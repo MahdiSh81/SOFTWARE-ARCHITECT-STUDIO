@@ -1,4 +1,4 @@
-# Software Architect Studio 0.7.1
+# Software Architect Studio 0.8.1
 
 A skills-based architecture assistant with a local, portable engineering toolkit and offline workbench. This release implements the audit's integrity repairs and scoped local workflows. It preserves the existing plugin identity, audience, optional GitHub declaration and starter prompts. It is not a hosted MCP App or automatic repository/model execution service.
 

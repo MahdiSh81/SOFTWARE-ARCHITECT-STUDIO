@@ -1,0 +1,19 @@
+COMMAND: /workspace/sas-env/bin/python -m unittest discover -s tests -p test_project_workflows.py -v
+EXIT: 0
+test_bad_regex_rejected (test_project_workflows.BehavioralTests.test_bad_regex_rejected) ... ok
+test_evaluate_and_baseline (test_project_workflows.BehavioralTests.test_evaluate_and_baseline) ... ok
+test_missing_outputs_are_not_pass (test_project_workflows.BehavioralTests.test_missing_outputs_are_not_pass) ... ok
+test_dangling_ids (test_project_workflows.ProjectTests.test_dangling_ids) ... ok
+test_duplicate_rejected (test_project_workflows.ProjectTests.test_duplicate_rejected) ... ok
+test_handoff_and_validators (test_project_workflows.ProjectTests.test_handoff_and_validators) ... ok
+test_impact_declared_links (test_project_workflows.ProjectTests.test_impact_declared_links) ... ok
+test_links_valid (test_project_workflows.ProjectTests.test_links_valid) ... ok
+test_project_context_version_and_snapshot (test_project_workflows.ProjectTests.test_project_context_version_and_snapshot) ... ok
+test_repo_file_line_evidence_and_drift (test_project_workflows.ProjectTests.test_repo_file_line_evidence_and_drift) ... ok
+test_requirement_ids (test_project_workflows.ProjectTests.test_requirement_ids) ... ok
+test_validating_project_json_checks_links (test_project_workflows.ProjectTests.test_validating_project_json_checks_links) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.178s
+
+OK

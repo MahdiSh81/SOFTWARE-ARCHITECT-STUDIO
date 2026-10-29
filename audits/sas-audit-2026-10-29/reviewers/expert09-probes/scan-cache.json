@@ -1,0 +1,2695 @@
+{
+  "adapter_version": "0.8.0",
+  "cache_schema": 1,
+  "entries": {
+    ".app.json:29b2f1afeaa640d1214e4389f254c2a8e3c3ada195fadd92d4a0a6a695c4e086": {
+      "edges": [],
+      "items": []
+    },
+    ".codex-plugin/plugin.json:d4451f2719c950cebee85b5813f407aefe9e152596b0a59d6ba2319f7598b6c7": {
+      "edges": [],
+      "items": []
+    },
+    ".github/workflows/ci.yml:88a06741195a9c997c6408360a5dd0fe66d11ae2769351300eea2dd01239bd20": {
+      "edges": [],
+      "items": [
+        {
+          "class": "DECLARED CONFIG; not deployed",
+          "line": 1,
+          "observation": "jobs descriptor",
+          "target": "python-and-core"
+        },
+        {
+          "class": "DECLARED CONFIG; not deployed",
+          "line": 1,
+          "observation": "jobs descriptor",
+          "target": "browser"
+        }
+      ]
+    },
+    "IMPLEMENTATION_STATUS.json:6ca5cb55a782483547a4408f67cc1c1521de2f9f06260bc2f8f5437392805c27": {
+      "edges": [],
+      "items": []
+    },
+    "capabilities.json:63d379873eadcb275a6cddefe184e1e47fa41d053cffc9e3ac6f5b4ed7b8735f": {
+      "edges": [],
+      "items": []
+    },
+    "evals/architecture-cases.json:a4141a9c9912305affed28e75169b73a3e13c4bd851376c6bd16e0866191e851": {
+      "edges": [],
+      "items": []
+    },
+    "evals/example-responses.json:06d357733613a3df93708c0b3ae477100853da7aa1a40968621a8a4981c3223a": {
+      "edges": [],
+      "items": []
+    },
+    "evals/semantic-review-rubric.json:6158174ca808f4de5eed228d6d40d080a87653184b9af4906ce4fedb7c44eb2a": {
+      "edges": [],
+      "items": []
+    },
+    "examples/api.yaml:a6d68b8bb28a0fd5960bb9aaa7d6ed7ecddd82fdeca1d8d3e7d6b4ce2a7c36a3": {
+      "edges": [],
+      "items": [
+        {
+          "class": "DECLARED CONTRACT",
+          "line": 1,
+          "observation": "paths contract entry",
+          "target": "/records"
+        }
+      ]
+    },
+    "examples/atlas-project/project.json:e7fe387e095e8df5a98a7c6ca6eff0302dc9d66c596cc47589748adb1cf8821d": {
+      "edges": [],
+      "items": []
+    },
+    "examples/capacity.json:ac2abde042b8512458fcf45a3c03fb1ff80c9994c565e77034bbec853d79d755": {
+      "edges": [],
+      "items": []
+    },
+    "examples/score.json:ed44d5226a0f18f7b56d62ed8526cf24bec50665305a27991729ac9fe5941f2c": {
+      "edges": [],
+      "items": []
+    },
+    "plugin.json:51b2989beb5246748c4c75fd36933a230de166771d69881505fa002f37386f9c": {
+      "edges": [],
+      "items": []
+    },
+    "release/counterexamples-0.7.0.json:6c06d1121afbfdcb5a8c1005bee2c3d22aafc9c6a1a4191ccc51836e90e332be": {
+      "edges": [],
+      "items": []
+    },
+    "release/source-manifest.json:99b919bfc329eb1b8d17083e94939070c74d6d7acfdad07dbed4ba4274487917": {
+      "edges": [],
+      "items": []
+    },
+    "release/verification-0.7.0.json:bc1fd1e3d8f076ac6b0fbe50182efb7030ee6fa69a0672fcf45d5b7b2050dfb6": {
+      "edges": [],
+      "items": []
+    },
+    "release/verification.json:8b864f1b79740a95499d5c004c1afa77f3d6df3e7c3d2211f44eade62b0cd2d2": {
+      "edges": [],
+      "items": []
+    },
+    "research/user-observation-template.json:28a22066f3c89756670090ddf7c5a24ac8f1df4bb67dba3aa176e517ca04cb94": {
+      "edges": [],
+      "items": []
+    },
+    "schemas/evidence-v1.schema.json:08cc7204524ec3c417450a1b02ac617a4e2c003e13cf10cdf7d302784a6f36a2": {
+      "edges": [],
+      "items": []
+    },
+    "schemas/project-v2.schema.json:de90b0dabbcad5883752a6edde6c02c9e52193a1e63d9ab41abeccd850b95fdb": {
+      "edges": [],
+      "items": []
+    },
+    "schemas/tool-capability-v1.schema.json:d05486c5b83953a1e9ce733790b98be73bae48186ae803137573efccdb7bc6be": {
+      "edges": [],
+      "items": []
+    },
+    "schemas/verification-receipt-v1.schema.json:ab1a40f2d0c96dd16f68f3a94cba35a203b0f8f6ce040b31c7d6013861e81cfa": {
+      "edges": [],
+      "items": []
+    },
+    "tests/browser/package.json:ed4fb178e8e5c811807b4d486d1d7b592fbb361db5e111ce9a2789e08f9220a5": {
+      "edges": [
+        {
+          "kind": "package-depends-on",
+          "line": 1,
+          "target": "@playwright/test"
+        }
+      ],
+      "items": [
+        {
+          "class": "DECLARED CONFIG",
+          "line": 1,
+          "observation": "devDependencies",
+          "target": "@playwright/test"
+        }
+      ]
+    },
+    "tests/fixtures/conformance.json:fc7eff4a8b550fd13627c9aa178e0dad74f47f5ba4f5064abe4ff70aa82aebed": {
+      "edges": [],
+      "items": []
+    },
+    "tests/fixtures/rich-project.json:3e8b1536df484822138a1bafc8f224f96a907b5b0902f88fff0c788e5e7cc1f1": {
+      "edges": [],
+      "items": []
+    },
+    "tests/test_acceptance.py:9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "copy"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "sys"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "tempfile"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "unittest"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "types"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "unittest.mock"
+        },
+        {
+          "kind": "imports",
+          "line": 9,
+          "target": "revision_store"
+        },
+        {
+          "kind": "imports",
+          "line": 10,
+          "target": "validation_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 11,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 12,
+          "target": "safe_io"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "copy"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "sys"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "tempfile"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "unittest"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "types"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "unittest.mock"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 9,
+          "line": 9,
+          "observation": "parsed Python import",
+          "target": "revision_store"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 10,
+          "line": 10,
+          "observation": "parsed Python import",
+          "target": "validation_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 11,
+          "line": 11,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 12,
+          "line": 12,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        }
+      ]
+    },
+    "tests/test_architect_cli.py:229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "sys"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "tempfile"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "unittest"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "architect_cli"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "sys"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "tempfile"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "unittest"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "architect_cli"
+        }
+      ]
+    },
+    "tests/test_audit_followups.py:133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "sys"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "tempfile"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "unittest"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 8,
+          "target": "artifact_compiler"
+        },
+        {
+          "kind": "imports",
+          "line": 9,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 10,
+          "target": "revision_store"
+        },
+        {
+          "kind": "imports",
+          "line": 11,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 12,
+          "target": "validation_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 13,
+          "target": "integration_contracts"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "sys"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "tempfile"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "unittest"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 8,
+          "line": 8,
+          "observation": "parsed Python import",
+          "target": "artifact_compiler"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 9,
+          "line": 9,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 10,
+          "line": 10,
+          "observation": "parsed Python import",
+          "target": "revision_store"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 11,
+          "line": 11,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 12,
+          "line": 12,
+          "observation": "parsed Python import",
+          "target": "validation_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 13,
+          "line": 13,
+          "observation": "parsed Python import",
+          "target": "integration_contracts"
+        }
+      ]
+    },
+    "tests/test_project_workflows.py:c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "sys"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "tempfile"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "unittest"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "project_workflows"
+        },
+        {
+          "kind": "imports",
+          "line": 8,
+          "target": "architect_cli"
+        },
+        {
+          "kind": "imports",
+          "line": 9,
+          "target": "behavioral_eval"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "sys"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "tempfile"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "unittest"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "project_workflows"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 8,
+          "line": 8,
+          "observation": "parsed Python import",
+          "target": "architect_cli"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 9,
+          "line": 9,
+          "observation": "parsed Python import",
+          "target": "behavioral_eval"
+        }
+      ]
+    },
+    "tests/test_release.py:7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "copy"
+        },
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "importlib.util"
+        },
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "math"
+        },
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "os"
+        },
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "subprocess"
+        },
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "sys"
+        },
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "tempfile"
+        },
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "time"
+        },
+        {
+          "kind": "imports",
+          "line": 1,
+          "target": "unittest"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "unittest.mock"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "revision_store"
+        },
+        {
+          "kind": "imports",
+          "line": 8,
+          "target": "graph_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 9,
+          "target": "artifact_compiler"
+        },
+        {
+          "kind": "imports",
+          "line": 10,
+          "target": "repository_evidence"
+        },
+        {
+          "kind": "imports",
+          "line": 11,
+          "target": "validation_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 12,
+          "target": "calculators"
+        },
+        {
+          "kind": "imports",
+          "line": 13,
+          "target": "behavioral_eval"
+        },
+        {
+          "kind": "imports",
+          "line": 14,
+          "target": "workflow_tools"
+        },
+        {
+          "kind": "imports",
+          "line": 28,
+          "target": "jsonschema"
+        },
+        {
+          "kind": "imports",
+          "line": 46,
+          "target": "revision_store"
+        },
+        {
+          "kind": "imports",
+          "line": 57,
+          "target": "revision_store"
+        },
+        {
+          "kind": "imports",
+          "line": 108,
+          "target": "artifact_compiler"
+        },
+        {
+          "kind": "imports",
+          "line": 206,
+          "target": "shutil"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "copy"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "importlib.util"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "math"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "os"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "subprocess"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "sys"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "tempfile"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "time"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 1,
+          "line": 1,
+          "observation": "parsed Python import",
+          "target": "unittest"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "unittest.mock"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "revision_store"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 8,
+          "line": 8,
+          "observation": "parsed Python import",
+          "target": "graph_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 9,
+          "line": 9,
+          "observation": "parsed Python import",
+          "target": "artifact_compiler"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 10,
+          "line": 10,
+          "observation": "parsed Python import",
+          "target": "repository_evidence"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 11,
+          "line": 11,
+          "observation": "parsed Python import",
+          "target": "validation_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 12,
+          "line": 12,
+          "observation": "parsed Python import",
+          "target": "calculators"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 13,
+          "line": 13,
+          "observation": "parsed Python import",
+          "target": "behavioral_eval"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 14,
+          "line": 14,
+          "observation": "parsed Python import",
+          "target": "workflow_tools"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 28,
+          "line": 28,
+          "observation": "parsed Python import",
+          "target": "jsonschema"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 46,
+          "line": 46,
+          "observation": "parsed Python import",
+          "target": "revision_store"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 57,
+          "line": 57,
+          "observation": "parsed Python import",
+          "target": "revision_store"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 108,
+          "line": 108,
+          "observation": "parsed Python import",
+          "target": "artifact_compiler"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 206,
+          "line": 206,
+          "observation": "parsed Python import",
+          "target": "shutil"
+        }
+      ]
+    },
+    "tools/architect_cli.py:6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "__future__"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "argparse"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "sys"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "time"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "calculators"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 8,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 9,
+          "target": "revision_store"
+        },
+        {
+          "kind": "imports",
+          "line": 10,
+          "target": "graph_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 11,
+          "target": "artifact_compiler"
+        },
+        {
+          "kind": "imports",
+          "line": 12,
+          "target": "repository_evidence"
+        },
+        {
+          "kind": "imports",
+          "line": 13,
+          "target": "validation_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 14,
+          "target": "workflow_tools"
+        },
+        {
+          "kind": "imports",
+          "line": 20,
+          "target": "yaml"
+        },
+        {
+          "kind": "imports",
+          "line": 83,
+          "target": "behavioral_eval"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "__future__"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "argparse"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "sys"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "time"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "calculators"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 8,
+          "line": 8,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 9,
+          "line": 9,
+          "observation": "parsed Python import",
+          "target": "revision_store"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 10,
+          "line": 10,
+          "observation": "parsed Python import",
+          "target": "graph_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 11,
+          "line": 11,
+          "observation": "parsed Python import",
+          "target": "artifact_compiler"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 12,
+          "line": 12,
+          "observation": "parsed Python import",
+          "target": "repository_evidence"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 13,
+          "line": 13,
+          "observation": "parsed Python import",
+          "target": "validation_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 14,
+          "line": 14,
+          "observation": "parsed Python import",
+          "target": "workflow_tools"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 20,
+          "line": 20,
+          "observation": "parsed Python import",
+          "target": "yaml"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 83,
+          "line": 83,
+          "observation": "parsed Python import",
+          "target": "behavioral_eval"
+        }
+      ]
+    },
+    "tools/artifact_compiler.py:49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "__future__"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "copy"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "re"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "uuid"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "datetime"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "validation_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 145,
+          "target": "revision_store"
+        },
+        {
+          "kind": "imports",
+          "line": 42,
+          "target": "disclosure"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "__future__"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "copy"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "re"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "uuid"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "datetime"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "validation_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 145,
+          "line": 145,
+          "observation": "parsed Python import",
+          "target": "revision_store"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 42,
+          "line": 42,
+          "observation": "parsed Python import",
+          "target": "disclosure"
+        }
+      ]
+    },
+    "tools/behavioral_eval.py:4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "__future__"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "multiprocessing"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "re"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "time"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "resource"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "__future__"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "multiprocessing"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "re"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "time"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "resource"
+        }
+      ]
+    },
+    "tools/calculators.py:8ba331a8c5710daed540d64a6102c41089f0c3d988c25a04f41c180d25a933fb": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "math"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "math"
+        }
+      ]
+    },
+    "tools/check_release.py:1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "argparse"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "io"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "shutil"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "subprocess"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "sys"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "time"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "unittest"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "validation_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "project_model"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "argparse"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "shutil"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "subprocess"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "sys"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "time"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "unittest"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "validation_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        }
+      ]
+    },
+    "tools/disclosure.py:81fa5d9727d6fb386f5cc11ffb4354e04eca971462d971066c2a1f3aa24d9058": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "re"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "re"
+        }
+      ]
+    },
+    "tools/graph_engine.py:c3b7c25fa48838c47db8403a0ba693998dd8812cd8aaea8bb22f7c424670bd20": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "collections"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "safe_io"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "collections"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        }
+      ]
+    },
+    "tools/integration_contracts.py:143454f2bf08a3a66871dd4d96f1083a4f162402a5b7b2820880e76652a83410": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "__future__"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "datetime"
+        },
+        {
+          "kind": "imports",
+          "line": 8,
+          "target": "re"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "__future__"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "datetime"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 8,
+          "line": 8,
+          "observation": "parsed Python import",
+          "target": "re"
+        }
+      ]
+    },
+    "tools/project_model.py:c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "__future__"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "copy"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "math"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "re"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "uuid"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "safe_io"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "__future__"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "copy"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "math"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "re"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "uuid"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        }
+      ]
+    },
+    "tools/project_workflows.py:8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "revision_store"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "graph_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "artifact_compiler"
+        },
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "repository_evidence"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "safe_io"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "revision_store"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "graph_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "artifact_compiler"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "repository_evidence"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        }
+      ]
+    },
+    "tools/repository_evidence.py:f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "__future__"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "ast"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "copy"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "datetime"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "io"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "os"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "re"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "stat"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "time"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "tokenize"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 15,
+          "target": "disclosure"
+        },
+        {
+          "kind": "imports",
+          "line": 120,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 153,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 142,
+          "target": "disclosure"
+        },
+        {
+          "kind": "imports",
+          "line": 59,
+          "target": "validation_engine"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "__future__"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "ast"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "copy"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "datetime"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "os"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "re"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "stat"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "time"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "tokenize"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 15,
+          "line": 15,
+          "observation": "parsed Python import",
+          "target": "disclosure"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 120,
+          "line": 120,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 153,
+          "line": 153,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 142,
+          "line": 142,
+          "observation": "parsed Python import",
+          "target": "disclosure"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 59,
+          "line": 59,
+          "observation": "parsed Python import",
+          "target": "validation_engine"
+        }
+      ]
+    },
+    "tools/revision_store.py:fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "copy"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "datetime"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "re"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "uuid"
+        },
+        {
+          "kind": "imports",
+          "line": 8,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 9,
+          "target": "safe_io"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "copy"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "datetime"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "re"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "uuid"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 8,
+          "line": 8,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 9,
+          "line": 9,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        }
+      ]
+    },
+    "tools/safe_io.py:159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "__future__"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "contextlib"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "hashlib"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "os"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "stat"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "time"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "uuid"
+        },
+        {
+          "kind": "imports",
+          "line": 8,
+          "target": "pathlib"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "__future__"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "contextlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "hashlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "os"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "stat"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "time"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "uuid"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 8,
+          "line": 8,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        }
+      ]
+    },
+    "tools/validation_engine.py:12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "__future__"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "importlib.util"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "importlib.metadata"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "math"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "os"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "re"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "shutil"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "signal"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "subprocess"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "sys"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "tempfile"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "time"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "uuid"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "urllib.parse"
+        },
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 206,
+          "target": "resource"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "__future__"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "importlib.util"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "importlib.metadata"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "math"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "os"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "re"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "shutil"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "signal"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "subprocess"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "sys"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "tempfile"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "time"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "uuid"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "urllib.parse"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 206,
+          "line": 206,
+          "observation": "parsed Python import",
+          "target": "resource"
+        }
+      ]
+    },
+    "tools/validator_worker.py:899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "sys"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 8,
+          "target": "yaml"
+        },
+        {
+          "kind": "imports",
+          "line": 12,
+          "target": "openapi_spec_validator"
+        },
+        {
+          "kind": "imports",
+          "line": 13,
+          "target": "validation_engine"
+        },
+        {
+          "kind": "imports",
+          "line": 17,
+          "target": "jsonschema"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "sys"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 8,
+          "line": 8,
+          "observation": "parsed Python import",
+          "target": "yaml"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 12,
+          "line": 12,
+          "observation": "parsed Python import",
+          "target": "openapi_spec_validator"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 13,
+          "line": 13,
+          "observation": "parsed Python import",
+          "target": "validation_engine"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 17,
+          "line": 17,
+          "observation": "parsed Python import",
+          "target": "jsonschema"
+        }
+      ]
+    },
+    "tools/workflow_tools.py:7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42": {
+      "edges": [
+        {
+          "kind": "imports",
+          "line": 2,
+          "target": "__future__"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "copy"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "datetime"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "itertools"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "json"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "sqlite3"
+        },
+        {
+          "kind": "imports",
+          "line": 3,
+          "target": "uuid"
+        },
+        {
+          "kind": "imports",
+          "line": 4,
+          "target": "pathlib"
+        },
+        {
+          "kind": "imports",
+          "line": 5,
+          "target": "project_model"
+        },
+        {
+          "kind": "imports",
+          "line": 6,
+          "target": "safe_io"
+        },
+        {
+          "kind": "imports",
+          "line": 7,
+          "target": "calculators"
+        }
+      ],
+      "items": [
+        {
+          "class": "PARSED",
+          "end_line": 2,
+          "line": 2,
+          "observation": "parsed Python import",
+          "target": "__future__"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "copy"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "datetime"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "itertools"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "json"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "sqlite3"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 3,
+          "line": 3,
+          "observation": "parsed Python import",
+          "target": "uuid"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 4,
+          "line": 4,
+          "observation": "parsed Python import",
+          "target": "pathlib"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 5,
+          "line": 5,
+          "observation": "parsed Python import",
+          "target": "project_model"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 6,
+          "line": 6,
+          "observation": "parsed Python import",
+          "target": "safe_io"
+        },
+        {
+          "class": "PARSED",
+          "end_line": 7,
+          "line": 7,
+          "observation": "parsed Python import",
+          "target": "calculators"
+        }
+      ]
+    },
+    "workbench/project-core.js:1f186b7e2ef5d20768c3407653f4c6c467a5cf8939d154d5ece7a21cd4d98272": {
+      "edges": [],
+      "items": []
+    }
+  },
+  "retention": "local opt-in; delete this file to purge extraction cache",
+  "root": "/workspace/SOFTWARE-ARCHITECT-STUDIO"
+}

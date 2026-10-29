@@ -1,0 +1,56 @@
+{
+  "bytes_read": 461,
+  "checks": [
+    {
+      "check": "OpenAPI basic structure",
+      "detail": "",
+      "file": "api.yaml",
+      "input_sha256": "a6d68b8bb28a0fd5960bb9aaa7d6ed7ecddd82fdeca1d8d3e7d6b4ce2a7c36a3",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "OpenAPI full schema",
+      "detail": "{\"status\": \"passed\"}\n",
+      "file": "api.yaml",
+      "input_sha256": "a6d68b8bb28a0fd5960bb9aaa7d6ed7ecddd82fdeca1d8d3e7d6b4ce2a7c36a3",
+      "method": "openapi-spec-validator 0.7.2",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    }
+  ],
+  "checks_run": [
+    {
+      "check": "OpenAPI basic structure",
+      "file": "api.yaml"
+    },
+    {
+      "check": "OpenAPI full schema",
+      "file": "api.yaml"
+    }
+  ],
+  "duration_seconds": 0.336683,
+  "files_checked": 1,
+  "gate": "full",
+  "issues": [],
+  "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+  "ok": true,
+  "policy_ok": true,
+  "run_id": "4efe8080ce25442ba4ab4c36fec70407",
+  "skipped": [],
+  "stop_reasons": [],
+  "toolkit_version": "0.8.0",
+  "traceability_coverage": {},
+  "verified": [
+    {
+      "file": "api.yaml",
+      "gate": "OpenAPI basic structure"
+    },
+    {
+      "file": "api.yaml",
+      "gate": "OpenAPI full schema"
+    }
+  ],
+  "warnings": []
+}

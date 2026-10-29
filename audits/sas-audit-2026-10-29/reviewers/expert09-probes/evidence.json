@@ -1,0 +1,165 @@
+{
+  "bounded_scan": {
+    "coverage": "partial",
+    "discovered_files": 2,
+    "entries_visited": 2,
+    "enumeration_complete": false,
+    "stop_reasons": [
+      "entry/time budget"
+    ],
+    "total_candidate_files": null
+  },
+  "browser_static_test_calls": 4,
+  "commit": "83812e1d31c17ed857be8d2fb5c98126a8ccb5c8",
+  "doctor": {
+    "host_budgets": {
+      "agent_count": "advisory; host must mediate",
+      "external_tool_authority": "host enforcement required",
+      "local_file_bytes": "enforced",
+      "subprocess_deadline": "enforced",
+      "tokens": "unsupported"
+    },
+    "io": {
+      "bounded_reads": true,
+      "non_posix": "preflight only; hostile path-race protection not claimed",
+      "posix_descriptor_no_follow": true,
+      "power_loss_durability": "fsync attempted; filesystem/platform durability not certified",
+      "regular_file_reads": true,
+      "writer_concurrency": "cooperating local writers under exclusive lock"
+    },
+    "mmdc": null,
+    "network": "no automatic installs/fetching; host connector capabilities unprobed",
+    "packages": {
+      "PyYAML": "6.0.3",
+      "jsonschema": "4.23.0",
+      "openapi-spec-validator": "0.7.2"
+    },
+    "platform": "linux",
+    "python": "3.12.14",
+    "toolkit_version": "0.8.0"
+  },
+  "failed_validation_receipt": {
+    "bytes_read": 7,
+    "check_count": 1,
+    "command": "validate",
+    "duration_seconds": 0.000511,
+    "observed_files": 0,
+    "receipt_schema": 1,
+    "retention": "local explicit receipt; delete file to purge",
+    "run_id": "c8c1b8732ad240d1b68de2d558dba2f1",
+    "status": "completed",
+    "tokens": "unreported",
+    "toolkit_version": "0.8.0"
+  },
+  "git_status_after": "",
+  "invalid_descriptor_scan": {
+    "coverage": "complete within supported static scope",
+    "dependency_edges": [],
+    "observed_files": [
+      {
+        "bytes": 19,
+        "extractor_version": "0.8.0",
+        "kind": "manifest",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "path": "compose.yaml",
+        "sha256": "b18926f05cf546e6253917cb51c27f933949bc66d7b364500302bd1611252b9c",
+        "source": "local",
+        "source_revision": "unpinned local tree"
+      }
+    ],
+    "omissions": [],
+    "scanned_count": 1,
+    "static_declarations": [],
+    "stop_reasons": []
+  },
+  "invalid_validation": {
+    "argv": [
+      "/workspace/sas-env/bin/python",
+      "/workspace/SOFTWARE-ARCHITECT-STUDIO/tools/architect_cli.py",
+      "--receipt",
+      "/workspace/sas-audit-2026-10-29/reviewers/expert09-probes/failed-validation-receipt.json",
+      "validate",
+      "/workspace/sas-audit-2026-10-29/reviewers/expert09-probes/invalid-input",
+      "--gate",
+      "structural"
+    ],
+    "exit_code": 1,
+    "stderr": "",
+    "stdout": "{\n  \"bytes_read\": 7,\n  \"checks\": [\n    {\n      \"check\": \"Input parse/validation\",\n      \"detail\": \"JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\",\n      \"file\": \"bad.json\",\n      \"input_sha256\": \"be302461cda285db3ed2d45fb767b23e08ca8808b35a638009937df22b332d73\",\n      \"method\": \"built-in\",\n      \"status\": \"failed\",\n      \"toolkit_version\": \"0.8.0\"\n    }\n  ],\n  \"checks_run\": [\n    {\n      \"check\": \"Input parse/validation\",\n      \"file\": \"bad.json\"\n    }\n  ],\n  \"duration_seconds\": 0.00041,\n  \"files_checked\": 1,\n  \"gate\": \"structural\",\n  \"issues\": [\n    {\n      \"file\": \"bad.json\",\n      \"issue\": \"JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\"\n    }\n  ],\n  \"note\": \"Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.\",\n  \"ok\": false,\n  \"policy_ok\": false,\n  \"run_id\": \"debb2558a3bc46618b933db1890f673f\",\n  \"skipped\": [],\n  \"stop_reasons\": [],\n  \"toolkit_version\": \"0.8.0\",\n  \"traceability_coverage\": {},\n  \"verified\": [],\n  \"warnings\": []\n}\n"
+  },
+  "manifest_changed_paths": [
+    "README.md",
+    "tools/artifact_compiler.py",
+    "tools/project_model.py",
+    "tools/revision_store.py",
+    "tools/validation_engine.py",
+    "workbench/index.html"
+  ],
+  "manifest_count": 67,
+  "manifest_missing_paths": [],
+  "manifest_unlisted_tracked_paths": [
+    ".github/workflows/ci.yml",
+    "docs/implementation-adapter.md",
+    "docs/integrations.md",
+    "schemas/tool-capability-v1.schema.json",
+    "schemas/verification-receipt-v1.schema.json",
+    "skills/api-data-contracts/SKILL.md",
+    "skills/implementation-planning-and-change/SKILL.md",
+    "skills/repository-intelligence/SKILL.md",
+    "skills/requirements-specification/SKILL.md",
+    "skills/security-review/SKILL.md",
+    "skills/test-debug-verify/SKILL.md",
+    "tests/browser/README.md",
+    "tests/browser/package.json",
+    "tests/browser/playwright.config.cjs",
+    "tests/browser/workbench.spec.cjs",
+    "tests/test_audit_followups.py",
+    "tools/integration_contracts.py"
+  ],
+  "missing_manifest_script": {
+    "argv": [
+      "/workspace/sas-env/bin/python",
+      "/workspace/SOFTWARE-ARCHITECT-STUDIO/tools/check_source_manifest.py",
+      "--check"
+    ],
+    "exit_code": 2,
+    "stderr": "/workspace/sas-env/bin/python: can't open file '/workspace/SOFTWARE-ARCHITECT-STUDIO/tools/check_source_manifest.py': [Errno 2] No such file or directory\n",
+    "stdout": ""
+  },
+  "node_static_async_checks": 1,
+  "node_static_sync_calls": 24,
+  "python_discovered_count": 88,
+  "python_static_test_methods": 88,
+  "scan_cold": {
+    "bytes_read": 324683,
+    "cache_hits": 0,
+    "coverage": "partial",
+    "declarations": 206,
+    "duration_seconds": 0.16654,
+    "edges": 203,
+    "eligible_discovered": 47,
+    "entries_visited": 111,
+    "enumeration_complete": true,
+    "scanned_count": 47,
+    "skipped_files": 39,
+    "source_fingerprint": "b184a9b8f8f6f539f7b5cdab42571f10e4e32691556c7b9e7768861ce51b7c62",
+    "stop_reasons": []
+  },
+  "scan_warm": {
+    "bytes_read": 324683,
+    "cache_hits": 47,
+    "coverage": "partial",
+    "declarations": 206,
+    "duration_seconds": 0.011555,
+    "edges": 203,
+    "eligible_discovered": 47,
+    "entries_visited": 111,
+    "enumeration_complete": true,
+    "scanned_count": 47,
+    "skipped_files": 39,
+    "source_fingerprint": "b184a9b8f8f6f539f7b5cdab42571f10e4e32691556c7b9e7768861ce51b7c62",
+    "stop_reasons": []
+  },
+  "tracked_count": 85
+}

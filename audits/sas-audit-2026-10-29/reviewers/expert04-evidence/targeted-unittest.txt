@@ -1,0 +1,15 @@
+test_typed_graph_closure_cycles_order_invariant (test_release.ReleaseTests.test_typed_graph_closure_cycles_order_invariant) ... ok
+test_change_removed_requirement_is_supported (test_release.ReleaseTests.test_change_removed_requirement_is_supported) ... ok
+test_scanner_ci_and_relevant_quota (test_release.ReleaseTests.test_scanner_ci_and_relevant_quota) ... ok
+test_scanner_comments_not_routes (test_release.ReleaseTests.test_scanner_comments_not_routes) ... ok
+test_special_file_not_opened_and_entry_budget_honest (test_release.ReleaseTests.test_special_file_not_opened_and_entry_budget_honest) ... ok
+test_cache_parity_and_fitness_counterexample (test_release.ReleaseTests.test_cache_parity_and_fitness_counterexample) ... ok
+test_cache_preserves_unrelated_file (test_release.ReleaseTests.test_cache_preserves_unrelated_file) ... ok
+test_js_static_import_adapter_ignores_comments_and_templates (test_release.ReleaseTests.test_js_static_import_adapter_ignores_comments_and_templates) ... ok
+test_impact_declared_links (test_project_workflows.ProjectTests.test_impact_declared_links) ... ok
+test_repo_file_line_evidence_and_drift (test_project_workflows.ProjectTests.test_repo_file_line_evidence_and_drift) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.096s
+
+OK

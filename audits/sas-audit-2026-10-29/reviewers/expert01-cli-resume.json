@@ -1,0 +1,31 @@
+{
+  "accepted_decisions": [],
+  "authority": "Recorded acceptance is preserved; it grants no new tool permission. No redundant reapproval is required for unchanged decisions.",
+  "constraints": [
+    "Five developers",
+    "Low operating budget",
+    "Tenant data must be isolated"
+  ],
+  "coverage": {
+    "functional_requirements": 2,
+    "nfr_requirements": 1,
+    "nfr_without_passed_verification": [
+      "NFR-001"
+    ],
+    "review_note": "Links and plans do not prove satisfaction; applicability and measured verification require review.",
+    "without_declared_component": [],
+    "without_declared_interface": [],
+    "without_declared_task": [
+      "FR-002"
+    ]
+  },
+  "excluded": "private history, arbitrary extensions, raw repository contents",
+  "name": "Atlas SaaS",
+  "open_questions": [
+    "Does the customer need EU data residency?",
+    "What are peak request rates?"
+  ],
+  "project_id": null,
+  "revision": 1,
+  "source_hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0"
+}

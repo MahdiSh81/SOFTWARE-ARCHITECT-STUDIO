@@ -1,0 +1,542 @@
+{
+  "release": "0.7.1",
+  "baseline": "0.6.0",
+  "source_release_id": "pluginrel_6ade7f4f61088191a7fa3000fab23e02",
+  "date": "2026-10-29",
+  "meaning": "Every recommendation disposition is tracked; scoped implementations are not certification or proof of every ambitious outcome. Human studies, comparative model/specialist benefit and deferred infrastructure remain explicitly pending.",
+  "recommendations": [
+    {
+      "id": "M01",
+      "recommendation": "Canonical project schema and compatibility contract",
+      "report_decision": "REDESIGN",
+      "priority": "P0",
+      "status": "scoped_implementation",
+      "files": [
+        "schemas/project-v2.schema.json",
+        "tools/project_model.py"
+      ],
+      "delivered_and_limits": "Canonical v2 structural/semantic contract and valid-draft diagnostics; shared rich/invalid conformance fixtures.",
+      "acceptance_from_report": "Every supported command handles schema-valid fixtures without an unhandled structural error; missing command-specific prerequisites return typed diagnostics before mutation. Malformed envelopes fail safely, while a blank valid draft remains usable as an explicitly incomplete draft."
+    },
+    {
+      "id": "M02",
+      "recommendation": "Lossless canonical browser editing",
+      "report_decision": "REDESIGN",
+      "priority": "P0",
+      "status": "scoped_implementation",
+      "files": [
+        "workbench/project-core.js",
+        "workbench/index.html"
+      ],
+      "delivered_and_limits": "Lossless supported canonical editing/export, immutable IDs, exact original recovery, explicit unsupported legacy/precision/budget errors.",
+      "acceptance_from_report": "No-edit round trips preserve all supported fields and IDs; no silent loss for over-limit display fixtures; accepted requirements remain accepted."
+    },
+    {
+      "id": "M03",
+      "recommendation": "Flat snapshots, restore and corrupt-state recovery",
+      "report_decision": "REDESIGN",
+      "priority": "P0",
+      "status": "scoped_implementation",
+      "files": [
+        "workbench/project-core.js",
+        "workbench/index.html"
+      ],
+      "delivered_and_limits": "Flat twenty-snapshot envelopes, restore as new revision, corrupt startup preservation, recovery export, session/purge controls; no silent JSON string truncation.",
+      "acceptance_from_report": "Snapshot size grows linearly for a fixed-size project; 20 supported revisions reopen/export/restore; malformed history leaves current state recoverable."
+    },
+    {
+      "id": "M04",
+      "recommendation": "Filesystem containment and non-destructive initialization",
+      "report_decision": "IMPROVE",
+      "priority": "P0",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/safe_io.py",
+        "tools/revision_store.py"
+      ],
+      "delivered_and_limits": "Regular bounded reads, descriptor-relative POSIX no-follow writes, non-destructive init, output containment and ownership. Tested on Linux; other-platform hostile race protection unverified.",
+      "acceptance_from_report": "Controlled symlink and pre-existing-history fixtures cannot change any unauthorized file; errors identify the path and leave prior state intact."
+    },
+    {
+      "id": "M05",
+      "recommendation": "Transactional revisions and managed artifact publication",
+      "report_decision": "REDESIGN",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/revision_store.py",
+        "tools/artifact_compiler.py"
+      ],
+      "delivered_and_limits": "Journaled local commit/recovery under cooperating-writer lock; committed handoff generation/pointer and recoverable legacy projections. No distributed or multi-file atomicity claim.",
+      "acceptance_from_report": "Injected failures preserve an authoritative committed generation/pointer and recoverable prepared state; restart completes or conflicts explicitly. Concurrent edits preserve independent drafts and conflict or serialize; obsolete managed ADRs are removed safely without deleting unrelated files."
+    },
+    {
+      "id": "M06",
+      "recommendation": "Correct and symmetric artifact validation",
+      "report_decision": "IMPROVE",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/validation_engine.py",
+        "tools/validator_worker.py"
+      ],
+      "delivered_and_limits": "Symmetric OAS 3.0/3.1 basic validation, installed full OpenAPI/project-schema adapters, typed partial results, actual-version method records; renderer policy/failure reporting.",
+      "acceptance_from_report": "Valid specification fixtures pass correct gates; malformed/empty-response fixtures fail at the appropriate layer; no raw traceback replaces a result."
+    },
+    {
+      "id": "M07",
+      "recommendation": "Contract-preserving handoff compiler",
+      "report_decision": "REDESIGN",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/artifact_compiler.py"
+      ],
+      "delivered_and_limits": "Native/detailed HTTP contracts, all eight supported-profile verbs, collision failures, raw non-HTTP contract preservation, data/schema/task/ADR projections and exact coverage.",
+      "acceptance_from_report": "Every supported operation/schema/task is emitted or has an exact blocker; duplicate operations never silently win; input/project/API correspondence is checked."
+    },
+    {
+      "id": "M08",
+      "recommendation": "Faithful diagram aliases and explicit topology",
+      "report_decision": "REDESIGN",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/artifact_compiler.py",
+        "workbench/project-core.js"
+      ],
+      "delivered_and_limits": "Stable safe Mermaid aliases, Unicode labels, no topology inferred from association order, textual relationship view.",
+      "acceptance_from_report": "Hyphen/Unicode/collision fixtures retain every supported entity; permutations of unordered associations cannot reverse a flow."
+    },
+    {
+      "id": "M09",
+      "recommendation": "Typed graph semantics and explainable impact closure",
+      "report_decision": "REDESIGN",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/graph_engine.py",
+        "workbench/project-core.js"
+      ],
+      "delivered_and_limits": "Typed identities/edges and order-independent closure with connectivity witnesses and unreached/manual-review gaps; no semantic causality claim.",
+      "acceptance_from_report": "Order-independent results on cycles/multiple paths; every impact has a supported witness; unknown areas never become no-impact assertions."
+    },
+    {
+      "id": "M10",
+      "recommendation": "Scanner selection, CI inclusion and honest coverage",
+      "report_decision": "IMPROVE",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/repository_evidence.py"
+      ],
+      "delivered_and_limits": "Exact .git filtering with .github included; relevant selection; separate entry/read/bytes/deadline budgets; reconciled omissions and unknown unseen totals.",
+      "acceptance_from_report": "CI fixtures are included; 400 irrelevant files cannot silently consume useful extraction budget; all exclusions/truncations reconcile in counts."
+    },
+    {
+      "id": "M11",
+      "recommendation": "Shared revisioned evidence envelope",
+      "report_decision": "ADD",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/repository_evidence.py",
+        "tools/project_model.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "delivered_and_limits": "Versioned observation identity, content hashes, spans, capture time, adapter/scope/fingerprint and declared optional evidence records; no invented Git commit.",
+      "acceptance_from_report": "A cited observation resolves to the correct captured source version or is marked stale/unavailable; unknown source commit is never invented."
+    },
+    {
+      "id": "M12",
+      "recommendation": "Untrusted-content, data-minimization and retention boundary",
+      "report_decision": "IMPROVE",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/disclosure.py",
+        "tools/safe_io.py",
+        "skills/software-architecture/SKILL.md"
+      ],
+      "delivered_and_limits": "Source text cannot confer authority; minimized/redacted default exports/snippets and explicit private backups/retention. Host connector authority remains conditional; redaction incomplete.",
+      "acceptance_from_report": "Synthetic secret/instruction fixtures cannot authorize actions and are withheld/redacted from ordinary exports; authorization decisions are enforced outside source text."
+    },
+    {
+      "id": "M13",
+      "recommendation": "Hard resource bounds for external inputs and tools",
+      "report_decision": "IMPROVE",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/safe_io.py",
+        "tools/validation_engine.py",
+        "tools/behavioral_eval.py"
+      ],
+      "delivered_and_limits": "Bounded regular-file reads, enumeration, killable regex/parser/tool workers, deadlines/output limits and POSIX CPU/file caps. OS authority isolation is not fabricated.",
+      "acceptance_from_report": "Adversarial regex, FIFO and huge-tree fixtures terminate within configured limits with recoverable structured reports."
+    },
+    {
+      "id": "M14",
+      "recommendation": "Measured model-quality program and deterministic constraints",
+      "report_decision": "REDESIGN",
+      "priority": "P1",
+      "status": "instrument_implemented_measurement_pending",
+      "files": [
+        "tools/behavioral_eval.py",
+        "tools/workflow_tools.py",
+        "evals/semantic-review-rubric.json"
+      ],
+      "delivered_and_limits": "Capture/provenance accounting, direct length constraints, bounded fixture validation and semantic review instruments. Real comparative model quality and calibrated human annotations remain pending.",
+      "acceptance_from_report": "Known unsafe keyword-stuffed fixtures fail semantic review; length limits are counted directly; release claims cite actual captures and disclose sample/variance limits."
+    },
+    {
+      "id": "M15",
+      "recommendation": "Explicit CI gate policies and exit semantics",
+      "report_decision": "ADD",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/architect_cli.py",
+        "tools/validation_engine.py"
+      ],
+      "delivered_and_limits": "Explicit structural/full/report policies and evaluate threshold exits; failed or required incomplete gates do not pass.",
+      "acceptance_from_report": "0/1 eval checks can report exit0 in report mode but must fail a selected required gate; required skipped checks cannot appear green."
+    },
+    {
+      "id": "M16",
+      "recommendation": "Per-artifact readiness and exact blockers",
+      "report_decision": "ADD",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/artifact_compiler.py"
+      ],
+      "delivered_and_limits": "Profile-scoped exact field blockers, waivers-with-reason and independent completeness/structure/correspondence/review/runtime/freshness dimensions.",
+      "acceptance_from_report": "A draft placeholder API cannot be labeled implementation-ready; every blocker points to a field/record and next validation action."
+    },
+    {
+      "id": "M17",
+      "recommendation": "Capability preflight, dry runs and stable diagnostics",
+      "report_decision": "ADD",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/architect_cli.py",
+        "tools/validation_engine.py"
+      ],
+      "delivered_and_limits": "Doctor/preflight, dry-run plans, typed operation errors, recovery and explicit host enforcement limits. No unavailable integration is reported as executed.",
+      "acceptance_from_report": "Unavailable connector/renderer returns a useful scoped result; malformed inputs retain current state; dry run shows affected files and missing capabilities."
+    },
+    {
+      "id": "M18",
+      "recommendation": "One intent/depth/audience vocabulary",
+      "report_decision": "MERGE",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "skills/software-architecture/SKILL.md",
+        "workbench/index.html",
+        "capabilities.json"
+      ],
+      "delivered_and_limits": "Independent task intent, three depths and audience; compatibility data preserved and no mandatory dossier for quick answers.",
+      "acceptance_from_report": "Task×depth×audience fixtures route consistently; quick questions do not start a full interview or force persistent project state."
+    },
+    {
+      "id": "M19",
+      "recommendation": "Safe requirement and ADR correction workflow",
+      "report_decision": "IMPROVE",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "workbench/index.html",
+        "workbench/project-core.js",
+        "tools/project_model.py"
+      ],
+      "delivered_and_limits": "Draft editing, accepted predecessor supersession, explicit deliberate accepted edits, reference-safe deletion, undo and no-op acceptance continuity.",
+      "acceptance_from_report": "Correction changes only intended fields; accepted predecessor remains reviewable; no silent dangling references after deletion. No-op resumption preserves acceptance without redundant reacceptance; unknown historical approvers remain unknown."
+    },
+    {
+      "id": "M20",
+      "recommendation": "Accessible and bilingual authoring",
+      "report_decision": "IMPROVE",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "workbench/index.html",
+        "tests/test_workbench.cjs"
+      ],
+      "delivered_and_limits": "Labeled controls, selected navigation/focus/status, keyboard-native actions, textual graph and dir=auto Persian/English editing. Real browser/assistive-technology validation remains limited by host runtime.",
+      "acceptance_from_report": "Keyboard/zoom/narrow-view journeys complete; graph meaning is available as text; mixed Persian/English exports preserve labels and IDs."
+    },
+    {
+      "id": "M21",
+      "recommendation": "Structured assumptions, risks and NFR verification scenarios",
+      "report_decision": "ADD",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/project_model.py",
+        "tools/artifact_compiler.py",
+        "schemas/project-v2.schema.json"
+      ],
+      "delivered_and_limits": "Optional assumptions/risks/evidence/verifications/experiments with NFR scenario and actual-verification gap reporting; no mandatory paperwork for every note.",
+      "acceptance_from_report": "Important NFRs and decisions have source/assumption/verification or exact gap; no coverage metric implies semantic satisfaction."
+    },
+    {
+      "id": "M22",
+      "recommendation": "Continuation packet and source freshness check",
+      "report_decision": "ADD",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/project_model.py",
+        "workbench/project-core.js"
+      ],
+      "delivered_and_limits": "Compact current revision/accepted choices/constraints/questions packet excluding private history/extensions; preserve unknown approval origin and unchanged acceptance.",
+      "acceptance_from_report": "A resumed fixture identifies correct revision/accepted choices, detects changed source identity and limits retrieval to decision-relevant evidence. No-op resumption preserves recorded acceptance without a fresh approval interview; packets omit irrelevant private history."
+    },
+    {
+      "id": "M23",
+      "recommendation": "Reviewable architecture change bundles",
+      "report_decision": "ADD",
+      "priority": "P2",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/graph_engine.py",
+        "tools/revision_store.py"
+      ],
+      "delivered_and_limits": "Reviewable baseline/proposal semantic delta, impacts and compatibility/data/security/NFR/applicable recovery obligations; explicit expected-hash commit, no automatic acceptance rewriting.",
+      "acceptance_from_report": "Each material change has rationale, source and owner when known, plus applicable validation and rollback/forward-fix requirements; trivial text edits need no operational rollout ceremony. No unrelated accepted decision changes silently."
+    },
+    {
+      "id": "M24",
+      "recommendation": "Artifact staleness and decision revisit detection",
+      "report_decision": "ADD",
+      "priority": "P2",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/workflow_tools.py",
+        "tools/artifact_compiler.py"
+      ],
+      "delivered_and_limits": "Evidence-content freshness and artifact-input hash staleness with source/generator/output manifests; unknown/unread stays distinct from deletion.",
+      "acceptance_from_report": "Changing a linked source invalidates the correct derived artifacts; unrelated stable artifacts remain reusable; unknown freshness remains explicit."
+    },
+    {
+      "id": "M25",
+      "recommendation": "Narrow language/framework parser adapters",
+      "report_decision": "ADD",
+      "priority": "P2",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/repository_evidence.py"
+      ],
+      "delivered_and_limits": "Scoped Python AST imports/route candidates and JS/TS static module token adapter; comments/templates ignored, unresolved language/framework behavior explicitly unknown.",
+      "acceptance_from_report": "Fixtures include comments/strings/dynamic cases and supported frameworks; precision/coverage reported separately by adapter."
+    },
+    {
+      "id": "M26",
+      "recommendation": "Deployment, data and event evidence extraction",
+      "report_decision": "ADD",
+      "priority": "P2",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/repository_evidence.py"
+      ],
+      "delivered_and_limits": "Selected package dependencies, compose services/depends_on, GitHub jobs/needs, OpenAPI paths and AsyncAPI channels. Generic IaC/runtime reconstruction is outside the declared adapter scope.",
+      "acceptance_from_report": "Every extracted edge cites supported syntax and source version; unsupported descriptors are explicitly listed."
+    },
+    {
+      "id": "M27",
+      "recommendation": "Architecture fitness checks with counterexamples",
+      "report_decision": "ADD",
+      "priority": "P2",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/repository_evidence.py"
+      ],
+      "delivered_and_limits": "Supported forbid-import rule emits exact counterexamples and violation/satisfied-in-scope/unknown with source identity; no global compliance grade.",
+      "acceptance_from_report": "Known violating fixture yields evidence-linked counterexample; missing extractor evidence yields unknown rather than pass."
+    },
+    {
+      "id": "M28",
+      "recommendation": "Architecture revision delta; later measured extraction cache",
+      "report_decision": "ADD",
+      "priority": "P2",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/repository_evidence.py"
+      ],
+      "delivered_and_limits": "Observed base/head evidence deltas and optional bounded local extraction cache keyed by path/content/adapter/source; no universal semantic index.",
+      "acceptance_from_report": "Incremental results agree with a clean supported-scope scan and disclose skipped/invalidated evidence."
+    },
+    {
+      "id": "M29",
+      "recommendation": "Evidence-based modernization and migration packs",
+      "report_decision": "ADD",
+      "priority": "P2",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/workflow_tools.py"
+      ],
+      "delivered_and_limits": "Evidence-attributed modernization worksheet with modularization-first comparison, ownership/compatibility/reconciliation/canary/applicable recovery. Actual migration is not executed.",
+      "acceptance_from_report": "A migration fixture names data ownership and failure recovery, reversible stages and validation before the next stage."
+    },
+    {
+      "id": "M30",
+      "recommendation": "Portable engineering-tool and task exports",
+      "report_decision": "ADD",
+      "priority": "P2",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/artifact_compiler.py",
+        "workbench/index.html"
+      ],
+      "delivered_and_limits": "Portable accepted coding rules and task/AC exports, native contracts/diagrams/ADRs, source/readiness identity. No tracker/commit/comment write occurs automatically.",
+      "acceptance_from_report": "Exports retain IDs/source/readiness and reopen; no default commit/comment/task creation or silent cross-service data disclosure."
+    },
+    {
+      "id": "M31",
+      "recommendation": "Local run telemetry and useful quality metrics",
+      "report_decision": "ADD",
+      "priority": "P2",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/workflow_tools.py",
+        "tools/architect_cli.py"
+      ],
+      "delivered_and_limits": "Explicit minimized local run receipts with version/status/counts/duration and no raw prompts/source. Real outcome and cost study data remain unmeasured.",
+      "acceptance_from_report": "Run reports reconcile partial stages, contain no synthetic secret, and permit measuring actual task outcomes without mandatory remote analytics."
+    },
+    {
+      "id": "M32",
+      "recommendation": "Finite, unit-safe and consistent capacity/scoring math",
+      "report_decision": "IMPROVE",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/calculators.py",
+        "workbench/project-core.js"
+      ],
+      "delivered_and_limits": "Finite inputs/results/weights, strict JSON, raw intermediate math, decimal GB billing vs KiB/GiB units and CLI/JS conformance cases; UI inputs reflect imported state.",
+      "acceptance_from_report": "CLI/browser conformance and boundary fixtures agree within declared precision; invalid calculations are withheld with field errors."
+    },
+    {
+      "id": "M33",
+      "recommendation": "Discoverable outcome journeys and honest examples",
+      "report_decision": "IMPROVE",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "workbench/index.html",
+        "README.md",
+        "skills/software-architecture/SKILL.md"
+      ],
+      "delivered_and_limits": "Three discoverable outcome journeys, blank default/deliberate samples, distinct portable/backup/brief names and truthful checks/statuses.",
+      "acceptance_from_report": "Users can identify next action/file purpose/readiness in scoped trials; blank projects do not masquerade as measured architecture."
+    },
+    {
+      "id": "M34",
+      "recommendation": "Cross-surface release conformance and reproducible packaging",
+      "report_decision": "ADD",
+      "priority": "P1",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/check_release.py",
+        "tests/test_release.py",
+        "tests/test_workbench.cjs"
+      ],
+      "delivered_and_limits": "Original and new negative/positive/cross-surface/fault/privacy/resource conformance, pinned optional validator environment and package preservation/readback verification.",
+      "acceptance_from_report": "Release bundle runs deterministic conformance checks; regression cases for reproduced defects cannot pass silently; skipped optional tools remain visible."
+    },
+    {
+      "id": "M35",
+      "recommendation": "Selective specialist reviews with budget and independence",
+      "report_decision": "ADD",
+      "priority": "P3",
+      "status": "instrument_implemented_measurement_pending",
+      "files": [
+        "tools/workflow_tools.py",
+        "skills/software-architecture/references/evaluation.md"
+      ],
+      "delivered_and_limits": "Selective independent-first-pass/peer-review protocol and bounded review plan only; no agent dispatcher or comparative benefit study is fabricated.",
+      "acceptance_from_report": "Controlled comparison to a single-pass baseline measures useful corrected findings versus cost; no specialist bypasses tool authorization."
+    },
+    {
+      "id": "M36",
+      "recommendation": "Decision experiments and scenario sensitivity",
+      "report_decision": "ADD",
+      "priority": "P3",
+      "status": "scoped_implementation",
+      "files": [
+        "tools/workflow_tools.py"
+      ],
+      "delivered_and_limits": "Decision experiment/revisit instruments, bounded parameter sensitivity and proposed migration/measurement criteria; no cloud provisioning or invented thresholds.",
+      "acceptance_from_report": "A decision fixture states what evidence would change the choice and how to measure it; sensitivity results show assumptions and omissions."
+    },
+    {
+      "id": "M37",
+      "recommendation": "Validate target users and engineering outcomes",
+      "report_decision": "INVESTIGATE",
+      "priority": "P1",
+      "status": "instrument_implemented_measurement_pending",
+      "files": [
+        "tools/workflow_tools.py",
+        "research/user-observation-template.json"
+      ],
+      "delivered_and_limits": "Research task protocol, observation template and decision gates. Actual participants/interviews/task outcomes are not available and were not invented.",
+      "acceptance_from_report": "Document observed needs, counterexamples and decision criteria for the next optional investments; no unsupported market ranking."
+    },
+    {
+      "id": "M38",
+      "recommendation": "Hosted shared projects and native app surface",
+      "report_decision": "DEFER",
+      "priority": "P4",
+      "status": "deferred_as_recommended",
+      "files": [
+        "strategy/deferred-decisions.md"
+      ],
+      "delivered_and_limits": "Deferred as recommended: no hosted multi-user/native-app service created; separate demand, auth/storage/concurrency/operations gates documented.",
+      "acceptance_from_report": "Prototype must demonstrate tenant isolation, conflict recovery and user value; do not claim delivery until real service/host tests run."
+    },
+    {
+      "id": "M39",
+      "recommendation": "Universal semantic repository index or graph database",
+      "report_decision": "DEFER",
+      "priority": "P4",
+      "status": "deferred_as_recommended",
+      "files": [
+        "strategy/deferred-decisions.md"
+      ],
+      "delivered_and_limits": "Deferred as recommended: local typed graph and selected adapters used; no universal vector/semantic index or graph database added.",
+      "acceptance_from_report": "A benchmarked workload shows simpler approach insufficient and a prototype improves evidence retrieval within budgets before adoption."
+    },
+    {
+      "id": "M40",
+      "recommendation": "Multi-model judges and autonomous expansion",
+      "report_decision": "DEFER",
+      "priority": "P4",
+      "status": "deferred_as_recommended",
+      "files": [
+        "strategy/deferred-decisions.md"
+      ],
+      "delivered_and_limits": "Deferred as recommended: no multi-model/autonomous deployment service; controlled future experiment and deterministic authority gates documented.",
+      "acceptance_from_report": "Compare blinded judged cases and actual corrections/cost; unsupported outputs or majority agreement never become accepted facts."
+    }
+  ],
+  "previous_release": "0.7.0",
+  "follow_up": {
+    "scope": "Acceptance counterexamples in revision/recovery, local workbench and validation. No pending study or deferred service was reclassified as completed.",
+    "recommendations": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M15",
+      "M19",
+      "M20",
+      "M34"
+    ]
+  }
+}

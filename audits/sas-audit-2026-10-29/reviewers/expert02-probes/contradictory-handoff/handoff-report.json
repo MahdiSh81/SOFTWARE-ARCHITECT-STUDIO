@@ -1,0 +1,90 @@
+{
+  "coverage": {
+    "all_interfaces": "contracts.json",
+    "components": {},
+    "http_interfaces": {
+      "API-001": "api.json"
+    },
+    "tasks": "tasks.json"
+  },
+  "diagnostics": [],
+  "disclosure": "known engineering fields; opaque extensions/history omitted; obvious sensitive values redacted, detection incomplete; review before sharing",
+  "generated": [
+    "AGENTS.md",
+    "api.json",
+    "architecture.md",
+    "containers.mmd",
+    "contracts.json",
+    "data-model.md",
+    "data-schemas.json",
+    "diagram-map.json",
+    "engineering-tasks.json",
+    "handoff-report.json",
+    "implementation-tasks.md",
+    "project.json",
+    "relationships.json",
+    "requirements.md",
+    "risk-register.json",
+    "security.md",
+    "tasks.json",
+    "traceability.md"
+  ],
+  "identity": {
+    "artifact_hash_scope": "all generated files except handoff-report.json, which is excluded to avoid a self-referential hash",
+    "artifact_hashes": {
+      "AGENTS.md": "d287797c4fc8bb277a265f8793921241029ef1a0125f38c383ce51e6c5e84f81",
+      "api.json": "0921ef93d88c1c05cd2c0334cf4f4875788c63085e22fe673c2e8d3d4aace86c",
+      "architecture.md": "683722116bc733f882e65173d39d720d3585fd153f11d6430d995182a7846511",
+      "containers.mmd": "51acef301487104af3403be40cc2917abc1dec7365e654c34db0f4736d6019e2",
+      "contracts.json": "f01a046735eae65c27f23ad8bc6453aeb818bd2ae8dd8572586e57ccce013d83",
+      "data-model.md": "1628a56e777e73e884c413ddb1572ae39c36fb0da195d6ce53248efb3485093c",
+      "data-schemas.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "diagram-map.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "engineering-tasks.json": "f465bc154df5a32cd2cc399ae0e475a28e27a1acddd337ed4ae51d0234194e18",
+      "implementation-tasks.md": "9e99a37def726da52d452eb475c308303f6c4142efc3115ec59ec8716866a3a9",
+      "project.json": "b21e054f732f52c3400e42af449862876d957004d8067583f3784e978b80e605",
+      "relationships.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "requirements.md": "8de4621211c26aa07016d6f45d64e6fa49fffc712115fdbf64d18ba99d181b70",
+      "risk-register.json": "4c0775283d7ebb093e99eeb0848bbf7c1ecfb5819122f84d17ddbcd0759875a8",
+      "security.md": "5db6b1695371d606e2884f81d9ceba42959102a8aca0f040e29fd0bb0444636c",
+      "tasks.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "traceability.md": "84f2723a97e35e56fa0387188d047dfcd78faf2f656604773ceb99dbd0ed9758"
+    },
+    "canonical_input_hash": "5e460920e0ebe9c7b6e379885aae2a13c07bd2a3f18e5ee1a08a19d9527c1960",
+    "generator_version": "0.8.0",
+    "projection_hash": "5e460920e0ebe9c7b6e379885aae2a13c07bd2a3f18e5ee1a08a19d9527c1960",
+    "redaction_report": {
+      "detection": "pattern-based and incomplete; review every export before sharing",
+      "paths_changed": [],
+      "private_context_included": false
+    },
+    "schema_version": 1,
+    "source_revision": 1
+  },
+  "note": "Generated proposals; actual render/schema checks, human review and runtime verification are independent.",
+  "profile": "review-ready",
+  "readiness": {
+    "blockers": [],
+    "dimensions": {
+      "completeness": "specified within supported scope",
+      "correspondence": "checked at compilation for supported records",
+      "freshness": {
+        "hash": "5e460920e0ebe9c7b6e379885aae2a13c07bd2a3f18e5ee1a08a19d9527c1960",
+        "revision": 1
+      },
+      "human_review": "unknown",
+      "runtime_verification": "not run",
+      "structural": "valid draft"
+    },
+    "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.",
+    "obligations": [],
+    "profile": "review-ready",
+    "profile_satisfied": true
+  },
+  "redactions": [],
+  "revision": 1,
+  "source_hash": "5e460920e0ebe9c7b6e379885aae2a13c07bd2a3f18e5ee1a08a19d9527c1960",
+  "source_hash_compatibility": "legacy alias of canonical_input_hash; use identity fields for new consumers",
+  "toolkit_version": "0.8.0",
+  "unresolved": []
+}

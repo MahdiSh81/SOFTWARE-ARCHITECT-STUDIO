@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-29T18:34:02.187909+00:00",
+  "source_ref": "unpinned local tree; resolved commit not inferred",
+  "claim_class": "OBSERVED STATIC SOURCE",
+  "root": "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/fixtures/prefix-boundaries",
+  "adapter": "local-static",
+  "adapter_version": "0.8.0",
+  "observed_files": [
+    {
+      "path": "src2/a.py",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "bytes": 19,
+      "sha256": "6993f29f0e842bc72bb2445eead78881fd04dc5c7b36d7007744bd69c91daf37",
+      "source": "local",
+      "source_revision": "unpinned local tree",
+      "extractor_version": "0.8.0"
+    }
+  ],
+  "static_declarations": [
+    {
+      "line": 1,
+      "end_line": 1,
+      "observation": "parsed Python import",
+      "target": "forbiddenly",
+      "class": "PARSED",
+      "path": "src2/a.py",
+      "sha256": "6993f29f0e842bc72bb2445eead78881fd04dc5c7b36d7007744bd69c91daf37"
+    }
+  ],
+  "dependency_edges": [
+    {
+      "kind": "imports",
+      "target": "forbiddenly",
+      "line": 1,
+      "path": "src2/a.py",
+      "sha256": "6993f29f0e842bc72bb2445eead78881fd04dc5c7b36d7007744bd69c91daf37"
+    }
+  ],
+  "scanned_count": 1,
+  "total_candidate_files": 1,
+  "discovered_files": 1,
+  "entries_visited": 2,
+  "eligible_discovered": 1,
+  "bytes_read": 19,
+  "skipped_files": 0,
+  "omissions": [],
+  "enumeration_complete": true,
+  "coverage": "complete within supported static scope",
+  "stop_reasons": [],
+  "cache_hits": 0,
+  "source_fingerprint": "9d45e169f850b87f480bf8666f9f8d898a3c65fa30488c30c804a04a98a05165",
+  "coverage_note": "Read-only bounded static evidence. Python AST and narrow JS imports/config adapters; no runtime, full dependency or framework-binding guarantee. Local source is not commit-pinned. Snippets off by default."
+}

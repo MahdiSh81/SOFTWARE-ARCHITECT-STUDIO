@@ -1,0 +1,6 @@
+{
+  "project_file": "/tmp/sas-expert03-audit/task-tracker/project.json",
+  "revision": 1,
+  "versioned": true,
+  "warning": "Local files require actual backed-up storage/Git for cross-session continuity."
+}

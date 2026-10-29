@@ -1,0 +1,273 @@
+{
+  "parser_cache": {
+    "cold_coverage": "complete within supported static scope",
+    "cold_omissions": [],
+    "warm_coverage": "complete within supported static scope",
+    "warm_omissions": [],
+    "warm_observed": [
+      {
+        "path": "broken.py",
+        "kind": "source",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "bytes": 44,
+        "sha256": "6c18557294200259dcfed920dd6738a5d2f51c4b5baa489bfd9d021c7de903ee",
+        "source": "local",
+        "source_revision": "unpinned local tree",
+        "extractor_version": "0.8.0"
+      }
+    ],
+    "fitness_cold": {
+      "rules": [
+        {
+          "id": "RULE-001",
+          "status": "satisfied-in-scope",
+          "counterexamples": [],
+          "coverage": "complete within supported static scope",
+          "note": "No global compliance inferred from partial static evidence."
+        }
+      ],
+      "source_fingerprint": "21fb3d8737908ac6ab981fe559c7bebbbfe8d677f75918454892a9e4ae4dde8b",
+      "project_hash": "d7b63eac44a575feaaa6d056d398d17a3731d4f09b84fb8b4c113a5af3e116cb"
+    },
+    "fitness_warm": {
+      "rules": [
+        {
+          "id": "RULE-001",
+          "status": "satisfied-in-scope",
+          "counterexamples": [],
+          "coverage": "complete within supported static scope",
+          "note": "No global compliance inferred from partial static evidence."
+        }
+      ],
+      "source_fingerprint": "21fb3d8737908ac6ab981fe559c7bebbbfe8d677f75918454892a9e4ae4dde8b",
+      "project_hash": "9a89d1d9dab34c0e6b9728be888ae4975d12deb5d4ce0e6668f99861a343ffe0"
+    }
+  },
+  "unsupported_language_fitness": {
+    "rules": [
+      {
+        "id": "RULE-001",
+        "status": "satisfied-in-scope",
+        "counterexamples": [],
+        "coverage": "complete within supported static scope",
+        "note": "No global compliance inferred from partial static evidence."
+      }
+    ],
+    "source_fingerprint": "3f05ccdde5b31c3c386caf3b5eaf497c2046d0920553b92f0accea10765b58f6",
+    "project_hash": "1cea84ebf2ed4540d1207776bd7b816669099236052b208cfcc662131166b7c3"
+  },
+  "relative_python_fitness": {
+    "rules": [
+      {
+        "id": "RULE-001",
+        "status": "satisfied-in-scope",
+        "counterexamples": [],
+        "coverage": "complete within supported static scope",
+        "note": "No global compliance inferred from partial static evidence."
+      }
+    ],
+    "source_fingerprint": "c49db1db9915b4133671ac519cd2c01cd90751a541110c3cd21b7038e7e8e07b",
+    "project_hash": "6c19ba7a386c50b83f64adbaf4f1d130cd07797fbc2f409360e8c5329ee7a4d8"
+  },
+  "silent_edge_quota": {
+    "edge_count": 100,
+    "coverage": "complete within supported static scope",
+    "omissions": [],
+    "fitness": {
+      "rules": [
+        {
+          "id": "RULE-001",
+          "status": "satisfied-in-scope",
+          "counterexamples": [],
+          "coverage": "complete within supported static scope",
+          "note": "No global compliance inferred from partial static evidence."
+        }
+      ],
+      "source_fingerprint": "4b7bed680e3c56b655d37f9033a0dc799c5decf1a5d16158c9f7e5fcf8463702",
+      "project_hash": "0b2a6a0dcd1b8ffc5d92c0784025dcf68513b8acc0eb6a0763caa1111026536b"
+    }
+  },
+  "javascript_declaration_bleed": {
+    "declarations": [
+      {
+        "line": 1,
+        "observation": "JS/TS static module token declaration",
+        "target": "forbidden",
+        "class": "TOKENIZED; unresolved",
+        "path": "a.ts",
+        "sha256": "3314baee8df199342907c8d0362871bafd509c04325bcad28aefd7a281fe2837"
+      },
+      {
+        "line": 2,
+        "observation": "JS/TS static module token declaration",
+        "target": "forbidden",
+        "class": "TOKENIZED; unresolved",
+        "path": "a.ts",
+        "sha256": "3314baee8df199342907c8d0362871bafd509c04325bcad28aefd7a281fe2837"
+      }
+    ],
+    "edges": [
+      {
+        "kind": "imports",
+        "target": "forbidden",
+        "line": 1,
+        "path": "a.ts",
+        "sha256": "3314baee8df199342907c8d0362871bafd509c04325bcad28aefd7a281fe2837"
+      },
+      {
+        "kind": "imports",
+        "target": "forbidden",
+        "line": 2,
+        "path": "a.ts",
+        "sha256": "3314baee8df199342907c8d0362871bafd509c04325bcad28aefd7a281fe2837"
+      }
+    ]
+  },
+  "descriptor_failures": {
+    "coverage": "complete within supported static scope",
+    "omissions": [],
+    "observed_files": [
+      {
+        "path": "package.json",
+        "kind": "manifest",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "bytes": 24,
+        "sha256": "645d0147422daa511a1179273516c93cc31e4bf3f5303cf76fe6817b77b789e7",
+        "source": "local",
+        "source_revision": "unpinned local tree",
+        "extractor_version": "0.8.0"
+      },
+      {
+        "path": "pyproject.toml",
+        "kind": "manifest",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "bytes": 42,
+        "sha256": "29c66d7f2aef91892e8d2663e7a05de722731439f34ac1317419513b335f84d0",
+        "source": "local",
+        "source_revision": "unpinned local tree",
+        "extractor_version": "0.8.0"
+      },
+      {
+        "path": "requirements.txt",
+        "kind": "manifest",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "bytes": 15,
+        "sha256": "8c7dd740bc08eac209b813f16214a8af7c0430f729d3ac1ecf9471ab095d731b",
+        "source": "local",
+        "source_revision": "unpinned local tree",
+        "extractor_version": "0.8.0"
+      }
+    ],
+    "declarations": [],
+    "fitness": {
+      "rules": [
+        {
+          "id": "RULE-001",
+          "status": "satisfied-in-scope",
+          "counterexamples": [],
+          "coverage": "complete within supported static scope",
+          "note": "No global compliance inferred from partial static evidence."
+        }
+      ],
+      "source_fingerprint": "3b938757e012735246b138674cc7f57bce2cb69b37a3af98249d19afbd2ab549",
+      "project_hash": "c3fb87141468abb7435dbe9674f3e6bbdc77999f16be72a74817cf36ea95f856"
+    }
+  },
+  "fitness_prefix_boundaries": {
+    "rules": [
+      {
+        "id": "RULE-001",
+        "status": "violation",
+        "counterexamples": [
+          {
+            "kind": "imports",
+            "target": "forbiddenly",
+            "line": 1,
+            "path": "src2/a.py",
+            "sha256": "6993f29f0e842bc72bb2445eead78881fd04dc5c7b36d7007744bd69c91daf37"
+          }
+        ],
+        "coverage": "complete within supported static scope",
+        "note": "No global compliance inferred from partial static evidence."
+      }
+    ],
+    "source_fingerprint": "9d45e169f850b87f480bf8666f9f8d898a3c65fa30488c30c804a04a98a05165",
+    "project_hash": "7544b7ac3ca4e409ebb580ca15a44a0cbdbb9923ccf5e373f4533e112d0aeb8b"
+  },
+  "unrelated_delta": {
+    "added": [],
+    "removed_or_unread": [],
+    "changed": [
+      "a.py"
+    ],
+    "scope": "observed files only; unread is not deleted"
+  },
+  "invalid_delta": {
+    "added": [],
+    "removed_or_unread": [],
+    "changed": [],
+    "scope": "observed files only; unread is not deleted"
+  },
+  "interface_only_change": {
+    "changed_interfaces": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        "API-001"
+      ]
+    },
+    "changed_requirements": [],
+    "baseline_affected": {
+      "components": [],
+      "interfaces": [],
+      "data_models": [],
+      "decisions": [],
+      "tasks": [],
+      "cost_drivers": []
+    },
+    "proposed_affected": {
+      "components": [],
+      "interfaces": [],
+      "data_models": [],
+      "decisions": [],
+      "tasks": [],
+      "cost_drivers": []
+    }
+  },
+  "optional_graph_records": {
+    "affected_groups": [
+      "components",
+      "interfaces",
+      "data_models",
+      "decisions",
+      "tasks",
+      "cost_drivers"
+    ],
+    "verification_reported_in_affected": false,
+    "verification_reported_unreached": false
+  },
+  "freshness_stale_and_unknown": {
+    "project_hash": "447b8f6cfed27370d19003a37bf481512d9ac958297abbeb2ef726b19dd26310",
+    "source_fingerprint": "650eb12b8f272c678b87a917dea99177182b88ab96b8a9f1e1f3ee446212e58b",
+    "evidence": [
+      {
+        "id": "EVID-001",
+        "status": "stale",
+        "path": "a.py",
+        "reason": "hash comparison only; absence from partial scan is not deletion"
+      },
+      {
+        "id": "EVID-002",
+        "status": "unknown",
+        "path": "missing.py",
+        "reason": "hash comparison only; absence from partial scan is not deletion"
+      }
+    ],
+    "artifact_status": "not applicable",
+    "note": "Hashes prove captured identity, not truth, approval or authorization."
+  }
+}

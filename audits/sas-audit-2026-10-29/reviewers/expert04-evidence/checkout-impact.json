@@ -1,0 +1,296 @@
+{
+  "affected": {
+    "components": [
+      {
+        "id": "app",
+        "name": "Application API",
+        "status": "review candidate; change not proven necessary",
+        "why": [
+          "declared requirements association"
+        ],
+        "witness_path": [
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "relation": "declared requirements association",
+            "to": {
+              "group": "components",
+              "id": "app"
+            }
+          }
+        ]
+      },
+      {
+        "id": "database",
+        "name": "PostgreSQL",
+        "status": "review candidate; change not proven necessary",
+        "why": [
+          "declared requirements association"
+        ],
+        "witness_path": [
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "relation": "declared requirements association",
+            "to": {
+              "group": "components",
+              "id": "database"
+            }
+          }
+        ]
+      }
+    ],
+    "cost_drivers": [
+      {
+        "id": "COST-001",
+        "name": "Audit log storage",
+        "status": "review candidate; change not proven necessary",
+        "why": [
+          "declared requirements association",
+          "declared components association"
+        ],
+        "witness_path": [
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "relation": "declared requirements association",
+            "to": {
+              "group": "components",
+              "id": "database"
+            }
+          },
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "components",
+              "id": "database"
+            },
+            "relation": "declared components association",
+            "to": {
+              "group": "cost_drivers",
+              "id": "COST-001"
+            }
+          }
+        ]
+      }
+    ],
+    "data_models": [
+      {
+        "id": "DATA-001",
+        "name": "Tenant records",
+        "status": "review candidate; change not proven necessary",
+        "why": [
+          "declared requirements association"
+        ],
+        "witness_path": [
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "relation": "declared requirements association",
+            "to": {
+              "group": "data_models",
+              "id": "DATA-001"
+            }
+          }
+        ]
+      },
+      {
+        "id": "DATA-002",
+        "name": "Audit events",
+        "status": "review candidate; change not proven necessary",
+        "why": [
+          "declared requirements association",
+          "declared components association"
+        ],
+        "witness_path": [
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "relation": "declared requirements association",
+            "to": {
+              "group": "components",
+              "id": "database"
+            }
+          },
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "components",
+              "id": "database"
+            },
+            "relation": "declared components association",
+            "to": {
+              "group": "data_models",
+              "id": "DATA-002"
+            }
+          }
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "id": "ADR-001",
+        "name": "Use shared schema with tenant_id",
+        "status": "review candidate; change not proven necessary",
+        "why": [
+          "declared requirements association"
+        ],
+        "witness_path": [
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "relation": "declared requirements association",
+            "to": {
+              "group": "decisions",
+              "id": "ADR-001"
+            }
+          }
+        ]
+      }
+    ],
+    "interfaces": [
+      {
+        "id": "API-001",
+        "name": "List tenant records",
+        "status": "review candidate; change not proven necessary",
+        "why": [
+          "declared requirements association"
+        ],
+        "witness_path": [
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "relation": "declared requirements association",
+            "to": {
+              "group": "interfaces",
+              "id": "API-001"
+            }
+          }
+        ]
+      },
+      {
+        "id": "API-002",
+        "name": "Export audit log",
+        "status": "review candidate; change not proven necessary",
+        "why": [
+          "declared requirements association",
+          "declared components association"
+        ],
+        "witness_path": [
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "relation": "declared requirements association",
+            "to": {
+              "group": "components",
+              "id": "app"
+            }
+          },
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "components",
+              "id": "app"
+            },
+            "relation": "declared components association",
+            "to": {
+              "group": "interfaces",
+              "id": "API-002"
+            }
+          }
+        ]
+      }
+    ],
+    "tasks": [
+      {
+        "id": "TASK-001",
+        "name": "Implement tenant authorization",
+        "status": "review candidate; change not proven necessary",
+        "why": [
+          "declared requirements association"
+        ],
+        "witness_path": [
+          {
+            "evidence_status": "DECLARED",
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "relation": "declared requirements association",
+            "to": {
+              "group": "tasks",
+              "id": "TASK-001"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "caveat": "Typed declared-link closure with connectivity witnesses, not semantic causality. Missing links and runtime effects require manual review.",
+  "requirements": [
+    "FR-001"
+  ],
+  "revision": 1,
+  "source_hash": "6cada39ddcbe49ba6ced7de75ec5fbceaaf7440b68ec0b75fcd492c8c92150c6",
+  "traceability_coverage": {
+    "components": {
+      "linked_affected": 2,
+      "total": 2
+    },
+    "cost_drivers": {
+      "linked_affected": 1,
+      "total": 1
+    },
+    "data_models": {
+      "linked_affected": 2,
+      "total": 2
+    },
+    "decisions": {
+      "linked_affected": 1,
+      "total": 1
+    },
+    "interfaces": {
+      "linked_affected": 2,
+      "total": 2
+    },
+    "tasks": {
+      "linked_affected": 1,
+      "total": 1
+    }
+  },
+  "unlinked_review_required": [],
+  "unreached_records": [
+    {
+      "group": "requirements",
+      "id": "FR-002"
+    },
+    {
+      "group": "requirements",
+      "id": "NFR-001"
+    }
+  ]
+}

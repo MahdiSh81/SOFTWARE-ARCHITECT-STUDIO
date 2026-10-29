@@ -1,0 +1,45 @@
+{
+  "interface": {
+    "displayName": "Software Architect Studio",
+    "shortDescription": "Design and audit systems",
+    "longDescription": "Software architecture design and auditing with versioned project requirements/ADRs, three adjustable answer depths, explicit change-impact analysis, repository/PR evidence mapping, developer handoff artifacts, a local interactive workbench, capacity modeling, automated structural checks and evaluation fixtures. Conditional GitHub connector support requires authorization. Local files and workbench are not automatically cloud-synced or hosted as an MCP App.",
+    "developerName": "Plugin owner",
+    "category": "Developer Tools",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Design a scalable architecture for a ride-sharing app and explain key trade-offs.",
+      "Help me choose a database and tenant-isolation model for my B2B SaaS product.",
+      "Review my proposed architecture and write a prioritized improvement plan."
+    ]
+  },
+  "apps": "./.app.json",
+  "name": "software-architect-studio",
+  "version": "0.7.1",
+  "description": "Software architecture design with portable project context, handoff packages, dependency-based impact analysis, repo audits, validation checks, and behavioral evaluation.",
+  "author": {
+    "name": "Plugin owner",
+    "email": "samirbahramiy89@gmail.com"
+  },
+  "keywords": [
+    "software architecture",
+    "system design",
+    "architecture decision records",
+    "scalability",
+    "databases",
+    "multitenancy",
+    "LLM architecture",
+    "architecture audits",
+    "cost estimation",
+    "C4 diagrams",
+    "OpenAPI",
+    "Github review",
+    "architecture workbench",
+    "decision traceability",
+    "developer handoff",
+    "change impact analysis",
+    "architecture validation",
+    "project context",
+    "behavioral evaluation"
+  ],
+  "skills": "./skills"
+}

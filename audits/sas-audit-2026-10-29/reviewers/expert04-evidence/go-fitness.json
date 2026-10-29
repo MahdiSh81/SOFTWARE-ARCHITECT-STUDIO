@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "id": "RULE-001",
+      "status": "satisfied-in-scope",
+      "counterexamples": [],
+      "coverage": "complete within supported static scope",
+      "note": "No global compliance inferred from partial static evidence."
+    }
+  ],
+  "source_fingerprint": "3f05ccdde5b31c3c386caf3b5eaf497c2046d0920553b92f0accea10765b58f6",
+  "project_hash": "2dcea6c5d3d0b4155aa2534dacb63ba941b3dff25313d833c5910e9dce51b595"
+}

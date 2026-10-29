@@ -1,0 +1,101 @@
+{
+  "coverage": {
+    "all_interfaces": "contracts.json",
+    "components": {
+      "CMP-CLI": "containers.mmd",
+      "CMP-STORE": "containers.mmd"
+    },
+    "http_interfaces": {},
+    "tasks": "tasks.json"
+  },
+  "diagnostics": [
+    {
+      "preserved_in": "contracts.json",
+      "record": "IFACE-CLI",
+      "status": "not applicable to HTTP projection"
+    }
+  ],
+  "disclosure": "known engineering fields; opaque extensions/history omitted; obvious sensitive values redacted, detection incomplete; review before sharing",
+  "generated": [
+    "AGENTS.md",
+    "adrs/ADR-001.md",
+    "api.json",
+    "architecture.md",
+    "containers.mmd",
+    "contracts.json",
+    "data-model.md",
+    "data-schemas.json",
+    "diagram-map.json",
+    "engineering-tasks.json",
+    "handoff-report.json",
+    "implementation-tasks.md",
+    "project.json",
+    "relationships.json",
+    "requirements.md",
+    "risk-register.json",
+    "security.md",
+    "tasks.json",
+    "traceability.md"
+  ],
+  "identity": {
+    "artifact_hash_scope": "all generated files except handoff-report.json, which is excluded to avoid a self-referential hash",
+    "artifact_hashes": {
+      "AGENTS.md": "d287797c4fc8bb277a265f8793921241029ef1a0125f38c383ce51e6c5e84f81",
+      "adrs/ADR-001.md": "090a4ec23081d6449884f0e8459edf16f723bc38a305775b3213785a72d6b49c",
+      "api.json": "66878203134d9f91763ef2e07a604041c2c157e257cb071385e9cb37aaf09d1c",
+      "architecture.md": "b9916d8963f1055a490ee1eca10881f80725a03be41eac1ad1b1139134166fcc",
+      "containers.mmd": "50b5021ed52445f8222e70b6601ef88743ab8d1e1420825109f8ac2aae3de465",
+      "contracts.json": "5881517210343100d6b5321fb5e5b228dc9c7c9f10ed6b6063cb2754dac3ede5",
+      "data-model.md": "367d396a7d8fd039a87445a9edfaa2f23ad99d50da90cb6e362a0c5b7938cb8a",
+      "data-schemas.json": "504fc0551987c59c30abc88c9e4268f53bf5fe972237a31212e441f44d974d93",
+      "diagram-map.json": "ff5726af2e8120e6d3733d834a1a9abb2138594b86be0481d6e1d517e4a284ae",
+      "engineering-tasks.json": "4f829f70b54820633aed42bb20cf9ab983b79f0d0d767548ceaf2f63874e3b09",
+      "implementation-tasks.md": "06589220ee573247f3a8fa2b680a6da6410816f09ada2af160781f559670fc1a",
+      "project.json": "3ffc25b316c30d529486c330d31f1c161cfabebdcb3158369eb75387af0fc6fe",
+      "relationships.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "requirements.md": "f812f027cf6a192dc33a09a631a547492e0824e33a4d1186b959ee48f424a024",
+      "risk-register.json": "4c0775283d7ebb093e99eeb0848bbf7c1ecfb5819122f84d17ddbcd0759875a8",
+      "security.md": "5db6b1695371d606e2884f81d9ceba42959102a8aca0f040e29fd0bb0444636c",
+      "tasks.json": "11ecadf373e9b41c822f1c6a2e80328e61d4264e80ef1b9e26844b866262b569",
+      "traceability.md": "b34252f10487526eedeb21c12d837910a9bbb86691abbcc5211b01b3381cc45b"
+    },
+    "canonical_input_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+    "generator_version": "0.8.0",
+    "projection_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+    "redaction_report": {
+      "detection": "pattern-based and incomplete; review every export before sharing",
+      "paths_changed": [],
+      "private_context_included": false
+    },
+    "schema_version": 1,
+    "source_revision": 2
+  },
+  "note": "Generated proposals; actual render/schema checks, human review and runtime verification are independent.",
+  "output": "/tmp/sas-expert03-audit/handoff",
+  "profile": "review-ready",
+  "readiness": {
+    "blockers": [],
+    "dimensions": {
+      "completeness": "specified within supported scope",
+      "correspondence": "checked at compilation for supported records",
+      "freshness": {
+        "hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+        "revision": 2
+      },
+      "human_review": "unknown",
+      "runtime_verification": "not run",
+      "structural": "valid draft"
+    },
+    "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.",
+    "obligations": [],
+    "profile": "review-ready",
+    "profile_satisfied": true
+  },
+  "redactions": [],
+  "revision": 2,
+  "source_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+  "source_hash_compatibility": "legacy alias of canonical_input_hash; use identity fields for new consumers",
+  "status": "planned; no files written",
+  "toolkit_version": "0.8.0",
+  "unresolved": []
+}

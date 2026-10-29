@@ -1,0 +1,16 @@
+usage: architect_cli.py [-h] [--receipt RECEIPT]
+                        {doctor,capacity,score,init,snapshot,resume,recover,readiness,experiments,migration-plan,data-check,restore,commit,impact,diff,change,handoff,handoff-recover,validate,repo-scan,evidence-delta,fitness,freshness,evaluate,capture,quality-summary,sensitivity,review-plan,research-kit}
+                        ...
+
+Versioned, evidence-aware local architecture toolkit. No network installs,
+model calls or repository execution.
+
+positional arguments:
+  {doctor,capacity,score,init,snapshot,resume,recover,readiness,experiments,migration-plan,data-check,restore,commit,impact,diff,change,handoff,handoff-recover,validate,repo-scan,evidence-delta,fitness,freshness,evaluate,capture,quality-summary,sensitivity,review-plan,research-kit}
+    doctor              Report installed tools and enforcement limits
+    research-kit        Export research protocol; does not interview users
+
+options:
+  -h, --help            show this help message and exit
+  --receipt RECEIPT     Explicit local minimized run receipt (no raw
+                        prompts/source)

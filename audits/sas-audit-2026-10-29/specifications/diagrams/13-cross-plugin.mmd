@@ -1,0 +1,7 @@
+flowchart LR
+C[Coordinator] --> A[One scoped adapter request]
+A --> P[Selected external provider]
+P --> R[Receipt and artifact refs]
+R --> V[Source status and artifact checks]
+V --> I[Intent reconciliation]
+V --> F[Partial blocked or conflict]

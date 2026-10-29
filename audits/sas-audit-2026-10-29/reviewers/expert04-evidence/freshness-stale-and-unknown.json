@@ -1,0 +1,20 @@
+{
+  "project_hash": "a361e60808a98ef8415e11b85e305793ba902c39810c54cde2cca5d13184c9de",
+  "source_fingerprint": "650eb12b8f272c678b87a917dea99177182b88ab96b8a9f1e1f3ee446212e58b",
+  "evidence": [
+    {
+      "id": "EVID-001",
+      "status": "stale",
+      "path": "a.py",
+      "reason": "hash comparison only; absence from partial scan is not deletion"
+    },
+    {
+      "id": "EVID-002",
+      "status": "unknown",
+      "path": "missing.py",
+      "reason": "hash comparison only; absence from partial scan is not deletion"
+    }
+  ],
+  "artifact_status": "not applicable",
+  "note": "Hashes prove captured identity, not truth, approval or authorization."
+}

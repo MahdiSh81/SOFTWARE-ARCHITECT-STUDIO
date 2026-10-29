@@ -1,0 +1,26 @@
+{
+  "status": "instrument only; no participants interviewed",
+  "target_segment": "hypothesis: technical leads and small engineering teams",
+  "tasks": [
+    "resume an accepted project without losing state",
+    "assess a changed requirement with source evidence",
+    "prepare a handoff and locate unresolved blockers"
+  ],
+  "observation_template": {
+    "participant_alias": "",
+    "task": "",
+    "completed": null,
+    "time_seconds": null,
+    "corrections": null,
+    "trust_issue": "",
+    "counterexample": "",
+    "collaboration_need": ""
+  },
+  "decision_criteria": [
+    "state preservation must be demonstrated",
+    "record repeated friction before adding UI steps",
+    "hosted services need repeated collaboration demand",
+    "do not generalize from a small convenience sample"
+  ],
+  "privacy": "Use aliases, consent and minimal notes. No outreach, analytics upload or interviews are performed by this tool."
+}

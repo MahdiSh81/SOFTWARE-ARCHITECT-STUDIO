@@ -1,0 +1,33 @@
+{
+  "manifest_release": "0.7.1",
+  "manifest_entries": 67,
+  "tracked_scope_files": 84,
+  "missing": [],
+  "hash_mismatches": [
+    "README.md",
+    "tools/artifact_compiler.py",
+    "tools/project_model.py",
+    "tools/revision_store.py",
+    "tools/validation_engine.py",
+    "workbench/index.html"
+  ],
+  "unlisted_tracked_files": [
+    ".github/workflows/ci.yml",
+    "docs/implementation-adapter.md",
+    "docs/integrations.md",
+    "schemas/tool-capability-v1.schema.json",
+    "schemas/verification-receipt-v1.schema.json",
+    "skills/api-data-contracts/SKILL.md",
+    "skills/implementation-planning-and-change/SKILL.md",
+    "skills/repository-intelligence/SKILL.md",
+    "skills/requirements-specification/SKILL.md",
+    "skills/security-review/SKILL.md",
+    "skills/test-debug-verify/SKILL.md",
+    "tests/browser/README.md",
+    "tests/browser/package.json",
+    "tests/browser/playwright.config.cjs",
+    "tests/browser/workbench.spec.cjs",
+    "tests/test_audit_followups.py",
+    "tools/integration_contracts.py"
+  ]
+}

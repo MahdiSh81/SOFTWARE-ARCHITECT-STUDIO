@@ -1,0 +1,101 @@
+test_history_uses_resulting_revision_and_commit_order (test_acceptance.AcceptanceTests.test_history_uses_resulting_revision_and_commit_order) ... ok
+test_inaccessible_subtree_retains_other_validation_results (test_acceptance.AcceptanceTests.test_inaccessible_subtree_retains_other_validation_results) ... ok
+test_init_preserves_existing_revision_directory (test_acceptance.AcceptanceTests.test_init_preserves_existing_revision_directory) ... ok
+test_missing_yaml_parser_is_incomplete_structural_gate (test_acceptance.AcceptanceTests.test_missing_yaml_parser_is_incomplete_structural_gate) ... ok
+test_recovery_does_not_overwrite_a_conflicting_history_record (test_acceptance.AcceptanceTests.test_recovery_does_not_overwrite_a_conflicting_history_record) ... ok
+test_recovery_journal_cannot_escape_project (test_acceptance.AcceptanceTests.test_recovery_journal_cannot_escape_project) ... ok
+test_recovery_rejects_modified_journal_payload (test_acceptance.AcceptanceTests.test_recovery_rejects_modified_journal_payload) ... ok
+test_uppercase_mermaid_extension_is_checked_as_mermaid (test_acceptance.AcceptanceTests.test_uppercase_mermaid_extension_is_checked_as_mermaid) ... ok
+test_uppercase_yaml_extension_is_checked_as_openapi (test_acceptance.AcceptanceTests.test_uppercase_yaml_extension_is_checked_as_openapi) ... ok
+test_verification_references_are_validated_before_coverage (test_acceptance.AcceptanceTests.test_verification_references_are_validated_before_coverage) ... ok
+test_capacity_formulas (test_architect_cli.CapacityTests.test_capacity_formulas) ... ok
+test_fractional_replica_rejected (test_architect_cli.CapacityTests.test_fractional_replica_rejected) ... ok
+test_nan_rejected (test_architect_cli.CapacityTests.test_nan_rejected) ... ok
+test_negative_rejected (test_architect_cli.CapacityTests.test_negative_rejected) ... ok
+test_zero_prices_are_valid (test_architect_cli.CapacityTests.test_zero_prices_are_valid) ... ok
+test_bad_score_rejected (test_architect_cli.ScoringTests.test_bad_score_rejected) ... ok
+test_bad_weights_rejected (test_architect_cli.ScoringTests.test_bad_weights_rejected) ... ok
+test_empty_is_not_evaluated (test_architect_cli.ScoringTests.test_empty_is_not_evaluated) ... ok
+test_partial_coverage_not_zeroed (test_architect_cli.ScoringTests.test_partial_coverage_not_zeroed) ... ok
+test_api_basic (test_architect_cli.ValidationTests.test_api_basic) ... ok
+test_dangling_arrow (test_architect_cli.ValidationTests.test_dangling_arrow) ... ok
+test_json_error (test_architect_cli.ValidationTests.test_json_error) ... ok
+test_valid_mermaid (test_architect_cli.ValidationTests.test_valid_mermaid) ... ok
+test_capability_manifest_rejects_duplicate_operation_ids (test_audit_followups.AuditFollowupTests.test_capability_manifest_rejects_duplicate_operation_ids) ... ok
+test_committed_journal_mismatch_preserves_current_project_and_history (test_audit_followups.AuditFollowupTests.test_committed_journal_mismatch_preserves_current_project_and_history) ... ok
+test_deployment_receipt_requires_authorization_reference (test_audit_followups.AuditFollowupTests.test_deployment_receipt_requires_authorization_reference) ... ok
+test_handoff_generation_manifest_preserves_identity (test_audit_followups.AuditFollowupTests.test_handoff_generation_manifest_preserves_identity) ... ok
+test_handoff_identity_distinguishes_canonical_and_projection_hashes (test_audit_followups.AuditFollowupTests.test_handoff_identity_distinguishes_canonical_and_projection_hashes) ... FAIL
+test_openapi_external_and_nonstring_refs_are_rejected (test_audit_followups.AuditFollowupTests.test_openapi_external_and_nonstring_refs_are_rejected) ... ok
+test_openapi_local_references_resolve_and_escaped_pointer_is_supported (test_audit_followups.AuditFollowupTests.test_openapi_local_references_resolve_and_escaped_pointer_is_supported) ... ok
+test_openapi_path_parameter_reference_is_resolved_semantically (test_audit_followups.AuditFollowupTests.test_openapi_path_parameter_reference_is_resolved_semantically) ... ok
+test_openapi_security_scheme_must_be_declared (test_audit_followups.AuditFollowupTests.test_openapi_security_scheme_must_be_declared) ... ok
+test_openapi_unresolved_local_reference_fails (test_audit_followups.AuditFollowupTests.test_openapi_unresolved_local_reference_fails) ... ok
+test_passed_tool_result_requires_output_identity_and_valid_time (test_audit_followups.AuditFollowupTests.test_passed_tool_result_requires_output_identity_and_valid_time) ... ok
+test_bad_regex_rejected (test_project_workflows.BehavioralTests.test_bad_regex_rejected) ... ok
+test_evaluate_and_baseline (test_project_workflows.BehavioralTests.test_evaluate_and_baseline) ... ok
+test_missing_outputs_are_not_pass (test_project_workflows.BehavioralTests.test_missing_outputs_are_not_pass) ... ok
+test_dangling_ids (test_project_workflows.ProjectTests.test_dangling_ids) ... ok
+test_duplicate_rejected (test_project_workflows.ProjectTests.test_duplicate_rejected) ... ok
+test_handoff_and_validators (test_project_workflows.ProjectTests.test_handoff_and_validators) ... ok
+test_impact_declared_links (test_project_workflows.ProjectTests.test_impact_declared_links) ... ok
+test_links_valid (test_project_workflows.ProjectTests.test_links_valid) ... ok
+test_project_context_version_and_snapshot (test_project_workflows.ProjectTests.test_project_context_version_and_snapshot) ... ok
+test_repo_file_line_evidence_and_drift (test_project_workflows.ProjectTests.test_repo_file_line_evidence_and_drift) ... ok
+test_requirement_ids (test_project_workflows.ProjectTests.test_requirement_ids) ... ok
+test_validating_project_json_checks_links (test_project_workflows.ProjectTests.test_validating_project_json_checks_links) ... ok
+test_actual_full_schema_worker (test_release.ReleaseTests.test_actual_full_schema_worker) ... ok
+test_actual_worker_timeout (test_release.ReleaseTests.test_actual_worker_timeout) ... ok
+test_cache_parity_and_fitness_counterexample (test_release.ReleaseTests.test_cache_parity_and_fitness_counterexample) ... ok
+test_cache_preserves_unrelated_file (test_release.ReleaseTests.test_cache_preserves_unrelated_file) ... ok
+test_change_removed_requirement_is_supported (test_release.ReleaseTests.test_change_removed_requirement_is_supported) ... ok
+test_cli_bad_api_returns_json_not_traceback (test_release.ReleaseTests.test_cli_bad_api_returns_json_not_traceback) ... ok
+test_commit_conflict_preserves_project (test_release.ReleaseTests.test_commit_conflict_preserves_project) ... ok
+test_committed_handoff_survives_projection_failure (test_release.ReleaseTests.test_committed_handoff_survives_projection_failure) ... ok
+test_compiler_preserves_native_contracts_and_ids (test_release.ReleaseTests.test_compiler_preserves_native_contracts_and_ids) ... ok
+test_cross_surface_capacity_cases (test_release.ReleaseTests.test_cross_surface_capacity_cases) ... ok
+test_default_disclosure_redacts_and_private_backup_preserves (test_release.ReleaseTests.test_default_disclosure_redacts_and_private_backup_preserves) ... ok
+test_dry_run_writes_nothing (test_release.ReleaseTests.test_dry_run_writes_nothing) ... ok
+test_evaluation_gate_and_deterministic_length (test_release.ReleaseTests.test_evaluation_gate_and_deterministic_length) ... ok
+test_external_refs_blocked (test_release.ReleaseTests.test_external_refs_blocked) ... ok
+test_head_supported_and_duplicate_rejected_before_write (test_release.ReleaseTests.test_head_supported_and_duplicate_rejected_before_write) ... ok
+test_history_projection_failure_recoverable (test_release.ReleaseTests.test_history_projection_failure_recoverable) ... ok
+test_init_preserves_unrelated_history (test_release.ReleaseTests.test_init_preserves_unrelated_history) ... ok
+test_invalid_shapes_are_diagnostics (test_release.ReleaseTests.test_invalid_shapes_are_diagnostics) ... ok
+test_js_static_import_adapter_ignores_comments_and_templates (test_release.ReleaseTests.test_js_static_import_adapter_ignores_comments_and_templates) ... ok
+test_missing_envelope_rejected (test_release.ReleaseTests.test_missing_envelope_rejected) ... ok
+test_modified_owned_output_not_overwritten (test_release.ReleaseTests.test_modified_owned_output_not_overwritten) ... ok
+test_nonstring_operation_id_is_typed_error (test_release.ReleaseTests.test_nonstring_operation_id_is_typed_error) ... ok
+test_numeric_overflow_nan_and_nonfinite_weights (test_release.ReleaseTests.test_numeric_overflow_nan_and_nonfinite_weights) ... ok
+test_openapi_positive_fields_and_negative_shapes (test_release.ReleaseTests.test_openapi_positive_fields_and_negative_shapes) ... ok
+test_optional_full_gate_cannot_hide_unavailable_tools (test_release.ReleaseTests.test_optional_full_gate_cannot_hide_unavailable_tools) ... ok
+test_pathological_regex_times_out_without_false_pass (test_release.ReleaseTests.test_pathological_regex_times_out_without_false_pass) ... ok
+test_published_schema_agrees_with_fixtures (test_release.ReleaseTests.test_published_schema_agrees_with_fixtures) ... ok
+test_readiness_waiver_not_verification (test_release.ReleaseTests.test_readiness_waiver_not_verification) ... ok
+test_renderer_attempt_not_suppressed_by_heuristic (test_release.ReleaseTests.test_renderer_attempt_not_suppressed_by_heuristic) ... ok
+test_restore_as_new_revision (test_release.ReleaseTests.test_restore_as_new_revision) ... ok
+test_rich_fixture_valid (test_release.ReleaseTests.test_rich_fixture_valid) ... ok
+test_scanner_ci_and_relevant_quota (test_release.ReleaseTests.test_scanner_ci_and_relevant_quota) ... ok
+test_scanner_comments_not_routes (test_release.ReleaseTests.test_scanner_comments_not_routes) ... ok
+test_snapshot_failure_retries_without_double_revision (test_release.ReleaseTests.test_snapshot_failure_retries_without_double_revision) ... ok
+test_special_file_not_opened_and_entry_budget_honest (test_release.ReleaseTests.test_special_file_not_opened_and_entry_budget_honest) ... ok
+test_sqlite_allowlist_and_planning_tools (test_release.ReleaseTests.test_sqlite_allowlist_and_planning_tools) ... ok
+test_stale_owned_adr_removed_and_unowned_note_preserved (test_release.ReleaseTests.test_stale_owned_adr_removed_and_unowned_note_preserved) ... ok
+test_supersede_preserves_predecessor (test_release.ReleaseTests.test_supersede_preserves_predecessor) ... ok
+test_symlink_reads_and_writes_refused (test_release.ReleaseTests.test_symlink_reads_and_writes_refused) ... ok
+test_timeout_retains_other_file_results (test_release.ReleaseTests.test_timeout_retains_other_file_results) ... ok
+test_typed_graph_closure_cycles_order_invariant (test_release.ReleaseTests.test_typed_graph_closure_cycles_order_invariant) ... ok
+test_unordered_associations_do_not_invent_flows (test_release.ReleaseTests.test_unordered_associations_do_not_invent_flows) ... ok
+
+======================================================================
+FAIL: test_handoff_identity_distinguishes_canonical_and_projection_hashes (test_audit_followups.AuditFollowupTests.test_handoff_identity_distinguishes_canonical_and_projection_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/SOFTWARE-ARCHITECT-STUDIO/tests/test_audit_followups.py", line 101, in test_handoff_identity_distinguishes_canonical_and_projection_hashes
+    self.assertNotEqual(identity["canonical_input_hash"], identity["projection_hash"])
+AssertionError: '923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0' == '923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0'
+
+----------------------------------------------------------------------
+Ran 88 tests in 1.499s
+
+FAILED (failures=1)

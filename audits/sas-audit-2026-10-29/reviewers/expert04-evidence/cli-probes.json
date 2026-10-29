@@ -1,0 +1,36 @@
+[
+  {
+    "args": [
+      "fitness",
+      "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/go-rule-project.json",
+      "--scan",
+      "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/go-fitness-scan.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"project_hash\": \"8f0eaf02f1d0236a6edede0e190b16cd65f3c6c4a25fddf87e0d2bfeb6fc1e27\",\n  \"rules\": [\n    {\n      \"counterexamples\": [],\n      \"coverage\": \"complete within supported static scope\",\n      \"id\": \"RULE-001\",\n      \"note\": \"No global compliance inferred from partial static evidence.\",\n      \"status\": \"satisfied-in-scope\"\n    }\n  ],\n  \"source_fingerprint\": \"3f05ccdde5b31c3c386caf3b5eaf497c2046d0920553b92f0accea10765b58f6\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "evidence-delta",
+      "--baseline",
+      "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/delta-a-scan.json",
+      "--current",
+      "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/delta-b-scan.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"added\": [],\n  \"changed\": [\n    \"a.py\"\n  ],\n  \"removed_or_unread\": [],\n  \"scope\": \"observed files only; unread is not deleted\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "repo-scan",
+      "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/fixtures/large-declarations",
+      "--cache",
+      "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/cli-large-cache.json"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "{\n  \"command\": \"repo-scan\",\n  \"error\": {\n    \"code\": \"INPUT_OR_OPERATION_ERROR\",\n    \"message\": \"output byte budget exceeded\",\n    \"type\": \"ValueError\"\n  },\n  \"toolkit_version\": \"0.8.0\"\n}\n"
+  }
+]

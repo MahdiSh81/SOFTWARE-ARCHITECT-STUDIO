@@ -1,0 +1,7 @@
+flowchart LR
+D[Draft] --> V[Validate candidate]
+V --> H[Expected hash and project ID]
+H --> J[Recovery journal]
+J --> C[Atomic canonical replace]
+C --> P[History projection]
+P --> S[Snapshot and export]

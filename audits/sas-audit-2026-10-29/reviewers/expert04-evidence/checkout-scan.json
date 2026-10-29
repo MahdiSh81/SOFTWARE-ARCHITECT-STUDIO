@@ -1,0 +1,3974 @@
+{
+  "adapter": "local-static",
+  "adapter_version": "0.8.0",
+  "bytes_read": 324683,
+  "cache_hits": 0,
+  "captured_at": "2026-10-29T18:31:06.453496+00:00",
+  "claim_class": "OBSERVED STATIC SOURCE",
+  "coverage": "partial",
+  "coverage_note": "Read-only bounded static evidence. Python AST and narrow JS imports/config adapters; no runtime, full dependency or framework-binding guarantee. Local source is not commit-pinned. Snippets off by default.",
+  "dependency_edges": [
+    {
+      "kind": "package-depends-on",
+      "line": 1,
+      "path": "tests/browser/package.json",
+      "sha256": "ed4fb178e8e5c811807b4d486d1d7b592fbb361db5e111ce9a2789e08f9220a5",
+      "target": "@playwright/test"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "copy"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "sys"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "tempfile"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "unittest"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "types"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "unittest.mock"
+    },
+    {
+      "kind": "imports",
+      "line": 9,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "revision_store"
+    },
+    {
+      "kind": "imports",
+      "line": 10,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "validation_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 11,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 12,
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "sys"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "tempfile"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "unittest"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "architect_cli"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "sys"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "tempfile"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "unittest"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 8,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "artifact_compiler"
+    },
+    {
+      "kind": "imports",
+      "line": 9,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 10,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "revision_store"
+    },
+    {
+      "kind": "imports",
+      "line": 11,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 12,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "validation_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 13,
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "integration_contracts"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "sys"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "tempfile"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "unittest"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "project_workflows"
+    },
+    {
+      "kind": "imports",
+      "line": 8,
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "architect_cli"
+    },
+    {
+      "kind": "imports",
+      "line": 9,
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "behavioral_eval"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "copy"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "importlib.util"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "math"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "os"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "subprocess"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "sys"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "tempfile"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "time"
+    },
+    {
+      "kind": "imports",
+      "line": 1,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "unittest"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "unittest.mock"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "revision_store"
+    },
+    {
+      "kind": "imports",
+      "line": 8,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "graph_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 9,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "artifact_compiler"
+    },
+    {
+      "kind": "imports",
+      "line": 10,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "repository_evidence"
+    },
+    {
+      "kind": "imports",
+      "line": 11,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "validation_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 12,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "calculators"
+    },
+    {
+      "kind": "imports",
+      "line": 13,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "behavioral_eval"
+    },
+    {
+      "kind": "imports",
+      "line": 14,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "workflow_tools"
+    },
+    {
+      "kind": "imports",
+      "line": 28,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "jsonschema"
+    },
+    {
+      "kind": "imports",
+      "line": 46,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "revision_store"
+    },
+    {
+      "kind": "imports",
+      "line": 57,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "revision_store"
+    },
+    {
+      "kind": "imports",
+      "line": 108,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "artifact_compiler"
+    },
+    {
+      "kind": "imports",
+      "line": 206,
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "shutil"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "__future__"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "argparse"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "sys"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "time"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "calculators"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 8,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 9,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "revision_store"
+    },
+    {
+      "kind": "imports",
+      "line": 10,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "graph_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 11,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "artifact_compiler"
+    },
+    {
+      "kind": "imports",
+      "line": 12,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "repository_evidence"
+    },
+    {
+      "kind": "imports",
+      "line": 13,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "validation_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 14,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "workflow_tools"
+    },
+    {
+      "kind": "imports",
+      "line": 20,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "yaml"
+    },
+    {
+      "kind": "imports",
+      "line": 83,
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "behavioral_eval"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "__future__"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "copy"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "re"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "uuid"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "datetime"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "validation_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 145,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "revision_store"
+    },
+    {
+      "kind": "imports",
+      "line": 42,
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "disclosure"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "__future__"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "multiprocessing"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "re"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "time"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "resource"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/calculators.py",
+      "sha256": "8ba331a8c5710daed540d64a6102c41089f0c3d988c25a04f41c180d25a933fb",
+      "target": "math"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "argparse"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "io"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "shutil"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "subprocess"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "sys"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "time"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "unittest"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "validation_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/disclosure.py",
+      "sha256": "81fa5d9727d6fb386f5cc11ffb4354e04eca971462d971066c2a1f3aa24d9058",
+      "target": "re"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/graph_engine.py",
+      "sha256": "c3b7c25fa48838c47db8403a0ba693998dd8812cd8aaea8bb22f7c424670bd20",
+      "target": "collections"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/graph_engine.py",
+      "sha256": "c3b7c25fa48838c47db8403a0ba693998dd8812cd8aaea8bb22f7c424670bd20",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/graph_engine.py",
+      "sha256": "c3b7c25fa48838c47db8403a0ba693998dd8812cd8aaea8bb22f7c424670bd20",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/integration_contracts.py",
+      "sha256": "143454f2bf08a3a66871dd4d96f1083a4f162402a5b7b2820880e76652a83410",
+      "target": "__future__"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/integration_contracts.py",
+      "sha256": "143454f2bf08a3a66871dd4d96f1083a4f162402a5b7b2820880e76652a83410",
+      "target": "datetime"
+    },
+    {
+      "kind": "imports",
+      "line": 8,
+      "path": "tools/integration_contracts.py",
+      "sha256": "143454f2bf08a3a66871dd4d96f1083a4f162402a5b7b2820880e76652a83410",
+      "target": "re"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "__future__"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "copy"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "math"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "re"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "uuid"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "revision_store"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "graph_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "artifact_compiler"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "repository_evidence"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "__future__"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "ast"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "copy"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "datetime"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "io"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "os"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "re"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "stat"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "time"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "tokenize"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 15,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "disclosure"
+    },
+    {
+      "kind": "imports",
+      "line": 120,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 153,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 142,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "disclosure"
+    },
+    {
+      "kind": "imports",
+      "line": 59,
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "validation_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "copy"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "datetime"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "re"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "uuid"
+    },
+    {
+      "kind": "imports",
+      "line": 8,
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 9,
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "__future__"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "contextlib"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "hashlib"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "os"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "stat"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "time"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "uuid"
+    },
+    {
+      "kind": "imports",
+      "line": 8,
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "__future__"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "importlib.util"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "importlib.metadata"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "math"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "os"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "re"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "shutil"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "signal"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "subprocess"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "sys"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "tempfile"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "time"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "uuid"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "urllib.parse"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 206,
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "resource"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "sys"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 8,
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "yaml"
+    },
+    {
+      "kind": "imports",
+      "line": 12,
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "openapi_spec_validator"
+    },
+    {
+      "kind": "imports",
+      "line": 13,
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "validation_engine"
+    },
+    {
+      "kind": "imports",
+      "line": 17,
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "jsonschema"
+    },
+    {
+      "kind": "imports",
+      "line": 2,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "__future__"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "copy"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "datetime"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "itertools"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "json"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "sqlite3"
+    },
+    {
+      "kind": "imports",
+      "line": 3,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "uuid"
+    },
+    {
+      "kind": "imports",
+      "line": 4,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "pathlib"
+    },
+    {
+      "kind": "imports",
+      "line": 5,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "project_model"
+    },
+    {
+      "kind": "imports",
+      "line": 6,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "safe_io"
+    },
+    {
+      "kind": "imports",
+      "line": 7,
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "calculators"
+    }
+  ],
+  "discovered_files": 85,
+  "eligible_discovered": 47,
+  "entries_visited": 111,
+  "enumeration_complete": true,
+  "observed_files": [
+    {
+      "bytes": 1539,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "88a06741195a9c997c6408360a5dd0fe66d11ae2769351300eea2dd01239bd20",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 239,
+      "extractor_version": "0.8.0",
+      "kind": "manifest",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tests/browser/package.json",
+      "sha256": "ed4fb178e8e5c811807b4d486d1d7b592fbb361db5e111ce9a2789e08f9220a5",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 127,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": ".app.json",
+      "sha256": "29b2f1afeaa640d1214e4389f254c2a8e3c3ada195fadd92d4a0a6a695c4e086",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 1874,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "d4451f2719c950cebee85b5813f407aefe9e152596b0a59d6ba2319f7598b6c7",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 28146,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "IMPLEMENTATION_STATUS.json",
+      "sha256": "6ca5cb55a782483547a4408f67cc1c1521de2f9f06260bc2f8f5437392805c27",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 1364,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "capabilities.json",
+      "sha256": "63d379873eadcb275a6cddefe184e1e47fa41d053cffc9e3ac6f5b4ed7b8735f",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 3255,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "evals/architecture-cases.json",
+      "sha256": "a4141a9c9912305affed28e75169b73a3e13c4bd851376c6bd16e0866191e851",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 774,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "evals/example-responses.json",
+      "sha256": "06d357733613a3df93708c0b3ae477100853da7aa1a40968621a8a4981c3223a",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 1076,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "evals/semantic-review-rubric.json",
+      "sha256": "6158174ca808f4de5eed228d6d40d080a87653184b9af4906ce4fedb7c44eb2a",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 461,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "examples/api.yaml",
+      "sha256": "a6d68b8bb28a0fd5960bb9aaa7d6ed7ecddd82fdeca1d8d3e7d6b4ce2a7c36a3",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 2639,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "examples/atlas-project/project.json",
+      "sha256": "e7fe387e095e8df5a98a7c6ca6eff0302dc9d66c596cc47589748adb1cf8821d",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 404,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "examples/capacity.json",
+      "sha256": "ac2abde042b8512458fcf45a3c03fb1ff80c9994c565e77034bbec853d79d755",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 252,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "examples/score.json",
+      "sha256": "ed44d5226a0f18f7b56d62ed8526cf24bec50665305a27991729ac9fe5941f2c",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 2029,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "plugin.json",
+      "sha256": "51b2989beb5246748c4c75fd36933a230de166771d69881505fa002f37386f9c",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 15995,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "release/counterexamples-0.7.0.json",
+      "sha256": "6c06d1121afbfdcb5a8c1005bee2c3d22aafc9c6a1a4191ccc51836e90e332be",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 7437,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "release/source-manifest.json",
+      "sha256": "99b919bfc329eb1b8d17083e94939070c74d6d7acfdad07dbed4ba4274487917",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 23008,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "release/verification-0.7.0.json",
+      "sha256": "bc1fd1e3d8f076ac6b0fbe50182efb7030ee6fa69a0672fcf45d5b7b2050dfb6",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 26373,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "release/verification.json",
+      "sha256": "8b864f1b79740a95499d5c004c1afa77f3d6df3e7c3d2211f44eade62b0cd2d2",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 931,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "research/user-observation-template.json",
+      "sha256": "28a22066f3c89756670090ddf7c5a24ac8f1df4bb67dba3aa176e517ca04cb94",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 1241,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "schemas/evidence-v1.schema.json",
+      "sha256": "08cc7204524ec3c417450a1b02ac617a4e2c003e13cf10cdf7d302784a6f36a2",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 8026,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "schemas/project-v2.schema.json",
+      "sha256": "de90b0dabbcad5883752a6edde6c02c9e52193a1e63d9ab41abeccd850b95fdb",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 1753,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "schemas/tool-capability-v1.schema.json",
+      "sha256": "d05486c5b83953a1e9ce733790b98be73bae48186ae803137573efccdb7bc6be",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 3270,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "schemas/verification-receipt-v1.schema.json",
+      "sha256": "ab1a40f2d0c96dd16f68f3a94cba35a203b0f8f6ce040b31c7d6013861e81cfa",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 13986,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tests/fixtures/conformance.json",
+      "sha256": "fc7eff4a8b550fd13627c9aa178e0dad74f47f5ba4f5064abe4ff70aa82aebed",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 5828,
+      "extractor_version": "0.8.0",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tests/fixtures/rich-project.json",
+      "sha256": "3e8b1536df484822138a1bafc8f224f96a907b5b0902f88fff0c788e5e7cc1f1",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 6071,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 3723,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 7876,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 5244,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 17642,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 9970,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 15557,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 6009,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 4162,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/calculators.py",
+      "sha256": "8ba331a8c5710daed540d64a6102c41089f0c3d988c25a04f41c180d25a933fb",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 1634,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 1086,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/disclosure.py",
+      "sha256": "81fa5d9727d6fb386f5cc11ffb4354e04eca971462d971066c2a1f3aa24d9058",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 4371,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/graph_engine.py",
+      "sha256": "c3b7c25fa48838c47db8403a0ba693998dd8812cd8aaea8bb22f7c424670bd20",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 6487,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/integration_contracts.py",
+      "sha256": "143454f2bf08a3a66871dd4d96f1083a4f162402a5b7b2820880e76652a83410",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 7954,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 421,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 15023,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 7747,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 5299,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 22824,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 1128,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 9115,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    },
+    {
+      "bytes": 13313,
+      "extractor_version": "0.8.0",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "path": "workbench/project-core.js",
+      "sha256": "1f186b7e2ef5d20768c3407653f4c6c467a5cf8939d154d5ece7a21cd4d98272",
+      "source": "local",
+      "source_revision": "unpinned local tree"
+    }
+  ],
+  "omissions": [
+    {
+      "path": ".git",
+      "reason": "excluded directory"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "README.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "requirements-validation.lock",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "requirements-validation.txt",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "docs/implementation-adapter.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "docs/integrations.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "examples/architecture.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "examples/containers.mmd",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/api-data-contracts/SKILL.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/implementation-planning-and-change/SKILL.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/repository-intelligence/SKILL.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/requirements-specification/SKILL.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/security-review/SKILL.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/SKILL.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/automated-checks.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/capacity-cost.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/change-impact.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/decisions.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/deliverable-contracts.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/depth-and-audience.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/design-document.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/developer-handoff.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/diagrams.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/evaluation.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/github-review.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/implementation-status.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/project-lifecycle.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/review-checklist.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/scoring.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/specialized-designs.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/software-architecture/references/traceability.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "skills/test-debug-verify/SKILL.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "strategy/deferred-decisions.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "tests/test_workbench.cjs",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "tests/browser/README.md",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "tests/browser/playwright.config.cjs",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "tests/browser/workbench.spec.cjs",
+      "reason": "unsupported extension"
+    },
+    {
+      "path": "workbench/index.html",
+      "reason": "unsupported extension"
+    }
+  ],
+  "root": "/workspace/SOFTWARE-ARCHITECT-STUDIO",
+  "scanned_count": 47,
+  "schema_version": 1,
+  "skipped_files": 39,
+  "source_fingerprint": "b184a9b8f8f6f539f7b5cdab42571f10e4e32691556c7b9e7768861ce51b7c62",
+  "source_ref": "unpinned local tree; resolved commit not inferred",
+  "static_declarations": [
+    {
+      "class": "DECLARED CONFIG; not deployed",
+      "line": 1,
+      "observation": "jobs descriptor",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "88a06741195a9c997c6408360a5dd0fe66d11ae2769351300eea2dd01239bd20",
+      "target": "python-and-core"
+    },
+    {
+      "class": "DECLARED CONFIG; not deployed",
+      "line": 1,
+      "observation": "jobs descriptor",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "88a06741195a9c997c6408360a5dd0fe66d11ae2769351300eea2dd01239bd20",
+      "target": "browser"
+    },
+    {
+      "class": "DECLARED CONFIG",
+      "line": 1,
+      "observation": "devDependencies",
+      "path": "tests/browser/package.json",
+      "sha256": "ed4fb178e8e5c811807b4d486d1d7b592fbb361db5e111ce9a2789e08f9220a5",
+      "target": "@playwright/test"
+    },
+    {
+      "class": "DECLARED CONTRACT",
+      "line": 1,
+      "observation": "paths contract entry",
+      "path": "examples/api.yaml",
+      "sha256": "a6d68b8bb28a0fd5960bb9aaa7d6ed7ecddd82fdeca1d8d3e7d6b4ce2a7c36a3",
+      "target": "/records"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "copy"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "sys"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "tempfile"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "unittest"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "types"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "unittest.mock"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 9,
+      "line": 9,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "revision_store"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 10,
+      "line": 10,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "validation_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 11,
+      "line": 11,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 12,
+      "line": 12,
+      "observation": "parsed Python import",
+      "path": "tests/test_acceptance.py",
+      "sha256": "9659968c6fba67e0acc95c6efac8d7b7c2b08147e3b4adc06d9c747d6e9cd1ba",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "sys"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "tempfile"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "unittest"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tests/test_architect_cli.py",
+      "sha256": "229edad4aaf697663f592935a415ee618816ecc8d49d9ec0ac5e5193dea79b3b",
+      "target": "architect_cli"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "sys"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "tempfile"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "unittest"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 8,
+      "line": 8,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "artifact_compiler"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 9,
+      "line": 9,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 10,
+      "line": 10,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "revision_store"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 11,
+      "line": 11,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 12,
+      "line": 12,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "validation_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 13,
+      "line": 13,
+      "observation": "parsed Python import",
+      "path": "tests/test_audit_followups.py",
+      "sha256": "133c27725dbbd78a6ee2343eeb5e0053e8c46a8e1177ca3190238fe75b4bb586",
+      "target": "integration_contracts"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "sys"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "tempfile"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "unittest"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "project_workflows"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 8,
+      "line": 8,
+      "observation": "parsed Python import",
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "architect_cli"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 9,
+      "line": 9,
+      "observation": "parsed Python import",
+      "path": "tests/test_project_workflows.py",
+      "sha256": "c2ed23e259ca77c048d77d4f5fb3f0ec02d2bae480f249d80955823a4195b47b",
+      "target": "behavioral_eval"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "copy"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "importlib.util"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "math"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "os"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "subprocess"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "sys"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "tempfile"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "time"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 1,
+      "line": 1,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "unittest"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "unittest.mock"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "revision_store"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 8,
+      "line": 8,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "graph_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 9,
+      "line": 9,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "artifact_compiler"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 10,
+      "line": 10,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "repository_evidence"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 11,
+      "line": 11,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "validation_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 12,
+      "line": 12,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "calculators"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 13,
+      "line": 13,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "behavioral_eval"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 14,
+      "line": 14,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "workflow_tools"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 28,
+      "line": 28,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "jsonschema"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 46,
+      "line": 46,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "revision_store"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 57,
+      "line": 57,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "revision_store"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 108,
+      "line": 108,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "artifact_compiler"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 206,
+      "line": 206,
+      "observation": "parsed Python import",
+      "path": "tests/test_release.py",
+      "sha256": "7e343d2f4e522dfee75437ff8951712d71b2588c54f210d030c909a4a33e64a4",
+      "target": "shutil"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "__future__"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "argparse"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "sys"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "time"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "calculators"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 8,
+      "line": 8,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 9,
+      "line": 9,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "revision_store"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 10,
+      "line": 10,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "graph_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 11,
+      "line": 11,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "artifact_compiler"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 12,
+      "line": 12,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "repository_evidence"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 13,
+      "line": 13,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "validation_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 14,
+      "line": 14,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "workflow_tools"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 20,
+      "line": 20,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "yaml"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 83,
+      "line": 83,
+      "observation": "parsed Python import",
+      "path": "tools/architect_cli.py",
+      "sha256": "6e4bf0dced59fdfb7385c033b8d1dc979b07984da07a62bc5e75abf1b1ec7e12",
+      "target": "behavioral_eval"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "__future__"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "copy"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "re"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "uuid"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "datetime"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "validation_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 145,
+      "line": 145,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "revision_store"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 42,
+      "line": 42,
+      "observation": "parsed Python import",
+      "path": "tools/artifact_compiler.py",
+      "sha256": "49c6d28dd742eb02033f4ace51f90561456606fbfe992a6e21c70ea2aeb5f3e0",
+      "target": "disclosure"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "__future__"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "multiprocessing"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "re"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "time"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/behavioral_eval.py",
+      "sha256": "4d5a4ebb43bbefeeee9fa876bebcea87613f785fcbc75cc15b90af7aa2bc6348",
+      "target": "resource"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/calculators.py",
+      "sha256": "8ba331a8c5710daed540d64a6102c41089f0c3d988c25a04f41c180d25a933fb",
+      "target": "math"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "argparse"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "shutil"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "subprocess"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "sys"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "time"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "unittest"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "validation_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/check_release.py",
+      "sha256": "1498179663294d18bc933cc811b2f045381e96c94721d870c0b419f442f4fd47",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/disclosure.py",
+      "sha256": "81fa5d9727d6fb386f5cc11ffb4354e04eca971462d971066c2a1f3aa24d9058",
+      "target": "re"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/graph_engine.py",
+      "sha256": "c3b7c25fa48838c47db8403a0ba693998dd8812cd8aaea8bb22f7c424670bd20",
+      "target": "collections"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/graph_engine.py",
+      "sha256": "c3b7c25fa48838c47db8403a0ba693998dd8812cd8aaea8bb22f7c424670bd20",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/graph_engine.py",
+      "sha256": "c3b7c25fa48838c47db8403a0ba693998dd8812cd8aaea8bb22f7c424670bd20",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/integration_contracts.py",
+      "sha256": "143454f2bf08a3a66871dd4d96f1083a4f162402a5b7b2820880e76652a83410",
+      "target": "__future__"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/integration_contracts.py",
+      "sha256": "143454f2bf08a3a66871dd4d96f1083a4f162402a5b7b2820880e76652a83410",
+      "target": "datetime"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 8,
+      "line": 8,
+      "observation": "parsed Python import",
+      "path": "tools/integration_contracts.py",
+      "sha256": "143454f2bf08a3a66871dd4d96f1083a4f162402a5b7b2820880e76652a83410",
+      "target": "re"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "__future__"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "copy"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "math"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "re"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "uuid"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/project_model.py",
+      "sha256": "c764ce5e5e2a071161eab06008b337a7c393bb1e10914f2ca82961918e1c7396",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "revision_store"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "graph_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "artifact_compiler"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "repository_evidence"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/project_workflows.py",
+      "sha256": "8794929c7afc56bb82a830f632c2e79bad5882e663a6ff6addd512b307631ac2",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "__future__"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "ast"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "copy"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "datetime"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "os"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "re"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "stat"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "time"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "tokenize"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 15,
+      "line": 15,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "disclosure"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 120,
+      "line": 120,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 153,
+      "line": 153,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 142,
+      "line": 142,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "disclosure"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 59,
+      "line": 59,
+      "observation": "parsed Python import",
+      "path": "tools/repository_evidence.py",
+      "sha256": "f04175f5989c5c0e734828bddfad64ba6a7cb2434a30b9ea09c80f23f3871edf",
+      "target": "validation_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "copy"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "datetime"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "re"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "uuid"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 8,
+      "line": 8,
+      "observation": "parsed Python import",
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 9,
+      "line": 9,
+      "observation": "parsed Python import",
+      "path": "tools/revision_store.py",
+      "sha256": "fc2d46fa0b5f6b205290004a25eeb2e01ae85509837d2be57434b9eda1f2eb36",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "__future__"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "contextlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "hashlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "os"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "stat"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "time"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "uuid"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 8,
+      "line": 8,
+      "observation": "parsed Python import",
+      "path": "tools/safe_io.py",
+      "sha256": "159cde2c705088f5cfca31899d40e4ed791b5e4ec08f321fc958fc14f8cfe630",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "__future__"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "importlib.util"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "importlib.metadata"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "math"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "os"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "re"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "shutil"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "signal"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "subprocess"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "sys"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "tempfile"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "time"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "uuid"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "urllib.parse"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 206,
+      "line": 206,
+      "observation": "parsed Python import",
+      "path": "tools/validation_engine.py",
+      "sha256": "12316f03c4531a90eba7534cc5167090a5a25cd73bdf1ea1c10143e7d17c2b65",
+      "target": "resource"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "sys"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 8,
+      "line": 8,
+      "observation": "parsed Python import",
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "yaml"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 12,
+      "line": 12,
+      "observation": "parsed Python import",
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "openapi_spec_validator"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 13,
+      "line": 13,
+      "observation": "parsed Python import",
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "validation_engine"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 17,
+      "line": 17,
+      "observation": "parsed Python import",
+      "path": "tools/validator_worker.py",
+      "sha256": "899f18de704ff0860c0a3cb440da0b887962bcc9fc4edd3e29cde395a7e10297",
+      "target": "jsonschema"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 2,
+      "line": 2,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "__future__"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "copy"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "datetime"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "itertools"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "json"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "sqlite3"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 3,
+      "line": 3,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "uuid"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 4,
+      "line": 4,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "pathlib"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 5,
+      "line": 5,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "project_model"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 6,
+      "line": 6,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "safe_io"
+    },
+    {
+      "class": "PARSED",
+      "end_line": 7,
+      "line": 7,
+      "observation": "parsed Python import",
+      "path": "tools/workflow_tools.py",
+      "sha256": "7d24685d7eba0d7d3c23f06d91c8ba7661701fdb7c1efac476299fb5ecc89b42",
+      "target": "calculators"
+    }
+  ],
+  "stop_reasons": [],
+  "total_candidate_files": 85
+}

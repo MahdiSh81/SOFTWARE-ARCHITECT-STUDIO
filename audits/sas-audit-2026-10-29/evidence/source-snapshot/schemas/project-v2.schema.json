@@ -1,0 +1,381 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:software-architect-studio:project:v2",
+  "title": "Canonical architecture project v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "revision",
+    "name",
+    "constraints",
+    "open_questions",
+    "requirements",
+    "components",
+    "interfaces",
+    "data_models",
+    "decisions",
+    "tasks",
+    "cost_drivers"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2,
+      "type": "integer"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "brief": {
+      "type": "string"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "object"
+        ]
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "object"
+        ]
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/record"
+          },
+          {
+            "properties": {
+              "id": {
+                "pattern": "^(FR|NFR)-[0-9]{3,}$"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "description"
+            ]
+          }
+        ]
+      }
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "data_models": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/record"
+          },
+          {
+            "properties": {
+              "id": {
+                "pattern": "^ADR-[0-9]{3,}$"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "cost_drivers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "verifications": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "fitness_rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "experiments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "from",
+          "to"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{1,63}$"
+          },
+          "kind": {
+            "enum": [
+              "affects",
+              "calls",
+              "consumes",
+              "depends_on",
+              "implements",
+              "owns",
+              "publishes",
+              "reads",
+              "verifies",
+              "writes"
+            ]
+          },
+          "from": {
+            "type": "object",
+            "required": [
+              "group",
+              "id"
+            ],
+            "properties": {
+              "group": {
+                "enum": [
+                  "requirements",
+                  "components",
+                  "interfaces",
+                  "data_models",
+                  "decisions",
+                  "tasks",
+                  "cost_drivers",
+                  "evidence",
+                  "assumptions",
+                  "risks",
+                  "verifications",
+                  "fitness_rules",
+                  "experiments"
+                ]
+              },
+              "id": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          },
+          "to": {
+            "type": "object",
+            "required": [
+              "group",
+              "id"
+            ],
+            "properties": {
+              "group": {
+                "enum": [
+                  "requirements",
+                  "components",
+                  "interfaces",
+                  "data_models",
+                  "decisions",
+                  "tasks",
+                  "cost_drivers",
+                  "evidence",
+                  "assumptions",
+                  "risks",
+                  "verifications",
+                  "fitness_rules",
+                  "experiments"
+                ]
+              },
+              "id": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "preferences": {
+      "type": "object"
+    },
+    "api_contract": {
+      "type": "object"
+    },
+    "asyncapi_contract": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]{1,63}$"
+        },
+        "status": {
+          "enum": [
+            "Accepted",
+            "Draft",
+            "Implemented",
+            "Proposed",
+            "Rejected",
+            "Superseded",
+            "Withdrawn"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "acceptance": {
+          "type": "string"
+        },
+        "decision": {
+          "type": "string"
+        },
+        "consequences": {
+          "type": "string"
+        },
+        "validation": {
+          "type": "string"
+        },
+        "responsibility": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "operation": {
+          "type": "object"
+        },
+        "schema": {
+          "type": "object"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "interfaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "data_models": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cost_drivers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "$comment": "Draft structural contract. Unique IDs/references and finite JSON/5 MiB transport bounds are enforced by semantic validators. Unknown fields are opaque, not trusted instructions."
+}

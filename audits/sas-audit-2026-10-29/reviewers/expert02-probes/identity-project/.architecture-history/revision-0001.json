@@ -1,0 +1,20 @@
+{
+  "brief": "",
+  "components": [],
+  "constraints": [],
+  "cost_drivers": [],
+  "data_models": [],
+  "decisions": [],
+  "interfaces": [],
+  "name": "Project A",
+  "notes": {
+    "source": "user-authored; not production-observed",
+    "status": "draft"
+  },
+  "open_questions": [],
+  "project_id": "f54f570f-8b88-4837-adbf-e7a61093fddc",
+  "requirements": [],
+  "revision": 1,
+  "schema_version": 2,
+  "tasks": []
+}

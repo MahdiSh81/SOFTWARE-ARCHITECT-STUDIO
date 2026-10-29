@@ -1,0 +1,9 @@
+flowchart LR
+  client[Web client] --> edge[Authentication and edge]
+  edge --> app[Modular application API]
+  app --> database[(PostgreSQL)]
+  app --> queue[Task queue]
+  queue --> worker[Background worker]
+  worker --> database
+  app --> telemetry[Metrics and traces]
+  worker --> telemetry

@@ -1,0 +1,26 @@
+[2m[WebServer] [22m127.0.0.1 - - [29/Oct/2026 18:30:35] "GET /workbench/index.html HTTP/1.1" 200 -
+
+Running 4 tests using 2 workers
+
+(node:1591) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1591) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m127.0.0.1 - - [29/Oct/2026 18:30:37] "GET /workbench/index.html HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [29/Oct/2026 18:30:37] "GET /workbench/index.html HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [29/Oct/2026 18:30:37] "GET /workbench/project-core.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [29/Oct/2026 18:30:37] "GET /workbench/project-core.js HTTP/1.1" 200 -
+  ✓  1 tests/browser/workbench.spec.cjs:2:1 › opens workbench and keyboard focus works (679ms)
+[2m[WebServer] [22m127.0.0.1 - - [29/Oct/2026 18:30:37] "GET /workbench/index.html HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [29/Oct/2026 18:30:37] "GET /workbench/project-core.js HTTP/1.1" 200 -
+  ✓  3 tests/browser/workbench.spec.cjs:12:1 › two tabs retain both drafts when writes interleave (334ms)
+  ✓  2 tests/browser/workbench.spec.cjs:7:1 › edits persist in local browser storage (1.2s)
+[2m[WebServer] [22m127.0.0.1 - - [29/Oct/2026 18:30:38] "GET /workbench/index.html HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [29/Oct/2026 18:30:38] "GET /workbench/project-core.js HTTP/1.1" 200 -
+  ✓  4 tests/browser/workbench.spec.cjs:18:1 › project export downloads a portable project (344ms)
+
+  4 passed (2.8s)

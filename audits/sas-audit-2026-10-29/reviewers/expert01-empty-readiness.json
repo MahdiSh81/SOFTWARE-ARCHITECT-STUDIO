@@ -1,0 +1,64 @@
+{
+  "method": "Actual imported Python functions, no filesystem artifact generation",
+  "input": {
+    "schema_version": 2,
+    "revision": 1,
+    "project_id": "17a2d057-f977-48e9-bc4b-70454be17c7e",
+    "name": "Tenant report application",
+    "brief": "Staff need a working application to export only authorized tenant reports. Full specification requested.",
+    "constraints": [],
+    "open_questions": [],
+    "notes": {
+      "status": "draft",
+      "source": "user-authored; not production-observed"
+    },
+    "requirements": [],
+    "components": [],
+    "interfaces": [],
+    "data_models": [],
+    "decisions": [],
+    "tasks": [],
+    "cost_drivers": [],
+    "preferences": {
+      "intent": "handoff",
+      "depth": "Full specification",
+      "audience": "Beginner"
+    }
+  },
+  "readiness": {
+    "profile": "review-ready",
+    "profile_satisfied": true,
+    "blockers": [],
+    "obligations": [],
+    "dimensions": {
+      "structural": "valid draft",
+      "completeness": "specified within supported scope",
+      "correspondence": "checked at compilation for supported records",
+      "human_review": "unknown",
+      "runtime_verification": "not run",
+      "freshness": {
+        "revision": 1,
+        "hash": "f6fc9f2fe554cf28658e75f25c6fdb5cde986c3c26d425a9fb7fa3c417a93d23"
+      }
+    },
+    "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification."
+  },
+  "compiled_readiness": {
+    "profile": "review-ready",
+    "profile_satisfied": true,
+    "blockers": [],
+    "obligations": [],
+    "dimensions": {
+      "structural": "valid draft",
+      "completeness": "specified within supported scope",
+      "correspondence": "checked at compilation for supported records",
+      "human_review": "unknown",
+      "runtime_verification": "not run",
+      "freshness": {
+        "revision": 1,
+        "hash": "f6fc9f2fe554cf28658e75f25c6fdb5cde986c3c26d425a9fb7fa3c417a93d23"
+      }
+    },
+    "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification."
+  }
+}

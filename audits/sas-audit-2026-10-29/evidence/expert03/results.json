@@ -1,0 +1,1265 @@
+{
+  "01-init": {
+    "returncode": 0,
+    "result": {
+      "project_file": "/tmp/sas-expert03-audit/task-tracker/project.json",
+      "revision": 1,
+      "versioned": true,
+      "warning": "Local files require actual backed-up storage/Git for cross-session continuity."
+    }
+  },
+  "02-empty-readiness": {
+    "returncode": 0,
+    "result": {
+      "blockers": [],
+      "dimensions": {
+        "completeness": "specified within supported scope",
+        "correspondence": "checked at compilation for supported records",
+        "freshness": {
+          "hash": "ff68c5d8d9e77151d77fc0c33e7e68633c806b6fe51a0dab0f79c56454296d0f",
+          "revision": 1
+        },
+        "human_review": "unknown",
+        "runtime_verification": "not run",
+        "structural": "valid draft"
+      },
+      "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.",
+      "obligations": [],
+      "profile": "review-ready",
+      "profile_satisfied": true
+    }
+  },
+  "03-change": {
+    "returncode": 0,
+    "result": {
+      "apply_precondition": {
+        "expected_hash": "ff68c5d8d9e77151d77fc0c33e7e68633c806b6fe51a0dab0f79c56454296d0f"
+      },
+      "baseline_hash": "ff68c5d8d9e77151d77fc0c33e7e68633c806b6fe51a0dab0f79c56454296d0f",
+      "baseline_impact": {
+        "affected": {
+          "components": [],
+          "cost_drivers": [],
+          "data_models": [],
+          "decisions": [],
+          "interfaces": [],
+          "tasks": []
+        },
+        "caveat": "Typed declared-link closure with connectivity witnesses, not semantic causality. Missing links and runtime effects require manual review.",
+        "requirements": [],
+        "revision": 1,
+        "source_hash": "ff68c5d8d9e77151d77fc0c33e7e68633c806b6fe51a0dab0f79c56454296d0f",
+        "traceability_coverage": {
+          "components": {
+            "linked_affected": 0,
+            "total": 0
+          },
+          "cost_drivers": {
+            "linked_affected": 0,
+            "total": 0
+          },
+          "data_models": {
+            "linked_affected": 0,
+            "total": 0
+          },
+          "decisions": {
+            "linked_affected": 0,
+            "total": 0
+          },
+          "interfaces": {
+            "linked_affected": 0,
+            "total": 0
+          },
+          "tasks": {
+            "linked_affected": 0,
+            "total": 0
+          }
+        },
+        "unlinked_review_required": [
+          "components",
+          "interfaces",
+          "data_models",
+          "decisions",
+          "tasks",
+          "cost_drivers"
+        ],
+        "unreached_records": []
+      },
+      "baseline_revision": 1,
+      "changed_requirements": [
+        "FR-001",
+        "FR-002"
+      ],
+      "delta": {
+        "assumptions": {
+          "added": [],
+          "changed": [],
+          "removed": []
+        },
+        "components": {
+          "added": [
+            "CMP-CLI",
+            "CMP-STORE"
+          ],
+          "changed": [],
+          "removed": []
+        },
+        "cost_drivers": {
+          "added": [],
+          "changed": [],
+          "removed": []
+        },
+        "data_models": {
+          "added": [
+            "DATA-TASK"
+          ],
+          "changed": [],
+          "removed": []
+        },
+        "decisions": {
+          "added": [
+            "ADR-001"
+          ],
+          "changed": [],
+          "removed": []
+        },
+        "evidence": {
+          "added": [],
+          "changed": [],
+          "removed": []
+        },
+        "experiments": {
+          "added": [],
+          "changed": [],
+          "removed": []
+        },
+        "fitness_rules": {
+          "added": [],
+          "changed": [],
+          "removed": []
+        },
+        "interfaces": {
+          "added": [
+            "IFACE-CLI"
+          ],
+          "changed": [],
+          "removed": []
+        },
+        "metadata_changed": [
+          "brief",
+          "constraints",
+          "open_questions"
+        ],
+        "relationships": {
+          "added": [],
+          "changed": [],
+          "removed": []
+        },
+        "requirements": {
+          "added": [
+            "FR-001",
+            "FR-002"
+          ],
+          "changed": [],
+          "removed": []
+        },
+        "risks": {
+          "added": [],
+          "changed": [],
+          "removed": []
+        },
+        "tasks": {
+          "added": [
+            "TASK-001",
+            "TASK-002"
+          ],
+          "changed": [],
+          "removed": []
+        },
+        "verifications": {
+          "added": [],
+          "changed": [],
+          "removed": []
+        }
+      },
+      "note": "Accepted decisions are not automatically amended. Review the semantic delta before an explicitly requested commit.",
+      "proposed_hash": "4fb4838c04238204422c2a084cccf604b709a88ff2e4fac5914793c7feb8ddfc",
+      "proposed_impact": {
+        "affected": {
+          "components": [
+            {
+              "id": "CMP-CLI",
+              "name": "CLI",
+              "status": "review candidate; change not proven necessary",
+              "why": [
+                "declared requirements association"
+              ],
+              "witness_path": [
+                {
+                  "evidence_status": "DECLARED",
+                  "from": {
+                    "group": "requirements",
+                    "id": "FR-001"
+                  },
+                  "relation": "declared requirements association",
+                  "to": {
+                    "group": "components",
+                    "id": "CMP-CLI"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "CMP-STORE",
+              "name": "Task Store",
+              "status": "review candidate; change not proven necessary",
+              "why": [
+                "declared requirements association"
+              ],
+              "witness_path": [
+                {
+                  "evidence_status": "DECLARED",
+                  "from": {
+                    "group": "requirements",
+                    "id": "FR-001"
+                  },
+                  "relation": "declared requirements association",
+                  "to": {
+                    "group": "components",
+                    "id": "CMP-STORE"
+                  }
+                }
+              ]
+            }
+          ],
+          "cost_drivers": [],
+          "data_models": [
+            {
+              "id": "DATA-TASK",
+              "name": "Task",
+              "status": "review candidate; change not proven necessary",
+              "why": [
+                "declared requirements association"
+              ],
+              "witness_path": [
+                {
+                  "evidence_status": "DECLARED",
+                  "from": {
+                    "group": "requirements",
+                    "id": "FR-001"
+                  },
+                  "relation": "declared requirements association",
+                  "to": {
+                    "group": "data_models",
+                    "id": "DATA-TASK"
+                  }
+                }
+              ]
+            }
+          ],
+          "decisions": [
+            {
+              "id": "ADR-001",
+              "name": "Standard library local CLI",
+              "status": "review candidate; change not proven necessary",
+              "why": [
+                "declared requirements association"
+              ],
+              "witness_path": [
+                {
+                  "evidence_status": "DECLARED",
+                  "from": {
+                    "group": "requirements",
+                    "id": "FR-001"
+                  },
+                  "relation": "declared requirements association",
+                  "to": {
+                    "group": "decisions",
+                    "id": "ADR-001"
+                  }
+                }
+              ]
+            }
+          ],
+          "interfaces": [
+            {
+              "id": "IFACE-CLI",
+              "name": "Command interface",
+              "status": "review candidate; change not proven necessary",
+              "why": [
+                "declared requirements association"
+              ],
+              "witness_path": [
+                {
+                  "evidence_status": "DECLARED",
+                  "from": {
+                    "group": "requirements",
+                    "id": "FR-001"
+                  },
+                  "relation": "declared requirements association",
+                  "to": {
+                    "group": "interfaces",
+                    "id": "IFACE-CLI"
+                  }
+                }
+              ]
+            }
+          ],
+          "tasks": [
+            {
+              "id": "TASK-001",
+              "name": "Implement persistent task store",
+              "status": "review candidate; change not proven necessary",
+              "why": [
+                "declared requirements association"
+              ],
+              "witness_path": [
+                {
+                  "evidence_status": "DECLARED",
+                  "from": {
+                    "group": "requirements",
+                    "id": "FR-001"
+                  },
+                  "relation": "declared requirements association",
+                  "to": {
+                    "group": "tasks",
+                    "id": "TASK-001"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "TASK-002",
+              "name": "Implement CLI and integration tests",
+              "status": "review candidate; change not proven necessary",
+              "why": [
+                "declared requirements association"
+              ],
+              "witness_path": [
+                {
+                  "evidence_status": "DECLARED",
+                  "from": {
+                    "group": "requirements",
+                    "id": "FR-001"
+                  },
+                  "relation": "declared requirements association",
+                  "to": {
+                    "group": "tasks",
+                    "id": "TASK-002"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "caveat": "Typed declared-link closure with connectivity witnesses, not semantic causality. Missing links and runtime effects require manual review.",
+        "requirements": [
+          "FR-001",
+          "FR-002"
+        ],
+        "revision": 1,
+        "source_hash": "4fb4838c04238204422c2a084cccf604b709a88ff2e4fac5914793c7feb8ddfc",
+        "traceability_coverage": {
+          "components": {
+            "linked_affected": 2,
+            "total": 2
+          },
+          "cost_drivers": {
+            "linked_affected": 0,
+            "total": 0
+          },
+          "data_models": {
+            "linked_affected": 1,
+            "total": 1
+          },
+          "decisions": {
+            "linked_affected": 1,
+            "total": 1
+          },
+          "interfaces": {
+            "linked_affected": 1,
+            "total": 1
+          },
+          "tasks": {
+            "linked_affected": 2,
+            "total": 2
+          }
+        },
+        "unlinked_review_required": [
+          "cost_drivers"
+        ],
+        "unreached_records": []
+      },
+      "proposed_revision": 1,
+      "review_obligations": [
+        "API compatibility and consumers",
+        "data migration/retention/backups",
+        "authorization/privacy",
+        "NFR/cost assumptions",
+        "applicable validation and rollback/forward-fix"
+      ],
+      "status": "PROPOSED; not applied"
+    }
+  },
+  "04-commit": {
+    "returncode": 0,
+    "result": {
+      "message": "Record auditor-authored proposed implementation plan",
+      "next_revision": 2,
+      "note": "Local single-project commit; Git/backups required for durable shared history.",
+      "operation_id": "5adfd7d87c05449fa0fd3b8b7f36e248",
+      "saved_revision": 1,
+      "snapshot_file": "/tmp/sas-expert03-audit/task-tracker/.architecture-history/revision-0001.json",
+      "source_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+      "status": "committed"
+    }
+  },
+  "05-readiness": {
+    "returncode": 0,
+    "result": {
+      "blockers": [],
+      "dimensions": {
+        "completeness": "specified within supported scope",
+        "correspondence": "checked at compilation for supported records",
+        "freshness": {
+          "hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+          "revision": 2
+        },
+        "human_review": "unknown",
+        "runtime_verification": "not run",
+        "structural": "valid draft"
+      },
+      "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.",
+      "obligations": [],
+      "profile": "review-ready",
+      "profile_satisfied": true
+    }
+  },
+  "06-dry-handoff": {
+    "returncode": 0,
+    "result": {
+      "coverage": {
+        "all_interfaces": "contracts.json",
+        "components": {
+          "CMP-CLI": "containers.mmd",
+          "CMP-STORE": "containers.mmd"
+        },
+        "http_interfaces": {},
+        "tasks": "tasks.json"
+      },
+      "diagnostics": [
+        {
+          "preserved_in": "contracts.json",
+          "record": "IFACE-CLI",
+          "status": "not applicable to HTTP projection"
+        }
+      ],
+      "disclosure": "known engineering fields; opaque extensions/history omitted; obvious sensitive values redacted, detection incomplete; review before sharing",
+      "generated": [
+        "AGENTS.md",
+        "adrs/ADR-001.md",
+        "api.json",
+        "architecture.md",
+        "containers.mmd",
+        "contracts.json",
+        "data-model.md",
+        "data-schemas.json",
+        "diagram-map.json",
+        "engineering-tasks.json",
+        "handoff-report.json",
+        "implementation-tasks.md",
+        "project.json",
+        "relationships.json",
+        "requirements.md",
+        "risk-register.json",
+        "security.md",
+        "tasks.json",
+        "traceability.md"
+      ],
+      "identity": {
+        "artifact_hash_scope": "all generated files except handoff-report.json, which is excluded to avoid a self-referential hash",
+        "artifact_hashes": {
+          "AGENTS.md": "d287797c4fc8bb277a265f8793921241029ef1a0125f38c383ce51e6c5e84f81",
+          "adrs/ADR-001.md": "090a4ec23081d6449884f0e8459edf16f723bc38a305775b3213785a72d6b49c",
+          "api.json": "66878203134d9f91763ef2e07a604041c2c157e257cb071385e9cb37aaf09d1c",
+          "architecture.md": "b9916d8963f1055a490ee1eca10881f80725a03be41eac1ad1b1139134166fcc",
+          "containers.mmd": "50b5021ed52445f8222e70b6601ef88743ab8d1e1420825109f8ac2aae3de465",
+          "contracts.json": "5881517210343100d6b5321fb5e5b228dc9c7c9f10ed6b6063cb2754dac3ede5",
+          "data-model.md": "367d396a7d8fd039a87445a9edfaa2f23ad99d50da90cb6e362a0c5b7938cb8a",
+          "data-schemas.json": "504fc0551987c59c30abc88c9e4268f53bf5fe972237a31212e441f44d974d93",
+          "diagram-map.json": "ff5726af2e8120e6d3733d834a1a9abb2138594b86be0481d6e1d517e4a284ae",
+          "engineering-tasks.json": "4f829f70b54820633aed42bb20cf9ab983b79f0d0d767548ceaf2f63874e3b09",
+          "implementation-tasks.md": "06589220ee573247f3a8fa2b680a6da6410816f09ada2af160781f559670fc1a",
+          "project.json": "3ffc25b316c30d529486c330d31f1c161cfabebdcb3158369eb75387af0fc6fe",
+          "relationships.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "requirements.md": "f812f027cf6a192dc33a09a631a547492e0824e33a4d1186b959ee48f424a024",
+          "risk-register.json": "4c0775283d7ebb093e99eeb0848bbf7c1ecfb5819122f84d17ddbcd0759875a8",
+          "security.md": "5db6b1695371d606e2884f81d9ceba42959102a8aca0f040e29fd0bb0444636c",
+          "tasks.json": "11ecadf373e9b41c822f1c6a2e80328e61d4264e80ef1b9e26844b866262b569",
+          "traceability.md": "b34252f10487526eedeb21c12d837910a9bbb86691abbcc5211b01b3381cc45b"
+        },
+        "canonical_input_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+        "generator_version": "0.8.0",
+        "projection_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+        "redaction_report": {
+          "detection": "pattern-based and incomplete; review every export before sharing",
+          "paths_changed": [],
+          "private_context_included": false
+        },
+        "schema_version": 1,
+        "source_revision": 2
+      },
+      "note": "Generated proposals; actual render/schema checks, human review and runtime verification are independent.",
+      "output": "/tmp/sas-expert03-audit/handoff",
+      "profile": "review-ready",
+      "readiness": {
+        "blockers": [],
+        "dimensions": {
+          "completeness": "specified within supported scope",
+          "correspondence": "checked at compilation for supported records",
+          "freshness": {
+            "hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+            "revision": 2
+          },
+          "human_review": "unknown",
+          "runtime_verification": "not run",
+          "structural": "valid draft"
+        },
+        "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.",
+        "obligations": [],
+        "profile": "review-ready",
+        "profile_satisfied": true
+      },
+      "redactions": [],
+      "revision": 2,
+      "source_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+      "source_hash_compatibility": "legacy alias of canonical_input_hash; use identity fields for new consumers",
+      "status": "planned; no files written",
+      "toolkit_version": "0.8.0",
+      "unresolved": []
+    }
+  },
+  "07-handoff": {
+    "returncode": 0,
+    "result": {
+      "coverage": {
+        "all_interfaces": "contracts.json",
+        "components": {
+          "CMP-CLI": "containers.mmd",
+          "CMP-STORE": "containers.mmd"
+        },
+        "http_interfaces": {},
+        "tasks": "tasks.json"
+      },
+      "diagnostics": [
+        {
+          "preserved_in": "contracts.json",
+          "record": "IFACE-CLI",
+          "status": "not applicable to HTTP projection"
+        }
+      ],
+      "disclosure": "known engineering fields; opaque extensions/history omitted; obvious sensitive values redacted, detection incomplete; review before sharing",
+      "generated": [
+        "AGENTS.md",
+        "adrs/ADR-001.md",
+        "api.json",
+        "architecture.md",
+        "containers.mmd",
+        "contracts.json",
+        "data-model.md",
+        "data-schemas.json",
+        "diagram-map.json",
+        "engineering-tasks.json",
+        "handoff-report.json",
+        "implementation-tasks.md",
+        "project.json",
+        "relationships.json",
+        "requirements.md",
+        "risk-register.json",
+        "security.md",
+        "tasks.json",
+        "traceability.md"
+      ],
+      "identity": {
+        "artifact_hash_scope": "all generated files except handoff-report.json, which is excluded to avoid a self-referential hash",
+        "artifact_hashes": {
+          "AGENTS.md": "d287797c4fc8bb277a265f8793921241029ef1a0125f38c383ce51e6c5e84f81",
+          "adrs/ADR-001.md": "090a4ec23081d6449884f0e8459edf16f723bc38a305775b3213785a72d6b49c",
+          "api.json": "66878203134d9f91763ef2e07a604041c2c157e257cb071385e9cb37aaf09d1c",
+          "architecture.md": "b9916d8963f1055a490ee1eca10881f80725a03be41eac1ad1b1139134166fcc",
+          "containers.mmd": "50b5021ed52445f8222e70b6601ef88743ab8d1e1420825109f8ac2aae3de465",
+          "contracts.json": "5881517210343100d6b5321fb5e5b228dc9c7c9f10ed6b6063cb2754dac3ede5",
+          "data-model.md": "367d396a7d8fd039a87445a9edfaa2f23ad99d50da90cb6e362a0c5b7938cb8a",
+          "data-schemas.json": "504fc0551987c59c30abc88c9e4268f53bf5fe972237a31212e441f44d974d93",
+          "diagram-map.json": "ff5726af2e8120e6d3733d834a1a9abb2138594b86be0481d6e1d517e4a284ae",
+          "engineering-tasks.json": "4f829f70b54820633aed42bb20cf9ab983b79f0d0d767548ceaf2f63874e3b09",
+          "implementation-tasks.md": "06589220ee573247f3a8fa2b680a6da6410816f09ada2af160781f559670fc1a",
+          "project.json": "3ffc25b316c30d529486c330d31f1c161cfabebdcb3158369eb75387af0fc6fe",
+          "relationships.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "requirements.md": "f812f027cf6a192dc33a09a631a547492e0824e33a4d1186b959ee48f424a024",
+          "risk-register.json": "4c0775283d7ebb093e99eeb0848bbf7c1ecfb5819122f84d17ddbcd0759875a8",
+          "security.md": "5db6b1695371d606e2884f81d9ceba42959102a8aca0f040e29fd0bb0444636c",
+          "tasks.json": "11ecadf373e9b41c822f1c6a2e80328e61d4264e80ef1b9e26844b866262b569",
+          "traceability.md": "b34252f10487526eedeb21c12d837910a9bbb86691abbcc5211b01b3381cc45b"
+        },
+        "canonical_input_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+        "generator_version": "0.8.0",
+        "projection_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+        "redaction_report": {
+          "detection": "pattern-based and incomplete; review every export before sharing",
+          "paths_changed": [],
+          "private_context_included": false
+        },
+        "schema_version": 1,
+        "source_revision": 2
+      },
+      "legacy_projections": "complete",
+      "manifest": "/tmp/sas-expert03-audit/handoff/.architecture-generations/1b07b9f7adbd4bfe8ed1e5e67428c4af/generation-manifest.json",
+      "note": "Generated proposals; actual render/schema checks, human review and runtime verification are independent.",
+      "profile": "review-ready",
+      "published_generation": "1b07b9f7adbd4bfe8ed1e5e67428c4af",
+      "read_path": "/tmp/sas-expert03-audit/handoff/.architecture-generations/1b07b9f7adbd4bfe8ed1e5e67428c4af",
+      "readiness": {
+        "blockers": [],
+        "dimensions": {
+          "completeness": "specified within supported scope",
+          "correspondence": "checked at compilation for supported records",
+          "freshness": {
+            "hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+            "revision": 2
+          },
+          "human_review": "unknown",
+          "runtime_verification": "not run",
+          "structural": "valid draft"
+        },
+        "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.",
+        "obligations": [],
+        "profile": "review-ready",
+        "profile_satisfied": true
+      },
+      "redactions": [],
+      "revision": 2,
+      "source_hash": "0be8a325e1056b811d8b5ea99819d7b44490ede7b23371c280fe69fd821a28c3",
+      "source_hash_compatibility": "legacy alias of canonical_input_hash; use identity fields for new consumers",
+      "toolkit_version": "0.8.0",
+      "unresolved": []
+    }
+  },
+  "08-validate": {
+    "returncode": 0,
+    "result": {
+      "bytes_read": 16692,
+      "checks": [
+        {
+          "check": "OpenAPI basic structure",
+          "detail": "",
+          "file": "api.json",
+          "input_sha256": "66878203134d9f91763ef2e07a604041c2c157e257cb071385e9cb37aaf09d1c",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "OpenAPI full schema",
+          "detail": "not requested or basic gate failed",
+          "file": "api.json",
+          "input_sha256": null,
+          "method": "built-in",
+          "status": "skipped",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "Mermaid heuristic",
+          "detail": "",
+          "file": "containers.mmd",
+          "input_sha256": "50b5021ed52445f8222e70b6601ef88743ab8d1e1420825109f8ac2aae3de465",
+          "method": "heuristic only",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "Mermaid renderer",
+          "detail": "rendering not requested",
+          "file": "containers.mmd",
+          "input_sha256": null,
+          "method": "built-in",
+          "status": "skipped",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "contracts.json",
+          "input_sha256": "5881517210343100d6b5321fb5e5b228dc9c7c9f10ed6b6063cb2754dac3ede5",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "data-schemas.json",
+          "input_sha256": "504fc0551987c59c30abc88c9e4268f53bf5fe972237a31212e441f44d974d93",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "diagram-map.json",
+          "input_sha256": "ff5726af2e8120e6d3733d834a1a9abb2138594b86be0481d6e1d517e4a284ae",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "engineering-tasks.json",
+          "input_sha256": "4f829f70b54820633aed42bb20cf9ab983b79f0d0d767548ceaf2f63874e3b09",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "generation-manifest.json",
+          "input_sha256": "917717d3bdd4df937c2f7fe30027729c825d1a111a74dcd40e78f623e59fb26d",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "handoff-report.json",
+          "input_sha256": "54f970b574310765c45d149cd3e4f9418651387879cb69c8b9a5f2b6936bf369",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "Project traceability integrity",
+          "detail": "",
+          "file": "project.json",
+          "input_sha256": "3ffc25b316c30d529486c330d31f1c161cfabebdcb3158369eb75387af0fc6fe",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "relationships.json",
+          "input_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "risk-register.json",
+          "input_sha256": "4c0775283d7ebb093e99eeb0848bbf7c1ecfb5819122f84d17ddbcd0759875a8",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "tasks.json",
+          "input_sha256": "11ecadf373e9b41c822f1c6a2e80328e61d4264e80ef1b9e26844b866262b569",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "Contract correspondence",
+          "detail": "supported operation coverage only",
+          "file": "project.json \u2194 api.json",
+          "input_sha256": null,
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        }
+      ],
+      "checks_run": [
+        {
+          "check": "OpenAPI basic structure",
+          "file": "api.json"
+        },
+        {
+          "check": "Mermaid heuristic",
+          "file": "containers.mmd"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "contracts.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "data-schemas.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "diagram-map.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "engineering-tasks.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "generation-manifest.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "handoff-report.json"
+        },
+        {
+          "check": "Project traceability integrity",
+          "file": "project.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "relationships.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "risk-register.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "tasks.json"
+        },
+        {
+          "check": "Contract correspondence",
+          "file": "project.json \u2194 api.json"
+        }
+      ],
+      "duration_seconds": 0.002689,
+      "files_checked": 12,
+      "gate": "structural",
+      "issues": [],
+      "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+      "ok": true,
+      "policy_ok": true,
+      "run_id": "2a6644016e6a4fb0b81185f6a40b0fdb",
+      "skipped": [
+        "api.json: not requested or basic gate failed",
+        "containers.mmd: rendering not requested"
+      ],
+      "stop_reasons": [],
+      "toolkit_version": "0.8.0",
+      "traceability_coverage": {
+        "project.json": {
+          "functional_requirements": 2,
+          "nfr_requirements": 0,
+          "nfr_without_passed_verification": [],
+          "review_note": "Links and plans do not prove satisfaction; applicability and measured verification require review.",
+          "without_declared_component": [],
+          "without_declared_interface": [],
+          "without_declared_task": []
+        }
+      },
+      "verified": [
+        {
+          "file": "api.json",
+          "gate": "OpenAPI basic structure"
+        },
+        {
+          "file": "containers.mmd",
+          "gate": "Mermaid heuristic"
+        },
+        {
+          "file": "contracts.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "data-schemas.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "diagram-map.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "engineering-tasks.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "generation-manifest.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "handoff-report.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "project.json",
+          "gate": "Project traceability integrity"
+        },
+        {
+          "file": "relationships.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "risk-register.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "tasks.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "project.json \u2194 api.json",
+          "gate": "Contract correspondence"
+        }
+      ],
+      "warnings": []
+    }
+  },
+  "09-validate-full": {
+    "returncode": 1,
+    "result": {
+      "bytes_read": 16692,
+      "checks": [
+        {
+          "check": "OpenAPI basic structure",
+          "detail": "",
+          "file": "api.json",
+          "input_sha256": "66878203134d9f91763ef2e07a604041c2c157e257cb071385e9cb37aaf09d1c",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "OpenAPI full schema",
+          "detail": "{\"status\": \"passed\"}\n",
+          "file": "api.json",
+          "input_sha256": "66878203134d9f91763ef2e07a604041c2c157e257cb071385e9cb37aaf09d1c",
+          "method": "openapi-spec-validator 0.7.2",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "Mermaid heuristic",
+          "detail": "",
+          "file": "containers.mmd",
+          "input_sha256": "50b5021ed52445f8222e70b6601ef88743ab8d1e1420825109f8ac2aae3de465",
+          "method": "heuristic only",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "Mermaid renderer",
+          "detail": "mmdc not installed",
+          "file": "containers.mmd",
+          "input_sha256": null,
+          "method": "built-in",
+          "status": "skipped",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "contracts.json",
+          "input_sha256": "5881517210343100d6b5321fb5e5b228dc9c7c9f10ed6b6063cb2754dac3ede5",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "data-schemas.json",
+          "input_sha256": "504fc0551987c59c30abc88c9e4268f53bf5fe972237a31212e441f44d974d93",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "diagram-map.json",
+          "input_sha256": "ff5726af2e8120e6d3733d834a1a9abb2138594b86be0481d6e1d517e4a284ae",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "engineering-tasks.json",
+          "input_sha256": "4f829f70b54820633aed42bb20cf9ab983b79f0d0d767548ceaf2f63874e3b09",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "generation-manifest.json",
+          "input_sha256": "917717d3bdd4df937c2f7fe30027729c825d1a111a74dcd40e78f623e59fb26d",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "handoff-report.json",
+          "input_sha256": "54f970b574310765c45d149cd3e4f9418651387879cb69c8b9a5f2b6936bf369",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "Project traceability integrity",
+          "detail": "",
+          "file": "project.json",
+          "input_sha256": "3ffc25b316c30d529486c330d31f1c161cfabebdcb3158369eb75387af0fc6fe",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "Project JSON Schema",
+          "detail": "{\"status\": \"passed\"}\n",
+          "file": "project.json",
+          "input_sha256": "3ffc25b316c30d529486c330d31f1c161cfabebdcb3158369eb75387af0fc6fe",
+          "method": "jsonschema 4.23.0",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "relationships.json",
+          "input_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "risk-register.json",
+          "input_sha256": "4c0775283d7ebb093e99eeb0848bbf7c1ecfb5819122f84d17ddbcd0759875a8",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "detail": "",
+          "file": "tasks.json",
+          "input_sha256": "11ecadf373e9b41c822f1c6a2e80328e61d4264e80ef1b9e26844b866262b569",
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        },
+        {
+          "check": "Contract correspondence",
+          "detail": "supported operation coverage only",
+          "file": "project.json \u2194 api.json",
+          "input_sha256": null,
+          "method": "built-in",
+          "status": "passed",
+          "toolkit_version": "0.8.0"
+        }
+      ],
+      "checks_run": [
+        {
+          "check": "OpenAPI basic structure",
+          "file": "api.json"
+        },
+        {
+          "check": "OpenAPI full schema",
+          "file": "api.json"
+        },
+        {
+          "check": "Mermaid heuristic",
+          "file": "containers.mmd"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "contracts.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "data-schemas.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "diagram-map.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "engineering-tasks.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "generation-manifest.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "handoff-report.json"
+        },
+        {
+          "check": "Project traceability integrity",
+          "file": "project.json"
+        },
+        {
+          "check": "Project JSON Schema",
+          "file": "project.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "relationships.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "risk-register.json"
+        },
+        {
+          "check": "JSON/YAML syntax",
+          "file": "tasks.json"
+        },
+        {
+          "check": "Contract correspondence",
+          "file": "project.json \u2194 api.json"
+        }
+      ],
+      "duration_seconds": 0.340984,
+      "files_checked": 12,
+      "gate": "full",
+      "issues": [],
+      "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+      "ok": true,
+      "policy_ok": false,
+      "run_id": "66d640e923f945b692ceec386c34a4ac",
+      "skipped": [
+        "containers.mmd: mmdc not installed"
+      ],
+      "stop_reasons": [],
+      "toolkit_version": "0.8.0",
+      "traceability_coverage": {
+        "project.json": {
+          "functional_requirements": 2,
+          "nfr_requirements": 0,
+          "nfr_without_passed_verification": [],
+          "review_note": "Links and plans do not prove satisfaction; applicability and measured verification require review.",
+          "without_declared_component": [],
+          "without_declared_interface": [],
+          "without_declared_task": []
+        }
+      },
+      "verified": [
+        {
+          "file": "api.json",
+          "gate": "OpenAPI basic structure"
+        },
+        {
+          "file": "api.json",
+          "gate": "OpenAPI full schema"
+        },
+        {
+          "file": "containers.mmd",
+          "gate": "Mermaid heuristic"
+        },
+        {
+          "file": "contracts.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "data-schemas.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "diagram-map.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "engineering-tasks.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "generation-manifest.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "handoff-report.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "project.json",
+          "gate": "Project traceability integrity"
+        },
+        {
+          "file": "project.json",
+          "gate": "Project JSON Schema"
+        },
+        {
+          "file": "relationships.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "risk-register.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "tasks.json",
+          "gate": "JSON/YAML syntax"
+        },
+        {
+          "file": "project.json \u2194 api.json",
+          "gate": "Contract correspondence"
+        }
+      ],
+      "warnings": []
+    }
+  },
+  "10-data-check": {
+    "returncode": 0,
+    "result": {
+      "dialect": "sqlite",
+      "schema_statements": [
+        "CREATE TABLE \"tasks\" (\"id\" INTEGER PRIMARY KEY, \"title\" TEXT NOT NULL, \"done\" INTEGER NOT NULL);"
+      ],
+      "scope": "generated allowlisted CREATE TABLE in memory; arbitrary migrations/data/runtime not tested",
+      "skipped": [],
+      "status": "passed"
+    }
+  },
+  "11-requirements-only-readiness": {
+    "returncode": 0,
+    "result": {
+      "blockers": [],
+      "dimensions": {
+        "completeness": "specified within supported scope",
+        "correspondence": "checked at compilation for supported records",
+        "freshness": {
+          "hash": "5c7d49cb5ac63dabf11cae082a224a7b1de6f83a4490e05a4922f9edc13cab16",
+          "revision": 2
+        },
+        "human_review": "unknown",
+        "runtime_verification": "not run",
+        "structural": "valid draft"
+      },
+      "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.",
+      "obligations": [],
+      "profile": "review-ready",
+      "profile_satisfied": true
+    }
+  },
+  "12-null-output-receipt": {
+    "jsonschema_errors": [],
+    "python_errors": [
+      "passed tool result requires output_hash as SHA-256 identity"
+    ]
+  }
+}

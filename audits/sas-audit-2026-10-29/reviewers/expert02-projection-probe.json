@@ -1,0 +1,43 @@
+{
+  "canonical_hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0",
+  "declared_projection_hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0",
+  "exported_project_hash": "7ef6716fb73bf0e53d2901ee2af2607ad3899f96ffa70f0e6774f16a061f8808",
+  "canonical_keys": [
+    "api_contract",
+    "brief",
+    "components",
+    "constraints",
+    "cost_drivers",
+    "custom_extension",
+    "data_models",
+    "decisions",
+    "interfaces",
+    "name",
+    "notes",
+    "open_questions",
+    "relationships",
+    "requirements",
+    "revision",
+    "schema_version",
+    "tasks"
+  ],
+  "exported_project_keys": [
+    "brief",
+    "components",
+    "constraints",
+    "cost_drivers",
+    "data_models",
+    "decisions",
+    "interfaces",
+    "name",
+    "notes",
+    "open_questions",
+    "relationships",
+    "requirements",
+    "revision",
+    "schema_version",
+    "tasks"
+  ],
+  "extension_retained_in_export": false,
+  "reported_redactions": []
+}

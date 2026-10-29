@@ -1,0 +1,12 @@
+{
+  "adapter_version": "0.8.0",
+  "cache_schema": 1,
+  "entries": {
+    "broken.py:6c18557294200259dcfed920dd6738a5d2f51c4b5baa489bfd9d021c7de903ee": {
+      "edges": [],
+      "items": []
+    }
+  },
+  "retention": "local opt-in; delete this file to purge extraction cache",
+  "root": "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/fixtures/parse-cache"
+}

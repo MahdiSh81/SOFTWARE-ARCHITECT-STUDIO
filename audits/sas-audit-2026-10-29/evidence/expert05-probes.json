@@ -1,0 +1,1482 @@
+{
+  "environment": {
+    "toolkit_version": "0.8.0",
+    "python": "3.12.14",
+    "platform": "linux",
+    "packages": {
+      "PyYAML": "6.0.3",
+      "jsonschema": "4.23.0",
+      "openapi-spec-validator": "0.7.2"
+    },
+    "mmdc": null,
+    "io": {
+      "regular_file_reads": true,
+      "bounded_reads": true,
+      "posix_descriptor_no_follow": true,
+      "writer_concurrency": "cooperating local writers under exclusive lock",
+      "power_loss_durability": "fsync attempted; filesystem/platform durability not certified",
+      "non_posix": "preflight only; hostile path-race protection not claimed"
+    },
+    "network": "no automatic installs/fetching; host connector capabilities unprobed",
+    "host_budgets": {
+      "tokens": "unsupported",
+      "agent_count": "advisory; host must mediate",
+      "local_file_bytes": "enforced",
+      "subprocess_deadline": "enforced",
+      "external_tool_authority": "host enforcement required"
+    }
+  },
+  "source_commit": "83812e1d31c17ed857be8d2fb5c98126a8ccb5c8",
+  "probes": {
+    "projection_identity": {
+      "canonical_input_hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0",
+      "reported_projection_hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0",
+      "exported_project_semantic_hash": "7ef6716fb73bf0e53d2901ee2af2607ad3899f96ffa70f0e6774f16a061f8808",
+      "redactions": {
+        "paths_changed": [],
+        "private_context_included": false,
+        "detection": "pattern-based and incomplete; review every export before sharing"
+      },
+      "export_differs_from_canonical": true
+    },
+    "valid_json": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/valid.json",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 138,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "valid.json",
+            "input_sha256": "5a1c10e95fdbff302a4e217935ade19d3203d4a87b4b6ba59b70ac5e0f2bc01c",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "valid.json",
+            "input_sha256": "5a1c10e95fdbff302a4e217935ade19d3203d4a87b4b6ba59b70ac5e0f2bc01c",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "valid.json"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "valid.json"
+          }
+        ],
+        "duration_seconds": 0.218614,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "94c7f8986978428981a38d8e0dcd8455",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "valid.json",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "valid.json",
+            "gate": "OpenAPI full schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "valid_yaml": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/valid.yaml",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 132,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "valid.yaml",
+            "input_sha256": "021f89a9d888eb16ba13bf0b2f9b5580d2b3e6dc2d5dfda908a5dc80752d4986",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "valid.yaml",
+            "input_sha256": "021f89a9d888eb16ba13bf0b2f9b5580d2b3e6dc2d5dfda908a5dc80752d4986",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "valid.yaml"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "valid.yaml"
+          }
+        ],
+        "duration_seconds": 0.386926,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "1906fcad7a054502a8082ae044e87c1f",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "valid.yaml",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "valid.yaml",
+            "gate": "OpenAPI full schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "undeclared_security_json": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/undeclared_security.json",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 1,
+      "result": {
+        "bytes_read": 169,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "security/0: security scheme is not declared: missing",
+            "file": "undeclared_security.json",
+            "input_sha256": "4af38f6ae227da7d235fb06ce3e26daf38863fc057d203af90cb1fb20e7b6b7c",
+            "method": "built-in",
+            "status": "failed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "not requested or basic gate failed",
+            "file": "undeclared_security.json",
+            "input_sha256": null,
+            "method": "built-in",
+            "status": "skipped",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "undeclared_security.json"
+          }
+        ],
+        "duration_seconds": 0.000652,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [
+          {
+            "file": "undeclared_security.json",
+            "issue": "security/0: security scheme is not declared: missing"
+          }
+        ],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": false,
+        "policy_ok": false,
+        "run_id": "cab250245d7945a4ae0a99f66dd57680",
+        "skipped": [
+          "undeclared_security.json: not requested or basic gate failed"
+        ],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "undeclared_security_yaml": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/undeclared_security.yaml",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 1,
+      "result": {
+        "bytes_read": 156,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "security/0: security scheme is not declared: missing",
+            "file": "undeclared_security.yaml",
+            "input_sha256": "c7bff7da393afa9fa93f25c1cbb7c9c99165c03e2539108d3c8517cc7e4b8fad",
+            "method": "built-in",
+            "status": "failed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "not requested or basic gate failed",
+            "file": "undeclared_security.yaml",
+            "input_sha256": null,
+            "method": "built-in",
+            "status": "skipped",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "undeclared_security.yaml"
+          }
+        ],
+        "duration_seconds": 0.068233,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [
+          {
+            "file": "undeclared_security.yaml",
+            "issue": "security/0: security scheme is not declared: missing"
+          }
+        ],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": false,
+        "policy_ok": false,
+        "run_id": "9edaf76fa13547758f597a1ac1ce80c9",
+        "skipped": [
+          "undeclared_security.yaml: not requested or basic gate failed"
+        ],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "non_oauth_nonempty_scopes_json": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/non_oauth_nonempty_scopes.json",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 260,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "non_oauth_nonempty_scopes.json",
+            "input_sha256": "da8ad9bf699cc800275d505d621644c6bc7d920953c8a2e18e0306fd6054490d",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "non_oauth_nonempty_scopes.json",
+            "input_sha256": "da8ad9bf699cc800275d505d621644c6bc7d920953c8a2e18e0306fd6054490d",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "non_oauth_nonempty_scopes.json"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "non_oauth_nonempty_scopes.json"
+          }
+        ],
+        "duration_seconds": 0.271167,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "802f34e8461c4f418cd2b47775f11c0b",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "non_oauth_nonempty_scopes.json",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "non_oauth_nonempty_scopes.json",
+            "gate": "OpenAPI full schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "non_oauth_nonempty_scopes_yaml": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/non_oauth_nonempty_scopes.yaml",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 243,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "non_oauth_nonempty_scopes.yaml",
+            "input_sha256": "da3eccc96c2235c54fea2f9d5ac8999fec8f91bbcb43f21609dcaf1b153f9ca5",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "non_oauth_nonempty_scopes.yaml",
+            "input_sha256": "da3eccc96c2235c54fea2f9d5ac8999fec8f91bbcb43f21609dcaf1b153f9ca5",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "non_oauth_nonempty_scopes.yaml"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "non_oauth_nonempty_scopes.yaml"
+          }
+        ],
+        "duration_seconds": 0.286353,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "17743018250d4182b6b54d65a11203ae",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "non_oauth_nonempty_scopes.yaml",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "non_oauth_nonempty_scopes.yaml",
+            "gate": "OpenAPI full schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "oauth_undeclared_scope_json": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/oauth_undeclared_scope.json",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 347,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "oauth_undeclared_scope.json",
+            "input_sha256": "4cab90ce0366c987e95ade425dedadc99940239bc8eef34d312e73c2ee19886b",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "oauth_undeclared_scope.json",
+            "input_sha256": "4cab90ce0366c987e95ade425dedadc99940239bc8eef34d312e73c2ee19886b",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "oauth_undeclared_scope.json"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "oauth_undeclared_scope.json"
+          }
+        ],
+        "duration_seconds": 0.219888,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "1022d0bedbc94787bcd62641c905b3c0",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "oauth_undeclared_scope.json",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "oauth_undeclared_scope.json",
+            "gate": "OpenAPI full schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "oauth_undeclared_scope_yaml": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/oauth_undeclared_scope.yaml",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 353,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "oauth_undeclared_scope.yaml",
+            "input_sha256": "a70bf242cd099f1b94bbfa6f211066eab33fb2ec0fa5f3064cc9adcf1905467a",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "oauth_undeclared_scope.yaml",
+            "input_sha256": "a70bf242cd099f1b94bbfa6f211066eab33fb2ec0fa5f3064cc9adcf1905467a",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "oauth_undeclared_scope.yaml"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "oauth_undeclared_scope.yaml"
+          }
+        ],
+        "duration_seconds": 0.288069,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "8a98497890c24239aa33415494ce4649",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "oauth_undeclared_scope.yaml",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "oauth_undeclared_scope.yaml",
+            "gate": "OpenAPI full schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "invalid_schema_json": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/invalid_schema.json",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 1,
+      "result": {
+        "bytes_read": 200,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "invalid_schema.json",
+            "input_sha256": "084c412d94a6be3412c5af75fc0792dab79cf5c646e197ba17e1b191a3bedce3",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"failed\", \"error\": \"OpenAPIValidationError: {'type': 'invalid_type'} is not valid under any of the given schemas\\n\\nFailed validating 'oneOf' in schema['properties']['components']['properties']['schemas']['patternProperties']['^[a-zA-Z0-9\\\\\\\\.\\\\\\\\-_]+$']:\\n    {'oneOf': [{'$ref': '#/definitions/Schema'},\\n               {'$ref': '#/definitions/Reference'}]}\\n\\nOn instance['components']['schemas']['Bad']:\\n    {'type': 'invalid_type'}\"}\n",
+            "file": "invalid_schema.json",
+            "input_sha256": "084c412d94a6be3412c5af75fc0792dab79cf5c646e197ba17e1b191a3bedce3",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "failed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "invalid_schema.json"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "invalid_schema.json"
+          }
+        ],
+        "duration_seconds": 0.218736,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [
+          {
+            "file": "invalid_schema.json",
+            "issue": "{\"status\": \"failed\", \"error\": \"OpenAPIValidationError: {'type': 'invalid_type'} is not valid under any of the given schemas\\n\\nFailed validating 'oneOf' in schema['properties']['components']['properties']['schemas']['patternProperties']['^[a-zA-Z0-9\\\\\\\\.\\\\\\\\-_]+$']:\\n    {'oneOf': [{'$ref': '#/definitions/Schema'},\\n               {'$ref': '#/definitions/Reference'}]}\\n\\nOn instance['components']['schemas']['Bad']:\\n    {'type': 'invalid_type'}\"}\n"
+          }
+        ],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": false,
+        "policy_ok": false,
+        "run_id": "27662d2602e24536ac6231c19b904ca6",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "invalid_schema.json",
+            "gate": "OpenAPI basic structure"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "invalid_schema_yaml": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/invalid_schema.yaml",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 1,
+      "result": {
+        "bytes_read": 189,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "invalid_schema.yaml",
+            "input_sha256": "1dcd6bedab0ac124822a328f4b2de25198704276790aa2300aeb484ed157372f",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"failed\", \"error\": \"OpenAPIValidationError: {'type': 'invalid_type'} is not valid under any of the given schemas\\n\\nFailed validating 'oneOf' in schema['properties']['components']['properties']['schemas']['patternProperties']['^[a-zA-Z0-9\\\\\\\\.\\\\\\\\-_]+$']:\\n    {'oneOf': [{'$ref': '#/definitions/Schema'},\\n               {'$ref': '#/definitions/Reference'}]}\\n\\nOn instance['components']['schemas']['Bad']:\\n    {'type': 'invalid_type'}\"}\n",
+            "file": "invalid_schema.yaml",
+            "input_sha256": "1dcd6bedab0ac124822a328f4b2de25198704276790aa2300aeb484ed157372f",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "failed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "invalid_schema.yaml"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "invalid_schema.yaml"
+          }
+        ],
+        "duration_seconds": 0.286259,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [
+          {
+            "file": "invalid_schema.yaml",
+            "issue": "{\"status\": \"failed\", \"error\": \"OpenAPIValidationError: {'type': 'invalid_type'} is not valid under any of the given schemas\\n\\nFailed validating 'oneOf' in schema['properties']['components']['properties']['schemas']['patternProperties']['^[a-zA-Z0-9\\\\\\\\.\\\\\\\\-_]+$']:\\n    {'oneOf': [{'$ref': '#/definitions/Schema'},\\n               {'$ref': '#/definitions/Reference'}]}\\n\\nOn instance['components']['schemas']['Bad']:\\n    {'type': 'invalid_type'}\"}\n"
+          }
+        ],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": false,
+        "policy_ok": false,
+        "run_id": "4e0e9d9fb0364d2baec20ad6a4fea623",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "invalid_schema.yaml",
+            "gate": "OpenAPI basic structure"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "duplicate_yaml_keys": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/duplicate-security.yaml",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 96,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "duplicate-security.yaml",
+            "input_sha256": "554a55a0c771b1af69ccaa759a522046be34c2fa0bb510a8f609554b47275947",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "duplicate-security.yaml",
+            "input_sha256": "554a55a0c771b1af69ccaa759a522046be34c2fa0bb510a8f609554b47275947",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "duplicate-security.yaml"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "duplicate-security.yaml"
+          }
+        ],
+        "duration_seconds": 0.202968,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "8cb39fb90d024b59af20c17b8e23eaf1",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "duplicate-security.yaml",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "duplicate-security.yaml",
+            "gate": "OpenAPI full schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "duplicate_json_keys": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/duplicate-security.json",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 108,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "duplicate-security.json",
+            "input_sha256": "247aa82983601449e541890b462f563041d22c8ad0a0f7bb9e93a895c6b0b9bc",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "duplicate-security.json",
+            "input_sha256": "247aa82983601449e541890b462f563041d22c8ad0a0f7bb9e93a895c6b0b9bc",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "duplicate-security.json"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "duplicate-security.json"
+          }
+        ],
+        "duration_seconds": 0.219018,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "d3fc1b5234ef49418bf66fe2c58b906f",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "duplicate-security.json",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "duplicate-security.json",
+            "gate": "OpenAPI full schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "missing_operation_correspondence_json": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/correspondence-json",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 1,
+      "result": {
+        "bytes_read": 3896,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "api.json",
+            "input_sha256": "94b56814c988c65396d1aa660b8fd335224bcad0a5351969c7b524044232804f",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "api.json",
+            "input_sha256": "94b56814c988c65396d1aa660b8fd335224bcad0a5351969c7b524044232804f",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "Project traceability integrity",
+            "detail": "",
+            "file": "project.json",
+            "input_sha256": "82e083fa2f1dd12b9995abc1ca5812ad00e2572f6e0849c55727fdcbbc3523de",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "Project JSON Schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "project.json",
+            "input_sha256": "82e083fa2f1dd12b9995abc1ca5812ad00e2572f6e0849c55727fdcbbc3523de",
+            "method": "jsonschema 4.23.0",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "Contract correspondence",
+            "detail": "missing supported HTTP interfaces: API-001, API-002",
+            "file": "project.json \u2194 api.json",
+            "input_sha256": null,
+            "method": "built-in",
+            "status": "failed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "api.json"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "api.json"
+          },
+          {
+            "check": "Project traceability integrity",
+            "file": "project.json"
+          },
+          {
+            "check": "Project JSON Schema",
+            "file": "project.json"
+          },
+          {
+            "check": "Contract correspondence",
+            "file": "project.json \u2194 api.json"
+          }
+        ],
+        "duration_seconds": 0.340726,
+        "files_checked": 2,
+        "gate": "full",
+        "issues": [
+          {
+            "file": "project.json \u2194 api.json",
+            "issue": "missing supported HTTP interfaces: API-001, API-002"
+          }
+        ],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": false,
+        "policy_ok": false,
+        "run_id": "483d21487f67439ebd45e12a0969351f",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {
+          "project.json": {
+            "functional_requirements": 2,
+            "nfr_requirements": 1,
+            "nfr_without_passed_verification": [
+              "NFR-001"
+            ],
+            "review_note": "Links and plans do not prove satisfaction; applicability and measured verification require review.",
+            "without_declared_component": [],
+            "without_declared_interface": [],
+            "without_declared_task": [
+              "FR-002"
+            ]
+          }
+        },
+        "verified": [
+          {
+            "file": "api.json",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "api.json",
+            "gate": "OpenAPI full schema"
+          },
+          {
+            "file": "project.json",
+            "gate": "Project traceability integrity"
+          },
+          {
+            "file": "project.json",
+            "gate": "Project JSON Schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "missing_operation_correspondence_yaml": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/correspondence-yaml",
+        "--full-openapi",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 3880,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "api.yaml",
+            "input_sha256": "f9c25816c1144ebf151006b3ec941c77ff32d176293b07065b60e955bc100509",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "api.yaml",
+            "input_sha256": "f9c25816c1144ebf151006b3ec941c77ff32d176293b07065b60e955bc100509",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "Project traceability integrity",
+            "detail": "",
+            "file": "project.json",
+            "input_sha256": "82e083fa2f1dd12b9995abc1ca5812ad00e2572f6e0849c55727fdcbbc3523de",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "Project JSON Schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "project.json",
+            "input_sha256": "82e083fa2f1dd12b9995abc1ca5812ad00e2572f6e0849c55727fdcbbc3523de",
+            "method": "jsonschema 4.23.0",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "api.yaml"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "file": "api.yaml"
+          },
+          {
+            "check": "Project traceability integrity",
+            "file": "project.json"
+          },
+          {
+            "check": "Project JSON Schema",
+            "file": "project.json"
+          }
+        ],
+        "duration_seconds": 0.404744,
+        "files_checked": 2,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "de8e4993821e416c9f684857ea994ee6",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {
+          "project.json": {
+            "functional_requirements": 2,
+            "nfr_requirements": 1,
+            "nfr_without_passed_verification": [
+              "NFR-001"
+            ],
+            "review_note": "Links and plans do not prove satisfaction; applicability and measured verification require review.",
+            "without_declared_component": [],
+            "without_declared_interface": [],
+            "without_declared_task": [
+              "FR-002"
+            ]
+          }
+        },
+        "verified": [
+          {
+            "file": "api.yaml",
+            "gate": "OpenAPI basic structure"
+          },
+          {
+            "file": "api.yaml",
+            "gate": "OpenAPI full schema"
+          },
+          {
+            "file": "project.json",
+            "gate": "Project traceability integrity"
+          },
+          {
+            "file": "project.json",
+            "gate": "Project JSON Schema"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "empty_renderer_output": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "validate",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/diagram.mmd",
+        "--render",
+        "--gate",
+        "full"
+      ],
+      "exit": 0,
+      "result": {
+        "bytes_read": 22,
+        "checks": [
+          {
+            "check": "Mermaid heuristic",
+            "detail": "",
+            "file": "diagram.mmd",
+            "input_sha256": "5380bf813263accd332cbb91d21658dbe0bad3139593c083034f56e117853e46",
+            "method": "heuristic only",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "Mermaid renderer",
+            "detail": "",
+            "file": "diagram.mmd",
+            "input_sha256": "5380bf813263accd332cbb91d21658dbe0bad3139593c083034f56e117853e46",
+            "method": "external mmdc; host authority boundary",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "Mermaid heuristic",
+            "file": "diagram.mmd"
+          },
+          {
+            "check": "Mermaid renderer",
+            "file": "diagram.mmd"
+          }
+        ],
+        "duration_seconds": 0.034498,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "b7b8677f852f40308ccc7eb2e6a9f61d",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "diagram.mmd",
+            "gate": "Mermaid heuristic"
+          },
+          {
+            "file": "diagram.mmd",
+            "gate": "Mermaid renderer"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    "sample_evaluation": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "evaluate",
+        "--cases",
+        "/workspace/SOFTWARE-ARCHITECT-STUDIO/evals/architecture-cases.json",
+        "--responses",
+        "/workspace/SOFTWARE-ARCHITECT-STUDIO/evals/example-responses.json",
+        "--gate",
+        "--min-pass",
+        "100"
+      ],
+      "exit": 0,
+      "result": {
+        "cases": [
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "proportionate",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "brief",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "small-question",
+            "passed": 2,
+            "status": "evaluated",
+            "total": 2
+          },
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "authorization",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "no-unfounded-certification",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "tenant-isolation",
+            "passed": 2,
+            "status": "evaluated",
+            "total": 2
+          },
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "idempotency",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "data-leak",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "no-false-security",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "flawed-payment-architecture",
+            "passed": 3,
+            "status": "evaluated",
+            "total": 3
+          },
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "no-fake-cost",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "no-fake-security-grade",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "evidence-gap",
+            "passed": 2,
+            "status": "evaluated",
+            "total": 2
+          },
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "dependencies",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "data",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "assumptions",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "change-impact",
+            "passed": 3,
+            "status": "evaluated",
+            "total": 3
+          }
+        ],
+        "checks_passed": 12,
+        "checks_total": 12,
+        "gate": "enforced lexical/constraint threshold",
+        "limitations": "Supplied responses only. Real accuracy, safety and generalization require captured provenance and independent semantic review.",
+        "pass_rate": 100.0,
+        "quality_status": "lexical/deterministic checks only; no semantic quality certification"
+      },
+      "stderr": ""
+    },
+    "adversarial_lexical_evaluation": {
+      "command": [
+        "/workspace/sas-env/bin/python",
+        "tools/architect_cli.py",
+        "evaluate",
+        "--cases",
+        "/workspace/SOFTWARE-ARCHITECT-STUDIO/evals/architecture-cases.json",
+        "--responses",
+        "/workspace/sas-audit-2026-10-29/evidence/expert05-j51pnp2g/adversarial-responses.json",
+        "--gate",
+        "--min-pass",
+        "100"
+      ],
+      "exit": 0,
+      "result": {
+        "cases": [
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "proportionate",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "brief",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "small-question",
+            "passed": 2,
+            "status": "evaluated",
+            "total": 2
+          },
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "authorization",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "no-unfounded-certification",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "tenant-isolation",
+            "passed": 2,
+            "status": "evaluated",
+            "total": 2
+          },
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "idempotency",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "data-leak",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "no-false-security",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "flawed-payment-architecture",
+            "passed": 3,
+            "status": "evaluated",
+            "total": 3
+          },
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "no-fake-cost",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "no-fake-security-grade",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "evidence-gap",
+            "passed": 2,
+            "status": "evaluated",
+            "total": 2
+          },
+          {
+            "checks": [
+              {
+                "forbidden_absent": true,
+                "id": "dependencies",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "data",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              },
+              {
+                "forbidden_absent": true,
+                "id": "assumptions",
+                "pass": true,
+                "positive_match": true,
+                "status": "evaluated"
+              }
+            ],
+            "id": "change-impact",
+            "passed": 3,
+            "status": "evaluated",
+            "total": 3
+          }
+        ],
+        "checks_passed": 12,
+        "checks_total": 12,
+        "gate": "enforced lexical/constraint threshold",
+        "limitations": "Supplied responses only. Real accuracy, safety and generalization require captured provenance and independent semantic review.",
+        "pass_rate": 100.0,
+        "quality_status": "lexical/deterministic checks only; no semantic quality certification"
+      },
+      "stderr": ""
+    }
+  }
+}

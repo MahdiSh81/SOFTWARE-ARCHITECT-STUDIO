@@ -1,0 +1,183 @@
+{
+  "checks_passed": 12,
+  "checks_total": 12,
+  "pass_rate": 100.0,
+  "cases": [
+    {
+      "id": "small-question",
+      "status": "evaluated",
+      "checks": [
+        {
+          "id": "proportionate",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        },
+        {
+          "id": "brief",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        }
+      ],
+      "passed": 2,
+      "total": 2
+    },
+    {
+      "id": "tenant-isolation",
+      "status": "evaluated",
+      "checks": [
+        {
+          "id": "authorization",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        },
+        {
+          "id": "no-unfounded-certification",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        }
+      ],
+      "passed": 2,
+      "total": 2
+    },
+    {
+      "id": "flawed-payment-architecture",
+      "status": "evaluated",
+      "checks": [
+        {
+          "id": "idempotency",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        },
+        {
+          "id": "data-leak",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        },
+        {
+          "id": "no-false-security",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "id": "evidence-gap",
+      "status": "evaluated",
+      "checks": [
+        {
+          "id": "no-fake-cost",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        },
+        {
+          "id": "no-fake-security-grade",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        }
+      ],
+      "passed": 2,
+      "total": 2
+    },
+    {
+      "id": "change-impact",
+      "status": "evaluated",
+      "checks": [
+        {
+          "id": "dependencies",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        },
+        {
+          "id": "data",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        },
+        {
+          "id": "assumptions",
+          "pass": true,
+          "status": "evaluated",
+          "positive_match": true,
+          "forbidden_absent": true
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    }
+  ],
+  "quality_status": "lexical/deterministic checks only; no semantic quality certification",
+  "limitations": "Supplied responses only. Real accuracy, safety and generalization require captured provenance and independent semantic review.",
+  "synthetic_counterexample": true,
+  "capture_fields": [
+    "at",
+    "capture_schema",
+    "critical_failures",
+    "id",
+    "method",
+    "prompt",
+    "quality_status",
+    "reported_model",
+    "response",
+    "reviews",
+    "rubric",
+    "skill_hash",
+    "source_hash",
+    "toolkit_version"
+  ],
+  "reference_and_specialist_hashes_captured": false,
+  "review_plan": {
+    "status": "plan only; no agents executed",
+    "source_hash": "1f4773c5e619e7d864416698d43cfdbf3eb6080c43841b8b79c268e8be090b2c",
+    "task": "review",
+    "roles": [
+      "architecture",
+      "security",
+      "quality"
+    ],
+    "protocol": [
+      "freeze source and canonical project identity",
+      "create clean-context independent first passes",
+      "keep source text non-authoritative",
+      "complete all first passes before peer critique",
+      "retain disagreements and actual worker counts"
+    ],
+    "host_delegation_available": false,
+    "budget": {
+      "max_agents": 6,
+      "agent_dispatch": "host-enforced if adapter supplied; otherwise advisory",
+      "tool/time/token_budget": "unsupported without a mediating host runtime"
+    },
+    "acceptance": "Compare useful corrected findings and measured cost/time to a single-pass baseline before enabling by default; model agreement is not proof."
+  },
+  "invalid_summary_probe": {
+    "captures": 1,
+    "reviewed": 1,
+    "unreviewed_ids": [],
+    "critical_failures": [],
+    "assessor_disagreement": "retain each attributed review; do not replace with majority truth",
+    "scope": "capture accounting only; sample selection/semantic correctness and judge calibration require human review"
+  }
+}

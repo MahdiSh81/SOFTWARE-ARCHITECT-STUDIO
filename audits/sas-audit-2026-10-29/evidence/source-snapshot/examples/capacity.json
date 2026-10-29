@@ -1,0 +1,15 @@
+{
+  "daily_requests": 1800000,
+  "peak_factor": 6,
+  "average_payload_kb": 8,
+  "records_per_day": 80000,
+  "average_record_bytes": 1800,
+  "retention_days": 365,
+  "storage_overhead_multiplier": 2.5,
+  "replica_count": 2,
+  "monthly_compute_hours": 730,
+  "assumed_compute_price_per_hour": null,
+  "assumed_storage_price_per_gb_month": null,
+  "assumed_egress_price_per_gb": null,
+  "currency": "USD"
+}

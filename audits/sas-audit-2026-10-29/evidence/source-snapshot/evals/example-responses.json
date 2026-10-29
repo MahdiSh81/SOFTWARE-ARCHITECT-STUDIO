@@ -1,0 +1,7 @@
+{
+  "small-question":"Start with a modular monolith for a small internal team. Split only when ownership or scale justifies it.",
+  "tenant-isolation":"Enforce tenant authorization for every read and write and verify row-level security with tests; regulatory compliance is unverified.",
+  "flawed-payment-architecture":"The charge endpoint must be idempotent on retries, and card data must never appear in logs. This is a high-severity payment data leak risk.",
+  "evidence-gap":"Costs are unknown; estimates require workload and pricing assumptions. Security is not evaluated without evidence.",
+  "change-impact":"Potentially affected: delete API endpoints, customer database tables, retention ADRs. The specific mapping is unverified without project dependency links."
+}

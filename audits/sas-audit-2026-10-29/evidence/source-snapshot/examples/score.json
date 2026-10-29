@@ -1,0 +1,4 @@
+{
+  "scores": {"security": 3, "reliability": 2, "scalability": null, "maintainability": 3, "observability": 1, "cost": null},
+  "weights": {"security": 25, "reliability": 20, "scalability": 15, "maintainability": 15, "observability": 15, "cost": 10}
+}

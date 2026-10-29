@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-29T18:31:17.720039+00:00",
+  "message": "replace with another project",
+  "new_hash": "d1d9343c720e8d3c83f91fe103c9f02461d4c28b2185b3b0cbf5297587c0b5a6",
+  "new_project": {
+    "brief": "",
+    "components": [],
+    "constraints": [],
+    "cost_drivers": [],
+    "data_models": [],
+    "decisions": [],
+    "interfaces": [],
+    "name": "Project B",
+    "notes": {
+      "source": "user-authored; not production-observed",
+      "status": "draft"
+    },
+    "open_questions": [],
+    "project_id": "00802f04-ae98-4ced-98c7-413d11c96754",
+    "requirements": [],
+    "revision": 2,
+    "schema_version": 2,
+    "tasks": []
+  },
+  "next_revision": 2,
+  "old_hash": "a79ea727974f0aeb57362440b0e0c168dadd8e4322deac4d468d4a04b6a9bcc8",
+  "operation_id": "d710878bc5c5451d933e99c7473fc4ff",
+  "saved_revision": 1,
+  "snapshot_file": "/workspace/sas-audit-2026-10-29/reviewers/expert02-probes/identity-project/.architecture-history/revision-0001.json",
+  "status": "committed"
+}

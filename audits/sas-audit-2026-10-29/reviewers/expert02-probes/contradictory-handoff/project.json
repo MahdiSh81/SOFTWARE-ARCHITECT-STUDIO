@@ -1,0 +1,51 @@
+{
+  "brief": "",
+  "components": [],
+  "constraints": [],
+  "cost_drivers": [],
+  "data_models": [],
+  "decisions": [],
+  "interfaces": [
+    {
+      "authentication": "public",
+      "id": "API-001",
+      "method": "GET",
+      "operation": {
+        "operationId": "getCount",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "A count"
+          }
+        },
+        "security": []
+      },
+      "path": "/count",
+      "requirements": [
+        "FR-001"
+      ]
+    }
+  ],
+  "name": "Contract divergence",
+  "notes": {
+    "source": "minimized handoff; opaque extensions and private history excluded"
+  },
+  "open_questions": [],
+  "project_id": "96e1ae1f-7dca-433a-a41e-4dff5544c384",
+  "requirements": [
+    {
+      "acceptance": "Response is an integer",
+      "description": "Get a count",
+      "id": "FR-001"
+    }
+  ],
+  "revision": 1,
+  "schema_version": 2,
+  "tasks": []
+}

@@ -1,0 +1,20 @@
+{
+  "brief": "",
+  "components": [],
+  "constraints": [],
+  "cost_drivers": [],
+  "data_models": [],
+  "decisions": [],
+  "interfaces": [],
+  "name": "Large",
+  "notes": {
+    "source": "user-authored; not production-observed",
+    "status": "draft"
+  },
+  "open_questions": [],
+  "project_id": "1f7dab71-d21e-4381-8488-ad70d3766e63",
+  "requirements": [],
+  "revision": 1,
+  "schema_version": 2,
+  "tasks": []
+}

@@ -1,0 +1,177 @@
+{
+  "brief": "A personal offline task tracker: add, list, complete tasks; SQLite persists across runs; reject empty titles; no network, authentication, or deployment.",
+  "components": [
+    {
+      "files": [
+        "src/tasks/cli.py",
+        "src/tasks/__main__.py"
+      ],
+      "id": "CMP-CLI",
+      "name": "CLI",
+      "requirements": [
+        "FR-001",
+        "FR-002"
+      ],
+      "responsibility": "Parse commands; validate input; render result and error exit codes."
+    },
+    {
+      "files": [
+        "src/tasks/store.py"
+      ],
+      "id": "CMP-STORE",
+      "name": "Task Store",
+      "requirements": [
+        "FR-001",
+        "FR-002"
+      ],
+      "responsibility": "Own SQLite schema and transactional task persistence."
+    }
+  ],
+  "constraints": [
+    "Python 3.12 standard library only; SQLite; local CLI",
+    "No remote service, auth or deployment; data stays in selected local DB"
+  ],
+  "cost_drivers": [],
+  "data_models": [
+    {
+      "columns": [
+        {
+          "name": "id",
+          "primary_key": true,
+          "type": "INTEGER"
+        },
+        {
+          "name": "title",
+          "nullable": false,
+          "type": "TEXT"
+        },
+        {
+          "name": "done",
+          "nullable": false,
+          "type": "INTEGER"
+        }
+      ],
+      "components": [
+        "CMP-STORE"
+      ],
+      "dialect": "sqlite",
+      "id": "DATA-TASK",
+      "name": "Task",
+      "requirements": [
+        "FR-001",
+        "FR-002"
+      ],
+      "table": "tasks"
+    }
+  ],
+  "decisions": [
+    {
+      "alternatives": [
+        "Remote API rejected for offline scope"
+      ],
+      "decision": "Use argparse and sqlite3; avoid third party dependencies for this limited offline workflow.",
+      "id": "ADR-001",
+      "requirements": [
+        "FR-001",
+        "FR-002"
+      ],
+      "status": "Proposed",
+      "title": "Standard library local CLI",
+      "validation": "Implement subprocess integration tests against temporary SQLite file."
+    }
+  ],
+  "interfaces": [
+    {
+      "components": [
+        "CMP-CLI"
+      ],
+      "contract": {
+        "commands": [
+          "add TITLE",
+          "list",
+          "complete ID"
+        ],
+        "db_argument": "--db PATH",
+        "error_exit": 2
+      },
+      "id": "IFACE-CLI",
+      "method": "CLI",
+      "name": "Command interface",
+      "requirements": [
+        "FR-001",
+        "FR-002"
+      ]
+    }
+  ],
+  "name": "Offline Task Tracker",
+  "notes": {
+    "source": "minimized handoff; opaque extensions and private history excluded"
+  },
+  "open_questions": [
+    "Exact package/distribution method remains proposed"
+  ],
+  "project_id": "c05bd47f-8c60-40bb-8794-22e2a4541cc2",
+  "requirements": [
+    {
+      "acceptance": "Add a title in one process; another process lists that title exactly once.",
+      "description": "Add and list persisted tasks.",
+      "id": "FR-001",
+      "status": "Proposed"
+    },
+    {
+      "acceptance": "Complete by integer ID; list shows done; invalid input returns nonzero without changing stored tasks.",
+      "description": "Complete a known task; reject missing ID and empty titles.",
+      "id": "FR-002",
+      "status": "Proposed"
+    }
+  ],
+  "revision": 2,
+  "schema_version": 2,
+  "tasks": [
+    {
+      "acceptance": "Temporary database tests prove add, list, complete and invalid-ID behavior.",
+      "components": [
+        "CMP-STORE"
+      ],
+      "data_models": [
+        "DATA-TASK"
+      ],
+      "decisions": [
+        "ADR-001"
+      ],
+      "files": [
+        "src/tasks/store.py",
+        "tests/test_store.py"
+      ],
+      "id": "TASK-001",
+      "requirements": [
+        "FR-001",
+        "FR-002"
+      ],
+      "title": "Implement persistent task store"
+    },
+    {
+      "acceptance": "python -m unittest discover -s tests passes; separate subprocesses prove persistence and error exits.",
+      "components": [
+        "CMP-CLI"
+      ],
+      "decisions": [
+        "ADR-001"
+      ],
+      "files": [
+        "src/tasks/cli.py",
+        "src/tasks/__main__.py",
+        "tests/test_cli.py"
+      ],
+      "id": "TASK-002",
+      "interfaces": [
+        "IFACE-CLI"
+      ],
+      "requirements": [
+        "FR-001",
+        "FR-002"
+      ],
+      "title": "Implement CLI and integration tests"
+    }
+  ]
+}

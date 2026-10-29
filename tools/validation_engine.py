@@ -2,6 +2,7 @@
 from __future__ import annotations
 import importlib.util,importlib.metadata,json,math,os,re,shutil,signal,subprocess,sys,tempfile,time,uuid
 from pathlib import Path
+from urllib.parse import unquote
 from safe_io import read_text,read_json,digest,guard,io_capabilities
 from project_model import project_checks,traceability_coverage,VERSION
 
@@ -9,52 +10,184 @@ METHODS={'get','put','post','delete','options','head','patch','trace'}
 PATH_FIELDS={'$ref','summary','description','servers','parameters'}
 MERMAID_TYPES=('flowchart','graph','sequenceDiagram','erDiagram','stateDiagram-v2','classDiagram','gantt','mindmap','journey','timeline','pie','gitGraph','quadrantChart','C4Context','C4Container')
 
+def _iter_refs(value, location="$"):
+    """Yield every JSON $ref with a stable location for diagnostics."""
+    if isinstance(value, dict):
+        for key, child in value.items():
+            child_location = f"{location}/{str(key).replace('~', '~0').replace('/', '~1')}"
+            if key == "$ref":
+                yield child_location, child
+            else:
+                yield from _iter_refs(child, child_location)
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            yield from _iter_refs(child, f"{location}/{index}")
+
+
+def _resolve_local_ref(document, ref):
+    """Resolve a local JSON Pointer without network access; return (target, error)."""
+    if not isinstance(ref, str):
+        return None, "$ref must be a string"
+    if not ref.startswith("#"):
+        return None, "external references are blocked by offline validation policy"
+    fragment = unquote(ref[1:])
+    if fragment == "":
+        return document, None
+    if not fragment.startswith("/"):
+        return None, "only local JSON Pointer fragments are supported"
+    current = document
+    for raw_token in fragment[1:].split("/"):
+        if re.search(r"~(?![01])", raw_token):
+            return None, "invalid JSON Pointer escape"
+        token = raw_token.replace("~1", "/").replace("~0", "~")
+        if isinstance(current, dict):
+            if token not in current:
+                return None, "pointer target does not exist"
+            current = current[token]
+        elif isinstance(current, list):
+            if not re.fullmatch(r"0|[1-9]\d*", token):
+                return None, "array pointer index is invalid"
+            index = int(token)
+            if index >= len(current):
+                return None, "array pointer index is out of range"
+            current = current[index]
+        else:
+            return None, "pointer traverses a non-container value"
+    return current, None
+
+
 def _external_refs(value):
-    stack=[value];seen=set()
-    while stack:
-        x=stack.pop()
-        if isinstance(x,(dict,list)):
-            if id(x) in seen:continue
-            seen.add(id(x))
-        if isinstance(x,dict):
-            if '$ref' in x and (not isinstance(x['$ref'],str) or not x['$ref'].startswith('#')):return True
-            stack.extend(x.values())
-        elif isinstance(x,list):stack.extend(x)
-    return False
+    return any(not isinstance(ref, str) or not ref.startswith("#") for _, ref in _iter_refs(value))
+
+
+def _parameter_target(parameter, document):
+    if not isinstance(parameter, dict):
+        return None
+    if "$ref" not in parameter:
+        return parameter
+    target, error = _resolve_local_ref(document, parameter["$ref"])
+    return target if error is None and isinstance(target, dict) else None
+
+
+def _check_security_requirements(value, schemes, location, issues):
+    if value is None:
+        return
+    if not isinstance(value, list):
+        issues.append(location + ": security must be an array of requirement objects")
+        return
+    for index, requirement in enumerate(value):
+        if not isinstance(requirement, dict):
+            issues.append(f"{location}/{index}: security requirement must be an object")
+            continue
+        for name, scopes in requirement.items():
+            if name not in schemes:
+                issues.append(f"{location}/{index}: security scheme is not declared: {name}")
+            if not isinstance(scopes, list) or any(not isinstance(scope, str) for scope in scopes):
+                issues.append(f"{location}/{index}/{name}: security scopes must be an array of strings")
+
 
 def openapi_checks(data):
-    if not isinstance(data,dict):return ['OpenAPI root must be an object']
-    issues=[]
-    if not isinstance(data.get('openapi'),str) or not re.match(r'^3\.(0|1)\.\d+$',data['openapi']):issues.append('this pinned profile supports OpenAPI 3.0/3.1; unsupported versions are not coerced')
-    info=data.get('info')
-    if not isinstance(info,dict) or any(not isinstance(info.get(k),str) or not info[k] for k in ('title','version')):issues.append('OpenAPI info.title and info.version required')
-    if not isinstance(data.get('paths'),dict):return issues+['OpenAPI paths must be an object']
-    ids=set()
-    for path,item in data['paths'].items():
-        if path.startswith('x-'):continue
-        if not path.startswith('/') or not isinstance(item,dict):issues.append('invalid path item: '+path);continue
-        path_parameters=item.get('parameters',[])
-        if not isinstance(path_parameters,list):issues.append(path+': parameters must be an array');path_parameters=[]
-        for method,op in item.items():
-            if method in PATH_FIELDS or method.startswith('x-'):continue
-            if method not in METHODS:issues.append(path+': unknown path-item field '+method);continue
-            if not isinstance(op,dict):issues.append(path+' '+method+': operation object required');continue
-            responses=op.get('responses')
-            if not isinstance(responses,dict) or not responses:issues.append(path+' '+method+': nonempty responses object required')
+    if not isinstance(data, dict):
+        return ["OpenAPI root must be an object"]
+    issues = []
+    if not isinstance(data.get("openapi"), str) or not re.match(r"^3\.(0|1)\.\d+$", data["openapi"]):
+        issues.append("this pinned profile supports OpenAPI 3.0/3.1; unsupported versions are not coerced")
+    info = data.get("info")
+    if not isinstance(info, dict) or any(not isinstance(info.get(k), str) or not info[k] for k in ("title", "version")):
+        issues.append("OpenAPI info.title and info.version required")
+    paths = data.get("paths")
+    if not isinstance(paths, dict):
+        return issues + ["OpenAPI paths must be an object"]
+
+    components = data.get("components", {})
+    if not isinstance(components, dict):
+        issues.append("OpenAPI components must be an object")
+        components = {}
+    schemes = components.get("securitySchemes", {})
+    if not isinstance(schemes, dict):
+        issues.append("components.securitySchemes must be an object")
+        schemes = {}
+    for name, scheme in schemes.items():
+        if not isinstance(name, str) or not name or not isinstance(scheme, dict):
+            issues.append("each security scheme must have a nonempty name and object definition")
+    _check_security_requirements(data.get("security"), schemes, "security", issues)
+
+    # Resolve every reference before relying on it. The built-in gate stays offline.
+    for location, ref in _iter_refs(data):
+        if not isinstance(ref, str):
+            issues.append(f"{location}: $ref must be a string")
+        elif not ref.startswith("#"):
+            issues.append(f"{location}: external references blocked by offline validation policy")
+        else:
+            _, error = _resolve_local_ref(data, ref)
+            if error:
+                issues.append(f"{location}: unresolved/unsupported local reference {ref!r}: {error}")
+
+    ids = set()
+    for path, item in paths.items():
+        if path.startswith("x-"):
+            continue
+        if not path.startswith("/") or not isinstance(item, dict):
+            issues.append("invalid path item: " + str(path))
+            continue
+        path_parameters = item.get("parameters", [])
+        if not isinstance(path_parameters, list):
+            issues.append(path + ": parameters must be an array")
+            path_parameters = []
+        for method, operation in item.items():
+            if method in PATH_FIELDS or method.startswith("x-"):
+                continue
+            if method not in METHODS:
+                issues.append(path + ": unknown path-item field " + str(method))
+                continue
+            if not isinstance(operation, dict):
+                issues.append(path + " " + method + ": operation object required")
+                continue
+            responses = operation.get("responses")
+            if not isinstance(responses, dict) or not responses:
+                issues.append(path + " " + method + ": nonempty responses object required")
             else:
-                for code,r in responses.items():
-                    if not re.fullmatch(r'(default|[1-5](\d\d|XX)|x-.+)',str(code)):issues.append('invalid response key: '+str(code))
-                    if not isinstance(r,dict) or ('$ref' not in r and not isinstance(r.get('description'),str)):issues.append('response description or reference required')
-            oid=op.get('operationId')
-            if oid is not None:
-                if not isinstance(oid,str) or oid in ids:issues.append('duplicate/nonstring operationId')
-                else:ids.add(oid)
-            params=op.get('parameters',[])
-            if not isinstance(params,list):issues.append('operation parameters must be an array');params=[]
-            for name in re.findall(r'\{([^}]+)\}',path):
-                if not any(isinstance(p,dict) and (p.get('$ref') or p.get('name')==name and p.get('in')=='path' and p.get('required') is True) for p in params+path_parameters):issues.append(path+': required path parameter missing: '+name)
-    if _external_refs(data):issues.append('external references blocked by offline validation policy')
-    return issues
+                for code, response in responses.items():
+                    if not re.fullmatch(r"(default|[1-5](\d\d|XX)|x-.+)", str(code)):
+                        issues.append("invalid response key: " + str(code))
+                    if not isinstance(response, dict):
+                        issues.append("response object or reference required: " + path + " " + str(code))
+                    elif "$ref" not in response and not isinstance(response.get("description"), str):
+                        issues.append("response description or reference required")
+                    elif "$ref" in response:
+                        target, error = _resolve_local_ref(data, response["$ref"])
+                        if error is None and not isinstance(target, dict):
+                            issues.append("response reference must resolve to an object: " + str(response["$ref"]))
+            operation_id = operation.get("operationId")
+            if operation_id is not None:
+                if not isinstance(operation_id, str) or not operation_id or operation_id in ids:
+                    issues.append("duplicate/nonstring operationId")
+                else:
+                    ids.add(operation_id)
+            _check_security_requirements(operation.get("security"), schemes, path + " " + method + " security", issues)
+            parameters = operation.get("parameters", [])
+            if not isinstance(parameters, list):
+                issues.append(path + " " + method + ": operation parameters must be an array")
+                parameters = []
+            resolved_parameters = []
+            for parameter in parameters + path_parameters:
+                if not isinstance(parameter, dict):
+                    issues.append(path + " " + method + ": each parameter must be an object or local reference")
+                    continue
+                target = _parameter_target(parameter, data)
+                if target is None:
+                    if "$ref" in parameter:
+                        issues.append(path + " " + method + ": parameter $ref must resolve to a parameter object: " + str(parameter.get("$ref")))
+                    continue
+                resolved_parameters.append(target)
+            for name in re.findall(r"\{([^}]+)\}", path):
+                if not any(
+                    p.get("name") == name and p.get("in") == "path" and p.get("required") is True
+                    for p in resolved_parameters
+                ):
+                    issues.append(path + ": required path parameter missing or invalid: " + name)
+    return list(dict.fromkeys(issues))
+
 
 def mermaid_checks(text):
     text=text.strip()

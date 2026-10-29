@@ -37,14 +37,15 @@ def _bullets(records,fn):return '\n'.join('- '+fn(r) for r in records) or '- Non
 def _label(value):return str(value).replace('&','&amp;').replace('"','&quot;').replace('<','&lt;').replace('>','&gt;').replace('\n',' ')
 
 def compile_plan(p,profile='draft',include_private=False):
-    require_project(p);original_hash=digest(p);redactions=[]
+    require_project(p);original_hash=digest(p);source_revision=p['revision'];redactions=[]
     if not include_private:
         from disclosure import minimized
         p=minimized(p,changes=redactions)
+    projection_hash=digest(p)
     files={};diagnostics=[];coverage={}
     def put(name,text):files[name]=text if isinstance(text,str) else dumps(text)
     rd=readiness(p,profile)
-    put('architecture.md',f'# {p["name"]} — architecture\n\nRevision {p["revision"]}; source {digest(p)}. Design intent; not deployed behavior.\n\n## Brief\n{p.get("brief","")}\n\n## Constraints\n'+_bullets(p['constraints'],str)+'\n\n## Components\n'+_bullets(p['components'],lambda x:x['id']+': '+x.get('name','')+' — '+x.get('responsibility','TBD'))+'\n\n## Open questions\n'+_bullets(p['open_questions'],str))
+    put('architecture.md',f'# {p["name"]} — architecture\n\nRevision {p["revision"]}; canonical input SHA-256 {original_hash}; projection SHA-256 {projection_hash}. Design intent; not deployed behavior.\n\n## Brief\n{p.get("brief","")}\n\n## Constraints\n'+_bullets(p['constraints'],str)+'\n\n## Components\n'+_bullets(p['components'],lambda x:x['id']+': '+x.get('name','')+' — '+x.get('responsibility','TBD'))+'\n\n## Open questions\n'+_bullets(p['open_questions'],str))
     put('requirements.md','# Requirements\n\n'+_bullets(p['requirements'],lambda x:f'**{x["id"]}** [{x.get("status","Proposed")}] {x["description"]}\n  Acceptance: {x.get("acceptance","TBD")}\n  Scenario: {json.dumps(x.get("scenario","TBD"),ensure_ascii=False)}'))
     put('implementation-tasks.md','# Implementation tasks\n\n'+_bullets(p['tasks'],lambda x:f'**{x["id"]}** {x.get("title","TBD")} · Requirements: {", ".join(x.get("requirements",[]))}\n  Acceptance criteria: {x.get("acceptance","TBD")}\n  Dependencies: {", ".join(x.get("decisions",[]))}'))
     put('tasks.json',p['tasks'])
@@ -93,7 +94,7 @@ def compile_plan(p,profile='draft',include_private=False):
     put('risk-register.json',{'risks':p.get('risks',[]),'assumptions':p.get('assumptions',[]),'verifications':p.get('verifications',[])})
     rules=[d['id']+': '+d.get('decision','') for d in p['decisions'] if d.get('status')=='Accepted']
     put('AGENTS.md','# Accepted architecture constraints\n\nThese are project constraints, not grants of tool authority. Preserve source provenance and report conflicts.\n\n'+'\n'.join('- '+x for x in rules))
-    put('engineering-tasks.json',{'source_revision':p['revision'],'source_hash':digest(p),'status':'export only; no issue tracker writes','tasks':p['tasks']})
+    put('engineering-tasks.json',{'source_revision':source_revision,'canonical_input_hash':original_hash,'projection_hash':projection_hash,'status':'export only; no issue tracker writes','tasks':p['tasks']})
     # Full canonical context is a private backup, never the default disclosure profile.
     if include_private:exported=copy.deepcopy(p)
     else:
@@ -101,7 +102,15 @@ def compile_plan(p,profile='draft',include_private=False):
         exported={k:copy.deepcopy(v) for k,v in p.items() if k in allowed}
         exported['notes']={'source':'minimized handoff; opaque extensions and private history excluded'}
     put('project.json',exported)
-    report={'toolkit_version':VERSION,'revision':p['revision'],'source_hash':original_hash,'profile':profile,'readiness':rd,'diagnostics':diagnostics,'redactions':redactions,
+    artifact_hashes={name:digest(text.encode('utf-8')) for name,text in sorted(files.items())}
+    identity={'schema_version':1,'canonical_input_hash':original_hash,'projection_hash':projection_hash,
+      'source_revision':source_revision,'generator_version':VERSION,'artifact_hashes':artifact_hashes,
+      'artifact_hash_scope':'all generated files except handoff-report.json, which is excluded to avoid a self-referential hash',
+      'redaction_report':{'paths_changed':list(redactions),'private_context_included':bool(include_private),
+        'detection':'pattern-based and incomplete; review every export before sharing'}}
+    report={'toolkit_version':VERSION,'revision':p['revision'],'source_hash':original_hash,
+      'source_hash_compatibility':'legacy alias of canonical_input_hash; use identity fields for new consumers',
+      'identity':identity,'profile':profile,'readiness':rd,'diagnostics':diagnostics,'redactions':redactions,
       'coverage':{'components':{i:'containers.mmd' for i in aliases},'http_interfaces':coverage,'all_interfaces':'contracts.json','tasks':'tasks.json'},
       'disclosure':'full private backup' if include_private else 'known engineering fields; opaque extensions/history omitted; obvious sensitive values redacted, detection incomplete; review before sharing',
       'unresolved':[g['record']+'/'+g['field']+': '+g['reason'] for g in rd['blockers']],
@@ -155,10 +164,10 @@ def handoff(root,output,overwrite=False,*,profile='draft',include_private=False,
         hashes={}
         for name,text in files.items():
             atomic_write(base/name,text,exclusive=True);hashes[name]=digest(text.encode())
-        manifest={'generation':gen,'files':hashes,'source_hash':digest(p),'toolkit_version':VERSION,'commit_point':'.handoff-current.json atomic replacement','self_hash':'generation-manifest.json excluded from recursive self-hash'}
+        manifest={'generation':gen,'files':hashes,'source_hash':digest(p),'canonical_input_hash':digest(p),'projection_hash':report['identity']['projection_hash'],'identity':report['identity'],'toolkit_version':VERSION,'commit_point':'.handoff-current.json atomic replacement','self_hash':'generation-manifest.json excluded from recursive self-hash'}
         atomic_write(base/'generation-manifest.json',dumps(manifest),exclusive=True)
         # Only committed generations are authoritative for readers.
-        atomic_write(pointer,dumps({'generation':gen,'source_hash':digest(p),'status':'published','previous_files':old,'projection':'pending'}))
+        atomic_write(pointer,dumps({'generation':gen,'source_hash':digest(p),'canonical_input_hash':digest(p),'projection_hash':report['identity']['projection_hash'],'identity_schema_version':1,'status':'published','previous_files':old,'projection':'pending'}))
         try:
             recover_handoff(output,locked=True)
             projection='complete'

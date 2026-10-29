@@ -51,7 +51,11 @@ def _recover_locked(root):
     path=root/'.architecture-journal.json'
     if not path.exists():return None
     j=_validated_journal(read_json(path))
-    if j.get('status')=='committed':_history(root,j);return j
+    if j.get('status')=='committed':
+        current=load_project(root)
+        if digest(current)!=j['new_hash']:
+            raise ValueError('committed journal/current project hash mismatch; history projection refused and original preserved')
+        _history(root,j);return j
     committed={**j,'status':'committed'}
     commit_path=guard(root/'.architecture-history'/('commit-'+j['operation_id']+'.json'),root)
     if commit_path.exists() and digest(_validated_journal(read_json(commit_path)))!=digest(committed):raise ValueError('history journal conflict; existing record and project preserved')

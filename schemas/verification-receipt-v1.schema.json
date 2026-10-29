@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-architect-studio.local/schemas/verification-receipt-v1.schema.json",
+  "title": "Tool result and verification receipt v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operation_id",
+    "tool_id",
+    "tool_version",
+    "capability",
+    "permission_class",
+    "input_source_hash",
+    "input_schema_version",
+    "started_at",
+    "completed_at",
+    "status",
+    "checks_run",
+    "checks_not_run",
+    "warnings",
+    "errors",
+    "limitations"
+  ],
+  "properties": {
+    "operation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tool_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tool_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "permission_class": {
+      "enum": [
+        "read",
+        "write",
+        "deploy",
+        "production_data"
+      ]
+    },
+    "input_source_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "input_schema_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "passed",
+        "failed",
+        "blocked",
+        "timed_out",
+        "skipped",
+        "partial",
+        "unknown"
+      ]
+    },
+    "output_hash": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "checks_run": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "checks_not_run": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authorization_reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "passed"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "output_hash"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "permission_class": {
+            "enum": [
+              "write",
+              "deploy",
+              "production_data"
+            ]
+          },
+          "status": {
+            "const": "passed"
+          }
+        },
+        "required": [
+          "permission_class",
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "authorization_reference"
+        ],
+        "properties": {
+          "authorization_reference": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

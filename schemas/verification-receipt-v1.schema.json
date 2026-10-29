@@ -70,7 +70,9 @@
         "timed_out",
         "skipped",
         "partial",
-        "unknown"
+        "unknown",
+        "tool_error",
+        "not_run_due_to_budget"
       ]
     },
     "output_hash": {
@@ -84,37 +86,43 @@
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "maxItems": 10000
     },
     "checks_run": {
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "maxItems": 10000
     },
     "checks_not_run": {
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "maxItems": 10000
     },
     "warnings": {
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "maxItems": 10000
     },
     "errors": {
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "maxItems": 10000
     },
     "limitations": {
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "maxItems": 10000
     },
     "authorization_reference": {
       "type": [
@@ -122,6 +130,25 @@
         "null"
       ],
       "minLength": 1
+    },
+    "output_source_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "observed_effects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10000
+    },
+    "details": {
+      "type": "object"
+    },
+    "receipt_status": {
+      "enum": [
+        "failed"
+      ]
     }
   },
   "allOf": [
@@ -139,7 +166,19 @@
       "then": {
         "required": [
           "output_hash"
-        ]
+        ],
+        "properties": {
+          "output_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "errors": {
+            "maxItems": 0
+          },
+          "checks_not_run": {
+            "maxItems": 0
+          }
+        }
       }
     },
     {
@@ -151,14 +190,10 @@
               "deploy",
               "production_data"
             ]
-          },
-          "status": {
-            "const": "passed"
           }
         },
         "required": [
-          "permission_class",
-          "status"
+          "permission_class"
         ]
       },
       "then": {

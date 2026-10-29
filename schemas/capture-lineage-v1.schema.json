@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "capture_schema",
+    "id",
+    "prompt",
+    "response",
+    "reported_model",
+    "declared_loaded_bundle",
+    "available_skill_bundle",
+    "review_source_hash",
+    "reviews"
+  ],
+  "properties": {
+    "capture_schema": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "response": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reported_model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "declared_loaded_bundle": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "entries",
+        "bundle_hash",
+        "provenance"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "entries": {
+          "type": "array",
+          "maxItems": 1000,
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "skill_id",
+              "sha256"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "pattern": "^skills/"
+              },
+              "skill_id": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "bundle_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "provenance": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "available_skill_bundle": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "entries",
+        "bundle_hash",
+        "provenance"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "entries": {
+          "type": "array",
+          "maxItems": 1000,
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "skill_id",
+              "sha256"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "pattern": "^skills/"
+              },
+              "skill_id": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "bundle_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "provenance": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "review_source_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reviews": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "required": [
+          "reviewer_id",
+          "capture_id",
+          "source_hash",
+          "reviewed_at",
+          "rubric_version",
+          "scores",
+          "critical_failures",
+          "evidence_refs",
+          "calibrated",
+          "conclusion"
+        ],
+        "properties": {
+          "reviewer_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          },
+          "capture_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          },
+          "conclusion": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          },
+          "source_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "reviewed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "rubric_version": {
+            "const": 1
+          },
+          "scores": {
+            "type": "object",
+            "required": [
+              "correctness",
+              "evidence",
+              "risk_handling",
+              "constraint_adherence",
+              "usefulness"
+            ],
+            "properties": {
+              "correctness": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "evidence": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "risk_handling": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "constraint_adherence": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "usefulness": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              }
+            },
+            "additionalProperties": false
+          },
+          "critical_failures": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4000
+            }
+          },
+          "evidence_refs": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 4000
+            }
+          },
+          "calibrated": {
+            "type": "boolean"
+          },
+          "calibration_reference": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "calibrated": {
+                  "const": true
+                }
+              },
+              "required": [
+                "calibrated"
+              ]
+            },
+            "then": {
+              "required": [
+                "calibration_reference"
+              ],
+              "properties": {
+                "calibration_reference": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

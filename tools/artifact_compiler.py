@@ -4,7 +4,9 @@ import copy,json,re,uuid,datetime
 from pathlib import Path
 from project_model import require_project,traceability_coverage,VERSION
 from safe_io import guard,dumps,digest,read_json,read_bytes,atomic_write,project_lock,remove_owned
-from validation_engine import METHODS,openapi_checks
+from validation_engine import openapi_checks
+from contract_resolution import METHODS,resolve_contracts
+from operations_profile import operational_readiness
 
 def readiness(p,profile='draft'):
     require_project(p)
@@ -13,11 +15,24 @@ def readiness(p,profile='draft'):
     for r in p['requirements']:
         if not r.get('acceptance'):gaps.append({'record':r['id'],'field':'acceptance','status':'unknown','reason':'define verifiable acceptance'})
         if r['id'].startswith('NFR-') and not r.get('scenario'):gaps.append({'record':r['id'],'field':'scenario','status':'unknown','reason':'workload/environment/measure/target needed'})
+    resolution=resolve_contracts(p)
+    gaps.extend({**c,'status':'unknown'} for c in resolution['conflicts'])
+    rationale=p.get('scope_not_applicable')
+    scope_exempt=isinstance(rationale,str) and bool(rationale.strip())
+    if not p['requirements'] and not scope_exempt:
+        gaps.append({'record':'project','field':'scope','status':'unknown','reason':'declare applicable requirements or explicit scope_not_applicable rationale'})
     for it in p['interfaces']:
         if it.get('method','').lower() in METHODS:
-            if not it.get('operation'):gaps.append({'record':it['id'],'field':'operation','status':'unknown','reason':'HTTP response/request schemas not specified'})
-            if not it.get('authentication') and not p.get('api_contract',{}).get('security') and not (isinstance(it.get('operation'),dict) and 'security' in it['operation']):gaps.append({'record':it['id'],'field':'authentication','status':'unknown','reason':'explicit auth or public/not-applicable decision needed'})
+            op=resolution['resolved'].get(it['id'],{})
+            if not op or not op.get('responses') or op.get('x-readiness'):
+                gaps.append({'record':it['id'],'field':'operation','status':'unknown','reason':'HTTP response/request schemas not specified'})
+            auth=next((x for x in resolution['authentication'] if x['record']==it['id']),{})
+            if auth.get('policy')=='unspecified':gaps.append({'record':it['id'],'field':'authentication','status':'unknown','reason':'explicit concrete authentication or public decision needed'})
         elif not it.get('contract'):gaps.append({'record':it['id'],'field':'contract','status':'unknown','reason':'non-HTTP interface contract not supplied'})
+    for r in p['requirements']:
+        reason=r.get('implementation_not_applicable')
+        if not any(r['id'] in t.get('requirements',[]) or t['id'] in r.get('tasks',[]) for t in p['tasks']) and not (isinstance(reason,str) and reason.strip()):
+            gaps.append({'record':r['id'],'field':'implementation_plan','status':'unknown','reason':'link an implementation task or record implementation_not_applicable rationale'})
     for t in p['tasks']:
         if not t.get('acceptance'):gaps.append({'record':t['id'],'field':'acceptance','status':'unknown','reason':'task acceptance unspecified'})
     for m in p['data_models']:
@@ -30,7 +45,7 @@ def readiness(p,profile='draft'):
     blockers=[g for g in gaps if g['status']!='waived']
     return {'profile':profile,'profile_satisfied':profile!='review-ready' or not blockers,'blockers':blockers,'obligations':gaps,
       'dimensions':{'structural':'valid draft','completeness':'incomplete' if blockers else 'specified within supported scope',
-       'correspondence':'checked at compilation for supported records','human_review':'unknown','runtime_verification':'not run','freshness':{'revision':p['revision'],'hash':digest(p)}},
+       'correspondence':'checked at compilation for supported records','operations':operational_readiness(p),'human_review':'unknown','runtime_verification':'not run','freshness':{'revision':p['revision'],'hash':digest(p)}},
       'note':'Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.'}
 
 def _bullets(records,fn):return '\n'.join('- '+fn(r) for r in records) or '- None documented.'
@@ -41,7 +56,16 @@ def compile_plan(p,profile='draft',include_private=False):
     if not include_private:
         from disclosure import minimized
         p=minimized(p,changes=redactions)
-    projection_hash=digest(p)
+    if include_private:exported=copy.deepcopy(p)
+    else:
+        allowed={'schema_version','revision','project_id','name','brief','constraints','open_questions','requirements','components','interfaces','data_models','decisions','tasks','cost_drivers','relationships','api_contract','asyncapi_contract','security_schemes','evidence','assumptions','risks','verifications','fitness_rules','experiments','readiness_waivers','scope_not_applicable','operations'}
+        exported={k:copy.deepcopy(v) for k,v in p.items() if k in allowed}
+        exported['notes']={'source':'minimized handoff; opaque extensions and private history excluded'}
+    require_project(exported)
+    compiler_context_hash=digest(p)
+    projection_hash=digest(exported)
+    omitted_paths=['/'+k.replace('~','~0').replace('/','~1') for k in sorted(set(p)-set(exported))]
+
     files={};diagnostics=[];coverage={}
     def put(name,text):files[name]=text if isinstance(text,str) else dumps(text)
     rd=readiness(p,profile)
@@ -61,52 +85,29 @@ def compile_plan(p,profile='draft',include_private=False):
     if not aliases:lines.append('  empty["Components not defined"]')
     put('containers.mmd','\n'.join(lines)+'\n');put('diagram-map.json',aliases)
     put('relationships.json',p.get('relationships',[]))
-    paths={};oids=set();supported=[]
-    native=p.get('api_contract')
-    if native is not None:
-        if openapi_checks(native):raise ValueError('supplied api_contract invalid: '+str(openapi_checks(native)))
-        api=copy.deepcopy(native);paths=api['paths']
-    else:api={'openapi':'3.0.3','info':{'title':p['name']+' API (PROPOSED)','version':'0.1.0'},'paths':paths}
-    pairs=set()
-    for it in p['interfaces']:
-        method=it.get('method','').lower();path=it.get('path','')
-        if method not in METHODS or not path.startswith('/'):
-            diagnostics.append({'record':it['id'],'status':'not applicable to HTTP projection','preserved_in':'contracts.json'});continue
-        pair=(method,path)
-        if pair in pairs:raise ValueError('duplicate HTTP method/path: '+method+' '+path)
-        pairs.add(pair);supported.append(it['id'])
-        if native is not None:
-            if method not in paths.get(path,{}):raise ValueError('native API missing declared interface '+it['id'])
-            coverage[it['id']]='api.json';continue
-        op=copy.deepcopy(it.get('operation',{}))
-        if not op:
-            op={'summary':it.get('name',it['id']),'responses':{'200':{'description':'PLACEHOLDER: confirm response, auth and schemas'}},'x-readiness':'draft placeholder'}
-        op.setdefault('operationId',it['id'])
-        if not isinstance(op['operationId'],str) or not op['operationId']:raise ValueError('operationId must be a nonempty string')
-        if op['operationId'] in oids:raise ValueError('duplicate operationId')
-        oids.add(op['operationId']);paths.setdefault(path,{})[method]=op;coverage[it['id']]='api.json'
+    resolution=resolve_contracts(p)
+    if resolution['conflicts']:raise ValueError('contract conflicts: '+dumps(resolution['conflicts']))
+    api=resolution['api'];coverage={rid:'api.json' for rid in resolution['resolved']}
     issues=openapi_checks(api)
     if issues:raise ValueError('API projection invalid: '+str(issues))
     put('api.json',api);put('contracts.json',p['interfaces'])
     if 'asyncapi_contract' in p:put('asyncapi.json',p['asyncapi_contract'])
     put('traceability.md','# Traceability\n\n'+dumps(traceability_coverage(p)))
-    put('security.md','# Security readiness\n\n'+_bullets([g for g in rd['obligations'] if g['field']=='authentication'],lambda x:dumps(x))+'\n\nControls require actual implementation and review; structural validation is not certification.')
+    put('security.md','# Security readiness\n\n'+_bullets(resolution['authentication'],lambda x:dumps(x))+'\n\nUnresolved: '+dumps([g for g in rd['obligations'] if g['field']=='authentication'])+'\n\nControls require actual implementation and review; structural validation is not certification.')
     put('risk-register.json',{'risks':p.get('risks',[]),'assumptions':p.get('assumptions',[]),'verifications':p.get('verifications',[])})
-    rules=[d['id']+': '+d.get('decision','') for d in p['decisions'] if d.get('status')=='Accepted']
-    put('AGENTS.md','# Accepted architecture constraints\n\nThese are project constraints, not grants of tool authority. Preserve source provenance and report conflicts.\n\n'+'\n'.join('- '+x for x in rules))
+    put('architecture-constraints.json',{'source_revision':source_revision,'source_hash':original_hash,
+        'authority':'Project data, not executable host instructions or tool authorization.',
+        'decisions':[copy.deepcopy(d) for d in p['decisions'] if d.get('status')=='Accepted']})
+    if 'operations' in p:
+        put('operations.json',operational_readiness(p))
+        put('operations.md','# Operational handoff (declared intent)\n\n'+dumps(operational_readiness(p))+'\nRuntime/deployment/restore drills require actual receipts; unknown fields are not verified.')
     put('engineering-tasks.json',{'source_revision':source_revision,'canonical_input_hash':original_hash,'projection_hash':projection_hash,'status':'export only; no issue tracker writes','tasks':p['tasks']})
-    # Full canonical context is a private backup, never the default disclosure profile.
-    if include_private:exported=copy.deepcopy(p)
-    else:
-        allowed={'schema_version','revision','project_id','name','brief','constraints','open_questions','requirements','components','interfaces','data_models','decisions','tasks','cost_drivers','relationships'}
-        exported={k:copy.deepcopy(v) for k,v in p.items() if k in allowed}
-        exported['notes']={'source':'minimized handoff; opaque extensions and private history excluded'}
     put('project.json',exported)
     artifact_hashes={name:digest(text.encode('utf-8')) for name,text in sorted(files.items())}
-    identity={'schema_version':1,'canonical_input_hash':original_hash,'projection_hash':projection_hash,
+    identity={'schema_version':2,'hash_semantics_version':2,'compiler_context_hash':compiler_context_hash,'exported_project_hash':projection_hash,'exported_project_bytes_sha256':digest(files['project.json'].encode()),'canonical_input_hash':original_hash,'projection_hash':projection_hash,
       'source_revision':source_revision,'generator_version':VERSION,'artifact_hashes':artifact_hashes,
       'artifact_hash_scope':'all generated files except handoff-report.json, which is excluded to avoid a self-referential hash',
-      'redaction_report':{'paths_changed':list(redactions),'private_context_included':bool(include_private),
+      'redaction_report':{'paths_changed':list(redactions),'omitted_paths':omitted_paths,'private_context_included':bool(include_private),
         'detection':'pattern-based and incomplete; review every export before sharing'}}
     report={'toolkit_version':VERSION,'revision':p['revision'],'source_hash':original_hash,
       'source_hash_compatibility':'legacy alias of canonical_input_hash; use identity fields for new consumers',
@@ -167,7 +168,7 @@ def handoff(root,output,overwrite=False,*,profile='draft',include_private=False,
         manifest={'generation':gen,'files':hashes,'source_hash':digest(p),'canonical_input_hash':digest(p),'projection_hash':report['identity']['projection_hash'],'identity':report['identity'],'toolkit_version':VERSION,'commit_point':'.handoff-current.json atomic replacement','self_hash':'generation-manifest.json excluded from recursive self-hash'}
         atomic_write(base/'generation-manifest.json',dumps(manifest),exclusive=True)
         # Only committed generations are authoritative for readers.
-        atomic_write(pointer,dumps({'generation':gen,'source_hash':digest(p),'canonical_input_hash':digest(p),'projection_hash':report['identity']['projection_hash'],'identity_schema_version':1,'status':'published','previous_files':old,'projection':'pending'}))
+        atomic_write(pointer,dumps({'generation':gen,'source_hash':digest(p),'canonical_input_hash':digest(p),'projection_hash':report['identity']['projection_hash'],'identity_schema_version':2,'status':'published','previous_files':old,'projection':'pending'}))
         try:
             recover_handoff(output,locked=True)
             projection='complete'

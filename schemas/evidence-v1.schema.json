@@ -52,12 +52,103 @@
           },
           "observation": {
             "type": "string"
+          },
+          "extraction": {
+            "enum": [
+              "parsed",
+              "tokenized",
+              "partial",
+              "unsupported",
+              "blocked",
+              "parse_failed",
+              "timed_out"
+            ]
+          },
+          "adapter": {
+            "type": "string"
+          },
+          "evidence_provenance": {
+            "type": "string"
+          },
+          "extracted_counts": {
+            "type": "object",
+            "required": [
+              "declarations",
+              "edges"
+            ],
+            "properties": {
+              "declarations": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "edges": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "emitted_counts": {
+            "type": "object",
+            "required": [
+              "declarations",
+              "edges"
+            ],
+            "properties": {
+              "declarations": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "edges": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
           }
         }
       }
     },
     "coverage_note": {
       "type": "string"
+    },
+    "root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "collection_policy": {
+      "type": "object"
+    },
+    "enumeration_complete": {
+      "type": "boolean"
+    },
+    "deadline_enforcement": {
+      "type": "string"
+    },
+    "dependency_edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "path",
+          "sha256",
+          "target"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
     }
   },
   "additionalProperties": true

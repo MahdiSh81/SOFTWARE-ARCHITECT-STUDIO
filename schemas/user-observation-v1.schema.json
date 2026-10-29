@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Consented task observation v1",
+  "type": "object",
+  "required": [
+    "id",
+    "participant_alias",
+    "task",
+    "consented"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "participant_alias": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "task": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "consented": {
+      "const": true
+    },
+    "completed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "time_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 86400
+    },
+    "corrections": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 10000
+    }
+  },
+  "additionalProperties": false
+}

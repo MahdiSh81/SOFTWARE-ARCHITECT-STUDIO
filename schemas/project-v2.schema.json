@@ -261,6 +261,10 @@
     },
     "asyncapi_contract": {
       "type": "object"
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
     }
   },
   "additionalProperties": true,
@@ -372,6 +376,18 @@
           "items": {
             "type": "string"
           }
+        },
+        "supersedes": {
+          "type": "string"
+        },
+        "superseded_by": {
+          "type": "string"
+        },
+        "approval_origin": {
+          "type": [
+            "string",
+            "object"
+          ]
         }
       },
       "additionalProperties": true

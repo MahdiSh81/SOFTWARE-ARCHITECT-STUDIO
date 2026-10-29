@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "primary",
+    "selected_skills",
+    "ambiguous",
+    "confidence",
+    "status",
+    "execution"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "primary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "selected_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "ambiguous": {
+      "type": "boolean"
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "status": {
+      "enum": [
+        "suggested",
+        "needs_clarification",
+        "manual_override"
+      ]
+    },
+    "execution": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Static evidence envelope v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "adapter",
+    "adapter_version",
+    "observed_files",
+    "coverage_note"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "adapter": {
+      "type": "string"
+    },
+    "adapter_version": {
+      "type": "string"
+    },
+    "captured_at": {
+      "type": "string"
+    },
+    "source_ref": {
+      "type": "string"
+    },
+    "source_fingerprint": {
+      "type": "string"
+    },
+    "observed_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256",
+          "line",
+          "observation"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "observation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "coverage_note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,22 @@
+openapi: 3.0.3
+info:
+  title: Proposed SaaS API
+  version: 0.1.0
+paths:
+  /records:
+    get:
+      summary: List tenant-scoped records
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful tenant-scoped query
+        '401':
+          description: Authentication required
+        '403':
+          description: Access denied
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

@@ -1,0 +1,568 @@
+{
+  "valid": [
+    "rich-project.json"
+  ],
+  "invalid": [
+    {
+      "schema_version": 2
+    },
+    {
+      "schema_version": 2,
+      "revision": true,
+      "name": "Atlas SaaS",
+      "brief": "Small multi-tenant business application; proposed design only.",
+      "constraints": [
+        "Five developers",
+        "Low operating budget",
+        "Tenant data must be isolated"
+      ],
+      "open_questions": [
+        "Does the customer need EU data residency?",
+        "What are peak request rates?"
+      ],
+      "requirements": [
+        {
+          "id": "FR-001",
+          "description": "User can view their own tenant records",
+          "status": "Accepted",
+          "acceptance": "Users from tenant B cannot access tenant A records"
+        },
+        {
+          "id": "FR-002",
+          "description": "Authorized tenant admins can export audit logs",
+          "status": "Proposed",
+          "acceptance": "Download contains only selected tenant's records"
+        },
+        {
+          "id": "NFR-001",
+          "description": "Support user-facing availability target (TBD)",
+          "status": "Proposed",
+          "acceptance": "Define SLO then validate with telemetry"
+        }
+      ],
+      "components": [
+        {
+          "id": "web-api",
+          "name": "Application API",
+          "responsibility": "Serve authorized requests",
+          "requirements": [
+            "FR-001",
+            "FR-002"
+          ],
+          "files": [
+            "src/app.py"
+          ]
+        },
+        {
+          "id": "database",
+          "name": "PostgreSQL",
+          "responsibility": "Store tenant-scoped records",
+          "requirements": [
+            "FR-001",
+            "FR-002"
+          ],
+          "files": [
+            "db/schema.sql"
+          ]
+        }
+      ],
+      "interfaces": [
+        {
+          "id": "API-001",
+          "name": "List tenant records",
+          "method": "GET",
+          "path": "/records",
+          "requirements": [
+            "FR-001"
+          ],
+          "components": [
+            "web-api",
+            "database"
+          ],
+          "authentication": "tenant session; proposed",
+          "operation": {
+            "operationId": "listRecords",
+            "security": [
+              {
+                "session": []
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Authorized records",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "API-002",
+          "name": "Export audit log",
+          "method": "GET",
+          "path": "/audit/export",
+          "requirements": [
+            "FR-002"
+          ],
+          "components": [
+            "web-api",
+            "database"
+          ]
+        }
+      ],
+      "data_models": [
+        {
+          "id": "DATA-001",
+          "name": "Tenant records",
+          "tables": [
+            "records",
+            "tenants"
+          ],
+          "requirements": [
+            "FR-001"
+          ],
+          "components": [
+            "database"
+          ]
+        },
+        {
+          "id": "DATA-002",
+          "name": "Audit events",
+          "tables": [
+            "audit_events"
+          ],
+          "requirements": [
+            "FR-002"
+          ],
+          "components": [
+            "database"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "ADR-001",
+          "title": "Use shared schema with tenant_id",
+          "status": "Proposed",
+          "decision": "PostgreSQL tenant-scoped queries and RLS guardrails",
+          "consequences": "Requires strict tenant tests",
+          "validation": "Cross-tenant access tests",
+          "requirements": [
+            "FR-001"
+          ],
+          "components": [
+            "database"
+          ],
+          "interfaces": [
+            "API-001"
+          ],
+          "data_models": [
+            "DATA-001"
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "id": "TASK-001",
+          "title": "Implement tenant authorization",
+          "requirements": [
+            "FR-001"
+          ],
+          "components": [
+            "web-api"
+          ],
+          "interfaces": [
+            "API-001"
+          ],
+          "data_models": [
+            "DATA-001"
+          ],
+          "decisions": [
+            "ADR-001"
+          ],
+          "acceptance": "Cross-tenant GET returns forbidden and is audited"
+        }
+      ],
+      "cost_drivers": [
+        {
+          "id": "COST-001",
+          "name": "Audit log storage",
+          "requirements": [
+            "FR-002"
+          ],
+          "components": [
+            "database"
+          ]
+        }
+      ],
+      "notes": {
+        "status": "draft",
+        "source": "illustrative sample only"
+      },
+      "custom_extension": {
+        "non_ascii": "معماری نرم‌افزار",
+        "unknown_fact": [
+          1,
+          {
+            "retain": true
+          }
+        ]
+      },
+      "relationships": [
+        {
+          "id": "EDGE-001",
+          "kind": "calls",
+          "from": {
+            "group": "components",
+            "id": "web-api"
+          },
+          "to": {
+            "group": "components",
+            "id": "database"
+          },
+          "evidence_status": "PROPOSED"
+        }
+      ],
+      "api_contract": {
+        "openapi": "3.0.3",
+        "info": {
+          "title": "Atlas supported contract",
+          "version": "0.1.0"
+        },
+        "components": {
+          "securitySchemes": {
+            "session": {
+              "type": "apiKey",
+              "in": "cookie",
+              "name": "sid"
+            }
+          }
+        },
+        "paths": {
+          "/records": {
+            "get": {
+              "operationId": "listRecords",
+              "security": [
+                {
+                  "session": []
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Authorized records",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/audit/export": {
+            "get": {
+              "operationId": "exportAudit",
+              "responses": {
+                "200": {
+                  "description": "Authorized audit export"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "schema_version": 2,
+      "revision": 1,
+      "name": "",
+      "brief": "Small multi-tenant business application; proposed design only.",
+      "constraints": [
+        "Five developers",
+        "Low operating budget",
+        "Tenant data must be isolated"
+      ],
+      "open_questions": [
+        "Does the customer need EU data residency?",
+        "What are peak request rates?"
+      ],
+      "requirements": [
+        {
+          "id": "FR-001",
+          "description": "User can view their own tenant records",
+          "status": "Accepted",
+          "acceptance": "Users from tenant B cannot access tenant A records"
+        },
+        {
+          "id": "FR-002",
+          "description": "Authorized tenant admins can export audit logs",
+          "status": "Proposed",
+          "acceptance": "Download contains only selected tenant's records"
+        },
+        {
+          "id": "NFR-001",
+          "description": "Support user-facing availability target (TBD)",
+          "status": "Proposed",
+          "acceptance": "Define SLO then validate with telemetry"
+        }
+      ],
+      "components": [
+        {
+          "id": "web-api",
+          "name": "Application API",
+          "responsibility": "Serve authorized requests",
+          "requirements": [
+            "FR-001",
+            "FR-002"
+          ],
+          "files": [
+            "src/app.py"
+          ]
+        },
+        {
+          "id": "database",
+          "name": "PostgreSQL",
+          "responsibility": "Store tenant-scoped records",
+          "requirements": [
+            "FR-001",
+            "FR-002"
+          ],
+          "files": [
+            "db/schema.sql"
+          ]
+        }
+      ],
+      "interfaces": [
+        {
+          "id": "API-001",
+          "name": "List tenant records",
+          "method": "GET",
+          "path": "/records",
+          "requirements": [
+            "FR-001"
+          ],
+          "components": [
+            "web-api",
+            "database"
+          ],
+          "authentication": "tenant session; proposed",
+          "operation": {
+            "operationId": "listRecords",
+            "security": [
+              {
+                "session": []
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Authorized records",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "API-002",
+          "name": "Export audit log",
+          "method": "GET",
+          "path": "/audit/export",
+          "requirements": [
+            "FR-002"
+          ],
+          "components": [
+            "web-api",
+            "database"
+          ]
+        }
+      ],
+      "data_models": [
+        {
+          "id": "DATA-001",
+          "name": "Tenant records",
+          "tables": [
+            "records",
+            "tenants"
+          ],
+          "requirements": [
+            "FR-001"
+          ],
+          "components": [
+            "database"
+          ]
+        },
+        {
+          "id": "DATA-002",
+          "name": "Audit events",
+          "tables": [
+            "audit_events"
+          ],
+          "requirements": [
+            "FR-002"
+          ],
+          "components": [
+            "database"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "ADR-001",
+          "title": "Use shared schema with tenant_id",
+          "status": "Proposed",
+          "decision": "PostgreSQL tenant-scoped queries and RLS guardrails",
+          "consequences": "Requires strict tenant tests",
+          "validation": "Cross-tenant access tests",
+          "requirements": [
+            "FR-001"
+          ],
+          "components": [
+            "database"
+          ],
+          "interfaces": [
+            "API-001"
+          ],
+          "data_models": [
+            "DATA-001"
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "id": "TASK-001",
+          "title": "Implement tenant authorization",
+          "requirements": [
+            "FR-001"
+          ],
+          "components": [
+            "web-api"
+          ],
+          "interfaces": [
+            "API-001"
+          ],
+          "data_models": [
+            "DATA-001"
+          ],
+          "decisions": [
+            "ADR-001"
+          ],
+          "acceptance": "Cross-tenant GET returns forbidden and is audited"
+        }
+      ],
+      "cost_drivers": [
+        {
+          "id": "COST-001",
+          "name": "Audit log storage",
+          "requirements": [
+            "FR-002"
+          ],
+          "components": [
+            "database"
+          ]
+        }
+      ],
+      "notes": {
+        "status": "draft",
+        "source": "illustrative sample only"
+      },
+      "custom_extension": {
+        "non_ascii": "معماری نرم‌افزار",
+        "unknown_fact": [
+          1,
+          {
+            "retain": true
+          }
+        ]
+      },
+      "relationships": [
+        {
+          "id": "EDGE-001",
+          "kind": "calls",
+          "from": {
+            "group": "components",
+            "id": "web-api"
+          },
+          "to": {
+            "group": "components",
+            "id": "database"
+          },
+          "evidence_status": "PROPOSED"
+        }
+      ],
+      "api_contract": {
+        "openapi": "3.0.3",
+        "info": {
+          "title": "Atlas supported contract",
+          "version": "0.1.0"
+        },
+        "components": {
+          "securitySchemes": {
+            "session": {
+              "type": "apiKey",
+              "in": "cookie",
+              "name": "sid"
+            }
+          }
+        },
+        "paths": {
+          "/records": {
+            "get": {
+              "operationId": "listRecords",
+              "security": [
+                {
+                  "session": []
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Authorized records",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/audit/export": {
+            "get": {
+              "operationId": "exportAudit",
+              "responses": {
+                "200": {
+                  "description": "Authorized audit export"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "release": "0.7.0",
+  "date": "2026-10-29",
+  "baseline_release": "pluginrel_6ade7f4f61088191a7fa3000fab23e02",
+  "python": {
+    "errors": 0,
+    "failures": 0,
+    "log": "test_capacity_formulas (test_architect_cli.CapacityTests.test_capacity_formulas) ... ok\ntest_fractional_replica_rejected (test_architect_cli.CapacityTests.test_fractional_replica_rejected) ... ok\ntest_nan_rejected (test_architect_cli.CapacityTests.test_nan_rejected) ... ok\ntest_negative_rejected (test_architect_cli.CapacityTests.test_negative_rejected) ... ok\ntest_zero_prices_are_valid (test_architect_cli.CapacityTests.test_zero_prices_are_valid) ... ok\ntest_bad_score_rejected (test_architect_cli.ScoringTests.test_bad_score_rejected) ... ok\ntest_bad_weights_rejected (test_architect_cli.ScoringTests.test_bad_weights_rejected) ... ok\ntest_empty_is_not_evaluated (test_architect_cli.ScoringTests.test_empty_is_not_evaluated) ... ok\ntest_partial_coverage_not_zeroed (test_architect_cli.ScoringTests.test_partial_coverage_not_zeroed) ... ok\ntest_api_basic (test_architect_cli.ValidationTests.test_api_basic) ... ok\ntest_dangling_arrow (test_architect_cli.ValidationTests.test_dangling_arrow) ... ok\ntest_json_error (test_architect_cli.ValidationTests.test_json_error) ... ok\ntest_valid_mermaid (test_architect_cli.ValidationTests.test_valid_mermaid) ... ok\ntest_bad_regex_rejected (test_project_workflows.BehavioralTests.test_bad_regex_rejected) ... ok\ntest_evaluate_and_baseline (test_project_workflows.BehavioralTests.test_evaluate_and_baseline) ... ok\ntest_missing_outputs_are_not_pass (test_project_workflows.BehavioralTests.test_missing_outputs_are_not_pass) ... ok\ntest_dangling_ids (test_project_workflows.ProjectTests.test_dangling_ids) ... ok\ntest_duplicate_rejected (test_project_workflows.ProjectTests.test_duplicate_rejected) ... ok\ntest_handoff_and_validators (test_project_workflows.ProjectTests.test_handoff_and_validators) ... ok\ntest_impact_declared_links (test_project_workflows.ProjectTests.test_impact_declared_links) ... ok\ntest_links_valid (test_project_workflows.ProjectTests.test_links_valid) ... ok\ntest_project_context_version_and_snapshot (test_project_workflows.ProjectTests.test_project_context_version_and_snapshot) ... ok\ntest_repo_file_line_evidence_and_drift (test_project_workflows.ProjectTests.test_repo_file_line_evidence_and_drift) ... ok\ntest_requirement_ids (test_project_workflows.ProjectTests.test_requirement_ids) ... ok\ntest_validating_project_json_checks_links (test_project_workflows.ProjectTests.test_validating_project_json_checks_links) ... ok\ntest_actual_full_schema_worker (test_release.ReleaseTests.test_actual_full_schema_worker) ... ok\ntest_actual_worker_timeout (test_release.ReleaseTests.test_actual_worker_timeout) ... ok\ntest_cache_parity_and_fitness_counterexample (test_release.ReleaseTests.test_cache_parity_and_fitness_counterexample) ... ok\ntest_cache_preserves_unrelated_file (test_release.ReleaseTests.test_cache_preserves_unrelated_file) ... ok\ntest_change_removed_requirement_is_supported (test_release.ReleaseTests.test_change_removed_requirement_is_supported) ... ok\ntest_cli_bad_api_returns_json_not_traceback (test_release.ReleaseTests.test_cli_bad_api_returns_json_not_traceback) ... ok\ntest_commit_conflict_preserves_project (test_release.ReleaseTests.test_commit_conflict_preserves_project) ... ok\ntest_committed_handoff_survives_projection_failure (test_release.ReleaseTests.test_committed_handoff_survives_projection_failure) ... ok\ntest_compiler_preserves_native_contracts_and_ids (test_release.ReleaseTests.test_compiler_preserves_native_contracts_and_ids) ... ok\ntest_cross_surface_capacity_cases (test_release.ReleaseTests.test_cross_surface_capacity_cases) ... ok\ntest_default_disclosure_redacts_and_private_backup_preserves (test_release.ReleaseTests.test_default_disclosure_redacts_and_private_backup_preserves) ... ok\ntest_dry_run_writes_nothing (test_release.ReleaseTests.test_dry_run_writes_nothing) ... ok\ntest_evaluation_gate_and_deterministic_length (test_release.ReleaseTests.test_evaluation_gate_and_deterministic_length) ... ok\ntest_external_refs_blocked (test_release.ReleaseTests.test_external_refs_blocked) ... ok\ntest_head_supported_and_duplicate_rejected_before_write (test_release.ReleaseTests.test_head_supported_and_duplicate_rejected_before_write) ... ok\ntest_history_projection_failure_recoverable (test_release.ReleaseTests.test_history_projection_failure_recoverable) ... ok\ntest_init_preserves_unrelated_history (test_release.ReleaseTests.test_init_preserves_unrelated_history) ... ok\ntest_invalid_shapes_are_diagnostics (test_release.ReleaseTests.test_invalid_shapes_are_diagnostics) ... ok\ntest_js_static_import_adapter_ignores_comments_and_templates (test_release.ReleaseTests.test_js_static_import_adapter_ignores_comments_and_templates) ... ok\ntest_missing_envelope_rejected (test_release.ReleaseTests.test_missing_envelope_rejected) ... ok\ntest_modified_owned_output_not_overwritten (test_release.ReleaseTests.test_modified_owned_output_not_overwritten) ... ok\ntest_nonstring_operation_id_is_typed_error (test_release.ReleaseTests.test_nonstring_operation_id_is_typed_error) ... ok\ntest_numeric_overflow_nan_and_nonfinite_weights (test_release.ReleaseTests.test_numeric_overflow_nan_and_nonfinite_weights) ... ok\ntest_openapi_positive_fields_and_negative_shapes (test_release.ReleaseTests.test_openapi_positive_fields_and_negative_shapes) ... ok\ntest_optional_full_gate_cannot_hide_unavailable_tools (test_release.ReleaseTests.test_optional_full_gate_cannot_hide_unavailable_tools) ... ok\ntest_pathological_regex_times_out_without_false_pass (test_release.ReleaseTests.test_pathological_regex_times_out_without_false_pass) ... ok\ntest_published_schema_agrees_with_fixtures (test_release.ReleaseTests.test_published_schema_agrees_with_fixtures) ... ok\ntest_readiness_waiver_not_verification (test_release.ReleaseTests.test_readiness_waiver_not_verification) ... ok\ntest_renderer_attempt_not_suppressed_by_heuristic (test_release.ReleaseTests.test_renderer_attempt_not_suppressed_by_heuristic) ... ok\ntest_restore_as_new_revision (test_release.ReleaseTests.test_restore_as_new_revision) ... ok\ntest_rich_fixture_valid (test_release.ReleaseTests.test_rich_fixture_valid) ... ok\ntest_scanner_ci_and_relevant_quota (test_release.ReleaseTests.test_scanner_ci_and_relevant_quota) ... ok\ntest_scanner_comments_not_routes (test_release.ReleaseTests.test_scanner_comments_not_routes) ... ok\ntest_snapshot_failure_retries_without_double_revision (test_release.ReleaseTests.test_snapshot_failure_retries_without_double_revision) ... ok\ntest_special_file_not_opened_and_entry_budget_honest (test_release.ReleaseTests.test_special_file_not_opened_and_entry_budget_honest) ... ok\ntest_sqlite_allowlist_and_planning_tools (test_release.ReleaseTests.test_sqlite_allowlist_and_planning_tools) ... ok\ntest_stale_owned_adr_removed_and_unowned_note_preserved (test_release.ReleaseTests.test_stale_owned_adr_removed_and_unowned_note_preserved) ... ok\ntest_supersede_preserves_predecessor (test_release.ReleaseTests.test_supersede_preserves_predecessor) ... ok\ntest_symlink_reads_and_writes_refused (test_release.ReleaseTests.test_symlink_reads_and_writes_refused) ... ok\ntest_timeout_retains_other_file_results (test_release.ReleaseTests.test_timeout_retains_other_file_results) ... ok\ntest_typed_graph_closure_cycles_order_invariant (test_release.ReleaseTests.test_typed_graph_closure_cycles_order_invariant) ... ok\ntest_unordered_associations_do_not_invent_flows (test_release.ReleaseTests.test_unordered_associations_do_not_invent_flows) ... ok\n\n----------------------------------------------------------------------\nRan 67 tests in 2.024s\n\nOK\n",
+    "run": 67,
+    "skipped": 0
+  },
+  "workbench": {
+    "method": "Node executes the canonical core and actual inline UI script under a minimal DOM model; no browser layout/assistive technology certification",
+    "checks": [
+      {
+        "name": "lossless rich project roundtrip",
+        "status": "passed"
+      },
+      {
+        "name": "accepted status, API and tasks retained",
+        "status": "passed"
+      },
+      {
+        "name": "no ID normalization or display truncation",
+        "status": "passed"
+      },
+      {
+        "name": "flat twenty snapshots and restore",
+        "status": "passed"
+      },
+      {
+        "name": "corrupt serialized snapshot rejected without truncation",
+        "status": "passed"
+      },
+      {
+        "name": "legacy UI backup rejected explicitly",
+        "status": "passed"
+      },
+      {
+        "name": "valid diagram aliases retain hyphen IDs, no inferred edges",
+        "status": "passed"
+      },
+      {
+        "name": "invalid fixture parity",
+        "status": "passed"
+      },
+      {
+        "name": "capacity finite parity fixture",
+        "status": "passed"
+      },
+      {
+        "name": "assessment unknown excluded and NaN rejected",
+        "status": "passed"
+      },
+      {
+        "name": "corrupt startup retains original without overwrite",
+        "status": "passed"
+      },
+      {
+        "name": "UI script edit in DOM model changes only selected fields",
+        "status": "passed"
+      },
+      {
+        "name": "UI script capacity and score handlers exist",
+        "status": "passed"
+      },
+      {
+        "name": "UI script snapshot in DOM model and per-tab draft preservation",
+        "status": "passed"
+      }
+    ],
+    "count": 14,
+    "status": "passed"
+  },
+  "cli_integration": {
+    "version": "0.7.0",
+    "recorded_at": "2026-10-29T14:29:41.679907+00:00",
+    "ok": true,
+    "runs": [
+      {
+        "command": "init",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "a441ed4f1bedb66b1df604c957b712dd0a90dfa620f45b9a4b3fb5ff4a5519c2",
+        "checks": [],
+        "policy_ok": null,
+        "status": null
+      },
+      {
+        "command": "commit",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "1fda398d6715537ea62d40d051df04b98678425c179190375de6bddb63f1e7ba",
+        "checks": [],
+        "policy_ok": null,
+        "status": "committed"
+      },
+      {
+        "command": "snapshot",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "089f217818acfce6a95ae3f4e71b9019e3a1ba73f03e7dbe343ba1e618e8368c",
+        "checks": [],
+        "policy_ok": null,
+        "status": "committed"
+      },
+      {
+        "command": "resume",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "71a8813803d94856682031627dc2625b981da9bee58578813384c1aac7b969cd",
+        "checks": [],
+        "policy_ok": null,
+        "status": null
+      },
+      {
+        "command": "impact",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "4870e47fb5ba86eb12ee71009f7f6970b22e465ab99fc1da2637157477727d43",
+        "checks": [],
+        "policy_ok": null,
+        "status": null
+      },
+      {
+        "command": "change",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "6c997d66c7051bd0171d5a39633a6d5a38edf48573cc7c77a984fd2c2b7fc54c",
+        "checks": [],
+        "policy_ok": null,
+        "status": "PROPOSED; not applied"
+      },
+      {
+        "command": "handoff",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "c0ccc0c496742ecc5535042e781ea0c088ab937c346761be2f4789e4048d233d",
+        "checks": [],
+        "policy_ok": null,
+        "status": null
+      },
+      {
+        "command": "validate",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "8a60c144a57755c1ac181387fd375e93e3add04446679cd45c8e2e978fd221ae",
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "api.json",
+            "input_sha256": "a1df633e690616c160697d4f39ef92802ac8abc4e161d057db471858611c6eb7",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "not requested or basic gate failed",
+            "file": "api.json",
+            "input_sha256": null,
+            "method": "built-in",
+            "status": "skipped",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "Mermaid heuristic",
+            "detail": "",
+            "file": "containers.mmd",
+            "input_sha256": "6bd2d1b24bdf688a003e831196d53be3daf4a22c1e489b1bc6b52255a8212435",
+            "method": "heuristic only",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "Mermaid renderer",
+            "detail": "rendering not requested",
+            "file": "containers.mmd",
+            "input_sha256": null,
+            "method": "built-in",
+            "status": "skipped",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "contracts.json",
+            "input_sha256": "2b98e4077cdd8cb5147619c00a09df27d205cd2bcb3fedb18dfb6852e195b833",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "data-schemas.json",
+            "input_sha256": "31dff5d4f136a6e9f54475b9eb820bfa0e9ade3e3cecf853ea36730c0da46b96",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "diagram-map.json",
+            "input_sha256": "b8bc561c639018e0c91523702e6d2b78f1598f86f0a534cbf2721fdbc7c2c84f",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "engineering-tasks.json",
+            "input_sha256": "b5989005596e567a78db1b6b2fd23b2245caa07f0da0d7d2b6c9ab1f73f57e95",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "generation-manifest.json",
+            "input_sha256": "58b47a26d8cbe707920c3e517ed023c71e9f2121587009af3df9928af14310f3",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "handoff-report.json",
+            "input_sha256": "4be467f740b8e56d2f6c74a103b2fc4e570f8da9313797c2e0103f18afd20b01",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "Project traceability integrity",
+            "detail": "",
+            "file": "project.json",
+            "input_sha256": "94defde103d3d768e0f1e52324cc0f98a395e9b9808e5e71aa93ebaa73ae04b5",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "relationships.json",
+            "input_sha256": "a820d0f966906e0ffb8db4619c4e5fcc614c208225771eb45386ed8b06825d33",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "risk-register.json",
+            "input_sha256": "4c0775283d7ebb093e99eeb0848bbf7c1ecfb5819122f84d17ddbcd0759875a8",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "tasks.json",
+            "input_sha256": "e3a26d86882fb3a74c5af0dcea58e7acc947994e2e42796c3da00f1893211182",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "Contract correspondence",
+            "detail": "supported operation coverage only",
+            "file": "project.json ↔ api.json",
+            "input_sha256": null,
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          }
+        ],
+        "policy_ok": true,
+        "status": null
+      },
+      {
+        "command": "validate",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "1dd010976f723be6b1aecd412f6efdaf907d89e34e6b41d64168c0fb5cfd8b84",
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "",
+            "file": "api.json",
+            "input_sha256": "a1df633e690616c160697d4f39ef92802ac8abc4e161d057db471858611c6eb7",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "api.json",
+            "input_sha256": "a1df633e690616c160697d4f39ef92802ac8abc4e161d057db471858611c6eb7",
+            "method": "openapi-spec-validator 0.7.2",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          }
+        ],
+        "policy_ok": true,
+        "status": null
+      },
+      {
+        "command": "validate",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "8791532842686aa453e462d2bdf8c49725274ebe5cc698acd6ecea11d637abc4",
+        "checks": [
+          {
+            "check": "Project traceability integrity",
+            "detail": "",
+            "file": "project.json",
+            "input_sha256": "94defde103d3d768e0f1e52324cc0f98a395e9b9808e5e71aa93ebaa73ae04b5",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          },
+          {
+            "check": "Project JSON Schema",
+            "detail": "{\"status\": \"passed\"}\n",
+            "file": "project.json",
+            "input_sha256": "94defde103d3d768e0f1e52324cc0f98a395e9b9808e5e71aa93ebaa73ae04b5",
+            "method": "jsonschema 4.23.0",
+            "status": "passed",
+            "toolkit_version": "0.7.0"
+          }
+        ],
+        "policy_ok": true,
+        "status": null
+      },
+      {
+        "command": "readiness",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "646d10dcd2ff98a39caa5add76bf9a099b1c21c1a675f007eadbad86043d874f",
+        "checks": [],
+        "policy_ok": null,
+        "status": null
+      },
+      {
+        "command": "data-check",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "1e29507a9c4f46979c3b341224fbc5d06791d01bb8b39e58024004bc52955d83",
+        "checks": [],
+        "policy_ok": null,
+        "status": "not applicable"
+      },
+      {
+        "command": "restore",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "c949cdd2d42eda0562c7099bd21c95171cba3a221602344f70f4cb3013c6028f",
+        "checks": [],
+        "policy_ok": null,
+        "status": "committed"
+      },
+      {
+        "command": "recover",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "matched": true,
+        "result_sha256": "ada5fd76132cf4774aa5d4d16e96bcbe4c9f080adca760df110e15cbd442426a",
+        "checks": [],
+        "policy_ok": null,
+        "status": "committed"
+      }
+    ],
+    "scope": "Real CLI invocations against a disposable declared rich fixture. No production service, model API, browser or repository build execution."
+  },
+  "environment": {
+    "host_budgets": {
+      "agent_count": "advisory; host must mediate",
+      "external_tool_authority": "host enforcement required",
+      "local_file_bytes": "enforced",
+      "subprocess_deadline": "enforced",
+      "tokens": "unsupported"
+    },
+    "io": {
+      "bounded_reads": true,
+      "non_posix": "preflight only; hostile path-race protection not claimed",
+      "posix_descriptor_no_follow": true,
+      "power_loss_durability": "fsync attempted; filesystem/platform durability not certified",
+      "regular_file_reads": true,
+      "writer_concurrency": "cooperating local writers under exclusive lock"
+    },
+    "mmdc": null,
+    "network": "no automatic installs/fetching; host connector capabilities unprobed",
+    "packages": {
+      "PyYAML": "6.0.3",
+      "jsonschema": "4.23.0",
+      "openapi-spec-validator": "0.7.2"
+    },
+    "platform": "linux",
+    "python": "3.12.14",
+    "toolkit_version": "0.7.0"
+  },
+  "preservation": {
+    "original_source_files": 35,
+    "omitted_original_files": [],
+    "manifests_only_version_changed": true,
+    "app_binding_byte_identical": true,
+    "default_prompt_value_type_and_order_preserved": true
+  },
+  "optional_runtime_attempts": [
+    {
+      "check": "Real browser UI",
+      "status": "blocked_by_host",
+      "observed_result": "Chromium could not launch in this host; no real-browser UI test completion or screenshots. Browser layout and assistive-technology behavior remain unverified."
+    },
+    {
+      "check": "Mermaid real render",
+      "status": "blocked_by_host",
+      "renderer": "@mermaid-js/mermaid-cli 12.0.0",
+      "browser": "Chromium 153.0.8010.0",
+      "observed_error": "Could not create NETLINK socket: Operation not permitted (1)",
+      "validation_gate_result": "failed with policy_ok false; no render pass claimed",
+      "source": "Observed earlier during this implementation session; this entry is a session observation summary, not a new execution transcript."
+    }
+  ],
+  "measurements_pending": [
+    "M14 comparative actual-model quality and calibrated human annotations",
+    "M35 specialist benefit vs single-pass cost/time comparison",
+    "M37 real participant task observations/interviews"
+  ],
+  "deferred_as_report_recommends": [
+    "M38 hosted multi-user/native app service",
+    "M39 universal semantic/vector/graph service",
+    "M40 multi-model autonomous expansion"
+  ],
+  "scope": "Local regression, actual installed schema validators and CLI integrations passed. These results do not certify production correctness, hostile OS isolation, deployment durability, live model quality or real-browser accessibility."
+}

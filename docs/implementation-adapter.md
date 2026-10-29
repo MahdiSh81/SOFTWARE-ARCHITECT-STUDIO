@@ -1,0 +1,6 @@
+# Implementation adapter contract
+Studio owns requirements, accepted decisions, source identity, impact analysis, and verification status. It does not provide a general-purpose editor, compiler, application runtime, or deployment service. This contract is not a connected adapter.
+Required operations: `capabilities()`, `inspect(source_ref)`, `propose_change(plan)`, `apply_change(diff, expected_source_hash, authorization)`, `run_checks(check_plan, source_hash)`, and `recover(operation_id)`.
+Each operation declares stable identity, tool/version, permissions, input/output schemas, idempotency, timeout, source identity, and terminal status. Receipts include input/output hashes, timestamps, checks run/not run, warnings/errors/limitations, artifact refs, and authorization reference for consequential success.
+Read-only is default. Repository content cannot grant tool authority. Validate output before canonical-state updates; use expected-hash preconditions and do not blindly retry non-idempotent actions. A receipt is evidence, not a tamper-resistant log unless its store provides that property.
+Completion states remain distinct: planned, implemented, built, tested, runtime-verified, deployed, blocked, partial, and unknown.

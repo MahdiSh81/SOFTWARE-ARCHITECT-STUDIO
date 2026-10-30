@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "name": "lossless rich project roundtrip",
+      "status": "passed"
+    },
+    {
+      "name": "accepted status, API and tasks retained",
+      "status": "passed"
+    },
+    {
+      "name": "no ID normalization or display truncation",
+      "status": "passed"
+    },
+    {
+      "name": "flat twenty snapshots and restore",
+      "status": "passed"
+    },
+    {
+      "name": "corrupt serialized snapshot rejected without truncation",
+      "status": "passed"
+    },
+    {
+      "name": "legacy UI backup rejected explicitly",
+      "status": "passed"
+    },
+    {
+      "name": "valid diagram aliases retain hyphen IDs, no inferred edges",
+      "status": "passed"
+    },
+    {
+      "name": "invalid fixture parity",
+      "status": "passed"
+    },
+    {
+      "name": "capacity finite parity fixture",
+      "status": "passed"
+    },
+    {
+      "name": "assessment unknown excluded and NaN rejected",
+      "status": "passed"
+    },
+    {
+      "name": "corrupt startup retains original without overwrite",
+      "status": "passed"
+    },
+    {
+      "name": "UI script edit in DOM model changes only selected fields",
+      "status": "passed"
+    },
+    {
+      "name": "UI script capacity and score handlers exist",
+      "status": "passed"
+    },
+    {
+      "name": "UI script snapshot in DOM model and per-tab draft preservation",
+      "status": "passed"
+    },
+    {
+      "name": "first writer conflict is detected when both tabs started blank",
+      "status": "passed"
+    },
+    {
+      "name": "full JSON edits cannot silently change accepted requirements",
+      "status": "passed"
+    },
+    {
+      "name": "record removal preserves unlinked accepted requirements",
+      "status": "passed"
+    },
+    {
+      "name": "failed score input does not mutate stored UI state",
+      "status": "passed"
+    },
+    {
+      "name": "verification references reject malformed and unknown IDs",
+      "status": "passed"
+    },
+    {
+      "name": "snapshot envelope revision must identify its project",
+      "status": "passed"
+    },
+    {
+      "name": "snapshot refuses unsafe next revision without mutating input",
+      "status": "passed"
+    },
+    {
+      "name": "backup rejects nonfinite UI data instead of silently changing it",
+      "status": "passed"
+    },
+    {
+      "name": "unchanged accepted record can be saved without reapproval",
+      "status": "passed"
+    },
+    {
+      "name": "accepted object key order does not create a semantic edit",
+      "status": "passed"
+    },
+    {
+      "name": "failed oversized-envelope import preserves recovery protection",
+      "status": "passed"
+    }
+  ],
+  "method": "actual project-core and inline UI code in Node; minimal DOM model, not browser rendering"
+}

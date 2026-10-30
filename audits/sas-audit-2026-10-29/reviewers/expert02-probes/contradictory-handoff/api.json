@@ -1,0 +1,27 @@
+{
+  "info": {
+    "title": "Counter",
+    "version": "1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/count": {
+      "get": {
+        "operationId": "getCount",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "A count"
+          }
+        },
+        "security": []
+      }
+    }
+  }
+}

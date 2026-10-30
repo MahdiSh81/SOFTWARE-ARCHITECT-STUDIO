@@ -1,0 +1,130 @@
+{
+  "requirements": [
+    "FR-001"
+  ],
+  "revision": 1,
+  "source_hash": "ac73daab4fccb38927127575f246ebae6ab22702b2e997e7b6983123fb9ab6fa",
+  "affected": {
+    "components": [
+      {
+        "id": "api",
+        "name": "api",
+        "why": [
+          "declared requirements association"
+        ],
+        "witness_path": [
+          {
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "to": {
+              "group": "components",
+              "id": "api"
+            },
+            "relation": "declared requirements association",
+            "evidence_status": "DECLARED"
+          }
+        ],
+        "status": "review candidate; change not proven necessary"
+      }
+    ],
+    "interfaces": [
+      {
+        "id": "API-001",
+        "name": "API-001",
+        "why": [
+          "declared requirements association"
+        ],
+        "witness_path": [
+          {
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "to": {
+              "group": "interfaces",
+              "id": "API-001"
+            },
+            "relation": "declared requirements association",
+            "evidence_status": "DECLARED"
+          }
+        ],
+        "status": "review candidate; change not proven necessary"
+      }
+    ],
+    "data_models": [],
+    "decisions": [],
+    "tasks": [
+      {
+        "id": "TASK-001",
+        "name": "TASK-001",
+        "why": [
+          "declared requirements association",
+          "declared interfaces association"
+        ],
+        "witness_path": [
+          {
+            "from": {
+              "group": "requirements",
+              "id": "FR-001"
+            },
+            "to": {
+              "group": "interfaces",
+              "id": "API-001"
+            },
+            "relation": "declared requirements association",
+            "evidence_status": "DECLARED"
+          },
+          {
+            "from": {
+              "group": "interfaces",
+              "id": "API-001"
+            },
+            "to": {
+              "group": "tasks",
+              "id": "TASK-001"
+            },
+            "relation": "declared interfaces association",
+            "evidence_status": "DECLARED"
+          }
+        ],
+        "status": "review candidate; change not proven necessary"
+      }
+    ],
+    "cost_drivers": []
+  },
+  "unlinked_review_required": [
+    "data_models",
+    "decisions",
+    "cost_drivers"
+  ],
+  "unreached_records": [],
+  "traceability_coverage": {
+    "components": {
+      "linked_affected": 1,
+      "total": 1
+    },
+    "interfaces": {
+      "linked_affected": 1,
+      "total": 1
+    },
+    "data_models": {
+      "linked_affected": 0,
+      "total": 0
+    },
+    "decisions": {
+      "linked_affected": 0,
+      "total": 0
+    },
+    "tasks": {
+      "linked_affected": 1,
+      "total": 1
+    },
+    "cost_drivers": {
+      "linked_affected": 0,
+      "total": 0
+    }
+  },
+  "caveat": "Typed declared-link closure with connectivity witnesses, not semantic causality. Missing links and runtime effects require manual review."
+}

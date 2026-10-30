@@ -1,0 +1,369 @@
+{
+  "apply_precondition": {
+    "expected_hash": "ff68c5d8d9e77151d77fc0c33e7e68633c806b6fe51a0dab0f79c56454296d0f"
+  },
+  "baseline_hash": "ff68c5d8d9e77151d77fc0c33e7e68633c806b6fe51a0dab0f79c56454296d0f",
+  "baseline_impact": {
+    "affected": {
+      "components": [],
+      "cost_drivers": [],
+      "data_models": [],
+      "decisions": [],
+      "interfaces": [],
+      "tasks": []
+    },
+    "caveat": "Typed declared-link closure with connectivity witnesses, not semantic causality. Missing links and runtime effects require manual review.",
+    "requirements": [],
+    "revision": 1,
+    "source_hash": "ff68c5d8d9e77151d77fc0c33e7e68633c806b6fe51a0dab0f79c56454296d0f",
+    "traceability_coverage": {
+      "components": {
+        "linked_affected": 0,
+        "total": 0
+      },
+      "cost_drivers": {
+        "linked_affected": 0,
+        "total": 0
+      },
+      "data_models": {
+        "linked_affected": 0,
+        "total": 0
+      },
+      "decisions": {
+        "linked_affected": 0,
+        "total": 0
+      },
+      "interfaces": {
+        "linked_affected": 0,
+        "total": 0
+      },
+      "tasks": {
+        "linked_affected": 0,
+        "total": 0
+      }
+    },
+    "unlinked_review_required": [
+      "components",
+      "interfaces",
+      "data_models",
+      "decisions",
+      "tasks",
+      "cost_drivers"
+    ],
+    "unreached_records": []
+  },
+  "baseline_revision": 1,
+  "changed_requirements": [
+    "FR-001",
+    "FR-002"
+  ],
+  "delta": {
+    "assumptions": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "components": {
+      "added": [
+        "CMP-CLI",
+        "CMP-STORE"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "cost_drivers": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "data_models": {
+      "added": [
+        "DATA-TASK"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "decisions": {
+      "added": [
+        "ADR-001"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "evidence": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "experiments": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "fitness_rules": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "interfaces": {
+      "added": [
+        "IFACE-CLI"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "metadata_changed": [
+      "brief",
+      "constraints",
+      "open_questions"
+    ],
+    "relationships": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "requirements": {
+      "added": [
+        "FR-001",
+        "FR-002"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "risks": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "tasks": {
+      "added": [
+        "TASK-001",
+        "TASK-002"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "verifications": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    }
+  },
+  "note": "Accepted decisions are not automatically amended. Review the semantic delta before an explicitly requested commit.",
+  "proposed_hash": "4fb4838c04238204422c2a084cccf604b709a88ff2e4fac5914793c7feb8ddfc",
+  "proposed_impact": {
+    "affected": {
+      "components": [
+        {
+          "id": "CMP-CLI",
+          "name": "CLI",
+          "status": "review candidate; change not proven necessary",
+          "why": [
+            "declared requirements association"
+          ],
+          "witness_path": [
+            {
+              "evidence_status": "DECLARED",
+              "from": {
+                "group": "requirements",
+                "id": "FR-001"
+              },
+              "relation": "declared requirements association",
+              "to": {
+                "group": "components",
+                "id": "CMP-CLI"
+              }
+            }
+          ]
+        },
+        {
+          "id": "CMP-STORE",
+          "name": "Task Store",
+          "status": "review candidate; change not proven necessary",
+          "why": [
+            "declared requirements association"
+          ],
+          "witness_path": [
+            {
+              "evidence_status": "DECLARED",
+              "from": {
+                "group": "requirements",
+                "id": "FR-001"
+              },
+              "relation": "declared requirements association",
+              "to": {
+                "group": "components",
+                "id": "CMP-STORE"
+              }
+            }
+          ]
+        }
+      ],
+      "cost_drivers": [],
+      "data_models": [
+        {
+          "id": "DATA-TASK",
+          "name": "Task",
+          "status": "review candidate; change not proven necessary",
+          "why": [
+            "declared requirements association"
+          ],
+          "witness_path": [
+            {
+              "evidence_status": "DECLARED",
+              "from": {
+                "group": "requirements",
+                "id": "FR-001"
+              },
+              "relation": "declared requirements association",
+              "to": {
+                "group": "data_models",
+                "id": "DATA-TASK"
+              }
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "ADR-001",
+          "name": "Standard library local CLI",
+          "status": "review candidate; change not proven necessary",
+          "why": [
+            "declared requirements association"
+          ],
+          "witness_path": [
+            {
+              "evidence_status": "DECLARED",
+              "from": {
+                "group": "requirements",
+                "id": "FR-001"
+              },
+              "relation": "declared requirements association",
+              "to": {
+                "group": "decisions",
+                "id": "ADR-001"
+              }
+            }
+          ]
+        }
+      ],
+      "interfaces": [
+        {
+          "id": "IFACE-CLI",
+          "name": "Command interface",
+          "status": "review candidate; change not proven necessary",
+          "why": [
+            "declared requirements association"
+          ],
+          "witness_path": [
+            {
+              "evidence_status": "DECLARED",
+              "from": {
+                "group": "requirements",
+                "id": "FR-001"
+              },
+              "relation": "declared requirements association",
+              "to": {
+                "group": "interfaces",
+                "id": "IFACE-CLI"
+              }
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "id": "TASK-001",
+          "name": "Implement persistent task store",
+          "status": "review candidate; change not proven necessary",
+          "why": [
+            "declared requirements association"
+          ],
+          "witness_path": [
+            {
+              "evidence_status": "DECLARED",
+              "from": {
+                "group": "requirements",
+                "id": "FR-001"
+              },
+              "relation": "declared requirements association",
+              "to": {
+                "group": "tasks",
+                "id": "TASK-001"
+              }
+            }
+          ]
+        },
+        {
+          "id": "TASK-002",
+          "name": "Implement CLI and integration tests",
+          "status": "review candidate; change not proven necessary",
+          "why": [
+            "declared requirements association"
+          ],
+          "witness_path": [
+            {
+              "evidence_status": "DECLARED",
+              "from": {
+                "group": "requirements",
+                "id": "FR-001"
+              },
+              "relation": "declared requirements association",
+              "to": {
+                "group": "tasks",
+                "id": "TASK-002"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "caveat": "Typed declared-link closure with connectivity witnesses, not semantic causality. Missing links and runtime effects require manual review.",
+    "requirements": [
+      "FR-001",
+      "FR-002"
+    ],
+    "revision": 1,
+    "source_hash": "4fb4838c04238204422c2a084cccf604b709a88ff2e4fac5914793c7feb8ddfc",
+    "traceability_coverage": {
+      "components": {
+        "linked_affected": 2,
+        "total": 2
+      },
+      "cost_drivers": {
+        "linked_affected": 0,
+        "total": 0
+      },
+      "data_models": {
+        "linked_affected": 1,
+        "total": 1
+      },
+      "decisions": {
+        "linked_affected": 1,
+        "total": 1
+      },
+      "interfaces": {
+        "linked_affected": 1,
+        "total": 1
+      },
+      "tasks": {
+        "linked_affected": 2,
+        "total": 2
+      }
+    },
+    "unlinked_review_required": [
+      "cost_drivers"
+    ],
+    "unreached_records": []
+  },
+  "proposed_revision": 1,
+  "review_obligations": [
+    "API compatibility and consumers",
+    "data migration/retention/backups",
+    "authorization/privacy",
+    "NFR/cost assumptions",
+    "applicable validation and rollback/forward-fix"
+  ],
+  "status": "PROPOSED; not applied"
+}

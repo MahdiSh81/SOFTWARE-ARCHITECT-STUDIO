@@ -1,0 +1,11 @@
+{
+  "name": "software-architect-studio-browser-tests",
+  "private": true,
+  "version": "0.8.0",
+  "scripts": {
+    "test": "playwright test --config=playwright.config.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}

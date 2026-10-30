@@ -1,0 +1,26 @@
+COMMAND: /workspace/sas-env/bin/python -m unittest discover -s tests -p test_audit_followups.py -v
+EXIT: 1
+test_capability_manifest_rejects_duplicate_operation_ids (test_audit_followups.AuditFollowupTests.test_capability_manifest_rejects_duplicate_operation_ids) ... ok
+test_committed_journal_mismatch_preserves_current_project_and_history (test_audit_followups.AuditFollowupTests.test_committed_journal_mismatch_preserves_current_project_and_history) ... ok
+test_deployment_receipt_requires_authorization_reference (test_audit_followups.AuditFollowupTests.test_deployment_receipt_requires_authorization_reference) ... ok
+test_handoff_generation_manifest_preserves_identity (test_audit_followups.AuditFollowupTests.test_handoff_generation_manifest_preserves_identity) ... ok
+test_handoff_identity_distinguishes_canonical_and_projection_hashes (test_audit_followups.AuditFollowupTests.test_handoff_identity_distinguishes_canonical_and_projection_hashes) ... FAIL
+test_openapi_external_and_nonstring_refs_are_rejected (test_audit_followups.AuditFollowupTests.test_openapi_external_and_nonstring_refs_are_rejected) ... ok
+test_openapi_local_references_resolve_and_escaped_pointer_is_supported (test_audit_followups.AuditFollowupTests.test_openapi_local_references_resolve_and_escaped_pointer_is_supported) ... ok
+test_openapi_path_parameter_reference_is_resolved_semantically (test_audit_followups.AuditFollowupTests.test_openapi_path_parameter_reference_is_resolved_semantically) ... ok
+test_openapi_security_scheme_must_be_declared (test_audit_followups.AuditFollowupTests.test_openapi_security_scheme_must_be_declared) ... ok
+test_openapi_unresolved_local_reference_fails (test_audit_followups.AuditFollowupTests.test_openapi_unresolved_local_reference_fails) ... ok
+test_passed_tool_result_requires_output_identity_and_valid_time (test_audit_followups.AuditFollowupTests.test_passed_tool_result_requires_output_identity_and_valid_time) ... ok
+
+======================================================================
+FAIL: test_handoff_identity_distinguishes_canonical_and_projection_hashes (test_audit_followups.AuditFollowupTests.test_handoff_identity_distinguishes_canonical_and_projection_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/SOFTWARE-ARCHITECT-STUDIO/tests/test_audit_followups.py", line 101, in test_handoff_identity_distinguishes_canonical_and_projection_hashes
+    self.assertNotEqual(identity["canonical_input_hash"], identity["projection_hash"])
+AssertionError: '923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0' == '923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.026s
+
+FAILED (failures=1)

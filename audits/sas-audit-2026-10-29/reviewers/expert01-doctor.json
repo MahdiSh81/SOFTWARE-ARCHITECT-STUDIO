@@ -1,0 +1,27 @@
+{
+  "host_budgets": {
+    "agent_count": "advisory; host must mediate",
+    "external_tool_authority": "host enforcement required",
+    "local_file_bytes": "enforced",
+    "subprocess_deadline": "enforced",
+    "tokens": "unsupported"
+  },
+  "io": {
+    "bounded_reads": true,
+    "non_posix": "preflight only; hostile path-race protection not claimed",
+    "posix_descriptor_no_follow": true,
+    "power_loss_durability": "fsync attempted; filesystem/platform durability not certified",
+    "regular_file_reads": true,
+    "writer_concurrency": "cooperating local writers under exclusive lock"
+  },
+  "mmdc": null,
+  "network": "no automatic installs/fetching; host connector capabilities unprobed",
+  "packages": {
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0",
+    "openapi-spec-validator": null
+  },
+  "platform": "linux",
+  "python": "3.12.14",
+  "toolkit_version": "0.8.0"
+}

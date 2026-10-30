@@ -1,0 +1,31 @@
+test_recovery_journal_cannot_escape_project (test_acceptance.AcceptanceTests.test_recovery_journal_cannot_escape_project) ... ok
+test_recovery_rejects_modified_journal_payload (test_acceptance.AcceptanceTests.test_recovery_rejects_modified_journal_payload) ... ok
+test_history_uses_resulting_revision_and_commit_order (test_acceptance.AcceptanceTests.test_history_uses_resulting_revision_and_commit_order) ... ok
+test_recovery_does_not_overwrite_a_conflicting_history_record (test_acceptance.AcceptanceTests.test_recovery_does_not_overwrite_a_conflicting_history_record) ... ok
+test_init_preserves_existing_revision_directory (test_acceptance.AcceptanceTests.test_init_preserves_existing_revision_directory) ... ok
+test_verification_references_are_validated_before_coverage (test_acceptance.AcceptanceTests.test_verification_references_are_validated_before_coverage) ... ok
+test_committed_journal_mismatch_preserves_current_project_and_history (test_audit_followups.AuditFollowupTests.test_committed_journal_mismatch_preserves_current_project_and_history) ... ok
+test_handoff_identity_distinguishes_canonical_and_projection_hashes (test_audit_followups.AuditFollowupTests.test_handoff_identity_distinguishes_canonical_and_projection_hashes) ... FAIL
+test_handoff_generation_manifest_preserves_identity (test_audit_followups.AuditFollowupTests.test_handoff_generation_manifest_preserves_identity) ... ok
+test_snapshot_failure_retries_without_double_revision (test_release.ReleaseTests.test_snapshot_failure_retries_without_double_revision) ... ok
+test_history_projection_failure_recoverable (test_release.ReleaseTests.test_history_projection_failure_recoverable) ... ok
+test_commit_conflict_preserves_project (test_release.ReleaseTests.test_commit_conflict_preserves_project) ... ok
+test_restore_as_new_revision (test_release.ReleaseTests.test_restore_as_new_revision) ... ok
+test_supersede_preserves_predecessor (test_release.ReleaseTests.test_supersede_preserves_predecessor) ... ok
+test_readiness_waiver_not_verification (test_release.ReleaseTests.test_readiness_waiver_not_verification) ... ok
+test_bad_regex_rejected (test_project_workflows.BehavioralTests.test_bad_regex_rejected) ... ok
+test_evaluate_and_baseline (test_project_workflows.BehavioralTests.test_evaluate_and_baseline) ... ok
+test_missing_outputs_are_not_pass (test_project_workflows.BehavioralTests.test_missing_outputs_are_not_pass) ... ok
+
+======================================================================
+FAIL: test_handoff_identity_distinguishes_canonical_and_projection_hashes (test_audit_followups.AuditFollowupTests.test_handoff_identity_distinguishes_canonical_and_projection_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/SOFTWARE-ARCHITECT-STUDIO/tests/test_audit_followups.py", line 101, in test_handoff_identity_distinguishes_canonical_and_projection_hashes
+    self.assertNotEqual(identity["canonical_input_hash"], identity["projection_hash"])
+AssertionError: '923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0' == '923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0'
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.238s
+
+FAILED (failures=1)

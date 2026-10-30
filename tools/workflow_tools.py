@@ -53,19 +53,23 @@ def sqlite_schema_check(p):
             return '"'+v.replace('"','""')+'"'
         table=quote(m.get('table',m.get('name',m['id'])));columns=[]
         for c in m['columns']:
-            if not isinstance(c,dict) or c.get('type') not in {'TEXT','INTEGER','REAL','BLOB','NUMERIC'}:raise ValueError('supported SQLite column type required')
+            if not isinstance(c,dict) or not isinstance(c.get('type'),str) or c['type'] not in {'TEXT','INTEGER','REAL','BLOB','NUMERIC'}:raise ValueError('supported SQLite column type required')
             columns.append(quote(c.get('name'))+' '+c['type']+(' PRIMARY KEY' if c.get('primary_key') is True else '')+(' NOT NULL' if c.get('nullable') is False else ''))
         ddl.append('CREATE TABLE '+table+' ('+', '.join(columns)+');')
+    if len(ddl) != len(set(x.split(' (', 1)[0].casefold() for x in ddl)):
+        raise ValueError('duplicate SQLite table names')
     conn=sqlite3.connect(':memory:');conn.enable_load_extension(False)
     try:
         conn.execute('PRAGMA trusted_schema=OFF')
         for statement in ddl:conn.execute(statement)
         return {'status':'passed' if ddl else 'not applicable','dialect':'sqlite','schema_statements':ddl,'skipped':gaps,'scope':'generated allowlisted CREATE TABLE in memory; arbitrary migrations/data/runtime not tested'}
+    except sqlite3.Error:
+        raise ValueError('invalid generated SQLite schema; check duplicate columns and key declarations') from None
     finally:conn.close()
 
 def research_kit():
     return {'status':'instrument only; no participants interviewed','target_segment':'hypothesis: technical leads and small engineering teams',
-      'tasks':['resume an accepted project without losing state','assess a changed requirement with source evidence','prepare a handoff and locate unresolved blockers'],
+      'tasks':['answer a focused technical question without unnecessary project setup','turn an incomplete idea into a bounded requirement slice','resume an accepted project without losing state','assess a changed requirement with source evidence','prepare a handoff and locate unresolved blockers'],
       'observation_template':{'participant_alias':'','task':'','completed':None,'time_seconds':None,'corrections':None,'trust_issue':'','counterexample':'','collaboration_need':''},
       'decision_criteria':['state preservation must be demonstrated','record repeated friction before adding UI steps','hosted services need repeated collaboration demand','do not generalize from a small convenience sample'],
       'privacy':'Use aliases, consent and minimal notes. No outreach, analytics upload or interviews are performed by this tool.'}
@@ -79,10 +83,9 @@ def capture_response(prompt,response,model,skill_hash,source_hash=None):
       'quality_status':'unreviewed; not a live quality benchmark until actual captures and calibrated independent reviews are supplied'}
 
 def capture_summary(captures):
-    if not isinstance(captures,list):raise ValueError('captures array required')
-    return {'captures':len(captures),'reviewed':sum(bool(c.get('reviews')) for c in captures),'unreviewed_ids':[c.get('id') for c in captures if not c.get('reviews')],
-      'critical_failures':[{'capture':c.get('id'),'failures':c.get('critical_failures')} for c in captures if c.get('critical_failures')],
-      'assessor_disagreement':'retain each attributed review; do not replace with majority truth','scope':'capture accounting only; sample selection/semantic correctness and judge calibration require human review'}
+    from evaluation_records import summarize_captures
+    return summarize_captures(captures)
+
 
 def specialist_plan(p,task,max_agents=3,host_delegation=False):
     require_project(p)
@@ -93,9 +96,31 @@ def specialist_plan(p,task,max_agents=3,host_delegation=False):
       'host_delegation_available':host_delegation,'budget':{'max_agents':max_agents,'agent_dispatch':'host-enforced if adapter supplied; otherwise advisory','tool/time/token_budget':'unsupported without a mediating host runtime'},
       'acceptance':'Compare useful corrected findings and measured cost/time to a single-pass baseline before enabling by default; model agreement is not proof.'}
 
-def record_run(path,command,result,duration):
-    # No raw prompt, source snippet, credential, full filesystem path or agent payload.
-    receipt={'receipt_schema':1,'run_id':uuid.uuid4().hex,'toolkit_version':VERSION,'command':command,'duration_seconds':round(duration,6),
-      'status':result.get('status',result.get('quality_status','completed')),'check_count':len(result.get('checks',[])),
-      'observed_files':len(result.get('observed_files',[])),'bytes_read':result.get('bytes_read'),'tokens':'unreported','retention':'local explicit receipt; delete file to purge'}
-    atomic_write(path,dumps(receipt));return receipt
+def preflight_receipt(path):
+    from safe_io import guard
+    target=guard(path)
+    if target.exists():
+        raise ValueError('receipt destination already exists; original preserved')
+    return target
+
+
+def record_run(path,command,result,duration,exit_code=0,operation_id=None):
+    # Telemetry is deliberately distinct from source-bound verification evidence.
+    preflight_receipt(path)
+    checks=result.get('checks',[])
+    counts={}
+    for check in checks:
+        state=check.get('status','unknown')
+        counts[state]=counts.get(state,0)+1
+    status='failed' if exit_code else 'passed'
+    receipt={'receipt_schema':2,'run_id':operation_id or result.get('run_id') or uuid.uuid4().hex,
+      'toolkit_version':VERSION,'command':command,'duration_seconds':round(duration,6),'completed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+      'status':status,'operation_status':result.get('status'),'exit_code':exit_code,
+      'policy_ok':result.get('policy_ok'),'ok':result.get('ok'),
+      'error_code':result.get('error',{}).get('code'),'check_count':len(checks),'check_status_counts':counts,
+      'input_source_hash':result.get('input_source_hash',result.get('source_hash')),
+      'observed_files':len(result.get('observed_files',[])),'bytes_read':result.get('bytes_read'),
+      'tokens':'unreported','scope':'minimized run telemetry, not a verification receipt',
+      'retention':'local explicit summary; delete file to purge'}
+    atomic_write(path,dumps(receipt),exclusive=True)
+    return receipt

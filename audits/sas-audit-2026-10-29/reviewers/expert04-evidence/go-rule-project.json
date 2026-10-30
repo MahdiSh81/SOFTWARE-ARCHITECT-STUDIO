@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "project_id": "9cfe2b75-065d-4da7-bc64-b37c6965b02e",
+  "name": "cli-rule",
+  "brief": "",
+  "constraints": [],
+  "open_questions": [],
+  "notes": {
+    "status": "draft",
+    "source": "user-authored; not production-observed"
+  },
+  "requirements": [],
+  "components": [],
+  "interfaces": [],
+  "data_models": [],
+  "decisions": [],
+  "tasks": [],
+  "cost_drivers": [],
+  "fitness_rules": [
+    {
+      "id": "RULE-001",
+      "kind": "forbid_import",
+      "source_prefix": "main.go",
+      "target_prefix": "forbidden"
+    }
+  ]
+}

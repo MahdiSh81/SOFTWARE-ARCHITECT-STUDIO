@@ -1,0 +1,49 @@
+{
+  "status": "PROPOSED worksheet; not executed",
+  "source_hash": "ac73daab4fccb38927127575f246ebae6ab22702b2e997e7b6983123fb9ab6fa",
+  "components": [
+    {
+      "id": "api",
+      "files": [],
+      "evidence_status": "declared mapping; runtime seam unverified"
+    }
+  ],
+  "stages": [
+    {
+      "phase": 1,
+      "objective": "Characterize current behavior and data ownership",
+      "acceptance": "contract/characterization tests and source identity recorded",
+      "rollback_or_forward_fix": "define for the actual change before execution"
+    },
+    {
+      "phase": 2,
+      "objective": "Compare modularization to service extraction",
+      "acceptance": "simpler option assessed against explicit constraints",
+      "rollback_or_forward_fix": "define for the actual change before execution"
+    },
+    {
+      "phase": 3,
+      "objective": "Select one verified seam",
+      "acceptance": "transactions, consumers, authorization and migration ownership reviewed",
+      "rollback_or_forward_fix": "define for the actual change before execution"
+    },
+    {
+      "phase": 4,
+      "objective": "Introduce compatible boundary and reconcile data",
+      "acceptance": "dual-write/backfill/reconciliation hazards explicitly addressed where applicable",
+      "rollback_or_forward_fix": "define for the actual change before execution"
+    },
+    {
+      "phase": 5,
+      "objective": "Canary and verify before retiring old path",
+      "acceptance": "measured decision signal and recovery rehearsal recorded",
+      "rollback_or_forward_fix": "define for the actual change before execution"
+    }
+  ],
+  "unknown": [
+    "business invariants",
+    "actual traffic",
+    "data ownership approval",
+    "operational rollback requirements"
+  ]
+}

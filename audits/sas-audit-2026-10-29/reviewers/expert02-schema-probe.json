@@ -1,0 +1,46 @@
+{
+  "input": {
+    "schema_version": 2,
+    "revision": 1,
+    "project_id": "89e634b1-d5ec-4bcd-af62-9e2e28991e48",
+    "name": "Schema divergence",
+    "brief": "",
+    "constraints": [],
+    "open_questions": [],
+    "notes": {
+      "status": "draft",
+      "source": "user-authored; not production-observed"
+    },
+    "requirements": [
+      {
+        "id": "FR-001",
+        "description": "A requirement",
+        "tasks": [
+          {
+            "malformed": "not a string"
+          }
+        ]
+      }
+    ],
+    "components": [],
+    "interfaces": [],
+    "data_models": [],
+    "decisions": [],
+    "tasks": [],
+    "cost_drivers": []
+  },
+  "result": {
+    "python_semantic_issues": [],
+    "json_schema_issues": [
+      {
+        "path": [
+          "requirements",
+          0,
+          "tasks",
+          0
+        ],
+        "message": "{'malformed': 'not a string'} is not of type 'string'"
+      }
+    ]
+  }
+}

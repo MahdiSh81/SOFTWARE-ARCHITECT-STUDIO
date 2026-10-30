@@ -1,0 +1,7 @@
+# Versioned change impact — 0.7
+
+Retrieve baseline and proposed canonical context before changing accepted design. `diff` identifies added/removed/changed records; `change` emits a proposed bundle with both baseline and proposed impacts, source hashes and review obligations. It never applies the proposal. An explicitly requested `commit` requires the expected current hash.
+
+`impact` uses typed identities and order-independent closure. Legacy requirement/component associations are declared conservative links; explicit owns/calls/reads/writes/publishes/consumes/implements/verifies/depends_on/affects relationships have documented propagation direction. Dependencies propagate from changed dependency to dependent; owns/affects/publishes propagate forward. Witness paths prove declared connectivity, not semantic causality or that all candidates must change. Cycles terminate; unsupported/unlinked/runtime effects remain manual review.
+
+For material changes assess consumers/backward compatibility, data migrations/reconciliation/retention/backups, authorization/privacy, NFR/cost assumptions, verification/docs and applicable rollout/rollback/forward-fix. A wording correction needs no operational ceremony. Preserve accepted ADR predecessors through supersession and attribute evidence. `freshness` compares captured evidence hashes with collected scope; unread or inaccessible is unknown, not deleted. `evidence-delta` reports observed base/head differences without needing a cache.

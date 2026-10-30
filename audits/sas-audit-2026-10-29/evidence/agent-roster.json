@@ -1,0 +1,74 @@
+{
+  "reviewer_instances": 10,
+  "coordinator_instances": 1,
+  "total_instances": 11,
+  "roster": [
+    {
+      "reviewer": "expert01",
+      "mandate": "Product/requirements/UX/strategy",
+      "first_pass_report": "reviewers/expert01.md",
+      "wave": 1
+    },
+    {
+      "reviewer": "expert02",
+      "mandate": "Architecture",
+      "first_pass_report": "reviewers/expert02.md",
+      "wave": 1
+    },
+    {
+      "reviewer": "expert03",
+      "mandate": "Program creation",
+      "first_pass_report": "reviewers/expert03.md",
+      "wave": 1
+    },
+    {
+      "reviewer": "expert04",
+      "mandate": "Repository intelligence",
+      "first_pass_report": "reviewers/expert04.md",
+      "wave": 1
+    },
+    {
+      "reviewer": "expert05",
+      "mandate": "Quality/testing",
+      "first_pass_report": "reviewers/expert05.md",
+      "wave": 1
+    },
+    {
+      "reviewer": "expert06",
+      "mandate": "Security/privacy/supply chain",
+      "first_pass_report": "reviewers/expert06.md",
+      "wave": 1
+    },
+    {
+      "reviewer": "expert07",
+      "mandate": "AI/skills/orchestration",
+      "first_pass_report": "reviewers/expert07.md",
+      "wave": 2
+    },
+    {
+      "reviewer": "expert08",
+      "mandate": "Tools/API/integrations",
+      "first_pass_report": "reviewers/expert08.md",
+      "wave": 2
+    },
+    {
+      "reviewer": "expert09",
+      "mandate": "Operations/performance/reliability",
+      "first_pass_report": "reviewers/expert09.md",
+      "wave": 2
+    },
+    {
+      "reviewer": "expert10",
+      "mandate": "Knowledge/governance/evaluation",
+      "first_pass_report": "reviewers/expert10.md",
+      "wave": 2
+    }
+  ],
+  "peer_reuse": [
+    "expert02",
+    "expert05",
+    "expert08"
+  ],
+  "mode": "independent first passes in two parallel waves, then reused-agent critique",
+  "independence_limit": "same model family and baseline; limited coordinator cross-confirmations after independently produced findings, no statistical independence or controlled benefit/cost inference"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-29T18:34:02.178208+00:00",
+  "source_ref": "unpinned local tree; resolved commit not inferred",
+  "claim_class": "OBSERVED STATIC SOURCE",
+  "root": "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/fixtures/go-fitness",
+  "adapter": "local-static",
+  "adapter_version": "0.8.0",
+  "observed_files": [
+    {
+      "path": "main.go",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "bytes": 54,
+      "sha256": "17444192d52f609454ecb4a88a4e0259031d235be67684a470e7b8c8bc6a72e7",
+      "source": "local",
+      "source_revision": "unpinned local tree",
+      "extractor_version": "0.8.0",
+      "extraction": "filename/content identity only; no language adapter"
+    }
+  ],
+  "static_declarations": [],
+  "dependency_edges": [],
+  "scanned_count": 1,
+  "total_candidate_files": 1,
+  "discovered_files": 1,
+  "entries_visited": 1,
+  "eligible_discovered": 1,
+  "bytes_read": 54,
+  "skipped_files": 0,
+  "omissions": [],
+  "enumeration_complete": true,
+  "coverage": "complete within supported static scope",
+  "stop_reasons": [],
+  "cache_hits": 0,
+  "source_fingerprint": "3f05ccdde5b31c3c386caf3b5eaf497c2046d0920553b92f0accea10765b58f6",
+  "coverage_note": "Read-only bounded static evidence. Python AST and narrow JS imports/config adapters; no runtime, full dependency or framework-binding guarantee. Local source is not commit-pinned. Snippets off by default."
+}

@@ -1,0 +1,179 @@
+{
+  "supersession_origin": {
+    "replacement": {
+      "id": "ADR-002",
+      "status": "Proposed",
+      "title": "Use SQL",
+      "decision": "Use SQLite",
+      "approval_origin": {
+        "approver": "historical user",
+        "source": "old-session"
+      },
+      "supersedes": "ADR-001",
+      "supersession_reason": "new evidence"
+    },
+    "resume": {
+      "project_id": "f2555840-ff8b-4f02-b6d4-088c697278be",
+      "revision": 1,
+      "source_hash": "7188dbef5a5d15fd51451399bff12e3393295570614787be02c0fd292c5a0597",
+      "name": "Governance probe",
+      "accepted_decisions": [],
+      "constraints": [],
+      "open_questions": [],
+      "coverage": {
+        "functional_requirements": 0,
+        "without_declared_interface": [],
+        "without_declared_component": [],
+        "without_declared_task": [],
+        "nfr_requirements": 0,
+        "nfr_without_passed_verification": [],
+        "review_note": "Links and plans do not prove satisfaction; applicability and measured verification require review."
+      },
+      "authority": "Recorded acceptance is preserved; it grants no new tool permission. No redundant reapproval is required for unchanged decisions.",
+      "excluded": "private history, arbitrary extensions, raw repository contents"
+    }
+  },
+  "repeated_supersession": {
+    "errors": [],
+    "decisions": [
+      {
+        "id": "ADR-001",
+        "status": "Superseded",
+        "title": "Use SQL",
+        "decision": "Use SQLite",
+        "approval_origin": {
+          "approver": "historical user",
+          "source": "old-session"
+        },
+        "superseded_by": "ADR-003"
+      },
+      {
+        "id": "ADR-002",
+        "status": "Proposed",
+        "title": "Use SQL",
+        "decision": "Use SQLite",
+        "approval_origin": {
+          "approver": "historical user",
+          "source": "old-session"
+        },
+        "supersedes": "ADR-001",
+        "supersession_reason": "new evidence"
+      },
+      {
+        "id": "ADR-003",
+        "status": "Proposed",
+        "title": "Use SQL",
+        "decision": "Use SQLite",
+        "approval_origin": {
+          "approver": "historical user",
+          "source": "old-session"
+        },
+        "superseded_by": "ADR-002",
+        "supersedes": "ADR-001",
+        "supersession_reason": "second successor of same predecessor"
+      }
+    ]
+  },
+  "invalid_lifecycle_accepted": {
+    "errors": [],
+    "resume": {
+      "project_id": "2384fa0f-14a5-4874-9785-3ee59290af8e",
+      "revision": 1,
+      "source_hash": "82e9342604c570a13695d2dee72433b1ea6fa7f2ce28b7192284c15116113270",
+      "name": "Broken provenance",
+      "accepted_decisions": [
+        {
+          "id": "ADR-001",
+          "title": null,
+          "decision": "Use SQL",
+          "approval_origin": false
+        }
+      ],
+      "constraints": [],
+      "open_questions": [],
+      "coverage": {
+        "functional_requirements": 0,
+        "without_declared_interface": [],
+        "without_declared_component": [],
+        "without_declared_task": [],
+        "nfr_requirements": 0,
+        "nfr_without_passed_verification": [],
+        "review_note": "Links and plans do not prove satisfaction; applicability and measured verification require review."
+      },
+      "authority": "Recorded acceptance is preserved; it grants no new tool permission. No redundant reapproval is required for unchanged decisions.",
+      "excluded": "private history, arbitrary extensions, raw repository contents"
+    }
+  },
+  "capture_fields": [
+    "at",
+    "capture_schema",
+    "critical_failures",
+    "id",
+    "method",
+    "prompt",
+    "quality_status",
+    "reported_model",
+    "response",
+    "reviews",
+    "rubric",
+    "skill_hash",
+    "source_hash",
+    "toolkit_version"
+  ],
+  "malformed_summary": {
+    "captures": 2,
+    "reviewed": 2,
+    "unreviewed_ids": [],
+    "critical_failures": [],
+    "assessor_disagreement": "retain each attributed review; do not replace with majority truth",
+    "scope": "capture accounting only; sample selection/semantic correctness and judge calibration require human review"
+  },
+  "failed_gate_receipt": {
+    "receipt_schema": 1,
+    "run_id": "3ba7aa4c5d004c8e97b83745e5aca6b1",
+    "toolkit_version": "0.8.0",
+    "command": "validate",
+    "duration_seconds": 0.1,
+    "status": "completed",
+    "check_count": 1,
+    "observed_files": 0,
+    "bytes_read": null,
+    "tokens": "unreported",
+    "retention": "local explicit receipt; delete file to purge"
+  },
+  "projection_identity": {
+    "canonical_input_hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0",
+    "projection_hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0",
+    "exported_project_semantic_hash": "7ef6716fb73bf0e53d2901ee2af2607ad3899f96ffa70f0e6774f16a061f8808",
+    "artifact_project_bytes_hash": "7ef6716fb73bf0e53d2901ee2af2607ad3899f96ffa70f0e6774f16a061f8808",
+    "opaque_fixture_keys": [
+      "api_contract",
+      "custom_extension"
+    ]
+  },
+  "release_manifest": {
+    "declared_release": "0.7.1",
+    "current_cli_version": "0.8.0",
+    "tracked_entries": 67,
+    "hash_mismatches": [
+      "README.md",
+      "tools/artifact_compiler.py",
+      "tools/project_model.py",
+      "tools/revision_store.py",
+      "tools/validation_engine.py",
+      "workbench/index.html"
+    ],
+    "manifest_keys": [
+      "release",
+      "hash",
+      "scope",
+      "files"
+    ]
+  },
+  "metadata_versions": {
+    "plugin.json": "0.7.1",
+    "capabilities.json": "0.7.1",
+    "IMPLEMENTATION_STATUS.json": "0.7.1",
+    "release/verification.json": "0.7.1"
+  }
+}

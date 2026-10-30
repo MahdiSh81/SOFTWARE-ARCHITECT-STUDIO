@@ -1,0 +1,848 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-29T18:34:02.181304+00:00",
+  "source_ref": "unpinned local tree; resolved commit not inferred",
+  "claim_class": "OBSERVED STATIC SOURCE",
+  "root": "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/fixtures/edge-quota",
+  "adapter": "local-static",
+  "adapter_version": "0.8.0",
+  "observed_files": [
+    {
+      "path": "ci.json",
+      "kind": "infrastructure/config",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "bytes": 938,
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831",
+      "source": "local",
+      "source_revision": "unpinned local tree",
+      "extractor_version": "0.8.0"
+    }
+  ],
+  "static_declarations": [
+    {
+      "line": 1,
+      "observation": "jobs descriptor",
+      "target": "consumer",
+      "class": "DECLARED CONFIG; not deployed",
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    }
+  ],
+  "dependency_edges": [
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job0",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job1",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job2",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job3",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job4",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job5",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job6",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job7",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job8",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job9",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job10",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job11",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job12",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job13",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job14",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job15",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job16",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job17",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job18",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job19",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job20",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job21",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job22",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job23",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job24",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job25",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job26",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job27",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job28",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job29",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job30",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job31",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job32",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job33",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job34",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job35",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job36",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job37",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job38",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job39",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job40",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job41",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job42",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job43",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job44",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job45",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job46",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job47",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job48",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job49",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job50",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job51",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job52",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job53",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job54",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job55",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job56",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job57",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job58",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job59",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job60",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job61",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job62",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job63",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job64",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job65",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job66",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job67",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job68",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job69",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job70",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job71",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job72",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job73",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job74",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job75",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job76",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job77",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job78",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job79",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job80",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job81",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job82",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job83",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job84",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job85",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job86",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job87",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job88",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job89",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job90",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job91",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job92",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job93",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job94",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job95",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job96",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job97",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job98",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    },
+    {
+      "kind": "depends-on",
+      "source": "consumer",
+      "target": "job99",
+      "line": 1,
+      "path": "ci.json",
+      "sha256": "1fc9bc340d3cddcacb8f86f26a8de199109afcb4bad591e72ab19c485ede9831"
+    }
+  ],
+  "scanned_count": 1,
+  "total_candidate_files": 1,
+  "discovered_files": 1,
+  "entries_visited": 1,
+  "eligible_discovered": 1,
+  "bytes_read": 938,
+  "skipped_files": 0,
+  "omissions": [],
+  "enumeration_complete": true,
+  "coverage": "complete within supported static scope",
+  "stop_reasons": [],
+  "cache_hits": 0,
+  "source_fingerprint": "4b7bed680e3c56b655d37f9033a0dc799c5decf1a5d16158c9f7e5fcf8463702",
+  "coverage_note": "Read-only bounded static evidence. Python AST and narrow JS imports/config adapters; no runtime, full dependency or framework-binding guarantee. Local source is not commit-pinned. Snippets off by default."
+}

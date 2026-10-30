@@ -1,0 +1,7 @@
+flowchart LR
+R[Requirement slice] --> P[Contract and check plan]
+P --> D[Multi-file diff]
+D --> H[Host authorized apply]
+H --> B[Build]
+B --> T[Behavior tests]
+T --> C[Source and intent reconciliation]

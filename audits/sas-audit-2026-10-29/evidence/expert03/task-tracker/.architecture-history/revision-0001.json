@@ -1,0 +1,20 @@
+{
+  "brief": "",
+  "components": [],
+  "constraints": [],
+  "cost_drivers": [],
+  "data_models": [],
+  "decisions": [],
+  "interfaces": [],
+  "name": "Offline Task Tracker",
+  "notes": {
+    "source": "user-authored; not production-observed",
+    "status": "draft"
+  },
+  "open_questions": [],
+  "project_id": "c05bd47f-8c60-40bb-8794-22e2a4541cc2",
+  "requirements": [],
+  "revision": 1,
+  "schema_version": 2,
+  "tasks": []
+}

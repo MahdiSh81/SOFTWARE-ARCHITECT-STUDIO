@@ -1,0 +1,9 @@
+flowchart LR
+O[Operation] --> P[Preflight and durable intent]
+P --> C[Commit point]
+C --> S[Projection]
+P --> F[Interrupted]
+C --> F
+S --> F
+F --> I[Inspect exact observed state]
+I --> R[Idempotent reconcile or preserve conflict]

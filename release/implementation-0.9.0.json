@@ -1,0 +1,1058 @@
+{
+  "release": "0.9.0",
+  "date": "2026-10-30",
+  "timezone": "Asia/Tehran",
+  "baseline_commit": "e90987f",
+  "audit": "audits/sas-audit-2026-10-29/REPORT.md",
+  "scope": "Implement accepted local repairs and conditional local capability additions; preserve audit KEEP/DEFER decisions. No audit/history evidence rewritten.",
+  "findings": [
+    {
+      "id": "PROD-001",
+      "finding": "Preference changes discard unapplied text",
+      "initiative": "I03",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "workbench/index.html",
+        "workbench/project-core.js"
+      ],
+      "regressions": [
+        "tests/test_workbench.cjs",
+        "tests/browser/workbench.spec.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "PROD-002",
+      "finding": "Record draft crosses collection boundary",
+      "initiative": "I03",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "workbench/index.html",
+        "workbench/project-core.js"
+      ],
+      "regressions": [
+        "tests/test_workbench.cjs",
+        "tests/browser/workbench.spec.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "PROD-003",
+      "finding": "New/sample guards ignore meaningful work",
+      "initiative": "I03",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "workbench/index.html",
+        "workbench/project-core.js"
+      ],
+      "regressions": [
+        "tests/test_workbench.cjs",
+        "tests/browser/workbench.spec.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "PROD-004",
+      "finding": "Beginner record authoring depends on raw JSON",
+      "initiative": "I08",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/skill_registry.py",
+        "tools/evaluation_records.py",
+        "skills",
+        "docs/recipes.md",
+        "workbench/index.html"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "PROD-005",
+      "finding": "Continuation packet loses purpose/identity context",
+      "initiative": "I05",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/project_model.py",
+        "tools/revision_store.py",
+        "tools/safe_io.py",
+        "tools/workflow_tools.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_local_adapter.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "PROD-006",
+      "finding": "Browser-to-CLI path is not guided",
+      "initiative": "I08",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/skill_registry.py",
+        "tools/evaluation_records.py",
+        "skills",
+        "docs/recipes.md",
+        "workbench/index.html"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "PROD-007",
+      "finding": "Product demand and user value unmeasured",
+      "initiative": "I11",
+      "status": "instrumented_outcome_pending",
+      "implementation": [
+        "tools/evaluation_records.py",
+        "tools/skill_registry.py",
+        "evals/routing-cases.json",
+        "schemas/user-observation-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py"
+      ],
+      "limitations": "Consented observation ingestion and privacy-preserving summaries implemented; no real participants or observed product-value result supplied."
+    },
+    {
+      "id": "OPS-001",
+      "finding": "Release identities conflict",
+      "initiative": "I01",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/check_source_manifest.py",
+        "release/version.json",
+        ".github/workflows/ci.yml",
+        "README.md",
+        "requirements-validation.lock",
+        "tests/browser/package-lock.json"
+      ],
+      "regressions": [
+        "tests/test_release_inventory.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "ARCH-001",
+      "finding": "Native and interface contracts disagree while correspondence passes",
+      "initiative": "I02",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/contract_resolution.py",
+        "tools/artifact_compiler.py",
+        "tools/project_model.py",
+        "tools/validation_engine.py",
+        "tools/codec.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_contract_resolution_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "ARCH-002",
+      "finding": "Accepted project cannot fit revision envelope",
+      "initiative": "I05",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/project_model.py",
+        "tools/revision_store.py",
+        "tools/safe_io.py",
+        "tools/workflow_tools.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_local_adapter.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "ARCH-003",
+      "finding": "Schema and Python/JS core validators disagree",
+      "initiative": "I02",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/contract_resolution.py",
+        "tools/artifact_compiler.py",
+        "tools/project_model.py",
+        "tools/validation_engine.py",
+        "tools/codec.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_contract_resolution_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REG-001",
+      "finding": "Projection identity names intermediate rather than exported representation",
+      "initiative": "I02",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/contract_resolution.py",
+        "tools/artifact_compiler.py",
+        "tools/project_model.py",
+        "tools/validation_engine.py",
+        "tools/codec.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_contract_resolution_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-001",
+      "finding": "Nonrequirement record changes do not seed impact",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "ARCH-004",
+      "finding": "Readiness lacks shared contract resolution and explicit applicability",
+      "initiative": "I02",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/contract_resolution.py",
+        "tools/artifact_compiler.py",
+        "tools/project_model.py",
+        "tools/validation_engine.py",
+        "tools/codec.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_contract_resolution_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "QA-001",
+      "finding": "SQLite failures escape typed CLI error boundary",
+      "initiative": "I05",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/project_model.py",
+        "tools/revision_store.py",
+        "tools/safe_io.py",
+        "tools/workflow_tools.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_local_adapter.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "GOV-001",
+      "finding": "Project identity policy differs across browser/revision workflows",
+      "initiative": "I05",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/project_model.py",
+        "tools/revision_store.py",
+        "tools/safe_io.py",
+        "tools/workflow_tools.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_local_adapter.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "CODE-001",
+      "finding": "Execution adapter is documented but not connected",
+      "initiative": "I09",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/execution_adapter.py",
+        "tools/integration_contracts.py",
+        "docs/implementation-adapter.md"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "ARCH-005",
+      "finding": "Policy/contract/effect seams are mixed",
+      "initiative": "I07",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/codec.py",
+        "tools/contract_resolution.py",
+        "tools/operations_profile.py"
+      ],
+      "regressions": [
+        "tests/test_contract_resolution_review.py",
+        "tests/test_integrity_implementation.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "CODE-002",
+      "finding": "Shareable project export loses native contract context and cannot regenerate",
+      "initiative": "I02",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/contract_resolution.py",
+        "tools/artifact_compiler.py",
+        "tools/project_model.py",
+        "tools/validation_engine.py",
+        "tools/codec.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_contract_resolution_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "INT-001",
+      "finding": "Receipt schema and runtime validators diverge",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "INT-002",
+      "finding": "Execution effects and source/result binding need explicit adapter policy",
+      "initiative": "I09",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/execution_adapter.py",
+        "tools/integration_contracts.py",
+        "docs/implementation-adapter.md"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "GOV-002",
+      "finding": "Implementation evidence does not close the intent verification loop",
+      "initiative": "I09",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/execution_adapter.py",
+        "tools/integration_contracts.py",
+        "docs/implementation-adapter.md"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "SKILL-001",
+      "finding": "Specialist guidance lacks operational recipes and measured program outcomes",
+      "initiative": "I08",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/skill_registry.py",
+        "tools/evaluation_records.py",
+        "skills",
+        "docs/recipes.md",
+        "workbench/index.html"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-002",
+      "finding": "Fitness treats file read as sufficient extractor evidence",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-003",
+      "finding": "Warm cache erases parse/adapter omissions",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-004",
+      "finding": "Descriptor edge limits silently truncate",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-005",
+      "finding": "Descriptor parse failure can appear as empty successful extraction",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-006",
+      "finding": "Python relative import identity is discarded",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-007",
+      "finding": "JS/TS token import attributed to unrelated preceding export",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-008",
+      "finding": "Reached optional records omitted from affected groups",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-009",
+      "finding": "Optional cache can abort valid scan; parser deadline is cooperative",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-010",
+      "finding": "Evidence delta lacks envelope/source comparability validation",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "REPO-011",
+      "finding": "Modernization/freshness are instruments, not semantic analysis",
+      "initiative": "I10",
+      "status": "implemented_scoped_instruments",
+      "implementation": [
+        "tools/operations_profile.py",
+        "tools/repository_evidence.py",
+        "docs/integrations.md",
+        "docs/recipes.md"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Typed source/impact/freshness and requirements/TOML adapters improved; universal call/dataflow and actual modernization remain task/host dependent."
+    },
+    {
+      "id": "QA-002",
+      "finding": "CI verifier absent; release inventory stale/incomplete",
+      "initiative": "I01",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/check_source_manifest.py",
+        "release/version.json",
+        ".github/workflows/ci.yml",
+        "README.md",
+        "requirements-validation.lock",
+        "tests/browser/package-lock.json"
+      ],
+      "regressions": [
+        "tests/test_release_inventory.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "QA-003",
+      "finding": "YAML/alternate filename bypasses cross-artifact correspondence",
+      "initiative": "I02",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/contract_resolution.py",
+        "tools/artifact_compiler.py",
+        "tools/project_model.py",
+        "tools/validation_engine.py",
+        "tools/codec.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_contract_resolution_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "SEC-001",
+      "finding": "Authentication intent disappears from review-ready OpenAPI projection",
+      "initiative": "I02",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/contract_resolution.py",
+        "tools/artifact_compiler.py",
+        "tools/project_model.py",
+        "tools/validation_engine.py",
+        "tools/codec.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_contract_resolution_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "SEC-002",
+      "finding": "Non-OAuth scheme accepts nonempty scopes",
+      "initiative": "I02",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/contract_resolution.py",
+        "tools/artifact_compiler.py",
+        "tools/project_model.py",
+        "tools/validation_engine.py",
+        "tools/codec.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_contract_resolution_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "QA-004",
+      "finding": "Duplicate keys erase invalid input before validation",
+      "initiative": "I02",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/contract_resolution.py",
+        "tools/artifact_compiler.py",
+        "tools/project_model.py",
+        "tools/validation_engine.py",
+        "tools/codec.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_contract_resolution_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "QA-005",
+      "finding": "Empty output counts as successful renderer result",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "AI-001",
+      "finding": "Unsafe keyword-stuffed responses pass lexical harness",
+      "initiative": "I11",
+      "status": "instrumented_outcome_pending",
+      "implementation": [
+        "tools/evaluation_records.py",
+        "tools/skill_registry.py",
+        "evals/routing-cases.json",
+        "schemas/user-observation-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py"
+      ],
+      "limitations": "Strict attributed semantic review/critical-failure gates implemented. Lexical checks remain lexical; no live model superiority comparison performed."
+    },
+    {
+      "id": "SEC-003",
+      "finding": "Auxiliary receipt can overwrite explicitly selected project/source path",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "SEC-004",
+      "finding": "Imported Accepted prose promoted into active AGENTS.md without provenance",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "SEC-005",
+      "finding": "Opt-in editable cache can hide fitness violation",
+      "initiative": "I06",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/repository_evidence.py",
+        "tools/graph_engine.py",
+        "schemas/evidence-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "OPS-002",
+      "finding": "CI resolution not bound to transitive inventory/immutable actions",
+      "initiative": "I01",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/check_source_manifest.py",
+        "release/version.json",
+        ".github/workflows/ci.yml",
+        "README.md",
+        "requirements-validation.lock",
+        "tests/browser/package-lock.json"
+      ],
+      "regressions": [
+        "tests/test_release_inventory.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "SEC-006",
+      "finding": "Validator diagnostics echo confidential input",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "SEC-007",
+      "finding": "Browser test server binds all interfaces and serves repository root",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "INT-003",
+      "finding": "Malformed untrusted record can crash contract validation",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "GOV-003",
+      "finding": "Minimized run receipts omit failed gate and operation identity",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "INT-004",
+      "finding": "Receipt failure conceals an already committed primary operation",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "INT-005",
+      "finding": "Generic full gate checks unknown integration JSON syntax only",
+      "initiative": "I04",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/architect_cli.py",
+        "tools/workflow_tools.py",
+        "tools/integration_contracts.py",
+        "tools/validation_engine.py",
+        "schemas/verification-receipt-v1.schema.json",
+        "tests/browser/serve_workbench.py"
+      ],
+      "regressions": [
+        "tests/test_local_adapter.py",
+        "tests/test_adapter_review.py",
+        "tests/test_validation_integrity.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "OPS-003",
+      "finding": "Operational guidance does not produce an executable operational handoff",
+      "initiative": "I10",
+      "status": "implemented_scoped_instruments",
+      "implementation": [
+        "tools/operations_profile.py",
+        "tools/repository_evidence.py",
+        "docs/integrations.md",
+        "docs/recipes.md"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_repository_integrity.py"
+      ],
+      "limitations": "Operational handoff now emits typed applicable/unknown intent and explicit unrun drill/deploy states; no production telemetry/drill performed."
+    },
+    {
+      "id": "SKILL-002",
+      "finding": "Repository coordinator lacks explicit specialist routing contract",
+      "initiative": "I08",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/skill_registry.py",
+        "tools/evaluation_records.py",
+        "skills",
+        "docs/recipes.md",
+        "workbench/index.html"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "GOV-004",
+      "finding": "Capture hashes root skill only, not loaded specialist/reference bundle",
+      "initiative": "I08",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/skill_registry.py",
+        "tools/evaluation_records.py",
+        "skills",
+        "docs/recipes.md",
+        "workbench/index.html"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "GOV-005",
+      "finding": "Review accounting counts malformed/duplicate reviews without validated lineage",
+      "initiative": "I11",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/evaluation_records.py",
+        "tools/skill_registry.py",
+        "evals/routing-cases.json",
+        "schemas/user-observation-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "SKILL-003",
+      "finding": "Four lifecycle specialty playbooks missing operational coverage",
+      "initiative": "I08",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/skill_registry.py",
+        "tools/evaluation_records.py",
+        "skills",
+        "docs/recipes.md",
+        "workbench/index.html"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    },
+    {
+      "id": "AI-002",
+      "finding": "Context volume known but latency/quality cost unmeasured",
+      "initiative": "I11",
+      "status": "instrumented_outcome_pending",
+      "implementation": [
+        "tools/evaluation_records.py",
+        "tools/skill_registry.py",
+        "evals/routing-cases.json",
+        "schemas/user-observation-v1.schema.json"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py"
+      ],
+      "limitations": "Actual file sizes/bundle identities and selective routing implemented; comparative model token/latency/cost gains require a controlled live evaluation."
+    },
+    {
+      "id": "AI-003",
+      "finding": "Specialist review plan correctly declares no executed agents",
+      "initiative": "I08",
+      "status": "retained_strength",
+      "implementation": [
+        "tools/skill_registry.py",
+        "tools/evaluation_records.py",
+        "skills",
+        "docs/recipes.md",
+        "workbench/index.html"
+      ],
+      "regressions": [
+        "tests/test_skill_evaluation.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Review-plan remains honest about no native dispatch; host-supported workers are optional and not automatic."
+    },
+    {
+      "id": "GOV-006",
+      "finding": "Repeated supersession creates contradictory lifecycle/provenance",
+      "initiative": "I05",
+      "status": "implemented_with_regression_coverage",
+      "implementation": [
+        "tools/project_model.py",
+        "tools/revision_store.py",
+        "tools/safe_io.py",
+        "tools/workflow_tools.py"
+      ],
+      "regressions": [
+        "tests/test_integrity_implementation.py",
+        "tests/test_local_adapter.py",
+        "tests/test_workbench.cjs"
+      ],
+      "limitations": "Scoped local implementation; verification results are recorded separately in verification-0.9.0.json."
+    }
+  ],
+  "deferred_initiatives": [
+    {
+      "id": "I12",
+      "status": "deferred_as_audit_recommends",
+      "items": [
+        "Hosted multi-user/native app service",
+        "Universal semantic/vector/graph service",
+        "Autonomous multi-model orchestration"
+      ],
+      "prerequisites": "Demonstrated demand/benefit, operational owner, infrastructure/security design and provider authorization."
+    }
+  ],
+  "external_limits": [
+    {
+      "capability": "Plugin Creator / marketplace publication",
+      "status": "unavailable",
+      "reason": "No Plugin Creator tools/skill exposed; repository implementation and Git push do not update an installed marketplace release."
+    },
+    {
+      "capability": "GitHub API/CI/provider deployment",
+      "status": "conditional",
+      "reason": "Native Git transport is available; no connected PR/CI/deploy service tool or production target configured."
+    },
+    {
+      "capability": "Real Mermaid render",
+      "status": "blocked_by_host_policy",
+      "reason": "Installed Mermaid CLI12.0.0 attempted system Chromium; file:// renderer page blocked with net::ERR_BLOCKED_BY_ADMINISTRATOR. Fake-render negative/positive adapter tests are not a real render claim."
+    },
+    {
+      "capability": "Live model/routing user outcomes",
+      "status": "not_measured",
+      "reason": "80 deterministic routing fixtures and semantic/user-record instruments are local tests, not live model intelligence or participant studies."
+    }
+  ],
+  "verification": "release/verification-0.9.0.json"
+}

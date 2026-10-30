@@ -4,18 +4,11 @@ These controls are local filesystem controls, not a sandbox for external tools.
 Locking serializes cooperating writers; it is not distributed consensus.
 """
 from __future__ import annotations
-import contextlib, hashlib, json, os, stat, time, uuid
+import contextlib, os, stat, time, uuid
 from pathlib import Path
+from codec import digest, dumps, strict_json_loads
 
 MAX_BYTES = 5 * 1024 * 1024
-
-def digest(value):
-    if not isinstance(value, bytes):
-        value = dumps(value).encode('utf-8')
-    return hashlib.sha256(value).hexdigest()
-
-def dumps(value):
-    return json.dumps(value, ensure_ascii=False, sort_keys=True, indent=2, allow_nan=False) + '\n'
 
 def guard(path, root=None):
     path = Path(os.path.abspath(path))
@@ -70,11 +63,13 @@ def read_text(path, maximum=MAX_BYTES):
     return read_bytes(path,maximum).decode('utf-8-sig')
 
 def read_json(path, maximum=MAX_BYTES):
-    return json.loads(read_text(path,maximum), parse_constant=lambda x: (_ for _ in ()).throw(ValueError('nonfinite JSON number: '+x)))
+    return strict_json_loads(read_text(path,maximum))
 
-def atomic_write(path, data, exclusive=False):
+def atomic_write(path, data, exclusive=False, *, maximum=MAX_BYTES):
+    if type(maximum) is not int or not 0 < maximum <= 64 * 1024 * 1024:
+        raise ValueError('write budget must be a positive integer at most 64 MiB')
     data=data.encode('utf-8') if isinstance(data,str) else data
-    if len(data)>MAX_BYTES: raise ValueError('output byte budget exceeded')
+    if len(data)>maximum: raise ValueError('output byte budget exceeded')
     with parent_fd(path,create=True) as (parent,name):
         try:
             info=os.stat(name,dir_fd=parent,follow_symlinks=False)

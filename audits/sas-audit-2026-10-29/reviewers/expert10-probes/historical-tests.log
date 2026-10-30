@@ -1,0 +1,14 @@
+test_openapi_local_references_resolve_and_escaped_pointer_is_supported (test_audit_followups.AuditFollowupTests.test_openapi_local_references_resolve_and_escaped_pointer_is_supported) ... ok
+test_openapi_unresolved_local_reference_fails (test_audit_followups.AuditFollowupTests.test_openapi_unresolved_local_reference_fails) ... ok
+test_openapi_security_scheme_must_be_declared (test_audit_followups.AuditFollowupTests.test_openapi_security_scheme_must_be_declared) ... ok
+test_openapi_path_parameter_reference_is_resolved_semantically (test_audit_followups.AuditFollowupTests.test_openapi_path_parameter_reference_is_resolved_semantically) ... ok
+test_openapi_external_and_nonstring_refs_are_rejected (test_audit_followups.AuditFollowupTests.test_openapi_external_and_nonstring_refs_are_rejected) ... ok
+test_cache_parity_and_fitness_counterexample (test_release.ReleaseTests.test_cache_parity_and_fitness_counterexample) ... ok
+test_cache_preserves_unrelated_file (test_release.ReleaseTests.test_cache_preserves_unrelated_file) ... ok
+test_cross_surface_capacity_cases (test_release.ReleaseTests.test_cross_surface_capacity_cases) ... ok
+test_capacity_formulas (test_architect_cli.CapacityTests.test_capacity_formulas) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.048s
+
+OK

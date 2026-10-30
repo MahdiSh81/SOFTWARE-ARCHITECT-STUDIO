@@ -1,0 +1,7 @@
+flowchart LR
+U[User authority] --> H[Host enforcement]
+R[Untrusted repo and docs] --> C[Coordinator data context]
+C --> A[Scoped tool request]
+A --> H
+H --> E[Untrusted tool evidence]
+E --> V[Validated reconciliation proposal]

@@ -1,0 +1,67 @@
+# Consolidated finding register
+
+Canonical IDs group duplicate observations. Local expert IDs preserve attribution and detailed evidence, impact, remedy, residual risk and acceptance in the linked reports. Priority is action order, not an exploit severity score. No verified remote P0 exploit was established.
+
+| ID | Priority / classification | Finding and evidence aliases | Initiative / acceptance |
+|---|---|---|---|
+| PROD-001 | P1; verified defect | Preference changes discard unapplied text. [E01-F01](reviewers/expert01.md) | I03: Draft survives preference/navigation changes |
+| PROD-002 | P1; verified defect | Record draft crosses collection boundary. [E01-F02](reviewers/expert01.md) | I03: Collection/type identity mismatch refused without draft loss |
+| PROD-003 | P1; verified defect | New/sample guards ignore meaningful work. [E01-F04](reviewers/expert01.md) | I03: Every populated field and unsaved draft protected |
+| PROD-004 | P2; usability opportunity | Beginner record authoring depends on raw JSON. [E01-F05](reviewers/expert01.md) | I08: Representative authoring task succeeds without schema guessing |
+| PROD-005 | P2; scope gap | Continuation packet loses purpose/identity context. [E01-F06](reviewers/expert01.md) | I05: Resume includes bounded purpose and stable identity |
+| PROD-006 | P2; workflow gap | Browser-to-CLI path is not guided. [E01-F07](reviewers/expert01.md) | I08: Fresh export reaches documented dry-run/check path |
+| PROD-007 | P2; unmeasured outcome | Product demand and user value unmeasured. [E01-F08](reviewers/expert01.md) | I11: Consented representative user-task observations retained |
+| OPS-001 | P1; verified inconsistency | Release identities conflict. [E01-F09](reviewers/expert01.md), [E07-F09](reviewers/expert07.md), [E08-F07](reviewers/expert08.md), [E09-F02](reviewers/expert09.md), [E10-F01](reviewers/expert10.md) | I01: Current manifests/toolkit/display identities agree |
+| ARCH-001 | P1; verified defect | Native and interface contracts disagree while correspondence passes. [E02-F01](reviewers/expert02.md) | I02: Conflicting response/body/security/parameters block publication |
+| ARCH-002 | P1; verified defect | Accepted project cannot fit revision envelope. [E02-F02](reviewers/expert02.md) | I05: All advertised payload sizes commit/recover or fail at preflight |
+| ARCH-003 | P1; verified defect | Schema and Python/JS core validators disagree. [E02-F03](reviewers/expert02.md) | I02: Shared known-field conformance corpus agrees across surfaces |
+| REG-001 | P1; verified regression | Projection identity names intermediate rather than exported representation. [E02-F04](reviewers/expert02.md), [E03-F04](reviewers/expert03.md), [E05-F01](reviewers/expert05.md), [E06-F04](reviewers/expert06.md), [E10-F03](reviewers/expert10.md) | I02: Each hash recomputes from its explicitly named representation |
+| REPO-001 | P1; verified omission | Nonrequirement record changes do not seed impact. [E02-F05](reviewers/expert02.md), [E04-F03](reviewers/expert04.md) | I06: Interface/ADR/data-only deltas produce witnesses or scoped unknown |
+| ARCH-004 | P1; scope gap and false blocker | Readiness lacks shared contract resolution and explicit applicability. [E02-F06](reviewers/expert02.md), [E01-F03](reviewers/expert01.md), [E03-F02](reviewers/expert03.md) | I02: Native-equivalent contracts agree; empty application scope not implementation-ready |
+| QA-001 | P2; verified defect | SQLite failures escape typed CLI error boundary. [E02-F07](reviewers/expert02.md) | I05: Duplicate-table fixture returns bounded typed JSON, no traceback |
+| GOV-001 | P2; integration design risk | Project identity policy differs across browser/revision workflows. [E02-F08](reviewers/expert02.md) | I05: Stable identity with explicit legacy/import/fork semantics |
+| CODE-001 | P1; expanded-scope missing capability | Execution adapter is documented but not connected. [E02-F09](reviewers/expert02.md), [E03-F01](reviewers/expert03.md) | I09: One real source-bound edit/build/check/reconcile workflow demonstrated |
+| ARCH-005 | P2; maintainability opportunity | Policy/contract/effect seams are mixed. [E02-F10](reviewers/expert02.md) | I07: Pure resolver/result seams without service rewrite |
+| CODE-002 | P1; verified defect | Shareable project export loses native contract context and cannot regenerate. [E03-F03](reviewers/expert03.md) | I02: Rich default export reloads and recompiles without missing security scheme |
+| INT-001 | P1; verified contract divergence | Receipt schema and runtime validators diverge. [E03-F05](reviewers/expert03.md), [E06-F05](reviewers/expert06.md), [E08-F01](reviewers/expert08.md) | I04: Schema/runtime agree on null/missing/invalid hashes and statuses |
+| INT-002 | P1; integration design risk | Execution effects and source/result binding need explicit adapter policy. [E03-F06](reviewers/expert03.md), [E08-F05](reviewers/expert08.md) | I09: Conflict/partial-write/idempotency/authorization fixture suite passes |
+| GOV-002 | P2; missing capability | Implementation evidence does not close the intent verification loop. [E03-F07](reviewers/expert03.md) | I09: Only source-matched actual checks update verification proposals |
+| SKILL-001 | P2; coverage gap | Specialist guidance lacks operational recipes and measured program outcomes. [E03-F08](reviewers/expert03.md), [E07-F05](reviewers/expert07.md) | I08: Versioned recipes plus positive/negative activation and end-task tests |
+| REPO-002 | P1; verified false success | Fitness treats file read as sufficient extractor evidence. [E04-F01](reviewers/expert04.md) | I06: Unsupported/parse-failed relevant files yield unknown |
+| REPO-003 | P1; verified defect | Warm cache erases parse/adapter omissions. [E04-F02](reviewers/expert04.md) | I06: Cold/warm diagnostics, scope and coverage equivalent |
+| REPO-004 | P2; verified omission | Descriptor edge limits silently truncate. [E04-F04](reviewers/expert04.md) | I06: Every capped collection reports omission/truncation |
+| REPO-005 | P2; verified defect and language limit | Descriptor parse failure can appear as empty successful extraction. [E04-F05](reviewers/expert04.md), [E09-F05](reviewers/expert09.md) | I06: Invalid supported descriptor produces explicit parse failure |
+| REPO-006 | P2; verified evidence loss | Python relative import identity is discarded. [E04-F06](reviewers/expert04.md) | I06: Relative level/module retained without guessing resolution |
+| REPO-007 | P2; verified false observation | JS/TS token import attributed to unrelated preceding export. [E04-F07](reviewers/expert04.md) | I06: Positive/negative module-token corpus yields precise spans |
+| REPO-008 | P2; verified output omission | Reached optional records omitted from affected groups. [E04-F08](reviewers/expert04.md) | I06: Verifications/optional groups returned or explicit filter disclosed |
+| REPO-009 | P2; verified availability gap and limit | Optional cache can abort valid scan; parser deadline is cooperative. [E04-F09](reviewers/expert04.md) | I06: Cache overflow degrades safely; parse budget limitation explicit |
+| REPO-010 | P2; input validation gap | Evidence delta lacks envelope/source comparability validation. [E04-F10](reviewers/expert04.md) | I06: Unrelated/incompatible/partial scopes rejected or labeled incomparable |
+| REPO-011 | P2; honest capability boundary | Modernization/freshness are instruments, not semantic analysis. [E04-F11](reviewers/expert04.md) | I10: Language-specific demand-backed seam/drift fixtures before expansion |
+| QA-002 | P1; verified release defect | CI verifier absent; release inventory stale/incomplete. [E05-F02](reviewers/expert05.md), [E09-F01](reviewers/expert09.md) | I01: All CI targets exist; fresh inventory detects actual tracked mismatches |
+| QA-003 | P1; verified false success | YAML/alternate filename bypasses cross-artifact correspondence. [E05-F03](reviewers/expert05.md) | I02: Equivalent JSON/YAML/naming variants receive same required checks |
+| SEC-001 | P1; verified contract defect | Authentication intent disappears from review-ready OpenAPI projection. [E06-F02](reviewers/expert06.md) | I02: Typed required/public intent and native security reconcile consistently |
+| SEC-002 | P2; verified semantic validation gap | Non-OAuth scheme accepts nonempty scopes. [E05-F04](reviewers/expert05.md) | I02: Unsupported scopes fail despite library schema acceptance |
+| QA-004 | P2; verified parser integrity gap | Duplicate keys erase invalid input before validation. [E05-F05](reviewers/expert05.md) | I02: Duplicate mapping keys rejected in JSON/YAML |
+| QA-005 | P2; verified false success | Empty output counts as successful renderer result. [E05-F06](reviewers/expert05.md) | I04: Fresh nonempty valid expected artifact required for render pass |
+| AI-001 | P2; documented semantic limitation | Unsafe keyword-stuffed responses pass lexical harness. [E05-F07](reviewers/expert05.md), [E07-F02](reviewers/expert07.md), [E10-F05](reviewers/expert10.md) | I11: Actual provenance-bound semantic holdout evaluation before quality claims |
+| SEC-003 | P1; verified accidental data-loss path | Auxiliary receipt can overwrite explicitly selected project/source path. [E06-F01](reviewers/expert06.md) | I04: Non-clobber destinations preflight before primary side effects |
+| SEC-004 | P1; verified generation; downstream threat conditional | Imported Accepted prose promoted into active AGENTS.md without provenance. [E06-F03](reviewers/expert06.md) | I04: Default structured constraints; explicit scoped instruction export only |
+| SEC-005 | P2; conditional cache trust risk | Opt-in editable cache can hide fitness violation. [E06-F06](reviewers/expert06.md) | I06: Release fitness re-extracts untrusted cache; no false clean from forged edge list |
+| OPS-002 | P2; reproducibility risk | CI resolution not bound to transitive inventory/immutable actions. [E06-F07](reviewers/expert06.md), [E09-F03](reviewers/expert09.md) | I01: Reviewed platform-supported locks and immutable action policy used |
+| SEC-006 | P2; verified local disclosure channel | Validator diagnostics echo confidential input. [E06-F08](reviewers/expert06.md) | I04: Default diagnostics minimize values; raw debug explicitly private |
+| SEC-007 | P2; configuration exposure risk | Browser test server binds all interfaces and serves repository root. [E06-F09](reviewers/expert06.md) | I04: Loopback fixture-only server; no repository metadata exposure |
+| INT-003 | P1; verified input handling defect | Malformed untrusted record can crash contract validation. [E08-F02](reviewers/expert08.md) | I04: Every JSON field shape returns bounded typed issues, no exceptions |
+| GOV-003 | P2; verified observability limitation | Minimized run receipts omit failed gate and operation identity. [E08-F03](reviewers/expert08.md), [E09-F04](reviewers/expert09.md), [E10-F04](reviewers/expert10.md) | I04: Failure/error/partial outcomes and correlation retained without raw secrets |
+| INT-004 | P1; verified partial-effect reporting defect | Receipt failure conceals an already committed primary operation. [E08-F04](reviewers/expert08.md) | I04: Post-commit auxiliary failure reports committed state and receipt failure separately |
+| INT-005 | P2; documented dispatch scope gap | Generic full gate checks unknown integration JSON syntax only. [E08-F06](reviewers/expert08.md) | I04: Explicit schema/kind validation; no schema-coverage inference from syntax pass |
+| OPS-003 | P2; expanded-scope capability gap | Operational guidance does not produce an executable operational handoff. [E09-F06](reviewers/expert09.md) | I10: Optional workload/SLO/recovery/runbook profile with exact unknowns |
+| SKILL-002 | P2; instruction coverage risk, activation unmeasured | Repository coordinator lacks explicit specialist routing contract. [E07-F01](reviewers/expert07.md) | I08: Small routing registry and positive/negative task-owner evaluations |
+| GOV-004 | P2; verified provenance limitation | Capture hashes root skill only, not loaded specialist/reference bundle. [E07-F03](reviewers/expert07.md) | I08: Loaded-source manifest and bundle identity reflect actual references/skills |
+| GOV-005 | P2; verified accounting limitation | Review accounting counts malformed/duplicate reviews without validated lineage. [E07-F04](reviewers/expert07.md), [E10-F06](reviewers/expert10.md) | I11: Typed rubric/reviewer/source records and distinct calibrated-review status |
+| SKILL-003 | P2; expanded-scope coverage gap | Four lifecycle specialty playbooks missing operational coverage. [E07-F06](reviewers/expert07.md) | I08: Four conditional 22-field specs with actual capability/fallback checks |
+| AI-002 | P2; measurement opportunity | Context volume known but latency/quality cost unmeasured. [E07-F07](reviewers/expert07.md) | I11: Selective loading benchmarked without removing safety/context obligations |
+| AI-003 | P2; strength and capability boundary | Specialist review plan correctly declares no executed agents. [E07-F08](reviewers/expert07.md) | I08: Preserve plan-only honesty and actual worker ledger when available |
+| GOV-006 | P1; verified lifecycle defect | Repeated supersession creates contradictory lifecycle/provenance. [E10-F02](reviewers/expert10.md) | I05: Valid chains reciprocal/acyclic, stale successor rejected, proposed approval distinct |
+
+Register: 58 consolidated findings; 82 expert finding aliases mapped.
+Unmapped expert aliases: none.

@@ -1,0 +1,635 @@
+{
+  "description": "Deterministic routing conformance fixtures only; not a live model activation or quality benchmark.",
+  "cases": [
+    {
+      "id": "1",
+      "task": "write acceptance criteria",
+      "expected_primary": [
+        "requirements-specification"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "2",
+      "task": "clarify the requirement",
+      "expected_primary": [
+        "requirements-specification"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "3",
+      "task": "define feature scope",
+      "expected_primary": [
+        "requirements-specification"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "4",
+      "task": "document non-functional targets",
+      "expected_primary": [
+        "requirements-specification"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "5",
+      "task": "map the repository",
+      "expected_primary": [
+        "repository-intelligence"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "6",
+      "task": "inspect an unfamiliar codebase",
+      "expected_primary": [
+        "repository-intelligence"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "7",
+      "task": "build a dependency graph",
+      "expected_primary": [
+        "repository-intelligence"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "8",
+      "task": "detect architecture drift",
+      "expected_primary": [
+        "repository-intelligence"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "9",
+      "task": "implement a feature",
+      "expected_primary": [
+        "implementation-planning-and-change"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "10",
+      "task": "scaffold a project",
+      "expected_primary": [
+        "implementation-planning-and-change"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "11",
+      "task": "refactor this module",
+      "expected_primary": [
+        "implementation-planning-and-change"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "12",
+      "task": "prepare a code change",
+      "expected_primary": [
+        "implementation-planning-and-change"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "13",
+      "task": "debug this problem",
+      "expected_primary": [
+        "test-debug-verify"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "14",
+      "task": "diagnose a failing test",
+      "expected_primary": [
+        "test-debug-verify"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "15",
+      "task": "interpret this stack trace",
+      "expected_primary": [
+        "test-debug-verify"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "16",
+      "task": "isolate a regression",
+      "expected_primary": [
+        "test-debug-verify"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "17",
+      "task": "perform a threat model",
+      "expected_primary": [
+        "security-review"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "18",
+      "task": "perform a security review",
+      "expected_primary": [
+        "security-review"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "19",
+      "task": "investigate a secret leak",
+      "expected_primary": [
+        "security-review"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "20",
+      "task": "assess a vulnerability",
+      "expected_primary": [
+        "security-review"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "21",
+      "task": "review this OpenAPI document",
+      "expected_primary": [
+        "api-data-contracts"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "22",
+      "task": "review AsyncAPI",
+      "expected_primary": [
+        "api-data-contracts"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "23",
+      "task": "check contract compatibility",
+      "expected_primary": [
+        "api-data-contracts"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "24",
+      "task": "check the API schema",
+      "expected_primary": [
+        "api-data-contracts"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "25",
+      "task": "repair keyboard navigation",
+      "expected_primary": [
+        "frontend-interaction-and-accessibility"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "26",
+      "task": "improve accessibility",
+      "expected_primary": [
+        "frontend-interaction-and-accessibility"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "27",
+      "task": "make layout responsive",
+      "expected_primary": [
+        "frontend-interaction-and-accessibility"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "28",
+      "task": "change frontend states",
+      "expected_primary": [
+        "frontend-interaction-and-accessibility"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "29",
+      "task": "build idempotent endpoint",
+      "expected_primary": [
+        "service-and-data-implementation"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "30",
+      "task": "plan database migration",
+      "expected_primary": [
+        "service-and-data-implementation"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "31",
+      "task": "recover a backfill",
+      "expected_primary": [
+        "service-and-data-implementation"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "32",
+      "task": "fix a transaction",
+      "expected_primary": [
+        "service-and-data-implementation"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "33",
+      "task": "deploy to staging",
+      "expected_primary": [
+        "delivery-and-operations"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "34",
+      "task": "set release gates",
+      "expected_primary": [
+        "delivery-and-operations"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "35",
+      "task": "triage a production incident",
+      "expected_primary": [
+        "delivery-and-operations"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "36",
+      "task": "write a runbook",
+      "expected_primary": [
+        "delivery-and-operations"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "37",
+      "task": "assess RAG retrieval",
+      "expected_primary": [
+        "ai-system-evaluation-and-safety"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "38",
+      "task": "evaluate prompt variants",
+      "expected_primary": [
+        "ai-system-evaluation-and-safety"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "39",
+      "task": "compare prompt variants",
+      "expected_primary": [
+        "ai-system-evaluation-and-safety"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "40",
+      "task": "investigate LLM quality",
+      "expected_primary": [
+        "ai-system-evaluation-and-safety"
+      ],
+      "kind": "positive"
+    },
+    {
+      "id": "41",
+      "task": "Explain a database index",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "42",
+      "task": "Explain HTTP caching",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "43",
+      "task": "Explain a Python function",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "44",
+      "task": "Explain event sourcing",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "45",
+      "task": "Explain a modular monolith",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "46",
+      "task": "Explain latency",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "47",
+      "task": "Explain data ownership",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "48",
+      "task": "Explain tenant isolation",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "49",
+      "task": "Explain idempotency",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "50",
+      "task": "Explain a queue",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "51",
+      "task": "Explain a primary key",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "52",
+      "task": "Explain CPU capacity",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "53",
+      "task": "Explain a trace",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "54",
+      "task": "Explain a snapshot",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "55",
+      "task": "Explain a JSON pointer",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "56",
+      "task": "Explain a schema",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "57",
+      "task": "Explain a transaction",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "58",
+      "task": "Explain a backup",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "59",
+      "task": "Explain a cost assumption",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "60",
+      "task": "Explain a browser",
+      "expected_primary": [
+        "software-architecture"
+      ],
+      "kind": "negative_conceptual"
+    },
+    {
+      "id": "61",
+      "task": "implement frontend",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "62",
+      "task": "debug security review",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "63",
+      "task": "refactor responsive layout",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "64",
+      "task": "deploy backend",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "65",
+      "task": "OpenAPI threat model",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "66",
+      "task": "failing test database migration",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "67",
+      "task": "map repository frontend",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "68",
+      "task": "acceptance criteria security review",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "69",
+      "task": "runbook API schema",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "70",
+      "task": "RAG keyboard navigation",
+      "expected_ambiguous": true,
+      "kind": "ambiguous"
+    },
+    {
+      "id": "71",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "requirements-specification",
+      "expected_primary": [
+        "requirements-specification"
+      ],
+      "kind": "manual_override"
+    },
+    {
+      "id": "72",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "repository-intelligence",
+      "expected_primary": [
+        "repository-intelligence"
+      ],
+      "kind": "manual_override"
+    },
+    {
+      "id": "73",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "implementation-planning-and-change",
+      "expected_primary": [
+        "implementation-planning-and-change"
+      ],
+      "kind": "manual_override"
+    },
+    {
+      "id": "74",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "test-debug-verify",
+      "expected_primary": [
+        "test-debug-verify"
+      ],
+      "kind": "manual_override"
+    },
+    {
+      "id": "75",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "security-review",
+      "expected_primary": [
+        "security-review"
+      ],
+      "kind": "manual_override"
+    },
+    {
+      "id": "76",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "api-data-contracts",
+      "expected_primary": [
+        "api-data-contracts"
+      ],
+      "kind": "manual_override"
+    },
+    {
+      "id": "77",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "frontend-interaction-and-accessibility",
+      "expected_primary": [
+        "frontend-interaction-and-accessibility"
+      ],
+      "kind": "manual_override"
+    },
+    {
+      "id": "78",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "service-and-data-implementation",
+      "expected_primary": [
+        "service-and-data-implementation"
+      ],
+      "kind": "manual_override"
+    },
+    {
+      "id": "79",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "delivery-and-operations",
+      "expected_primary": [
+        "delivery-and-operations"
+      ],
+      "kind": "manual_override"
+    },
+    {
+      "id": "80",
+      "task": "a composite task requiring a deliberate owner",
+      "override": "ai-system-evaluation-and-safety",
+      "expected_primary": [
+        "ai-system-evaluation-and-safety"
+      ],
+      "kind": "manual_override"
+    }
+  ]
+}

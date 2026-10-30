@@ -1,0 +1,104 @@
+{
+  "release": "0.9.1",
+  "date": "2026-10-30",
+  "timezone": "Asia/Tehran",
+  "baseline_commit": "e81fa93",
+  "scope": "Focused continuation of audit release readiness; concrete counterexamples reproduced before repairs. Original audit and0.9.0 evidence are unchanged.",
+  "fixes": [
+    {
+      "id": "FOLLOWUP-API-NAMES",
+      "related_findings": [
+        "ARCH-001",
+        "QA-003"
+      ],
+      "problem": "Global annotation stripping removed meaningful property names and literal instance fields before comparison, permitting conflicting contracts to compare equal.",
+      "changes": [
+        "tools/contract_resolution.py",
+        "tools/validation_engine.py"
+      ],
+      "regressions": [
+        "tests/test_contract_semantics.py"
+      ],
+      "result": "Context-aware structural comparison preserves map keys, literals and opaque schema vocabulary; resolver and artifact checks share one policy. Normative reference traversal also preserves literal $ref keys in instance data and property-name maps; real external contract references remain blocked."
+    },
+    {
+      "id": "FOLLOWUP-REF-SEMANTICS",
+      "related_findings": [
+        "ARCH-001",
+        "QA-003"
+      ],
+      "problem": "Reference siblings were overlaid in both OpenAPI3.0 and3.1, potentially overriding rather than retaining referenced constraints.",
+      "changes": [
+        "tools/contract_resolution.py",
+        "tools/validation_engine.py",
+        "docs/contract-comparison.md"
+      ],
+      "regressions": [
+        "tests/test_contract_semantics.py"
+      ],
+      "result": "OAS3.0 Reference Object siblings ignored; OAS3.1 schema siblings retained conjunctively as allOf. Offline reference and depth bounds preserved.",
+      "limitation": "Conservative structural comparison, not arbitrary JSON Schema logical equivalence.",
+      "official_sources": [
+        "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/versions/3.0.4.md",
+        "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/versions/3.1.1.md"
+      ]
+    },
+    {
+      "id": "FOLLOWUP-ADAPTER-PLANS",
+      "related_findings": [
+        "CODE-001",
+        "INT-002",
+        "INT-003",
+        "GOV-002"
+      ],
+      "problem": "Dependency-free requests and rehashed plans did not fully validate shape/version; missing content could mean deletion; later file preconditions could fail after earlier writes.",
+      "changes": [
+        "tools/execution_adapter.py"
+      ],
+      "regressions": [
+        "tests/test_adapter_readiness.py"
+      ],
+      "result": "Fixed-schema core request validation, complete bounded/versioned/unique plan preflight, explicit deletion intent and all file preconditions checked before source mutation. Positive stdlib multi-file apply also tested."
+    },
+    {
+      "id": "FOLLOWUP-SOURCE-IDENTITY",
+      "related_findings": [
+        "CODE-001",
+        "INT-002"
+      ],
+      "problem": "os.walk could silently omit an unreadable subtree and return a purported complete source identity.",
+      "changes": [
+        "tools/execution_adapter.py"
+      ],
+      "regressions": [
+        "tests/test_adapter_readiness.py"
+      ],
+      "result": "Unreadable enumeration fails closed; no complete identity asserted from a partial walk."
+    }
+  ],
+  "verification": "release/verification-0.9.1.json",
+  "unchanged_limits": [
+    "Plugin Creator/marketplace tools not exposed; repository push does not publish installed plugin.",
+    "Real Mermaid render blocked by host browser administrator policy; no policy bypass attempted.",
+    "Live model comparisons and consenting user outcomes remain unmeasured.",
+    "Hosted collaboration/universal semantic services/autonomous multi-model expansion remain deferred as recommended.",
+    "Local adapter is a cooperating runner, not an OS/filesystem/network sandbox."
+  ],
+  "official_source_content_hashes": {
+    "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/versions/3.0.4.md": "77af0760571a228e61ca2126d6f4de9efcf053d5dcfb7f0ad2f84d7ecf622ff6",
+    "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/versions/3.1.1.md": "a612d2b72d422925616b2cabfa7acc0419ffaaf4b0eb42bfb11dc9b804f92749"
+  },
+  "regression_evidence": {
+    "new_test_methods": 24,
+    "initial_failures": "Contract comparison:12 failing subtests across7 initial methods; adapter readiness:14 failing subtests and1 error across8 initial methods. Additional positive/edge cases added after repair.",
+    "node_checks": 37,
+    "chromium_tests": 9,
+    "additional_reproductions": "Five reference-traversal failures across four added methods were reproduced before the context-aware walk repair. A further installed full-schema success case verifies literal reference-looking data remains offline.",
+    "final_python": {
+      "run": 193,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+}

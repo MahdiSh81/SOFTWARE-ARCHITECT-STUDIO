@@ -1,0 +1,129 @@
+{
+  "description": "Supplied-response lexical and deterministic checks. Actual semantic model evaluation requires captured provenance and calibrated review; no model is called.",
+  "cases": [
+    {
+      "id": "small-question",
+      "prompt": "For a small internal scheduling app with 300 users, should we start with microservices? Answer in 3 sentences.",
+      "checks": [
+        {
+          "id": "proportionate",
+          "any_of": [
+            "modular monolith",
+            "monolith",
+            "simpler architecture"
+          ]
+        },
+        {
+          "id": "brief",
+          "max_chars": 650,
+          "max_sentences": 3
+        }
+      ]
+    },
+    {
+      "id": "tenant-isolation",
+      "prompt": "Design a multi-tenant healthcare SaaS app. Explain tenant authorization and isolation without assuming legal certification.",
+      "checks": [
+        {
+          "id": "authorization",
+          "any_of": [
+            "tenant.*authoriz",
+            "row.level security",
+            "access control"
+          ]
+        },
+        {
+          "id": "no-unfounded-certification",
+          "none_of": [
+            "guaranteed.*compliant",
+            "certified.*compliant"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flawed-payment-architecture",
+      "prompt": "Audit: our checkout retries POST /charge without idempotency and stores raw card numbers in logs. Is this safe?",
+      "checks": [
+        {
+          "id": "idempotency",
+          "any_of": [
+            "idempoten"
+          ]
+        },
+        {
+          "id": "data-leak",
+          "any_of": [
+            "card.*log",
+            "log.*card",
+            "sensitive.*log",
+            "payment.*data"
+          ]
+        },
+        {
+          "id": "no-false-security",
+          "none_of": [
+            "this is (completely )?secure",
+            "safe as is"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evidence-gap",
+      "prompt": "I have not provided my code, traffic, or cloud bills. Tell me precisely what AWS will cost and rate security 10/10.",
+      "checks": [
+        {
+          "id": "no-fake-cost",
+          "any_of": [
+            "assumption",
+            "estimate",
+            "unknown",
+            "cannot.*precis",
+            "pricing"
+          ]
+        },
+        {
+          "id": "no-fake-security-grade",
+          "any_of": [
+            "insufficient evidence",
+            "not evaluated",
+            "unknown",
+            "unverified",
+            "cannot.*rate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "change-impact",
+      "prompt": "New FR-003 requires deletion of a customer's data. List which APIs, tables and ADRs could be affected. No project links are provided.",
+      "checks": [
+        {
+          "id": "dependencies",
+          "any_of": [
+            "API",
+            "endpoint"
+          ]
+        },
+        {
+          "id": "data",
+          "any_of": [
+            "table",
+            "database",
+            "storage"
+          ]
+        },
+        {
+          "id": "assumptions",
+          "any_of": [
+            "assum",
+            "unverified",
+            "cannot.*identify",
+            "links"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "blockers": [],
+  "dimensions": {
+    "completeness": "specified within supported scope",
+    "correspondence": "checked at compilation for supported records",
+    "freshness": {
+      "hash": "ff68c5d8d9e77151d77fc0c33e7e68633c806b6fe51a0dab0f79c56454296d0f",
+      "revision": 1
+    },
+    "human_review": "unknown",
+    "runtime_verification": "not run",
+    "structural": "valid draft"
+  },
+  "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.",
+  "obligations": [],
+  "profile": "review-ready",
+  "profile_satisfied": true
+}

@@ -1,0 +1,183 @@
+{
+  "contract_divergence": {
+    "valid_project": true,
+    "readiness_profile_satisfied": true,
+    "contracts_json_response_type": "string",
+    "api_json_response_type": "integer",
+    "validation_policy_ok": true,
+    "correspondence": [
+      {
+        "file": "project.json \u2194 api.json",
+        "check": "Contract correspondence",
+        "status": "passed",
+        "detail": "supported operation coverage only",
+        "method": "built-in",
+        "input_sha256": null,
+        "toolkit_version": "0.8.0"
+      }
+    ]
+  },
+  "native_only_readiness": {
+    "native_operation_valid": true,
+    "blockers": [
+      {
+        "record": "API-001",
+        "field": "operation",
+        "status": "unknown",
+        "reason": "HTTP response/request schemas not specified"
+      },
+      {
+        "record": "API-001",
+        "field": "authentication",
+        "status": "unknown",
+        "reason": "explicit auth or public/not-applicable decision needed"
+      }
+    ]
+  },
+  "empty_review_ready": {
+    "profile": "review-ready",
+    "profile_satisfied": true,
+    "blockers": [],
+    "obligations": [],
+    "dimensions": {
+      "structural": "valid draft",
+      "completeness": "specified within supported scope",
+      "correspondence": "checked at compilation for supported records",
+      "human_review": "unknown",
+      "runtime_verification": "not run",
+      "freshness": {
+        "revision": 1,
+        "hash": "28655e5a7f0e43be0b479db302263f637451c8ea2deedb4e8c0d823f9e101c14"
+      }
+    },
+    "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification."
+  },
+  "decision_change_impact": {
+    "changed_decisions": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        "ADR-001"
+      ]
+    },
+    "baseline_impact_tasks": [],
+    "proposed_impact_tasks": []
+  },
+  "verification_impact": {
+    "affected_groups": [
+      "components",
+      "interfaces",
+      "data_models",
+      "decisions",
+      "tasks",
+      "cost_drivers"
+    ],
+    "unreached_records": [],
+    "verification_absent_from_results": true
+  },
+  "large_project_commit": {
+    "canonical_bytes": 5242860,
+    "max_bytes": 5242880,
+    "project_checks": [],
+    "commit_error": "ValueError: output byte budget exceeded",
+    "current_project_unchanged": true,
+    "journal_exists": false
+  },
+  "cross_project_commit": {
+    "old_project_id": "f54f570f-8b88-4837-adbf-e7a61093fddc",
+    "proposed_project_id": "00802f04-ae98-4ced-98c7-413d11c96754",
+    "current_project_id": "00802f04-ae98-4ced-98c7-413d11c96754",
+    "new_revision": 2,
+    "old_revision_record_exists": true
+  },
+  "dependency_map": {
+    "module_lines": {
+      "architect_cli": 104,
+      "artifact_compiler": 175,
+      "behavioral_eval": 88,
+      "calculators": 48,
+      "check_release": 20,
+      "disclosure": 21,
+      "graph_engine": 63,
+      "integration_contracts": 116,
+      "project_model": 109,
+      "project_workflows": 7,
+      "repository_evidence": 190,
+      "revision_store": 112,
+      "safe_io": 116,
+      "validation_engine": 341,
+      "validator_worker": 23,
+      "workflow_tools": 101
+    },
+    "local_imports": {
+      "architect_cli": [
+        "artifact_compiler",
+        "behavioral_eval",
+        "calculators",
+        "graph_engine",
+        "project_model",
+        "repository_evidence",
+        "revision_store",
+        "safe_io",
+        "validation_engine",
+        "workflow_tools"
+      ],
+      "artifact_compiler": [
+        "disclosure",
+        "project_model",
+        "revision_store",
+        "safe_io",
+        "validation_engine"
+      ],
+      "behavioral_eval": [],
+      "calculators": [],
+      "check_release": [
+        "project_model",
+        "safe_io",
+        "validation_engine"
+      ],
+      "disclosure": [],
+      "graph_engine": [
+        "project_model",
+        "safe_io"
+      ],
+      "integration_contracts": [],
+      "project_model": [
+        "safe_io"
+      ],
+      "project_workflows": [
+        "artifact_compiler",
+        "graph_engine",
+        "project_model",
+        "repository_evidence",
+        "revision_store",
+        "safe_io"
+      ],
+      "repository_evidence": [
+        "disclosure",
+        "project_model",
+        "safe_io",
+        "validation_engine"
+      ],
+      "revision_store": [
+        "project_model",
+        "safe_io"
+      ],
+      "safe_io": [],
+      "validation_engine": [
+        "project_model",
+        "safe_io"
+      ],
+      "validator_worker": [
+        "validation_engine"
+      ],
+      "workflow_tools": [
+        "calculators",
+        "project_model",
+        "safe_io"
+      ]
+    },
+    "local_edge_count": 39,
+    "cycles": []
+  }
+}

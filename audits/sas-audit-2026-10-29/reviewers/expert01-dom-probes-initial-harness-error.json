@@ -1,0 +1,121 @@
+{
+  "method": "Checkout actual inline UI script and project-core.js under the checkout minimal Node DOM harness. Not browser layout, persistence lifecycle, or assistive-technology validation.",
+  "baselineCoreChecks": [
+    {
+      "name": "lossless rich project roundtrip",
+      "status": "failed",
+      "error": "Values have same structure but are not reference-equal:\n\n... Skipped lines\n{\n  api_contract: {\n    components: {\n      securitySchemes: {\n        session: {\n          in: 'cookie',\n          name: 'sid',\n          type: 'apiKey'\n        }\n      }\n    },\n    info: {\n      title: 'Atlas supported contract',\n      version: '0.1.0'\n    },\n    openapi: '3.0.3',\n    paths: {\n      '/audit/export': {\n        get: {\n          operationId: 'exportAudit',\n          responses: {\n            '200': {\n              description: 'Authorized audit export'\n            }\n          }\n        }\n      },\n      '/records': {\n        get: {\n          operationId: 'listRecords',\n          responses: {\n            '200': {\n              content: {\n                'application/json': {\n                  schema: {\n                    items: {\n                      type: 'object'\n                    },\n                    type: 'array'\n                  }\n                }\n              },\n              description: 'Authorized records'\n            }\n          },\n          security: [\n            {\n              session: []\n            }\n          ]\n...}\n"
+    },
+    {
+      "name": "accepted status, API and tasks retained",
+      "status": "passed"
+    },
+    {
+      "name": "no ID normalization or display truncation",
+      "status": "passed"
+    },
+    {
+      "name": "flat twenty snapshots and restore",
+      "status": "passed"
+    },
+    {
+      "name": "corrupt serialized snapshot rejected without truncation",
+      "status": "passed"
+    },
+    {
+      "name": "legacy UI backup rejected explicitly",
+      "status": "passed"
+    },
+    {
+      "name": "valid diagram aliases retain hyphen IDs, no inferred edges",
+      "status": "passed"
+    },
+    {
+      "name": "invalid fixture parity",
+      "status": "passed"
+    },
+    {
+      "name": "capacity finite parity fixture",
+      "status": "passed"
+    },
+    {
+      "name": "assessment unknown excluded and NaN rejected",
+      "status": "passed"
+    }
+  ],
+  "observations": [
+    {
+      "id": "unapplied-brief-depth-change",
+      "status": "reproduced",
+      "visibleName": "New architecture",
+      "visibleBrief": "",
+      "canonical": {
+        "schema_version": 2,
+        "revision": 1,
+        "name": "New architecture",
+        "brief": "",
+        "constraints": [],
+        "open_questions": [],
+        "notes": {
+          "status": "draft",
+          "source": "user-authored; unverified"
+        },
+        "requirements": [],
+        "components": [],
+        "interfaces": [],
+        "data_models": [],
+        "decisions": [],
+        "tasks": [],
+        "cost_drivers": [],
+        "preferences": {
+          "intent": "design",
+          "depth": "Quick advice",
+          "audience": "Technical"
+        }
+      },
+      "lostTypedValues": true
+    },
+    {
+      "id": "record-collection-context-change",
+      "status": "reproduced",
+      "retainedRecordID": "FR-002",
+      "componentInserted": true,
+      "statusText": "Unsaved changes · saving shortly…"
+    },
+    {
+      "id": "sample-overwrites-brief-component-project",
+      "status": "reproduced",
+      "projectName": "Illustrative example — not observed",
+      "components": [
+        "web-api"
+      ],
+      "brief": "Example only. Replace with actual constraints and evidence.",
+      "undoAvailable": true,
+      "sourceConfirmsNoDialog": true
+    },
+    {
+      "id": "new-project-components-only",
+      "status": "reproduced",
+      "componentCount": 0,
+      "sourceConfirmationCondition": "requirements.length || decisions.length || brief",
+      "undoAvailable": true
+    },
+    {
+      "id": "browser-continuation-content",
+      "status": "observed",
+      "resume": {
+        "name": "Beginner reporting app",
+        "revision": 1,
+        "accepted_decisions": [],
+        "constraints": [],
+        "open_questions": [],
+        "note": "Recorded decisions preserved; no new action authority or redundant reapproval. Raw history/extensions excluded."
+      },
+      "excluded": {
+        "brief": true,
+        "sourceHash": true,
+        "requirements": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "no_cache": {
+    "status": "completed",
+    "elapsed_seconds": 0.26526098900001216,
+    "scanned_count": 1,
+    "declarations": 100,
+    "omissions": [
+      {
+        "path": "a.py",
+        "reason": "declaration quota",
+        "count": 19900
+      }
+    ],
+    "stop_reasons": []
+  },
+  "cache": {
+    "status": "error",
+    "elapsed_seconds": 0.4013444850000951,
+    "type": "ValueError",
+    "message": "output byte budget exceeded"
+  },
+  "short_deadline": {
+    "status": "completed",
+    "elapsed_seconds": 0.253194540000095,
+    "scanned_count": 1,
+    "declarations": 100,
+    "omissions": [
+      {
+        "path": "a.py",
+        "reason": "declaration quota",
+        "count": 19900
+      }
+    ],
+    "stop_reasons": []
+  }
+}

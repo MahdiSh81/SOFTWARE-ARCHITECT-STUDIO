@@ -8,6 +8,8 @@ import copy,datetime,re,uuid
 from project_model import new_project,require_project
 from safe_io import atomic_write,read_json,read_bytes,dumps,digest,guard,project_lock
 
+JOURNAL_BYTES=12*1024*1024
+
 def load_project(root):return require_project(read_json(Path(root)/'project.json'))
 
 def init_project(root,name):
@@ -38,7 +40,7 @@ def _history(root,journal):
     records=[];folder=root/'.architecture-history'
     if folder.exists():
         for path in sorted(folder.glob('commit-*.json')):
-            r=_validated_journal(read_json(path))
+            r=_validated_journal(read_json(path,maximum=JOURNAL_BYTES))
             if path.name!='commit-'+r['operation_id']+'.json':raise ValueError('history journal filename/identity mismatch')
             if r['status']=='committed':records.append(r)
     records.sort(key=lambda r:(r['next_revision'],r['operation_id']))
@@ -50,7 +52,7 @@ def _history(root,journal):
 def _recover_locked(root):
     path=root/'.architecture-journal.json'
     if not path.exists():return None
-    j=_validated_journal(read_json(path))
+    j=_validated_journal(read_json(path,maximum=JOURNAL_BYTES))
     if j.get('status')=='committed':
         current=load_project(root)
         if digest(current)!=j['new_hash']:
@@ -58,13 +60,13 @@ def _recover_locked(root):
         _history(root,j);return j
     committed={**j,'status':'committed'}
     commit_path=guard(root/'.architecture-history'/('commit-'+j['operation_id']+'.json'),root)
-    if commit_path.exists() and digest(_validated_journal(read_json(commit_path)))!=digest(committed):raise ValueError('history journal conflict; existing record and project preserved')
+    if commit_path.exists() and digest(_validated_journal(read_json(commit_path,maximum=JOURNAL_BYTES)))!=digest(committed):raise ValueError('history journal conflict; existing record and project preserved')
     current=load_project(root);h=digest(current)
     if h==j['old_hash']:atomic_write(root/'project.json',dumps(j['new_project']))
     elif h!=j['new_hash']:raise ValueError('recovery conflict: current project differs from both journal revisions; preserved without overwrite')
     j=committed
-    if not commit_path.exists():atomic_write(commit_path,dumps(j),exclusive=True)
-    atomic_write(path,dumps(j));_history(root,j)
+    if not commit_path.exists():atomic_write(commit_path,dumps(j),exclusive=True,maximum=JOURNAL_BYTES)
+    atomic_write(path,dumps(j),maximum=JOURNAL_BYTES);_history(root,j)
     return j
 
 def recover(root):
@@ -80,18 +82,21 @@ def commit_project(root,proposed,message,expected_hash):
     if not isinstance(message,str) or not message.strip():raise ValueError('nonempty change message required')
     with project_lock(root):
         pending=root/'.architecture-journal.json'
-        if pending.exists() and _validated_journal(read_json(pending))['status']!='committed':raise ValueError('pending operation; run recover before editing')
+        if pending.exists() and _validated_journal(read_json(pending,maximum=JOURNAL_BYTES))['status']!='committed':raise ValueError('pending operation; run recover before editing')
         old=load_project(root)
         if digest(old)!=expected_hash:raise ValueError('revision conflict: expected hash differs; both drafts preserved')
+        if old.get('project_id') and proposed.get('project_id')!=old['project_id']:raise ValueError('project identity mismatch; use a separate import/fork directory')
         new=copy.deepcopy(proposed);new['revision']=old['revision']+1;require_project(new)
         stamp=root/'.architecture-history'/f'revision-{old["revision"]:04d}.json'
         if stamp.exists():
             if digest(read_json(stamp))!=digest(old):raise ValueError('immutable snapshot conflict')
-        else:atomic_write(stamp,dumps(old),exclusive=True)
+        # Snapshot is published only after the full journal has passed preflight.
         j={'operation_id':uuid.uuid4().hex,'status':'prepared','saved_revision':old['revision'],'next_revision':new['revision'],
            'old_hash':digest(old),'new_hash':digest(new),'new_project':new,'message':message.strip(),
            'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'snapshot_file':str(stamp)}
-        atomic_write(root/'.architecture-journal.json',dumps(j))
+        if len(dumps(j).encode())>JOURNAL_BYTES:raise ValueError('journal envelope byte budget exceeded')
+        if not stamp.exists():atomic_write(stamp,dumps(old),exclusive=True)
+        atomic_write(root/'.architecture-journal.json',dumps(j),maximum=JOURNAL_BYTES)
         _recover_locked(root)
     return {'saved_revision':j['saved_revision'],'next_revision':j['next_revision'],'snapshot_file':str(stamp),
       'operation_id':j['operation_id'],'message':message.strip(),'source_hash':j['new_hash'],'status':'committed','note':'Local single-project commit; Git/backups required for durable shared history.'}
@@ -100,7 +105,7 @@ def snapshot(root,message):
     root=guard(root)
     pending=root/'.architecture-journal.json'
     if pending.exists():
-        j=_validated_journal(read_json(pending))
+        j=_validated_journal(read_json(pending,maximum=JOURNAL_BYTES))
         if j.get('status')!='committed':
             if j['message']!=message.strip():raise ValueError('pending different operation; recover first')
             recover(root);return {k:j[k] for k in ('saved_revision','next_revision','snapshot_file','operation_id','message')}

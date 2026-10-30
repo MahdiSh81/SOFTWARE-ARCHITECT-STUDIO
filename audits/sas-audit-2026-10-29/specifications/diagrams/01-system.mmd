@@ -1,0 +1,10 @@
+flowchart LR
+U[User] --> C[Coordinator]
+C --> S[Selected skills]
+C --> P[Canonical project]
+S --> A[Host capability adapter]
+A --> H[Editor and runners]
+H --> V[Evidence validation]
+V --> C
+P --> G[Artifact compiler]
+G --> D[Handoff]

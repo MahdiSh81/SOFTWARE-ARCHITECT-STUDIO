@@ -1,0 +1,80 @@
+{
+  "blockers": [
+    {
+      "field": "scenario",
+      "reason": "workload/environment/measure/target needed",
+      "record": "NFR-001",
+      "status": "unknown"
+    },
+    {
+      "field": "operation",
+      "reason": "HTTP response/request schemas not specified",
+      "record": "API-002",
+      "status": "unknown"
+    },
+    {
+      "field": "authentication",
+      "reason": "explicit auth or public/not-applicable decision needed",
+      "record": "API-002",
+      "status": "unknown"
+    },
+    {
+      "field": "schema",
+      "reason": "columns/schema unspecified",
+      "record": "DATA-001",
+      "status": "unknown"
+    },
+    {
+      "field": "schema",
+      "reason": "columns/schema unspecified",
+      "record": "DATA-002",
+      "status": "unknown"
+    }
+  ],
+  "dimensions": {
+    "completeness": "incomplete",
+    "correspondence": "checked at compilation for supported records",
+    "freshness": {
+      "hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0",
+      "revision": 1
+    },
+    "human_review": "unknown",
+    "runtime_verification": "not run",
+    "structural": "valid draft"
+  },
+  "note": "Waivers are not passed checks. Completeness/review/runtime status are independent; no production certification.",
+  "obligations": [
+    {
+      "field": "scenario",
+      "reason": "workload/environment/measure/target needed",
+      "record": "NFR-001",
+      "status": "unknown"
+    },
+    {
+      "field": "operation",
+      "reason": "HTTP response/request schemas not specified",
+      "record": "API-002",
+      "status": "unknown"
+    },
+    {
+      "field": "authentication",
+      "reason": "explicit auth or public/not-applicable decision needed",
+      "record": "API-002",
+      "status": "unknown"
+    },
+    {
+      "field": "schema",
+      "reason": "columns/schema unspecified",
+      "record": "DATA-001",
+      "status": "unknown"
+    },
+    {
+      "field": "schema",
+      "reason": "columns/schema unspecified",
+      "record": "DATA-002",
+      "status": "unknown"
+    }
+  ],
+  "profile": "review-ready",
+  "profile_satisfied": false
+}

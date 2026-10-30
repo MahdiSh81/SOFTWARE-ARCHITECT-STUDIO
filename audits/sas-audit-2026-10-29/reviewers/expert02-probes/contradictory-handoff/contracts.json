@@ -1,0 +1,27 @@
+[
+  {
+    "authentication": "public",
+    "id": "API-001",
+    "method": "GET",
+    "operation": {
+      "operationId": "getCount",
+      "responses": {
+        "200": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "A count"
+        }
+      },
+      "security": []
+    },
+    "path": "/count",
+    "requirements": [
+      "FR-001"
+    ]
+  }
+]

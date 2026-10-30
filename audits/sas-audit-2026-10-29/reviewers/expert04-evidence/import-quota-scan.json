@@ -1,0 +1,1646 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-29T18:34:02.183875+00:00",
+  "source_ref": "unpinned local tree; resolved commit not inferred",
+  "claim_class": "OBSERVED STATIC SOURCE",
+  "root": "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/fixtures/import-quota",
+  "adapter": "local-static",
+  "adapter_version": "0.8.0",
+  "observed_files": [
+    {
+      "path": "a.py",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "bytes": 1017,
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1",
+      "source": "local",
+      "source_revision": "unpinned local tree",
+      "extractor_version": "0.8.0"
+    }
+  ],
+  "static_declarations": [
+    {
+      "line": 1,
+      "end_line": 1,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 2,
+      "end_line": 2,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 3,
+      "end_line": 3,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 4,
+      "end_line": 4,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 5,
+      "end_line": 5,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 6,
+      "end_line": 6,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 7,
+      "end_line": 7,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 8,
+      "end_line": 8,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 9,
+      "end_line": 9,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 10,
+      "end_line": 10,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 11,
+      "end_line": 11,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 12,
+      "end_line": 12,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 13,
+      "end_line": 13,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 14,
+      "end_line": 14,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 15,
+      "end_line": 15,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 16,
+      "end_line": 16,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 17,
+      "end_line": 17,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 18,
+      "end_line": 18,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 19,
+      "end_line": 19,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 20,
+      "end_line": 20,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 21,
+      "end_line": 21,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 22,
+      "end_line": 22,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 23,
+      "end_line": 23,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 24,
+      "end_line": 24,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 25,
+      "end_line": 25,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 26,
+      "end_line": 26,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 27,
+      "end_line": 27,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 28,
+      "end_line": 28,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 29,
+      "end_line": 29,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 30,
+      "end_line": 30,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 31,
+      "end_line": 31,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 32,
+      "end_line": 32,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 33,
+      "end_line": 33,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 34,
+      "end_line": 34,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 35,
+      "end_line": 35,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 36,
+      "end_line": 36,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 37,
+      "end_line": 37,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 38,
+      "end_line": 38,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 39,
+      "end_line": 39,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 40,
+      "end_line": 40,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 41,
+      "end_line": 41,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 42,
+      "end_line": 42,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 43,
+      "end_line": 43,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 44,
+      "end_line": 44,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 45,
+      "end_line": 45,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 46,
+      "end_line": 46,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 47,
+      "end_line": 47,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 48,
+      "end_line": 48,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 49,
+      "end_line": 49,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 50,
+      "end_line": 50,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 51,
+      "end_line": 51,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 52,
+      "end_line": 52,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 53,
+      "end_line": 53,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 54,
+      "end_line": 54,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 55,
+      "end_line": 55,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 56,
+      "end_line": 56,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 57,
+      "end_line": 57,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 58,
+      "end_line": 58,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 59,
+      "end_line": 59,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 60,
+      "end_line": 60,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 61,
+      "end_line": 61,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 62,
+      "end_line": 62,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 63,
+      "end_line": 63,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 64,
+      "end_line": 64,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 65,
+      "end_line": 65,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 66,
+      "end_line": 66,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 67,
+      "end_line": 67,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 68,
+      "end_line": 68,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 69,
+      "end_line": 69,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 70,
+      "end_line": 70,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 71,
+      "end_line": 71,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 72,
+      "end_line": 72,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 73,
+      "end_line": 73,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 74,
+      "end_line": 74,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 75,
+      "end_line": 75,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 76,
+      "end_line": 76,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 77,
+      "end_line": 77,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 78,
+      "end_line": 78,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 79,
+      "end_line": 79,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 80,
+      "end_line": 80,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 81,
+      "end_line": 81,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 82,
+      "end_line": 82,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 83,
+      "end_line": 83,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 84,
+      "end_line": 84,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 85,
+      "end_line": 85,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 86,
+      "end_line": 86,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 87,
+      "end_line": 87,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 88,
+      "end_line": 88,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 89,
+      "end_line": 89,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 90,
+      "end_line": 90,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 91,
+      "end_line": 91,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 92,
+      "end_line": 92,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 93,
+      "end_line": 93,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 94,
+      "end_line": 94,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 95,
+      "end_line": 95,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 96,
+      "end_line": 96,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 97,
+      "end_line": 97,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 98,
+      "end_line": 98,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 99,
+      "end_line": 99,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "line": 100,
+      "end_line": 100,
+      "observation": "parsed Python import",
+      "target": "os",
+      "class": "PARSED",
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    }
+  ],
+  "dependency_edges": [
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 1,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 2,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 3,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 4,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 5,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 6,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 7,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 8,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 9,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 10,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 11,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 12,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 13,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 14,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 15,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 16,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 17,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 18,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 19,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 20,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 21,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 22,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 23,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 24,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 25,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 26,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 27,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 28,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 29,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 30,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 31,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 32,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 33,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 34,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 35,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 36,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 37,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 38,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 39,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 40,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 41,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 42,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 43,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 44,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 45,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 46,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 47,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 48,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 49,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 50,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 51,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 52,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 53,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 54,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 55,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 56,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 57,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 58,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 59,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 60,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 61,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 62,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 63,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 64,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 65,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 66,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 67,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 68,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 69,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 70,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 71,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 72,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 73,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 74,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 75,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 76,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 77,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 78,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 79,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 80,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 81,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 82,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 83,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 84,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 85,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 86,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 87,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 88,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 89,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 90,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 91,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 92,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 93,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 94,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 95,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 96,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 97,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 98,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 99,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    },
+    {
+      "kind": "imports",
+      "target": "os",
+      "line": 100,
+      "path": "a.py",
+      "sha256": "442174928d26a5c56b1fe8adae4e5aeb19eb86661de6055e8654f8456848c4e1"
+    }
+  ],
+  "scanned_count": 1,
+  "total_candidate_files": 1,
+  "discovered_files": 1,
+  "entries_visited": 1,
+  "eligible_discovered": 1,
+  "bytes_read": 1017,
+  "skipped_files": 1,
+  "omissions": [
+    {
+      "path": "a.py",
+      "reason": "declaration quota",
+      "count": 1
+    }
+  ],
+  "enumeration_complete": true,
+  "coverage": "partial",
+  "stop_reasons": [],
+  "cache_hits": 0,
+  "source_fingerprint": "720495f262f144ea7dfa3b5d45fd45c0246981aec66a956981a60a8b241a5286",
+  "coverage_note": "Read-only bounded static evidence. Python AST and narrow JS imports/config adapters; no runtime, full dependency or framework-binding guarantee. Local source is not commit-pinned. Snippets off by default."
+}

@@ -1,9 +1,9 @@
 """Canonical v2 draft contract. Unknown fields are preserved, never executed."""
 from __future__ import annotations
 import copy, math, re, uuid
-from safe_io import digest, dumps
+from codec import digest, dumps
 
-VERSION='0.8.0'
+VERSION='0.9.1'
 GROUPS=('requirements','components','interfaces','data_models','decisions','tasks','cost_drivers')
 OPTIONAL=('evidence','assumptions','risks','verifications','fitness_rules','experiments')
 ID=re.compile(r'^[A-Za-z][A-Za-z0-9_-]{1,63}$')
@@ -32,6 +32,7 @@ def project_checks(p):
     if 'brief' in p and not isinstance(p['brief'],str):err('brief','string required')
     for key in ('preferences','api_contract','asyncapi_contract'):
         if key in p and not isinstance(p[key],dict):err(key,'object required')
+    if 'project_id' in p and (not isinstance(p['project_id'],str) or not p['project_id'].strip()):err('project_id','nonempty string required')
     indexes={}
     for group in GROUPS+OPTIONAL:
         values=p.get(group,[])
@@ -49,8 +50,9 @@ def project_checks(p):
             if 'status' in r and (not isinstance(r['status'],str) or r['status'] not in STATES):err(loc+'/status','unrecognized lifecycle status')
             for field in ('name','title','acceptance','decision','consequences','validation','responsibility','method','path'):
                 if field in r and not isinstance(r[field],str):err(loc+'/'+field,'string required')
-            for field in ('files','tables'):
+            for field in ('files','tables')+GROUPS:
                 if field in r and (not isinstance(r[field],list) or any(not isinstance(x,str) for x in r[field])):err(loc+'/'+field,'array of strings required')
+            if 'approval_origin' in r and not isinstance(r['approval_origin'],(str,dict)):err(loc+'/approval_origin','string or provenance object required')
             for field in ('operation','schema'):
                 if field in r and not isinstance(r[field],dict):err(loc+'/'+field,'object required')
     for group,targets in LINKS.items():
@@ -60,6 +62,20 @@ def project_checks(p):
                 if not isinstance(refs,list) or any(not isinstance(x,str) for x in refs):err(f'{group}/{id}/{target}','references must be an array of IDs');continue
                 for ref in refs:
                     if ref not in indexes.get(target,{}):err(f'{group}/{id}/{target}',f'unknown {target} reference: {ref}')
+    decisions=indexes.get('decisions',{})
+    for rid,record in decisions.items():
+        for field,reverse in (('supersedes','superseded_by'),('superseded_by','supersedes')):
+            if field not in record:continue
+            target=record[field]
+            if not isinstance(target,str) or target==rid or target not in decisions:
+                err('decisions/'+rid+'/'+field,'existing distinct decision ID required');continue
+            if decisions[target].get(reverse)!=rid:err('decisions/'+rid+'/'+field,'reciprocal lifecycle reference required')
+        seen=set();current=rid
+        while current in decisions:
+            if current in seen:
+                err('decisions/'+rid,'cyclic supersession');break
+            seen.add(current);current=decisions[current].get('supersedes')
+            if not isinstance(current,str):break
     edges=p.get('relationships',[])
     if not isinstance(edges,list):err('relationships','array required');edges=[]
     seen=set()
@@ -93,7 +109,7 @@ def traceability_coverage(p):
 
 def resume_packet(p):
     require_project(p)
-    return {'project_id':p.get('project_id'),'revision':p['revision'],'source_hash':digest(p),'name':p['name'],
+    return {'project_id':p.get('project_id'),'revision':p['revision'],'source_hash':digest(p),'name':p['name'],'brief':p.get('brief','')[:4000],
             'accepted_decisions':[{'id':d['id'],'title':d.get('title'),'decision':d.get('decision'),'approval_origin':d.get('approval_origin','unknown')} for d in p['decisions'] if d.get('status')=='Accepted'],
             'constraints':p['constraints'],'open_questions':p['open_questions'],'coverage':traceability_coverage(p),
             'authority':'Recorded acceptance is preserved; it grants no new tool permission. No redundant reapproval is required for unchanged decisions.',
@@ -104,6 +120,10 @@ def supersede(p,old_id,new_id,reason):
     if not reason.strip():raise ValueError('supersession reason required')
     out=copy.deepcopy(p);old=next((r for r in out['decisions'] if r['id']==old_id),None)
     if old is None or any(r['id']==new_id for r in out['decisions']):raise ValueError('old decision missing or replacement id already exists')
-    replacement=copy.deepcopy(old);replacement.update(id=new_id,status='Proposed',supersedes=old_id,supersession_reason=reason)
+    if old.get('superseded_by') or old.get('status')=='Superseded':raise ValueError('decision already superseded; supersede the current successor')
+    replacement=copy.deepcopy(old)
+    replacement.pop('superseded_by',None)
+    if 'approval_origin' in replacement:replacement['predecessor_approval_origin']=replacement.pop('approval_origin')
+    replacement.update(id=new_id,status='Proposed',supersedes=old_id,supersession_reason=reason)
     old.update(status='Superseded',superseded_by=new_id);out['decisions'].append(replacement)
     return require_project(out)

@@ -1,0 +1,47 @@
+[
+  {
+    "acceptance": "Temporary database tests prove add, list, complete and invalid-ID behavior.",
+    "components": [
+      "CMP-STORE"
+    ],
+    "data_models": [
+      "DATA-TASK"
+    ],
+    "decisions": [
+      "ADR-001"
+    ],
+    "files": [
+      "src/tasks/store.py",
+      "tests/test_store.py"
+    ],
+    "id": "TASK-001",
+    "requirements": [
+      "FR-001",
+      "FR-002"
+    ],
+    "title": "Implement persistent task store"
+  },
+  {
+    "acceptance": "python -m unittest discover -s tests passes; separate subprocesses prove persistence and error exits.",
+    "components": [
+      "CMP-CLI"
+    ],
+    "decisions": [
+      "ADR-001"
+    ],
+    "files": [
+      "src/tasks/cli.py",
+      "src/tasks/__main__.py",
+      "tests/test_cli.py"
+    ],
+    "id": "TASK-002",
+    "interfaces": [
+      "IFACE-CLI"
+    ],
+    "requirements": [
+      "FR-001",
+      "FR-002"
+    ],
+    "title": "Implement CLI and integration tests"
+  }
+]

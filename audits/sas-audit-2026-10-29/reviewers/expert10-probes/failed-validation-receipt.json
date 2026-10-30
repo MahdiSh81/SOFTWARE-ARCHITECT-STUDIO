@@ -1,0 +1,13 @@
+{
+  "bytes_read": 19,
+  "check_count": 2,
+  "command": "validate",
+  "duration_seconds": 0.000796,
+  "observed_files": 0,
+  "receipt_schema": 1,
+  "retention": "local explicit receipt; delete file to purge",
+  "run_id": "8357e5dfc60140679e56d5e8bce542b1",
+  "status": "completed",
+  "tokens": "unreported",
+  "toolkit_version": "0.8.0"
+}

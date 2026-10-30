@@ -1,0 +1,7 @@
+flowchart LR
+F[Observed failure] --> M[Minimal reproduction]
+M --> H[Evidence-backed hypothesis]
+H --> P[Small patch proposal]
+P --> T[Targeted check]
+T --> R[Relevant regression]
+T --> F

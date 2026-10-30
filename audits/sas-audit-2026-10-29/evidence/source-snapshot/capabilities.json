@@ -1,0 +1,59 @@
+{
+  "version": "0.7.1",
+  "task_intents": [
+    "design",
+    "review",
+    "decision",
+    "repository",
+    "change",
+    "handoff"
+  ],
+  "depths": [
+    "Quick advice",
+    "Guided design",
+    "Full specification"
+  ],
+  "audiences": [
+    "Beginner",
+    "Technical"
+  ],
+  "project_schema": "schemas/project-v2.schema.json",
+  "adapters": {
+    "local_repository": {
+      "read_only": true,
+      "code_execution": false,
+      "languages": [
+        "Python AST",
+        "JS/TS static module token declarations"
+      ],
+      "config": [
+        "package.json",
+        "compose services",
+        "GitHub Actions jobs",
+        "OpenAPI paths",
+        "AsyncAPI channels"
+      ],
+      "limits": "static declared scope, no runtime binding"
+    },
+    "github": {
+      "provider": "host connector",
+      "availability": "conditional, not plugin native",
+      "default_effect": "read-only"
+    },
+    "mermaid": {
+      "kind": "installed mmdc",
+      "requested": true,
+      "execution": "policy/deadline/output constrained; no full OS authority sandbox"
+    },
+    "full_openapi": {
+      "package": "openapi-spec-validator",
+      "optional": true,
+      "offline_refs_only": true
+    }
+  },
+  "deferred": [
+    "hosted multi-user projects/native app",
+    "universal semantic index/graph database",
+    "multi-model autonomous expansion"
+  ]
+}

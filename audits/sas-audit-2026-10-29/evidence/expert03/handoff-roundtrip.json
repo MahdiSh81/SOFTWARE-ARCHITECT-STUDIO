@@ -1,0 +1,15 @@
+{
+  "fixture": "tests/fixtures/rich-project.json",
+  "canonical_hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0",
+  "projection_hash": "923bd6ec83536acbc9c4d65acdbebffacf4627d42038f9717ae5a21d72bba8e0",
+  "export_project_hash": "7ef6716fb73bf0e53d2901ee2af2607ad3899f96ffa70f0e6774f16a061f8808",
+  "omitted_keys": [
+    "api_contract",
+    "custom_extension"
+  ],
+  "redaction_paths": [],
+  "roundtrip": {
+    "status": "failed",
+    "error": "API projection invalid: ['/records get security/0: security scheme is not declared: session']"
+  }
+}

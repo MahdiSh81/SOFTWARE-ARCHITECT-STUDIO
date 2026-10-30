@@ -1,0 +1,9 @@
+{
+  "dialect": "sqlite",
+  "schema_statements": [
+    "CREATE TABLE \"tasks\" (\"id\" INTEGER PRIMARY KEY, \"title\" TEXT NOT NULL, \"done\" INTEGER NOT NULL);"
+  ],
+  "scope": "generated allowlisted CREATE TABLE in memory; arbitrary migrations/data/runtime not tested",
+  "skipped": [],
+  "status": "passed"
+}

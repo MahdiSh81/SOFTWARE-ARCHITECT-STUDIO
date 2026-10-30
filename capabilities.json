@@ -1,5 +1,5 @@
 {
-  "version": "0.7.1",
+  "version": "0.9.1",
   "task_intents": [
     "design",
     "review",
@@ -49,11 +49,26 @@
       "package": "openapi-spec-validator",
       "optional": true,
       "offline_refs_only": true
+    },
+    "local_execution": {
+      "provider": "explicitly authorized local workspace runner",
+      "availability": "local opt-in",
+      "operations": [
+        "capabilities",
+        "inspect",
+        "propose_change",
+        "apply_change",
+        "run_checks",
+        "recover",
+        "reconcile"
+      ],
+      "authority": "caller supplies scoped authorization; runner inherits OS authority, not an OS sandbox"
     }
   },
   "deferred": [
     "hosted multi-user projects/native app",
     "universal semantic index/graph database",
     "multi-model autonomous expansion"
-  ]
+  ],
+  "release_identity": "release/version.json"
 }

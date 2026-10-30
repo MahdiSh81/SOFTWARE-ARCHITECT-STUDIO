@@ -1,0 +1,374 @@
+{
+  "bytes_read": 2664,
+  "checks": [
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "01-system.mmd",
+      "input_sha256": "a53913548b3ca1eefdafacdd52da5ab57d2ba7637f642d15e79965d7338bc674",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "01-system.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "02-request-deliverable.mmd",
+      "input_sha256": "faffa6a30af7641260676387b2c747fb5c54e10baad1e0a35d6bbe641bd90f30",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "02-request-deliverable.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "03-skill-routing.mmd",
+      "input_sha256": "49cf3a7e4662d299fd59535395b531ca4e2f9606c3f8fdc8b76cf7afb182d060",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "03-skill-routing.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "04-project-state.mmd",
+      "input_sha256": "1cad130c7b4d80bed1bcae81602a92396ac3695223acaac5d893e24b201cd203",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "04-project-state.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "05-repository.mmd",
+      "input_sha256": "4936bca89bb6cee5f50996e639668651599f24aa54482db7e8aec403dc2615a2",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "05-repository.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "06-code-generation.mmd",
+      "input_sha256": "4074e7d916deb4ef6aa5d8ae9dc8c55b52bf4648551d4ecb16dc1ba97dffd555",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "06-code-generation.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "07-debug-loop.mmd",
+      "input_sha256": "fcdd997fad205e415130666dd67cbd18ba6b53fbdf38192516a4abb1c74ed22f",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "07-debug-loop.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "08-artifacts.mmd",
+      "input_sha256": "8da3d47c5889fa9e1e60d760bb4285b70ffb170f1158d5fb4ba0e28bbf55ec3d",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "08-artifacts.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "09-change-impact.mmd",
+      "input_sha256": "8d8c82d4553da19c6f15ad33dc005628fe418f5c561680750752fc4020706869",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "09-change-impact.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "10-trust.mmd",
+      "input_sha256": "daa2bf230cf1619d21a66503c01363023955f1478311f2919e85d9d858f1d713",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "10-trust.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "11-recovery.mmd",
+      "input_sha256": "ff13df9e63ab89a09c2ca1a2ff1bbb300462eceeec150833220b2375c7ae1d9f",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "11-recovery.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "12-discovery.mmd",
+      "input_sha256": "1684f492b81ee66f4d4d3cf07d2de841c2d942da771c647bd9cd3ce4c10fda31",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "12-discovery.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "13-cross-plugin.mmd",
+      "input_sha256": "3cd894ad782a0aea9ee6d6e76587b652e95a353599063bea6ea3a0f57f0a790a",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "13-cross-plugin.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    }
+  ],
+  "checks_run": [
+    {
+      "check": "Mermaid heuristic",
+      "file": "01-system.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "02-request-deliverable.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "03-skill-routing.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "04-project-state.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "05-repository.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "06-code-generation.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "07-debug-loop.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "08-artifacts.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "09-change-impact.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "10-trust.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "11-recovery.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "12-discovery.mmd"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "13-cross-plugin.mmd"
+    }
+  ],
+  "duration_seconds": 0.001883,
+  "files_checked": 13,
+  "gate": "structural",
+  "issues": [],
+  "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+  "ok": true,
+  "policy_ok": true,
+  "run_id": "e04f3122aa624784a9e761084a764824",
+  "skipped": [
+    "01-system.mmd: rendering not requested",
+    "02-request-deliverable.mmd: rendering not requested",
+    "03-skill-routing.mmd: rendering not requested",
+    "04-project-state.mmd: rendering not requested",
+    "05-repository.mmd: rendering not requested",
+    "06-code-generation.mmd: rendering not requested",
+    "07-debug-loop.mmd: rendering not requested",
+    "08-artifacts.mmd: rendering not requested",
+    "09-change-impact.mmd: rendering not requested",
+    "10-trust.mmd: rendering not requested",
+    "11-recovery.mmd: rendering not requested",
+    "12-discovery.mmd: rendering not requested",
+    "13-cross-plugin.mmd: rendering not requested"
+  ],
+  "stop_reasons": [],
+  "toolkit_version": "0.8.0",
+  "traceability_coverage": {},
+  "verified": [
+    {
+      "file": "01-system.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "02-request-deliverable.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "03-skill-routing.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "04-project-state.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "05-repository.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "06-code-generation.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "07-debug-loop.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "08-artifacts.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "09-change-impact.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "10-trust.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "11-recovery.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "12-discovery.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "13-cross-plugin.mmd",
+      "gate": "Mermaid heuristic"
+    }
+  ],
+  "warnings": []
+}

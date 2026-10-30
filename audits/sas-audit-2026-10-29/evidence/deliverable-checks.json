@@ -1,0 +1,26 @@
+{
+  "document_checks": {
+    "report_parts_1_through_26": true,
+    "ten_expert_reports": true,
+    "three_peer_reviews": true,
+    "four_new_skills_22_fields_each": true,
+    "thirteen_diagram_sources": true,
+    "finding_ids_unique": true,
+    "all_finding_aliases_have_evidence": true,
+    "every_finding_links_roadmap": true,
+    "all_local_markdown_targets_exist": true,
+    "original_85_tracked_files_unchanged_and_git_clean": true
+  },
+  "passed": true,
+  "finding_count": 58,
+  "mapped_expert_findings": 82,
+  "local_links_checked": 220,
+  "broken_links": [],
+  "skill_field_counts": [
+    22,
+    22,
+    22,
+    22
+  ],
+  "scope": "Audit-artifact completeness/link/source-preservation checks only; not product regression results. Known application defects and unrun checks remain in REPORT.md."
+}

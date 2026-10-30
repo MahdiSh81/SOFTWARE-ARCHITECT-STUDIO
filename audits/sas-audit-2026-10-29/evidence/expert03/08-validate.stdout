@@ -1,0 +1,274 @@
+{
+  "bytes_read": 16692,
+  "checks": [
+    {
+      "check": "OpenAPI basic structure",
+      "detail": "",
+      "file": "api.json",
+      "input_sha256": "66878203134d9f91763ef2e07a604041c2c157e257cb071385e9cb37aaf09d1c",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "OpenAPI full schema",
+      "detail": "not requested or basic gate failed",
+      "file": "api.json",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "detail": "",
+      "file": "containers.mmd",
+      "input_sha256": "50b5021ed52445f8222e70b6601ef88743ab8d1e1420825109f8ac2aae3de465",
+      "method": "heuristic only",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Mermaid renderer",
+      "detail": "rendering not requested",
+      "file": "containers.mmd",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "skipped",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "detail": "",
+      "file": "contracts.json",
+      "input_sha256": "5881517210343100d6b5321fb5e5b228dc9c7c9f10ed6b6063cb2754dac3ede5",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "detail": "",
+      "file": "data-schemas.json",
+      "input_sha256": "504fc0551987c59c30abc88c9e4268f53bf5fe972237a31212e441f44d974d93",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "detail": "",
+      "file": "diagram-map.json",
+      "input_sha256": "ff5726af2e8120e6d3733d834a1a9abb2138594b86be0481d6e1d517e4a284ae",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "detail": "",
+      "file": "engineering-tasks.json",
+      "input_sha256": "4f829f70b54820633aed42bb20cf9ab983b79f0d0d767548ceaf2f63874e3b09",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "detail": "",
+      "file": "generation-manifest.json",
+      "input_sha256": "917717d3bdd4df937c2f7fe30027729c825d1a111a74dcd40e78f623e59fb26d",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "detail": "",
+      "file": "handoff-report.json",
+      "input_sha256": "54f970b574310765c45d149cd3e4f9418651387879cb69c8b9a5f2b6936bf369",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Project traceability integrity",
+      "detail": "",
+      "file": "project.json",
+      "input_sha256": "3ffc25b316c30d529486c330d31f1c161cfabebdcb3158369eb75387af0fc6fe",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "detail": "",
+      "file": "relationships.json",
+      "input_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "detail": "",
+      "file": "risk-register.json",
+      "input_sha256": "4c0775283d7ebb093e99eeb0848bbf7c1ecfb5819122f84d17ddbcd0759875a8",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "detail": "",
+      "file": "tasks.json",
+      "input_sha256": "11ecadf373e9b41c822f1c6a2e80328e61d4264e80ef1b9e26844b866262b569",
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    },
+    {
+      "check": "Contract correspondence",
+      "detail": "supported operation coverage only",
+      "file": "project.json ↔ api.json",
+      "input_sha256": null,
+      "method": "built-in",
+      "status": "passed",
+      "toolkit_version": "0.8.0"
+    }
+  ],
+  "checks_run": [
+    {
+      "check": "OpenAPI basic structure",
+      "file": "api.json"
+    },
+    {
+      "check": "Mermaid heuristic",
+      "file": "containers.mmd"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "file": "contracts.json"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "file": "data-schemas.json"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "file": "diagram-map.json"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "file": "engineering-tasks.json"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "file": "generation-manifest.json"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "file": "handoff-report.json"
+    },
+    {
+      "check": "Project traceability integrity",
+      "file": "project.json"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "file": "relationships.json"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "file": "risk-register.json"
+    },
+    {
+      "check": "JSON/YAML syntax",
+      "file": "tasks.json"
+    },
+    {
+      "check": "Contract correspondence",
+      "file": "project.json ↔ api.json"
+    }
+  ],
+  "duration_seconds": 0.002689,
+  "files_checked": 12,
+  "gate": "structural",
+  "issues": [],
+  "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+  "ok": true,
+  "policy_ok": true,
+  "run_id": "2a6644016e6a4fb0b81185f6a40b0fdb",
+  "skipped": [
+    "api.json: not requested or basic gate failed",
+    "containers.mmd: rendering not requested"
+  ],
+  "stop_reasons": [],
+  "toolkit_version": "0.8.0",
+  "traceability_coverage": {
+    "project.json": {
+      "functional_requirements": 2,
+      "nfr_requirements": 0,
+      "nfr_without_passed_verification": [],
+      "review_note": "Links and plans do not prove satisfaction; applicability and measured verification require review.",
+      "without_declared_component": [],
+      "without_declared_interface": [],
+      "without_declared_task": []
+    }
+  },
+  "verified": [
+    {
+      "file": "api.json",
+      "gate": "OpenAPI basic structure"
+    },
+    {
+      "file": "containers.mmd",
+      "gate": "Mermaid heuristic"
+    },
+    {
+      "file": "contracts.json",
+      "gate": "JSON/YAML syntax"
+    },
+    {
+      "file": "data-schemas.json",
+      "gate": "JSON/YAML syntax"
+    },
+    {
+      "file": "diagram-map.json",
+      "gate": "JSON/YAML syntax"
+    },
+    {
+      "file": "engineering-tasks.json",
+      "gate": "JSON/YAML syntax"
+    },
+    {
+      "file": "generation-manifest.json",
+      "gate": "JSON/YAML syntax"
+    },
+    {
+      "file": "handoff-report.json",
+      "gate": "JSON/YAML syntax"
+    },
+    {
+      "file": "project.json",
+      "gate": "Project traceability integrity"
+    },
+    {
+      "file": "relationships.json",
+      "gate": "JSON/YAML syntax"
+    },
+    {
+      "file": "risk-register.json",
+      "gate": "JSON/YAML syntax"
+    },
+    {
+      "file": "tasks.json",
+      "gate": "JSON/YAML syntax"
+    },
+    {
+      "file": "project.json ↔ api.json",
+      "gate": "Contract correspondence"
+    }
+  ],
+  "warnings": []
+}

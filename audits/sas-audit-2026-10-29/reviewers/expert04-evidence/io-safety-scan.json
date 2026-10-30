@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-29T18:34:02.193710+00:00",
+  "source_ref": "unpinned local tree; resolved commit not inferred",
+  "claim_class": "OBSERVED STATIC SOURCE",
+  "root": "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/fixtures/io-safety",
+  "adapter": "local-static",
+  "adapter_version": "0.8.0",
+  "observed_files": [
+    {
+      "path": "safe.py",
+      "kind": "source",
+      "line": 1,
+      "observation": "regular file read; static evidence only",
+      "bytes": 43,
+      "sha256": "f81d24bc8f2bd8f17d6a0d27346c98981322093d380f897d318713f051e594f7",
+      "source": "local",
+      "source_revision": "unpinned local tree",
+      "extractor_version": "0.8.0"
+    }
+  ],
+  "static_declarations": [],
+  "dependency_edges": [],
+  "scanned_count": 1,
+  "total_candidate_files": 2,
+  "discovered_files": 2,
+  "entries_visited": 3,
+  "eligible_discovered": 1,
+  "bytes_read": 43,
+  "skipped_files": 2,
+  "omissions": [
+    {
+      "path": "blocked.py",
+      "reason": "special file; never opened"
+    },
+    {
+      "path": "link.py",
+      "reason": "symlink"
+    }
+  ],
+  "enumeration_complete": true,
+  "coverage": "partial",
+  "stop_reasons": [],
+  "cache_hits": 0,
+  "source_fingerprint": "9e05a2092c69cb882d00bab539a57f5494650d0bb1f92257666c257be81e1281",
+  "coverage_note": "Read-only bounded static evidence. Python AST and narrow JS imports/config adapters; no runtime, full dependency or framework-binding guarantee. Local source is not commit-pinned. Snippets off by default."
+}

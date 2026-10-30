@@ -1,0 +1,127 @@
+{
+  "baseline": "0.7.0",
+  "source_release": "pluginrel_6ae3590401d88191afd6c6db1ad9c4f8",
+  "scope": "New acceptance tests applied to a fresh copy of the actual published baseline, with no production data. Failures are the expected counterexamples; they are not current-release failures.",
+  "python": {
+    "exit_code": 1,
+    "log": "test_history_uses_resulting_revision_and_commit_order (test_acceptance.AcceptanceTests.test_history_uses_resulting_revision_and_commit_order) ... FAIL\ntest_inaccessible_subtree_retains_other_validation_results (test_acceptance.AcceptanceTests.test_inaccessible_subtree_retains_other_validation_results) ... ERROR\ntest_init_preserves_existing_revision_directory (test_acceptance.AcceptanceTests.test_init_preserves_existing_revision_directory) ... FAIL\ntest_missing_yaml_parser_is_incomplete_structural_gate (test_acceptance.AcceptanceTests.test_missing_yaml_parser_is_incomplete_structural_gate) ... FAIL\ntest_recovery_does_not_overwrite_a_conflicting_history_record (test_acceptance.AcceptanceTests.test_recovery_does_not_overwrite_a_conflicting_history_record) ... FAIL\ntest_recovery_journal_cannot_escape_project (test_acceptance.AcceptanceTests.test_recovery_journal_cannot_escape_project) ... FAIL\ntest_recovery_rejects_modified_journal_payload (test_acceptance.AcceptanceTests.test_recovery_rejects_modified_journal_payload) ... FAIL\ntest_uppercase_mermaid_extension_is_checked_as_mermaid (test_acceptance.AcceptanceTests.test_uppercase_mermaid_extension_is_checked_as_mermaid) ... FAIL\ntest_uppercase_yaml_extension_is_checked_as_openapi (test_acceptance.AcceptanceTests.test_uppercase_yaml_extension_is_checked_as_openapi) ... FAIL\ntest_verification_references_are_validated_before_coverage (test_acceptance.AcceptanceTests.test_verification_references_are_validated_before_coverage) ... FAIL\n\n======================================================================\nERROR: test_inaccessible_subtree_retains_other_validation_results (test_acceptance.AcceptanceTests.test_inaccessible_subtree_retains_other_validation_results)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 85, in test_inaccessible_subtree_retains_other_validation_results\n    with patch('validation_engine.os.scandir',side_effect=scan):result=ve.validate(root,gate='structural')\n                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/tmp677xjsvj/plugin/tools/validation_engine.py\", line 126, in validate\n    with os.scandir(base) as entries:\n         ^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1139, in __call__\n    return self._mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1143, in _mock_call\n    return self._execute_mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1204, in _execute_mock_call\n    result = effect(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 83, in scan\n    if Path(path)==blocked:raise PermissionError('unreadable fixture subtree')\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: unreadable fixture subtree\n\n======================================================================\nFAIL: test_history_uses_resulting_revision_and_commit_order (test_acceptance.AcceptanceTests.test_history_uses_resulting_revision_and_commit_order)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 44, in test_history_uses_resulting_revision_and_commit_order\n    self.assertIn('Revision 2: first change',history);self.assertIn('Revision 3: second change',history)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'Revision 2: first change' not found in '# Architecture change history\\n\\n- Revision 1: Initial project context.\\n- Revision 2: second change (2026-10-29T16:27:12.943985+00:00; operation 00000000000000000000000000000000)\\n- Revision 1: first change (2026-10-29T16:27:12.933043+00:00; operation ffffffffffffffffffffffffffffffff)\\n'\n\n======================================================================\nFAIL: test_init_preserves_existing_revision_directory (test_acceptance.AcceptanceTests.test_init_preserves_existing_revision_directory)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 57, in test_init_preserves_existing_revision_directory\n    with self.assertRaises(ValueError):rs.init_project(root,'New')\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_missing_yaml_parser_is_incomplete_structural_gate (test_acceptance.AcceptanceTests.test_missing_yaml_parser_is_incomplete_structural_gate)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 66, in test_missing_yaml_parser_is_incomplete_structural_gate\n    self.assertFalse(result['policy_ok']);self.assertTrue(any(c['check']=='YAML parse' and c['status']=='skipped' for c in result['checks']))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: True is not false\n\n======================================================================\nFAIL: test_recovery_does_not_overwrite_a_conflicting_history_record (test_acceptance.AcceptanceTests.test_recovery_does_not_overwrite_a_conflicting_history_record)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 51, in test_recovery_does_not_overwrite_a_conflicting_history_record\n    with self.assertRaisesRegex(ValueError,'journal conflict'):rs.recover(root)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_recovery_journal_cannot_escape_project (test_acceptance.AcceptanceTests.test_recovery_journal_cannot_escape_project)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 28, in test_recovery_journal_cannot_escape_project\n    with self.assertRaisesRegex(ValueError,'journal'):rs.recover(root)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_recovery_rejects_modified_journal_payload (test_acceptance.AcceptanceTests.test_recovery_rejects_modified_journal_payload)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 35, in test_recovery_rejects_modified_journal_payload\n    with self.assertRaisesRegex(ValueError,'journal'):rs.recover(root)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_uppercase_mermaid_extension_is_checked_as_mermaid (test_acceptance.AcceptanceTests.test_uppercase_mermaid_extension_is_checked_as_mermaid)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 71, in test_uppercase_mermaid_extension_is_checked_as_mermaid\n    self.assertTrue(result['policy_ok'],result);self.assertTrue(any(c['check']=='Mermaid heuristic' for c in result['checks']))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : {'ok': False, 'gate': 'structural', 'policy_ok': False, 'run_id': '602fb89729e844f6af7ab4c2284ee8e3', 'toolkit_version': '0.7.0', 'duration_seconds': 0.000135, 'files_checked': 1, 'bytes_read': 22, 'checks': [{'file': 'design.MMD', 'check': 'Input parse/validation', 'status': 'failed', 'detail': 'JSONDecodeError: Expecting value: line 1 column 1 (char 0)', 'method': 'built-in', 'input_sha256': '20c8319b36250ea950e61209189597c313c7519e06bc81c1104a1357b5dac5e6', 'toolkit_version': '0.7.0'}], 'checks_run': [{'file': 'design.MMD', 'check': 'Input parse/validation'}], 'issues': [{'file': 'design.MMD', 'issue': 'JSONDecodeError: Expecting value: line 1 column 1 (char 0)'}], 'verified': [], 'warnings': [], 'traceability_coverage': {}, 'skipped': [], 'stop_reasons': [], 'note': 'Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.'}\n\n======================================================================\nFAIL: test_uppercase_yaml_extension_is_checked_as_openapi (test_acceptance.AcceptanceTests.test_uppercase_yaml_extension_is_checked_as_openapi)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 77, in test_uppercase_yaml_extension_is_checked_as_openapi\n    self.assertTrue(result['policy_ok'],result);self.assertTrue(any(c['check']=='OpenAPI basic structure' for c in result['checks']))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : {'ok': False, 'gate': 'structural', 'policy_ok': False, 'run_id': '66e6e3f42a644ea58a20f1432bdc673e', 'toolkit_version': '0.7.0', 'duration_seconds': 0.000104, 'files_checked': 1, 'bytes_read': 59, 'checks': [{'file': 'API.YAML', 'check': 'Input parse/validation', 'status': 'failed', 'detail': 'JSONDecodeError: Expecting value: line 1 column 1 (char 0)', 'method': 'built-in', 'input_sha256': '9ae30313406c3ee557c80d226acaf0ac28785c7efa3b60d4047c9e092bea344d', 'toolkit_version': '0.7.0'}], 'checks_run': [{'file': 'API.YAML', 'check': 'Input parse/validation'}], 'issues': [{'file': 'API.YAML', 'issue': 'JSONDecodeError: Expecting value: line 1 column 1 (char 0)'}], 'verified': [], 'warnings': [], 'traceability_coverage': {}, 'skipped': [], 'stop_reasons': [], 'note': 'Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.'}\n\n======================================================================\nFAIL: test_verification_references_are_validated_before_coverage (test_acceptance.AcceptanceTests.test_verification_references_are_validated_before_coverage)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmp677xjsvj/plugin/tests/test_acceptance.py\", line 90, in test_verification_references_are_validated_before_coverage\n    self.assertTrue(project_checks(p))\nAssertionError: [] is not true\n\n----------------------------------------------------------------------\nRan 10 tests in 0.095s\n\nFAILED (failures=9, errors=1)\n",
+    "counterexample_tests": 10
+  },
+  "workbench": {
+    "checks": [
+      {
+        "name": "lossless rich project roundtrip",
+        "status": "passed"
+      },
+      {
+        "name": "accepted status, API and tasks retained",
+        "status": "passed"
+      },
+      {
+        "name": "no ID normalization or display truncation",
+        "status": "passed"
+      },
+      {
+        "name": "flat twenty snapshots and restore",
+        "status": "passed"
+      },
+      {
+        "name": "corrupt serialized snapshot rejected without truncation",
+        "status": "passed"
+      },
+      {
+        "name": "legacy UI backup rejected explicitly",
+        "status": "passed"
+      },
+      {
+        "name": "valid diagram aliases retain hyphen IDs, no inferred edges",
+        "status": "passed"
+      },
+      {
+        "name": "invalid fixture parity",
+        "status": "passed"
+      },
+      {
+        "name": "capacity finite parity fixture",
+        "status": "passed"
+      },
+      {
+        "name": "assessment unknown excluded and NaN rejected",
+        "status": "passed"
+      },
+      {
+        "name": "corrupt startup retains original without overwrite",
+        "status": "passed"
+      },
+      {
+        "name": "UI script edit in DOM model changes only selected fields",
+        "status": "passed"
+      },
+      {
+        "name": "UI script capacity and score handlers exist",
+        "status": "passed"
+      },
+      {
+        "name": "UI script snapshot in DOM model and per-tab draft preservation",
+        "status": "passed"
+      },
+      {
+        "name": "first writer conflict is detected when both tabs started blank",
+        "status": "failed",
+        "error": "'{\"backup_schema\":3,\"project\":{\"schema_version\":2,\"revision\":1,\"name\":\"Second draft\",\"brief\":\"\",\"constraints\":[],\"open_questions\":[],\"notes\":{\"status\":\"draft\",\"source\":\"user-authored; unverified\"},\"requirements\":[],\"components\":[],\"interfaces\":[],\"data_models\":[],\"decisions\":[],\"tasks\":[],\"cost_drivers\":[]},\"snapshots\":[],\"ui\":{}}' == '{\"backup_schema\":3,\"project\":{\"schema_version\":2,\"revision\":1,\"name\":\"First writer\",\"brief\":\"\",\"constraints\":[],\"open_questions\":[],\"notes\":{\"status\":\"draft\",\"source\":\"user-authored; unverified\"},\"requirements\":[],\"components\":[],\"interfaces\":[],\"data_models\":[],\"decisions\":[],\"tasks\":[],\"cost_drivers\":[]},\"snapshots\":[],\"ui\":{}}'"
+      },
+      {
+        "name": "full JSON edits cannot silently change accepted requirements",
+        "status": "failed",
+        "error": "'Changed accepted requirement' == 'User can view their own tenant records'"
+      },
+      {
+        "name": "record removal preserves unlinked accepted requirements",
+        "status": "failed",
+        "error": "0 == 1"
+      },
+      {
+        "name": "failed score input does not mutate stored UI state",
+        "status": "failed",
+        "error": "{\n  weights: {\n    security: -1\n  }\n} == undefined"
+      },
+      {
+        "name": "verification references reject malformed and unknown IDs",
+        "status": "failed",
+        "error": "The expression evaluated to a falsy value:\n\n  assert(C.errors(p).length)\n"
+      },
+      {
+        "name": "snapshot envelope revision must identify its project",
+        "status": "failed",
+        "error": "Missing expected exception."
+      },
+      {
+        "name": "snapshot refuses unsafe next revision without mutating input",
+        "status": "failed",
+        "error": "Missing expected exception."
+      },
+      {
+        "name": "backup rejects nonfinite UI data instead of silently changing it",
+        "status": "failed",
+        "error": "Missing expected exception."
+      },
+      {
+        "name": "unchanged accepted record can be saved without reapproval",
+        "status": "failed",
+        "error": "0 == 1"
+      },
+      {
+        "name": "accepted object key order does not create a semantic edit",
+        "status": "failed",
+        "error": "0 == 1"
+      },
+      {
+        "name": "failed oversized-envelope import preserves recovery protection",
+        "status": "failed",
+        "error": "false == true"
+      }
+    ],
+    "method": "actual project-core and inline UI code in Node; minimal DOM model, not browser rendering"
+  },
+  "workbench_exit": 1
+}

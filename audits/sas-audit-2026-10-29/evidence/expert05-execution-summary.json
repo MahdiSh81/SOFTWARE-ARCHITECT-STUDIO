@@ -1,0 +1,57 @@
+{
+  "source_commit": "83812e1d31c17ed857be8d2fb5c98126a8ccb5c8",
+  "git_status_porcelain": "",
+  "environment": {
+    "toolkit_version": "0.8.0",
+    "python": "3.12.14",
+    "platform": "linux",
+    "packages": {
+      "PyYAML": "6.0.3",
+      "jsonschema": "4.23.0",
+      "openapi-spec-validator": "0.7.2"
+    },
+    "mmdc": null,
+    "io": {
+      "regular_file_reads": true,
+      "bounded_reads": true,
+      "posix_descriptor_no_follow": true,
+      "writer_concurrency": "cooperating local writers under exclusive lock",
+      "power_loss_durability": "fsync attempted; filesystem/platform durability not certified",
+      "non_posix": "preflight only; hostile path-race protection not claimed"
+    },
+    "network": "no automatic installs/fetching; host connector capabilities unprobed",
+    "host_budgets": {
+      "tokens": "unsupported",
+      "agent_count": "advisory; host must mediate",
+      "local_file_bytes": "enforced",
+      "subprocess_deadline": "enforced",
+      "external_tool_authority": "host enforcement required"
+    }
+  },
+  "node": "v24.19.0",
+  "python_suite": {
+    "tests": 88,
+    "passed": 87,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "exit": 1,
+    "duration_reported_seconds": 1.499,
+    "log": "expert05-python.log"
+  },
+  "node_suite": {
+    "checks": 25,
+    "passed": 25,
+    "exit": 0,
+    "log": "expert05-node.log"
+  },
+  "python_test_counts_by_file": {
+    "test_acceptance.py": 10,
+    "test_architect_cli.py": 13,
+    "test_audit_followups.py": 11,
+    "test_project_workflows.py": 12,
+    "test_release.py": 42
+  },
+  "ci_missing_manifest_script_exit": 2,
+  "cli_probe_process_count": 17
+}

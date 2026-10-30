@@ -1,0 +1,1381 @@
+[
+  {
+    "path": ".app.json",
+    "bytes": 127,
+    "lines": 8,
+    "kind": "package metadata/docs"
+  },
+  {
+    "path": ".codex-plugin/plugin.json",
+    "bytes": 1874,
+    "lines": 45,
+    "kind": ".codex-plugin"
+  },
+  {
+    "path": ".github/workflows/ci.yml",
+    "bytes": 1539,
+    "lines": 49,
+    "kind": ".github"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "bytes": 2893,
+    "lines": 22,
+    "kind": "package metadata/docs"
+  },
+  {
+    "path": "IMPLEMENTATION_STATUS.json",
+    "bytes": 28146,
+    "lines": 542,
+    "kind": "package metadata/docs"
+  },
+  {
+    "path": "README.md",
+    "bytes": 8506,
+    "lines": 68,
+    "kind": "package metadata/docs"
+  },
+  {
+    "path": "capabilities.json",
+    "bytes": 1364,
+    "lines": 59,
+    "kind": "package metadata/docs"
+  },
+  {
+    "path": "docs/implementation-adapter.md",
+    "bytes": 1234,
+    "lines": 6,
+    "kind": "docs"
+  },
+  {
+    "path": "docs/integrations.md",
+    "bytes": 1252,
+    "lines": 9,
+    "kind": "docs"
+  },
+  {
+    "path": "evals/architecture-cases.json",
+    "bytes": 3255,
+    "lines": 129,
+    "kind": "evals"
+  },
+  {
+    "path": "evals/example-responses.json",
+    "bytes": 774,
+    "lines": 7,
+    "kind": "evals"
+  },
+  {
+    "path": "evals/semantic-review-rubric.json",
+    "bytes": 1076,
+    "lines": 35,
+    "kind": "evals"
+  },
+  {
+    "path": "examples/api.yaml",
+    "bytes": 461,
+    "lines": 22,
+    "kind": "examples"
+  },
+  {
+    "path": "examples/architecture.md",
+    "bytes": 1290,
+    "lines": 25,
+    "kind": "examples"
+  },
+  {
+    "path": "examples/atlas-project/project.json",
+    "bytes": 2639,
+    "lines": 35,
+    "kind": "examples"
+  },
+  {
+    "path": "examples/capacity.json",
+    "bytes": 404,
+    "lines": 15,
+    "kind": "examples"
+  },
+  {
+    "path": "examples/containers.mmd",
+    "bytes": 292,
+    "lines": 9,
+    "kind": "examples"
+  },
+  {
+    "path": "examples/score.json",
+    "bytes": 252,
+    "lines": 4,
+    "kind": "examples"
+  },
+  {
+    "path": "plugin.json",
+    "bytes": 2029,
+    "lines": 49,
+    "kind": "package metadata/docs"
+  },
+  {
+    "path": "release/counterexamples-0.7.0.json",
+    "bytes": 15995,
+    "lines": 127,
+    "kind": "release"
+  },
+  {
+    "path": "release/source-manifest.json",
+    "bytes": 7437,
+    "lines": 74,
+    "kind": "release"
+  },
+  {
+    "path": "release/verification-0.7.0.json",
+    "bytes": 23008,
+    "lines": 458,
+    "kind": "release"
+  },
+  {
+    "path": "release/verification.json",
+    "bytes": 26373,
+    "lines": 516,
+    "kind": "release"
+  },
+  {
+    "path": "requirements-validation.lock",
+    "bytes": 400,
+    "lines": 19,
+    "kind": "package metadata/docs"
+  },
+  {
+    "path": "requirements-validation.txt",
+    "bytes": 152,
+    "lines": 4,
+    "kind": "package metadata/docs"
+  },
+  {
+    "path": "research/user-observation-template.json",
+    "bytes": 931,
+    "lines": 26,
+    "kind": "research"
+  },
+  {
+    "path": "schemas/evidence-v1.schema.json",
+    "bytes": 1241,
+    "lines": 64,
+    "kind": "schemas"
+  },
+  {
+    "path": "schemas/project-v2.schema.json",
+    "bytes": 8026,
+    "lines": 381,
+    "kind": "schemas"
+  },
+  {
+    "path": "schemas/tool-capability-v1.schema.json",
+    "bytes": 1753,
+    "lines": 75,
+    "kind": "schemas"
+  },
+  {
+    "path": "schemas/verification-receipt-v1.schema.json",
+    "bytes": 3270,
+    "lines": 177,
+    "kind": "schemas"
+  },
+  {
+    "path": "skills/api-data-contracts/SKILL.md",
+    "bytes": 995,
+    "lines": 7,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/implementation-planning-and-change/SKILL.md",
+    "bytes": 1294,
+    "lines": 15,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/repository-intelligence/SKILL.md",
+    "bytes": 1343,
+    "lines": 15,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/requirements-specification/SKILL.md",
+    "bytes": 1244,
+    "lines": 14,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/security-review/SKILL.md",
+    "bytes": 890,
+    "lines": 7,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/SKILL.md",
+    "bytes": 14559,
+    "lines": 97,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/automated-checks.md",
+    "bytes": 2115,
+    "lines": 11,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/capacity-cost.md",
+    "bytes": 2745,
+    "lines": 37,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/change-impact.md",
+    "bytes": 1492,
+    "lines": 7,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/decisions.md",
+    "bytes": 2599,
+    "lines": 33,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/deliverable-contracts.md",
+    "bytes": 1828,
+    "lines": 34,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/depth-and-audience.md",
+    "bytes": 1282,
+    "lines": 7,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/design-document.md",
+    "bytes": 3049,
+    "lines": 45,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/developer-handoff.md",
+    "bytes": 2226,
+    "lines": 9,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/diagrams.md",
+    "bytes": 1721,
+    "lines": 19,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/evaluation.md",
+    "bytes": 2082,
+    "lines": 9,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/github-review.md",
+    "bytes": 2182,
+    "lines": 9,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/implementation-status.md",
+    "bytes": 8536,
+    "lines": 50,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/project-lifecycle.md",
+    "bytes": 3014,
+    "lines": 13,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/review-checklist.md",
+    "bytes": 1810,
+    "lines": 20,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/scoring.md",
+    "bytes": 2428,
+    "lines": 24,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/specialized-designs.md",
+    "bytes": 2953,
+    "lines": 27,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/software-architecture/references/traceability.md",
+    "bytes": 1740,
+    "lines": 32,
+    "kind": "skills"
+  },
+  {
+    "path": "skills/test-debug-verify/SKILL.md",
+    "bytes": 941,
+    "lines": 7,
+    "kind": "skills"
+  },
+  {
+    "path": "strategy/deferred-decisions.md",
+    "bytes": 1245,
+    "lines": 9,
+    "kind": "strategy"
+  },
+  {
+    "path": "tests/browser/README.md",
+    "bytes": 570,
+    "lines": 3,
+    "kind": "tests"
+  },
+  {
+    "path": "tests/browser/package.json",
+    "bytes": 239,
+    "lines": 11,
+    "kind": "tests"
+  },
+  {
+    "path": "tests/browser/playwright.config.cjs",
+    "bytes": 502,
+    "lines": 6,
+    "kind": "tests"
+  },
+  {
+    "path": "tests/browser/workbench.spec.cjs",
+    "bytes": 1952,
+    "lines": 21,
+    "kind": "tests"
+  },
+  {
+    "path": "tests/fixtures/conformance.json",
+    "bytes": 13986,
+    "lines": 568,
+    "kind": "tests"
+  },
+  {
+    "path": "tests/fixtures/rich-project.json",
+    "bytes": 5828,
+    "lines": 279,
+    "kind": "tests"
+  },
+  {
+    "path": "tests/test_acceptance.py",
+    "bytes": 6071,
+    "lines": 95,
+    "kind": "tests",
+    "module_description": "Acceptance counterexamples discovered after the 0.7.0 release.",
+    "definitions": [
+      {
+        "name": "AcceptanceTests",
+        "line": 14
+      },
+      {
+        "name": "pending",
+        "line": 15
+      },
+      {
+        "name": "test_recovery_journal_cannot_escape_project",
+        "line": 24
+      },
+      {
+        "name": "test_recovery_rejects_modified_journal_payload",
+        "line": 31
+      },
+      {
+        "name": "test_history_uses_resulting_revision_and_commit_order",
+        "line": 38
+      },
+      {
+        "name": "test_recovery_does_not_overwrite_a_conflicting_history_record",
+        "line": 47
+      },
+      {
+        "name": "test_init_preserves_existing_revision_directory",
+        "line": 54
+      },
+      {
+        "name": "test_missing_yaml_parser_is_incomplete_structural_gate",
+        "line": 60
+      },
+      {
+        "name": "test_uppercase_mermaid_extension_is_checked_as_mermaid",
+        "line": 68
+      },
+      {
+        "name": "test_uppercase_yaml_extension_is_checked_as_openapi",
+        "line": 74
+      },
+      {
+        "name": "test_inaccessible_subtree_retains_other_validation_results",
+        "line": 79
+      },
+      {
+        "name": "test_verification_references_are_validated_before_coverage",
+        "line": 88
+      },
+      {
+        "name": "fault",
+        "line": 17
+      },
+      {
+        "name": "scan",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "path": "tests/test_architect_cli.py",
+    "bytes": 3723,
+    "lines": 89,
+    "kind": "tests",
+    "module_description": null,
+    "definitions": [
+      {
+        "name": "CapacityTests",
+        "line": 10
+      },
+      {
+        "name": "ScoringTests",
+        "line": 43
+      },
+      {
+        "name": "ValidationTests",
+        "line": 61
+      },
+      {
+        "name": "setUp",
+        "line": 11
+      },
+      {
+        "name": "test_capacity_formulas",
+        "line": 17
+      },
+      {
+        "name": "test_zero_prices_are_valid",
+        "line": 25
+      },
+      {
+        "name": "test_nan_rejected",
+        "line": 31
+      },
+      {
+        "name": "test_negative_rejected",
+        "line": 35
+      },
+      {
+        "name": "test_fractional_replica_rejected",
+        "line": 39
+      },
+      {
+        "name": "test_empty_is_not_evaluated",
+        "line": 44
+      },
+      {
+        "name": "test_partial_coverage_not_zeroed",
+        "line": 49
+      },
+      {
+        "name": "test_bad_score_rejected",
+        "line": 55
+      },
+      {
+        "name": "test_bad_weights_rejected",
+        "line": 58
+      },
+      {
+        "name": "test_valid_mermaid",
+        "line": 62
+      },
+      {
+        "name": "test_dangling_arrow",
+        "line": 71
+      },
+      {
+        "name": "test_json_error",
+        "line": 78
+      },
+      {
+        "name": "test_api_basic",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "path": "tests/test_audit_followups.py",
+    "bytes": 7876,
+    "lines": 147,
+    "kind": "tests",
+    "module_description": "Regression tests for the 0.8.0 audit follow-ups.",
+    "definitions": [
+      {
+        "name": "api_fixture",
+        "line": 16
+      },
+      {
+        "name": "valid_result",
+        "line": 34
+      },
+      {
+        "name": "AuditFollowupTests",
+        "line": 45
+      },
+      {
+        "name": "test_openapi_local_references_resolve_and_escaped_pointer_is_supported",
+        "line": 46
+      },
+      {
+        "name": "test_openapi_unresolved_local_reference_fails",
+        "line": 52
+      },
+      {
+        "name": "test_openapi_security_scheme_must_be_declared",
+        "line": 57
+      },
+      {
+        "name": "test_openapi_path_parameter_reference_is_resolved_semantically",
+        "line": 62
+      },
+      {
+        "name": "test_openapi_external_and_nonstring_refs_are_rejected",
+        "line": 69
+      },
+      {
+        "name": "test_committed_journal_mismatch_preserves_current_project_and_history",
+        "line": 76
+      },
+      {
+        "name": "test_handoff_identity_distinguishes_canonical_and_projection_hashes",
+        "line": 91
+      },
+      {
+        "name": "test_handoff_generation_manifest_preserves_identity",
+        "line": 104
+      },
+      {
+        "name": "test_capability_manifest_rejects_duplicate_operation_ids",
+        "line": 117
+      },
+      {
+        "name": "test_passed_tool_result_requires_output_identity_and_valid_time",
+        "line": 131
+      },
+      {
+        "name": "test_deployment_receipt_requires_authorization_reference",
+        "line": 140
+      }
+    ]
+  },
+  {
+    "path": "tests/test_project_workflows.py",
+    "bytes": 5244,
+    "lines": 92,
+    "kind": "tests",
+    "module_description": null,
+    "definitions": [
+      {
+        "name": "ProjectTests",
+        "line": 13
+      },
+      {
+        "name": "BehavioralTests",
+        "line": 76
+      },
+      {
+        "name": "setUp",
+        "line": 14
+      },
+      {
+        "name": "test_links_valid",
+        "line": 16
+      },
+      {
+        "name": "test_dangling_ids",
+        "line": 18
+      },
+      {
+        "name": "test_requirement_ids",
+        "line": 21
+      },
+      {
+        "name": "test_duplicate_rejected",
+        "line": 24
+      },
+      {
+        "name": "test_project_context_version_and_snapshot",
+        "line": 27
+      },
+      {
+        "name": "test_impact_declared_links",
+        "line": 37
+      },
+      {
+        "name": "test_handoff_and_validators",
+        "line": 44
+      },
+      {
+        "name": "test_repo_file_line_evidence_and_drift",
+        "line": 55
+      },
+      {
+        "name": "test_validating_project_json_checks_links",
+        "line": 66
+      },
+      {
+        "name": "test_evaluate_and_baseline",
+        "line": 77
+      },
+      {
+        "name": "test_missing_outputs_are_not_pass",
+        "line": 83
+      },
+      {
+        "name": "test_bad_regex_rejected",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "path": "tests/test_release.py",
+    "bytes": 17642,
+    "lines": 215,
+    "kind": "tests",
+    "module_description": null,
+    "definitions": [
+      {
+        "name": "ReleaseTests",
+        "line": 16
+      },
+      {
+        "name": "setUp",
+        "line": 17
+      },
+      {
+        "name": "root",
+        "line": 18
+      },
+      {
+        "name": "cli",
+        "line": 20
+      },
+      {
+        "name": "test_missing_envelope_rejected",
+        "line": 21
+      },
+      {
+        "name": "test_invalid_shapes_are_diagnostics",
+        "line": 22
+      },
+      {
+        "name": "test_rich_fixture_valid",
+        "line": 25
+      },
+      {
+        "name": "test_published_schema_agrees_with_fixtures",
+        "line": 27
+      },
+      {
+        "name": "test_init_preserves_unrelated_history",
+        "line": 33
+      },
+      {
+        "name": "test_symlink_reads_and_writes_refused",
+        "line": 39
+      },
+      {
+        "name": "test_snapshot_failure_retries_without_double_revision",
+        "line": 45
+      },
+      {
+        "name": "test_history_projection_failure_recoverable",
+        "line": 56
+      },
+      {
+        "name": "test_commit_conflict_preserves_project",
+        "line": 66
+      },
+      {
+        "name": "test_restore_as_new_revision",
+        "line": 71
+      },
+      {
+        "name": "test_typed_graph_closure_cycles_order_invariant",
+        "line": 76
+      },
+      {
+        "name": "test_change_removed_requirement_is_supported",
+        "line": 82
+      },
+      {
+        "name": "test_supersede_preserves_predecessor",
+        "line": 84
+      },
+      {
+        "name": "test_compiler_preserves_native_contracts_and_ids",
+        "line": 87
+      },
+      {
+        "name": "test_head_supported_and_duplicate_rejected_before_write",
+        "line": 90
+      },
+      {
+        "name": "test_unordered_associations_do_not_invent_flows",
+        "line": 95
+      },
+      {
+        "name": "test_stale_owned_adr_removed_and_unowned_note_preserved",
+        "line": 97
+      },
+      {
+        "name": "test_modified_owned_output_not_overwritten",
+        "line": 102
+      },
+      {
+        "name": "test_committed_handoff_survives_projection_failure",
+        "line": 107
+      },
+      {
+        "name": "test_readiness_waiver_not_verification",
+        "line": 116
+      },
+      {
+        "name": "test_openapi_positive_fields_and_negative_shapes",
+        "line": 118
+      },
+      {
+        "name": "test_cli_bad_api_returns_json_not_traceback",
+        "line": 121
+      },
+      {
+        "name": "test_optional_full_gate_cannot_hide_unavailable_tools",
+        "line": 124
+      },
+      {
+        "name": "test_renderer_attempt_not_suppressed_by_heuristic",
+        "line": 129
+      },
+      {
+        "name": "test_timeout_retains_other_file_results",
+        "line": 135
+      },
+      {
+        "name": "test_external_refs_blocked",
+        "line": 140
+      },
+      {
+        "name": "test_scanner_ci_and_relevant_quota",
+        "line": 142
+      },
+      {
+        "name": "test_scanner_comments_not_routes",
+        "line": 148
+      },
+      {
+        "name": "test_special_file_not_opened_and_entry_budget_honest",
+        "line": 153
+      },
+      {
+        "name": "test_cache_parity_and_fitness_counterexample",
+        "line": 158
+      },
+      {
+        "name": "test_cache_preserves_unrelated_file",
+        "line": 163
+      },
+      {
+        "name": "test_nonstring_operation_id_is_typed_error",
+        "line": 168
+      },
+      {
+        "name": "test_numeric_overflow_nan_and_nonfinite_weights",
+        "line": 171
+      },
+      {
+        "name": "test_evaluation_gate_and_deterministic_length",
+        "line": 176
+      },
+      {
+        "name": "test_pathological_regex_times_out_without_false_pass",
+        "line": 180
+      },
+      {
+        "name": "test_sqlite_allowlist_and_planning_tools",
+        "line": 183
+      },
+      {
+        "name": "test_dry_run_writes_nothing",
+        "line": 186
+      },
+      {
+        "name": "test_default_disclosure_redacts_and_private_backup_preserves",
+        "line": 189
+      },
+      {
+        "name": "test_js_static_import_adapter_ignores_comments_and_templates",
+        "line": 193
+      },
+      {
+        "name": "test_actual_worker_timeout",
+        "line": 197
+      },
+      {
+        "name": "test_actual_full_schema_worker",
+        "line": 201
+      },
+      {
+        "name": "test_cross_surface_capacity_cases",
+        "line": 205
+      },
+      {
+        "name": "fault",
+        "line": 49
+      },
+      {
+        "name": "fault",
+        "line": 60
+      },
+      {
+        "name": "fault",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "path": "tests/test_workbench.cjs",
+    "bytes": 10493,
+    "lines": 34,
+    "kind": "tests"
+  },
+  {
+    "path": "tools/architect_cli.py",
+    "bytes": 9970,
+    "lines": 104,
+    "kind": "tools",
+    "module_description": "Software Architect Studio: bounded local architecture workflows, v0.7.",
+    "definitions": [
+      {
+        "name": "validate_mermaid",
+        "line": 16
+      },
+      {
+        "name": "_validate_openapi_json",
+        "line": 17
+      },
+      {
+        "name": "_validate_openapi",
+        "line": 18
+      },
+      {
+        "name": "_project",
+        "line": 23
+      },
+      {
+        "name": "main",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "path": "tools/artifact_compiler.py",
+    "bytes": 15557,
+    "lines": 175,
+    "kind": "tools",
+    "module_description": "Profile-driven artifact plans and committed generations with legacy projections.",
+    "definitions": [
+      {
+        "name": "readiness",
+        "line": 9
+      },
+      {
+        "name": "_bullets",
+        "line": 36
+      },
+      {
+        "name": "_label",
+        "line": 37
+      },
+      {
+        "name": "compile_plan",
+        "line": 39
+      },
+      {
+        "name": "resolve_generation",
+        "line": 122
+      },
+      {
+        "name": "recover_handoff",
+        "line": 127
+      },
+      {
+        "name": "handoff",
+        "line": 144
+      },
+      {
+        "name": "put",
+        "line": 46
+      },
+      {
+        "name": "finish",
+        "line": 129
+      }
+    ]
+  },
+  {
+    "path": "tools/behavioral_eval.py",
+    "bytes": 6009,
+    "lines": 88,
+    "kind": "tools",
+    "module_description": "Bounded supplied-response checks. Semantic quality requires reviewed captures.",
+    "definitions": [
+      {
+        "name": "_regex_worker",
+        "line": 5
+      },
+      {
+        "name": "_pattern_found",
+        "line": 14
+      },
+      {
+        "name": "_check_fixture",
+        "line": 28
+      },
+      {
+        "name": "_run",
+        "line": 59
+      },
+      {
+        "name": "evaluate_cases",
+        "line": 84
+      },
+      {
+        "name": "match",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "path": "tools/calculators.py",
+    "bytes": 4162,
+    "lines": 48,
+    "kind": "tools",
+    "module_description": "Finite scenario arithmetic. Prices are user assumptions, not vendor quotes.",
+    "definitions": [
+      {
+        "name": "number",
+        "line": 5
+      },
+      {
+        "name": "capacity",
+        "line": 12
+      },
+      {
+        "name": "score",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "path": "tools/check_release.py",
+    "bytes": 1634,
+    "lines": 20,
+    "kind": "tools",
+    "module_description": "Run meaningful regression/conformance suites, writing an exact local report.",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 8
+      }
+    ]
+  },
+  {
+    "path": "tools/disclosure.py",
+    "bytes": 1086,
+    "lines": 21,
+    "kind": "tools",
+    "module_description": "Conservative data minimization; pattern detection is never a completeness claim.",
+    "definitions": [
+      {
+        "name": "redact_text",
+        "line": 4
+      },
+      {
+        "name": "minimized",
+        "line": 7
+      }
+    ]
+  },
+  {
+    "path": "tools/graph_engine.py",
+    "bytes": 4371,
+    "lines": 63,
+    "kind": "tools",
+    "module_description": "Typed, order-independent declared graph queries. Reachability is review scope.",
+    "definitions": [
+      {
+        "name": "graph",
+        "line": 6
+      },
+      {
+        "name": "impacts",
+        "line": 22
+      },
+      {
+        "name": "project_diff",
+        "line": 47
+      },
+      {
+        "name": "change_bundle",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "path": "tools/integration_contracts.py",
+    "bytes": 6487,
+    "lines": 116,
+    "kind": "tools",
+    "module_description": "Validation for capability manifests and evidence-bearing tool receipts.\n\nThis module validates data contracts only. It does not discover, authorize, invoke,\nor sandbox external tools. Host permissions remain authoritative.",
+    "definitions": [
+      {
+        "name": "_timestamp",
+        "line": 16
+      },
+      {
+        "name": "validate_capability_manifest",
+        "line": 26
+      },
+      {
+        "name": "validate_tool_result",
+        "line": 68
+      },
+      {
+        "name": "validate_verification_receipt",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "path": "tools/project_model.py",
+    "bytes": 7954,
+    "lines": 109,
+    "kind": "tools",
+    "module_description": "Canonical v2 draft contract. Unknown fields are preserved, never executed.",
+    "definitions": [
+      {
+        "name": "new_project",
+        "line": 18
+      },
+      {
+        "name": "project_checks",
+        "line": 23
+      },
+      {
+        "name": "require_project",
+        "line": 79
+      },
+      {
+        "name": "traceability_coverage",
+        "line": 84
+      },
+      {
+        "name": "resume_packet",
+        "line": 94
+      },
+      {
+        "name": "supersede",
+        "line": 102
+      },
+      {
+        "name": "err",
+        "line": 25
+      },
+      {
+        "name": "coverage",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "path": "tools/project_workflows.py",
+    "bytes": 421,
+    "lines": 7,
+    "kind": "tools",
+    "module_description": "Compatibility exports; canonical implementation lives in focused modules.",
+    "definitions": []
+  },
+  {
+    "path": "tools/repository_evidence.py",
+    "bytes": 15023,
+    "lines": 190,
+    "kind": "tools",
+    "module_description": "Bounded, read-only source adapters. No repository code or build is executed.",
+    "definitions": [
+      {
+        "name": "minimize",
+        "line": 13
+      },
+      {
+        "name": "_python",
+        "line": 21
+      },
+      {
+        "name": "_javascript",
+        "line": 34
+      },
+      {
+        "name": "_descriptor",
+        "line": 54
+      },
+      {
+        "name": "repo_scan",
+        "line": 83
+      },
+      {
+        "name": "evidence_delta",
+        "line": 176
+      },
+      {
+        "name": "fitness",
+        "line": 181
+      }
+    ]
+  },
+  {
+    "path": "tools/revision_store.py",
+    "bytes": 7747,
+    "lines": 112,
+    "kind": "tools",
+    "module_description": "Recoverable local revisions. project.json atomic replacement is the commit point.\n\nHistory is a derived projection; journal entries retain messages before commit.\nNo cross-file atomicity, hostile-writer lock or power-loss certification claimed.",
+    "definitions": [
+      {
+        "name": "load_project",
+        "line": 11
+      },
+      {
+        "name": "init_project",
+        "line": 13
+      },
+      {
+        "name": "_validated_journal",
+        "line": 24
+      },
+      {
+        "name": "_history",
+        "line": 37
+      },
+      {
+        "name": "_recover_locked",
+        "line": 50
+      },
+      {
+        "name": "recover",
+        "line": 70
+      },
+      {
+        "name": "commit_project",
+        "line": 78
+      },
+      {
+        "name": "snapshot",
+        "line": 99
+      },
+      {
+        "name": "restore",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "path": "tools/safe_io.py",
+    "bytes": 5299,
+    "lines": 116,
+    "kind": "tools",
+    "module_description": "Bounded regular-file IO. POSIX uses descriptor-relative no-follow operations.\n\nThese controls are local filesystem controls, not a sandbox for external tools.\nLocking serializes cooperating writers; it is not distributed consensus.",
+    "definitions": [
+      {
+        "name": "digest",
+        "line": 12
+      },
+      {
+        "name": "dumps",
+        "line": 17
+      },
+      {
+        "name": "guard",
+        "line": 20
+      },
+      {
+        "name": "parent_fd",
+        "line": 32
+      },
+      {
+        "name": "read_bytes",
+        "line": 50
+      },
+      {
+        "name": "read_text",
+        "line": 69
+      },
+      {
+        "name": "read_json",
+        "line": 72
+      },
+      {
+        "name": "atomic_write",
+        "line": 75
+      },
+      {
+        "name": "remove_owned",
+        "line": 99
+      },
+      {
+        "name": "project_lock",
+        "line": 104
+      },
+      {
+        "name": "io_capabilities",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "path": "tools/validation_engine.py",
+    "bytes": 22824,
+    "lines": 341,
+    "kind": "tools",
+    "module_description": "Scoped gates with typed terminal results and opt-in external validators.",
+    "definitions": [
+      {
+        "name": "_iter_refs",
+        "line": 13
+      },
+      {
+        "name": "_resolve_local_ref",
+        "line": 27
+      },
+      {
+        "name": "_external_refs",
+        "line": 59
+      },
+      {
+        "name": "_parameter_target",
+        "line": 63
+      },
+      {
+        "name": "_check_security_requirements",
+        "line": 72
+      },
+      {
+        "name": "openapi_checks",
+        "line": 89
+      },
+      {
+        "name": "mermaid_checks",
+        "line": 192
+      },
+      {
+        "name": "bounded_process",
+        "line": 203
+      },
+      {
+        "name": "parse_yaml",
+        "line": 222
+      },
+      {
+        "name": "doctor",
+        "line": 230
+      },
+      {
+        "name": "validate",
+        "line": 239
+      },
+      {
+        "name": "limits",
+        "line": 205
+      },
+      {
+        "name": "record",
+        "line": 245
+      }
+    ]
+  },
+  {
+    "path": "tools/validator_worker.py",
+    "bytes": 1128,
+    "lines": 23,
+    "kind": "tools",
+    "module_description": "Worker for optional installed validators. No automatic installs or remote refs.",
+    "definitions": []
+  },
+  {
+    "path": "tools/workflow_tools.py",
+    "bytes": 9115,
+    "lines": 101,
+    "kind": "tools",
+    "module_description": "Portable evolution, evaluation/research instruments and scoped planning tools.",
+    "definitions": [
+      {
+        "name": "freshness",
+        "line": 9
+      },
+      {
+        "name": "migration_plan",
+        "line": 17
+      },
+      {
+        "name": "decision_experiments",
+        "line": 28
+      },
+      {
+        "name": "sensitivity",
+        "line": 36
+      },
+      {
+        "name": "sqlite_schema_check",
+        "line": 46
+      },
+      {
+        "name": "research_kit",
+        "line": 66
+      },
+      {
+        "name": "capture_response",
+        "line": 73
+      },
+      {
+        "name": "capture_summary",
+        "line": 81
+      },
+      {
+        "name": "specialist_plan",
+        "line": 87
+      },
+      {
+        "name": "record_run",
+        "line": 96
+      },
+      {
+        "name": "quote",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "path": "workbench/index.html",
+    "bytes": 28947,
+    "lines": 72,
+    "kind": "workbench"
+  },
+  {
+    "path": "workbench/project-core.js",
+    "bytes": 13313,
+    "lines": 53,
+    "kind": "workbench"
+  }
+]

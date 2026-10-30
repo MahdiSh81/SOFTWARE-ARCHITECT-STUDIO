@@ -1,0 +1,6 @@
+{
+  "valid_project": true,
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/SOFTWARE-ARCHITECT-STUDIO/tools/architect_cli.py\", line 104, in <module>\n    if __name__=='__main__':sys.exit(main())\n                                     ^^^^^^\n  File \"/workspace/SOFTWARE-ARCHITECT-STUDIO/tools/architect_cli.py\", line 90, in main\n    elif c=='data-check':result=sqlite_schema_check(_project(args.path))\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/SOFTWARE-ARCHITECT-STUDIO/tools/workflow_tools.py\", line 62, in sqlite_schema_check\n    for statement in ddl:conn.execute(statement)\n                         ^^^^^^^^^^^^^^^^^^^^^^^\nsqlite3.OperationalError: table \"same_name\" already exists\n"
+}

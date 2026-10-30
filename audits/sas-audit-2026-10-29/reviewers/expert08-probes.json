@@ -1,0 +1,321 @@
+{
+  "python": "3.12.14",
+  "results": [
+    {
+      "name": "baseline_manifest",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": []
+    },
+    {
+      "name": "baseline_receipt",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": []
+    },
+    {
+      "name": "manifest_unknown_root",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": [
+        "Additional properties are not allowed ('extra_authority' was unexpected)"
+      ]
+    },
+    {
+      "name": "manifest_unknown_capability",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": [
+        "Additional properties are not allowed ('secret' was unexpected)"
+      ]
+    },
+    {
+      "name": "manifest_boolean_version",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": [
+        "1 was expected"
+      ]
+    },
+    {
+      "name": "manifest_duplicate_id",
+      "custom": {
+        "issues": [
+          "duplicate capability operation_id: run-tests"
+        ]
+      },
+      "json_schema_issues": []
+    },
+    {
+      "name": "manifest_invalid_embedded_schema",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": []
+    },
+    {
+      "name": "manifest_unhashable_permission",
+      "custom": {
+        "exception": "TypeError",
+        "message": "unhashable type: 'list'"
+      },
+      "json_schema_issues": [
+        "[] is not one of ['read', 'write', 'deploy', 'production_data']"
+      ]
+    },
+    {
+      "name": "receipt_unknown_field",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": [
+        "Additional properties are not allowed ('extra_authority' was unexpected)"
+      ]
+    },
+    {
+      "name": "receipt_bad_artifact_refs",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": [
+        "42 is not of type 'array'"
+      ]
+    },
+    {
+      "name": "receipt_bad_optional_authorization",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": [
+        "42 is not of type 'string', 'null'"
+      ]
+    },
+    {
+      "name": "receipt_passed_null_hash",
+      "custom": {
+        "issues": [
+          "passed tool result requires output_hash as SHA-256 identity"
+        ]
+      },
+      "json_schema_issues": []
+    },
+    {
+      "name": "receipt_non_rfc3339_timestamp",
+      "custom": {
+        "issues": []
+      },
+      "json_schema_issues": [
+        "'2026-10-29 10:00:00Z' is not a 'date-time'"
+      ]
+    },
+    {
+      "name": "receipt_reversed_time",
+      "custom": {
+        "issues": [
+          "completed_at must not precede started_at"
+        ]
+      },
+      "json_schema_issues": []
+    },
+    {
+      "name": "receipt_unhashable_status",
+      "custom": {
+        "exception": "TypeError",
+        "message": "unhashable type: 'dict'"
+      },
+      "json_schema_issues": [
+        "{} is not one of ['passed', 'failed', 'blocked', 'timed_out', 'skipped', 'partial', 'unknown']"
+      ]
+    },
+    {
+      "name": "receipt_unhashable_permission",
+      "custom": {
+        "exception": "TypeError",
+        "message": "unhashable type: 'list'"
+      },
+      "json_schema_issues": [
+        "[] is not one of ['read', 'write', 'deploy', 'production_data']"
+      ]
+    },
+    {
+      "name": "cli_full_gate_invalid_capability",
+      "exit": 0,
+      "stdout": {
+        "bytes_read": 41,
+        "checks": [
+          {
+            "check": "JSON/YAML syntax",
+            "detail": "",
+            "file": "bad-capability.json",
+            "input_sha256": "cb63c5eeff83342ab1cba8cfd4642f9ff3fc0b23b37b7ae02748d390097b72d1",
+            "method": "built-in",
+            "status": "passed",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "JSON/YAML syntax",
+            "file": "bad-capability.json"
+          }
+        ],
+        "duration_seconds": 0.000418,
+        "files_checked": 1,
+        "gate": "full",
+        "issues": [],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": true,
+        "policy_ok": true,
+        "run_id": "495adde7193644918358ff49886c3682",
+        "skipped": [],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [
+          {
+            "file": "bad-capability.json",
+            "gate": "JSON/YAML syntax"
+          }
+        ],
+        "warnings": []
+      },
+      "stderr": ""
+    },
+    {
+      "name": "cli_failed_gate_receipt",
+      "exit": 1,
+      "stdout": {
+        "bytes_read": 45,
+        "checks": [
+          {
+            "check": "OpenAPI basic structure",
+            "detail": "OpenAPI info.title and info.version required",
+            "file": "api.json",
+            "input_sha256": "17fb3e851b6e51a219810d48c55a6f94dda4c3429abe26af0c7a6ae682cf54c5",
+            "method": "built-in",
+            "status": "failed",
+            "toolkit_version": "0.8.0"
+          },
+          {
+            "check": "OpenAPI full schema",
+            "detail": "not requested or basic gate failed",
+            "file": "api.json",
+            "input_sha256": null,
+            "method": "built-in",
+            "status": "skipped",
+            "toolkit_version": "0.8.0"
+          }
+        ],
+        "checks_run": [
+          {
+            "check": "OpenAPI basic structure",
+            "file": "api.json"
+          }
+        ],
+        "duration_seconds": 0.000416,
+        "files_checked": 1,
+        "gate": "structural",
+        "issues": [
+          {
+            "file": "api.json",
+            "issue": "OpenAPI info.title and info.version required"
+          }
+        ],
+        "note": "Scoped structural gates only; no certification, runtime deployment or universal semantic correctness. Required incomplete gates are not green.",
+        "ok": false,
+        "policy_ok": false,
+        "run_id": "462fbeb9fb3640f8a1c4134a7eb469c6",
+        "skipped": [
+          "api.json: not requested or basic gate failed"
+        ],
+        "stop_reasons": [],
+        "toolkit_version": "0.8.0",
+        "traceability_coverage": {},
+        "verified": [],
+        "warnings": []
+      },
+      "stderr": "",
+      "receipt": {
+        "bytes_read": 45,
+        "check_count": 2,
+        "command": "validate",
+        "duration_seconds": 0.000534,
+        "observed_files": 0,
+        "receipt_schema": 1,
+        "retention": "local explicit receipt; delete file to purge",
+        "run_id": "5d135cf50d65424faa64c41869cab634",
+        "status": "completed",
+        "tokens": "unreported",
+        "toolkit_version": "0.8.0"
+      },
+      "receipt_contract_issues": [
+        "missing required field: operation_id",
+        "missing required field: tool_id",
+        "missing required field: tool_version",
+        "missing required field: capability",
+        "missing required field: permission_class",
+        "missing required field: input_source_hash",
+        "missing required field: input_schema_version",
+        "missing required field: started_at",
+        "missing required field: completed_at",
+        "missing required field: checks_run",
+        "missing required field: checks_not_run",
+        "missing required field: warnings",
+        "missing required field: errors",
+        "missing required field: limitations",
+        "permission_class is invalid",
+        "status is invalid",
+        "input_schema_version must be a positive integer",
+        "input_source_hash must be a lowercase SHA-256 hex digest",
+        "started_at must be an ISO-8601 timestamp with timezone",
+        "completed_at must be an ISO-8601 timestamp with timezone",
+        "checks_run must be an array of strings",
+        "checks_not_run must be an array of strings",
+        "warnings must be an array of strings",
+        "errors must be an array of strings",
+        "limitations must be an array of strings"
+      ]
+    },
+    {
+      "name": "cli_input_error_no_receipt",
+      "exit": 2,
+      "stdout": "",
+      "stderr": {
+        "command": "resume",
+        "error": {
+          "code": "INPUT_OR_OPERATION_ERROR",
+          "message": "[Errno 2] No such file or directory: 'missing'",
+          "type": "FileNotFoundError"
+        },
+        "toolkit_version": "0.8.0"
+      },
+      "receipt_exists": false
+    },
+    {
+      "name": "cli_receipt_failure_after_init",
+      "exit": 2,
+      "stdout": "",
+      "stderr": {
+        "command": "init",
+        "error": {
+          "code": "INPUT_OR_OPERATION_ERROR",
+          "message": "non-regular output disallowed",
+          "type": "ValueError"
+        },
+        "toolkit_version": "0.8.0"
+      },
+      "project_exists_after_error": true
+    },
+    {
+      "name": "cli_parse_error",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: architect_cli.py resume [-h] path\narchitect_cli.py resume: error: the following arguments are required: path\n"
+    }
+  ]
+}

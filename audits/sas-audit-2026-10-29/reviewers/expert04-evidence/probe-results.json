@@ -1,0 +1,433 @@
+{
+  "parser_cache": {
+    "cold_coverage": "partial",
+    "cold_omissions": [
+      {
+        "path": "broken.py",
+        "reason": "parser error",
+        "line": 2
+      }
+    ],
+    "warm_coverage": "complete within supported static scope",
+    "warm_omissions": [],
+    "warm_observed": [
+      {
+        "path": "broken.py",
+        "kind": "source",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "bytes": 44,
+        "sha256": "6c18557294200259dcfed920dd6738a5d2f51c4b5baa489bfd9d021c7de903ee",
+        "source": "local",
+        "source_revision": "unpinned local tree",
+        "extractor_version": "0.8.0"
+      }
+    ],
+    "fitness_cold": {
+      "rules": [
+        {
+          "id": "RULE-001",
+          "status": "satisfied-in-scope",
+          "counterexamples": [],
+          "coverage": "partial",
+          "note": "No global compliance inferred from partial static evidence."
+        }
+      ],
+      "source_fingerprint": "21fb3d8737908ac6ab981fe559c7bebbbfe8d677f75918454892a9e4ae4dde8b",
+      "project_hash": "8940e68209cca53dc4259642df25bdb08bebd444933a12ff660ce7142b2e781f"
+    },
+    "fitness_warm": {
+      "rules": [
+        {
+          "id": "RULE-001",
+          "status": "satisfied-in-scope",
+          "counterexamples": [],
+          "coverage": "complete within supported static scope",
+          "note": "No global compliance inferred from partial static evidence."
+        }
+      ],
+      "source_fingerprint": "21fb3d8737908ac6ab981fe559c7bebbbfe8d677f75918454892a9e4ae4dde8b",
+      "project_hash": "8c0e21db26247811a2bb40f0302d3b7774b0fa75f25adea56aa3cff4489ab028"
+    }
+  },
+  "unsupported_language_fitness": {
+    "rules": [
+      {
+        "id": "RULE-001",
+        "status": "satisfied-in-scope",
+        "counterexamples": [],
+        "coverage": "complete within supported static scope",
+        "note": "No global compliance inferred from partial static evidence."
+      }
+    ],
+    "source_fingerprint": "3f05ccdde5b31c3c386caf3b5eaf497c2046d0920553b92f0accea10765b58f6",
+    "project_hash": "2dcea6c5d3d0b4155aa2534dacb63ba941b3dff25313d833c5910e9dce51b595"
+  },
+  "relative_python_fitness": {
+    "rules": [
+      {
+        "id": "RULE-001",
+        "status": "satisfied-in-scope",
+        "counterexamples": [],
+        "coverage": "complete within supported static scope",
+        "note": "No global compliance inferred from partial static evidence."
+      }
+    ],
+    "source_fingerprint": "c49db1db9915b4133671ac519cd2c01cd90751a541110c3cd21b7038e7e8e07b",
+    "project_hash": "346b22dcd5b55f4f2ce6c3b2dff1a1cb3f6be0b1afe512fb12b2828267404f2d"
+  },
+  "silent_edge_quota": {
+    "edge_count": 100,
+    "coverage": "complete within supported static scope",
+    "omissions": [],
+    "fitness": {
+      "rules": [
+        {
+          "id": "RULE-001",
+          "status": "satisfied-in-scope",
+          "counterexamples": [],
+          "coverage": "complete within supported static scope",
+          "note": "No global compliance inferred from partial static evidence."
+        }
+      ],
+      "source_fingerprint": "4b7bed680e3c56b655d37f9033a0dc799c5decf1a5d16158c9f7e5fcf8463702",
+      "project_hash": "2de522f6db6f935726376639a93cb562586c13111dbf841394f58dec8476630c"
+    }
+  },
+  "import_quota_fitness": {
+    "omissions": [
+      {
+        "path": "a.py",
+        "reason": "declaration quota",
+        "count": 1
+      }
+    ],
+    "fitness": {
+      "rules": [
+        {
+          "id": "RULE-001",
+          "status": "satisfied-in-scope",
+          "counterexamples": [],
+          "coverage": "partial",
+          "note": "No global compliance inferred from partial static evidence."
+        }
+      ],
+      "source_fingerprint": "720495f262f144ea7dfa3b5d45fd45c0246981aec66a956981a60a8b241a5286",
+      "project_hash": "87f2c5bb741f9e6f02e1f8e9d5735fb0d71694859d24a575b87ded2dd42bde21"
+    }
+  },
+  "javascript_declaration_bleed": {
+    "declarations": [
+      {
+        "line": 1,
+        "observation": "JS/TS static module token declaration",
+        "target": "forbidden",
+        "class": "TOKENIZED; unresolved",
+        "path": "a.ts",
+        "sha256": "3314baee8df199342907c8d0362871bafd509c04325bcad28aefd7a281fe2837"
+      },
+      {
+        "line": 2,
+        "observation": "JS/TS static module token declaration",
+        "target": "forbidden",
+        "class": "TOKENIZED; unresolved",
+        "path": "a.ts",
+        "sha256": "3314baee8df199342907c8d0362871bafd509c04325bcad28aefd7a281fe2837"
+      }
+    ],
+    "edges": [
+      {
+        "kind": "imports",
+        "target": "forbidden",
+        "line": 1,
+        "path": "a.ts",
+        "sha256": "3314baee8df199342907c8d0362871bafd509c04325bcad28aefd7a281fe2837"
+      },
+      {
+        "kind": "imports",
+        "target": "forbidden",
+        "line": 2,
+        "path": "a.ts",
+        "sha256": "3314baee8df199342907c8d0362871bafd509c04325bcad28aefd7a281fe2837"
+      }
+    ]
+  },
+  "descriptor_failures": {
+    "coverage": "complete within supported static scope",
+    "omissions": [],
+    "observed_files": [
+      {
+        "path": "package.json",
+        "kind": "manifest",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "bytes": 24,
+        "sha256": "645d0147422daa511a1179273516c93cc31e4bf3f5303cf76fe6817b77b789e7",
+        "source": "local",
+        "source_revision": "unpinned local tree",
+        "extractor_version": "0.8.0"
+      },
+      {
+        "path": "pyproject.toml",
+        "kind": "manifest",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "bytes": 42,
+        "sha256": "29c66d7f2aef91892e8d2663e7a05de722731439f34ac1317419513b335f84d0",
+        "source": "local",
+        "source_revision": "unpinned local tree",
+        "extractor_version": "0.8.0"
+      },
+      {
+        "path": "requirements.txt",
+        "kind": "manifest",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "bytes": 15,
+        "sha256": "8c7dd740bc08eac209b813f16214a8af7c0430f729d3ac1ecf9471ab095d731b",
+        "source": "local",
+        "source_revision": "unpinned local tree",
+        "extractor_version": "0.8.0"
+      }
+    ],
+    "declarations": [],
+    "fitness": {
+      "rules": [
+        {
+          "id": "RULE-001",
+          "status": "satisfied-in-scope",
+          "counterexamples": [],
+          "coverage": "complete within supported static scope",
+          "note": "No global compliance inferred from partial static evidence."
+        }
+      ],
+      "source_fingerprint": "3b938757e012735246b138674cc7f57bce2cb69b37a3af98249d19afbd2ab549",
+      "project_hash": "866c1ec64d0518dbbc0dbd367805e068e480cfc2a2cbfeda140e04cf0ebc474f"
+    }
+  },
+  "fitness_prefix_boundaries": {
+    "rules": [
+      {
+        "id": "RULE-001",
+        "status": "violation",
+        "counterexamples": [
+          {
+            "kind": "imports",
+            "target": "forbiddenly",
+            "line": 1,
+            "path": "src2/a.py",
+            "sha256": "6993f29f0e842bc72bb2445eead78881fd04dc5c7b36d7007744bd69c91daf37"
+          }
+        ],
+        "coverage": "complete within supported static scope",
+        "note": "No global compliance inferred from partial static evidence."
+      }
+    ],
+    "source_fingerprint": "9d45e169f850b87f480bf8666f9f8d898a3c65fa30488c30c804a04a98a05165",
+    "project_hash": "e4136c7ec0db3b870c061fb78ff6afcab8ee87565a0354573ccfee76413006e3"
+  },
+  "unrelated_delta": {
+    "added": [],
+    "removed_or_unread": [],
+    "changed": [
+      "a.py"
+    ],
+    "scope": "observed files only; unread is not deleted"
+  },
+  "invalid_delta": {
+    "added": [],
+    "removed_or_unread": [],
+    "changed": [],
+    "scope": "observed files only; unread is not deleted"
+  },
+  "interface_only_change": {
+    "changed_interfaces": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        "API-001"
+      ]
+    },
+    "changed_requirements": [],
+    "baseline_affected": {
+      "components": [],
+      "interfaces": [],
+      "data_models": [],
+      "decisions": [],
+      "tasks": [],
+      "cost_drivers": []
+    },
+    "proposed_affected": {
+      "components": [],
+      "interfaces": [],
+      "data_models": [],
+      "decisions": [],
+      "tasks": [],
+      "cost_drivers": []
+    }
+  },
+  "optional_graph_records": {
+    "affected_groups": [
+      "components",
+      "interfaces",
+      "data_models",
+      "decisions",
+      "tasks",
+      "cost_drivers"
+    ],
+    "verification_reported_in_affected": false,
+    "verification_reported_unreached": false
+  },
+  "freshness_stale_and_unknown": {
+    "project_hash": "a361e60808a98ef8415e11b85e305793ba902c39810c54cde2cca5d13184c9de",
+    "source_fingerprint": "650eb12b8f272c678b87a917dea99177182b88ab96b8a9f1e1f3ee446212e58b",
+    "evidence": [
+      {
+        "id": "EVID-001",
+        "status": "stale",
+        "path": "a.py",
+        "reason": "hash comparison only; absence from partial scan is not deletion"
+      },
+      {
+        "id": "EVID-002",
+        "status": "unknown",
+        "path": "missing.py",
+        "reason": "hash comparison only; absence from partial scan is not deletion"
+      }
+    ],
+    "artifact_status": "not applicable",
+    "note": "Hashes prove captured identity, not truth, approval or authorization."
+  },
+  "migration_plan": {
+    "status": "PROPOSED worksheet; not executed",
+    "source_hash": "ac73daab4fccb38927127575f246ebae6ab22702b2e997e7b6983123fb9ab6fa",
+    "components": [
+      {
+        "id": "api",
+        "files": [],
+        "evidence_status": "declared mapping; runtime seam unverified"
+      }
+    ],
+    "stages": [
+      {
+        "phase": 1,
+        "objective": "Characterize current behavior and data ownership",
+        "acceptance": "contract/characterization tests and source identity recorded",
+        "rollback_or_forward_fix": "define for the actual change before execution"
+      },
+      {
+        "phase": 2,
+        "objective": "Compare modularization to service extraction",
+        "acceptance": "simpler option assessed against explicit constraints",
+        "rollback_or_forward_fix": "define for the actual change before execution"
+      },
+      {
+        "phase": 3,
+        "objective": "Select one verified seam",
+        "acceptance": "transactions, consumers, authorization and migration ownership reviewed",
+        "rollback_or_forward_fix": "define for the actual change before execution"
+      },
+      {
+        "phase": 4,
+        "objective": "Introduce compatible boundary and reconcile data",
+        "acceptance": "dual-write/backfill/reconciliation hazards explicitly addressed where applicable",
+        "rollback_or_forward_fix": "define for the actual change before execution"
+      },
+      {
+        "phase": 5,
+        "objective": "Canary and verify before retiring old path",
+        "acceptance": "measured decision signal and recovery rehearsal recorded",
+        "rollback_or_forward_fix": "define for the actual change before execution"
+      }
+    ],
+    "unknown": [
+      "business invariants",
+      "actual traffic",
+      "data ownership approval",
+      "operational rollback requirements"
+    ]
+  },
+  "io_safety": {
+    "schema_version": 1,
+    "captured_at": "2026-10-29T18:34:02.193710+00:00",
+    "source_ref": "unpinned local tree; resolved commit not inferred",
+    "claim_class": "OBSERVED STATIC SOURCE",
+    "root": "/workspace/sas-audit-2026-10-29/reviewers/expert04-evidence/fixtures/io-safety",
+    "adapter": "local-static",
+    "adapter_version": "0.8.0",
+    "observed_files": [
+      {
+        "path": "safe.py",
+        "kind": "source",
+        "line": 1,
+        "observation": "regular file read; static evidence only",
+        "bytes": 43,
+        "sha256": "f81d24bc8f2bd8f17d6a0d27346c98981322093d380f897d318713f051e594f7",
+        "source": "local",
+        "source_revision": "unpinned local tree",
+        "extractor_version": "0.8.0"
+      }
+    ],
+    "static_declarations": [],
+    "dependency_edges": [],
+    "scanned_count": 1,
+    "total_candidate_files": 2,
+    "discovered_files": 2,
+    "entries_visited": 3,
+    "eligible_discovered": 1,
+    "bytes_read": 43,
+    "skipped_files": 2,
+    "omissions": [
+      {
+        "path": "blocked.py",
+        "reason": "special file; never opened"
+      },
+      {
+        "path": "link.py",
+        "reason": "symlink"
+      }
+    ],
+    "enumeration_complete": true,
+    "coverage": "partial",
+    "stop_reasons": [],
+    "cache_hits": 0,
+    "source_fingerprint": "9e05a2092c69cb882d00bab539a57f5494650d0bb1f92257666c257be81e1281",
+    "coverage_note": "Read-only bounded static evidence. Python AST and narrow JS imports/config adapters; no runtime, full dependency or framework-binding guarantee. Local source is not commit-pinned. Snippets off by default."
+  },
+  "large_declaration_budget": {
+    "no_cache": {
+      "status": "completed",
+      "elapsed_seconds": 0.26526098900001216,
+      "scanned_count": 1,
+      "declarations": 100,
+      "omissions": [
+        {
+          "path": "a.py",
+          "reason": "declaration quota",
+          "count": 19900
+        }
+      ],
+      "stop_reasons": []
+    },
+    "cache": {
+      "status": "error",
+      "elapsed_seconds": 0.4013444850000951,
+      "type": "ValueError",
+      "message": "output byte budget exceeded"
+    },
+    "short_deadline": {
+      "status": "completed",
+      "elapsed_seconds": 0.253194540000095,
+      "scanned_count": 1,
+      "declarations": 100,
+      "omissions": [
+        {
+          "path": "a.py",
+          "reason": "declaration quota",
+          "count": 19900
+        }
+      ],
+      "stop_reasons": []
+    }
+  }
+}

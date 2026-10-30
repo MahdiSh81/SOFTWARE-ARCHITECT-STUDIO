@@ -1,3 +1,24 @@
+# 0.9.1 — 2026-10-30
+
+- Preserve business field names and literal values during API contract comparison; share one bounded comparison policy between intent resolution and exported-artifact validation.
+- Traverse references only in normative contract positions; `$ref` property names and literal enum/default/example values do not become schema-fetch instructions. Real external schema/example references remain blocked.
+- Respect OpenAPI3.0 Reference Object siblings and OpenAPI3.1 Schema Object conjunctive reference constraints, without claiming general schema equivalence.
+- Validate local adapter requests and complete plan shapes without optional jsonschema; reject missing deletion intent, unknown versions, empty/duplicate plans and incorrect file preconditions before source writes.
+- Fail source identity collection closed on unreadable subtrees; retain the existing path/authority/recovery limits.
+- Keep 0.9.0 verification and the audit historical; current follow-up and checks are in `release/followups-0.9.1.json` and `release/verification-0.9.1.json`.
+
+# 0.9.0 — 2026-10-30
+
+- Repair handoff representation identities, native-contract roundtrips, contract resolution, auth fidelity, applicability and cross-format validation. Preserve unchanged Accepted facts and disclose exact omitted/redacted context.
+- Preserve workbench drafts across preferences and collection changes; protect meaningful replacement state; add guided fields and explicit CLI transfer guidance.
+- Make auxiliary receipts non-clobbering and outcome-bearing; preserve primary commit outcomes after telemetry failure. Harden integration record validation and source/result binding.
+- Add an opt-in local inspect/propose/apply/check/recover/reconcile adapter, host-selected path/check policy and actual disposable-workspace acceptance tests. It inherits host authority and is not an OS sandbox or deployment service.
+- Improve bounded extraction completeness, cached diagnostics, typed impact seeds and evidence comparability. Keep unsupported/runtime semantics explicitly unknown.
+- Add four conditional specialist skills, routing/bundle provenance and validated review/evaluation records; retain live model/user outcomes as unmeasured.
+- Add a real source inventory/version gate, Linux CPython3.12 hash-locked validator wheels, npm lock/npm ci, verified immutable Actions refs, CI timeouts and bounded artifact retention. Rework README and integration/run instructions around actual capabilities and limits.
+
+Current per-finding disposition and validation belong to `release/implementation-0.9.0.json` and `release/verification-0.9.0.json`. Earlier release receipts and the full audit remain historical evidence; no old pass count is relabeled as current. Hosted collaboration, universal indexing, autonomous model expansion and live provider/model/user measurements remain conditional or deferred.
+
 # 0.7.1 — 2026-10-29
 
 - Reject malformed recovery journals, path-like operation IDs, payload/hash/revision mismatches and conflicting history records before replacing project data. Preserve existing revision directories at initialization; list resulting revisions in commit order.

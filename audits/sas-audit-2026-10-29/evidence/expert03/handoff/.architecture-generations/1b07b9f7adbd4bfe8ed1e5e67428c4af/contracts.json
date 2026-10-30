@@ -1,0 +1,23 @@
+[
+  {
+    "components": [
+      "CMP-CLI"
+    ],
+    "contract": {
+      "commands": [
+        "add TITLE",
+        "list",
+        "complete ID"
+      ],
+      "db_argument": "--db PATH",
+      "error_exit": 2
+    },
+    "id": "IFACE-CLI",
+    "method": "CLI",
+    "name": "Command interface",
+    "requirements": [
+      "FR-001",
+      "FR-002"
+    ]
+  }
+]

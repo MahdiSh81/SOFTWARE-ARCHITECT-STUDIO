@@ -1,0 +1,8 @@
+{
+  "info": {
+    "title": "Offline Task Tracker API (PROPOSED)",
+    "version": "0.1.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {}
+}

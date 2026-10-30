@@ -1,8 +1,10 @@
-# Software Architect Studio 0.9.0
+# Software Architect Studio 0.9.1
 
 Software Architect Studio connects architectural decisions to portable project state, source evidence, reviewable changes, and explicit verification. It includes eleven task-focused skills, a Python toolkit, an offline workbench, and an opt-in local execution adapter.
 
 Use it for a quick design decision, a source-backed review, a requirements change, or a developer handoff. Code editing and checks require a selected local workspace and an explicit host policy. Generated plans, completed edits, successful builds, runtime checks, and deployment are separate outcomes.
+
+Patch 0.9.1 preserves meaningful API field names and version-specific reference semantics, and rejects malformed adapter plans before file effects even without optional schema dependencies. See the [follow-up record](release/followups-0.9.1.json) and [supported contract-comparison rules](docs/contract-comparison.md).
 
 ## Choose a workflow
 
@@ -14,7 +16,7 @@ Use it for a quick design decision, a source-backed review, a requirements chang
 | To change software | Define acceptance, inspect the exact source identity, prepare a change plan, apply it through an authorized host, and run the required checks. |
 | To resume work | Load the actual project/Git/backups, inspect revision/hash and accepted decisions, and reconcile stale evidence. |
 
-The [recipes](docs/recipes.md), [implementation adapter](docs/implementation-adapter.md), and [integration strategy](docs/integrations.md) explain the execution boundary. The original [full audit](audits/sas-audit-2026-10-29/REPORT.md) and its evidence remain historical. The [implementation ledger](release/implementation-0.9.0.json) records the disposition of all 58 consolidated findings; [current verification](release/verification-0.9.0.json) records checks actually run for this release.
+The [recipes](docs/recipes.md), [implementation adapter](docs/implementation-adapter.md), and [integration strategy](docs/integrations.md) explain the execution boundary. The original [full audit](audits/sas-audit-2026-10-29/REPORT.md) and its evidence remain historical. The [implementation ledger](release/implementation-0.9.0.json) records the disposition of all 58 consolidated findings; [current verification](release/verification-0.9.1.json) records checks actually run for this release.
 
 ## Install the optional validation environment
 

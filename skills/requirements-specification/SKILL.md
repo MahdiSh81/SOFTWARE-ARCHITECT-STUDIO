@@ -1,7 +1,7 @@
 ---
 name: requirements-specification
 description: Turn a project goal into testable requirements, acceptance criteria, and traceable NFR scenarios.
-version: 0.9.0
+version: 0.9.1
 ---
 # Requirements Specification
 Use for project discovery, feature scope, acceptance criteria, conflicts, and NFRs. Do not force this workflow onto simple conceptual questions.

@@ -3,7 +3,7 @@ from __future__ import annotations
 import copy, math, re, uuid
 from codec import digest, dumps
 
-VERSION='0.9.0'
+VERSION='0.9.1'
 GROUPS=('requirements','components','interfaces','data_models','decisions','tasks','cost_drivers')
 OPTIONAL=('evidence','assumptions','risks','verifications','fitness_rules','experiments')
 ID=re.compile(r'^[A-Za-z][A-Za-z0-9_-]{1,63}$')

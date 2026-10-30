@@ -30,7 +30,8 @@ class SkillRegistryTests(unittest.TestCase):
         registry = discover_skills()
         self.assertEqual(len(registry['skills']), 11)
         self.assertEqual(len({s['id'] for s in registry['skills']}), 11)
-        self.assertTrue(all(s['version'] == '0.9.0' for s in registry['skills']))
+        expected = json.loads((BASE/'release/version.json').read_text())['version']
+        self.assertTrue(all(s['version'] == expected for s in registry['skills']))
 
     def test_eighty_routing_contract_cases(self):
         cases = json.loads((BASE/'evals/routing-cases.json').read_text())['cases']

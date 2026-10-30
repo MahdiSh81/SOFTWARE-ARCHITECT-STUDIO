@@ -1,13 +1,13 @@
 ---
 name: frontend-interaction-and-accessibility
 description: Implement and verify user-facing interaction flows, accessible states and responsive behavior in an existing or explicitly scaffolded application.
-version: 0.9.0
+version: 0.9.1
 ---
 # Frontend Interaction And Accessibility
 
 ## 1. Name/identifier
 
-`frontend-interaction-and-accessibility`, packaged skill version 0.9.0.
+`frontend-interaction-and-accessibility`, packaged skill version 0.9.1.
 
 ## 2. Purpose
 

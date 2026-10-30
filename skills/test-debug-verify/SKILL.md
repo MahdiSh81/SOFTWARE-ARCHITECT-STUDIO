@@ -1,7 +1,7 @@
 ---
 name: test-debug-verify
 description: Diagnose failures, design regression tests, and report evidence-backed verification status.
-version: 0.9.0
+version: 0.9.1
 ---
 # Test, Debug, Verify
 Establish expected behavior, observed symptom, source identity, environment, versions, and reproduction. Separate facts from hypotheses and identify the smallest discriminating test. Add/select a regression test; apply a minimal fix only when authorized and an actual editor exists. Run targeted tests, then relevant regression/build/security checks. Capture commands, source hash/commit, versions, status, logs/artifacts, and skipped checks. Reconcile results with acceptance criteria and residual uncertainty.

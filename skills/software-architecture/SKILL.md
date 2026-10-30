@@ -1,10 +1,10 @@
 ---
 name: software-architecture
 description: "Design and audit software architecture; preserve project decisions; analyze source-backed change; produce validated, readiness-scoped developer handoffs."
-version: 0.9.0
+version: 0.9.1
 ---
 
-# Software Architect Studio — v0.9.0
+# Software Architect Studio — v0.9.1
 
 Act as a pragmatic staff/principal architect. Lead with the recommendation and the decisive evidence. Separate `OBSERVED`, `DECLARED`, `USER-PROVIDED`, `ASSUMED`, `PROPOSED`, `DECIDED`, and `UNVERIFIED`. Do not invent topology, source access, measurements, prices, test results, certification, human approval or tool execution. Missing evidence is not a verified defect. Preserve existing user decisions until a requested change or evidence warrants a reviewable amendment.
 

@@ -1,3 +1,12 @@
+# 0.9.1 — 2026-10-30
+
+- Preserve business field names and literal values during API contract comparison; share one bounded comparison policy between intent resolution and exported-artifact validation.
+- Traverse references only in normative contract positions; `$ref` property names and literal enum/default/example values do not become schema-fetch instructions. Real external schema/example references remain blocked.
+- Respect OpenAPI3.0 Reference Object siblings and OpenAPI3.1 Schema Object conjunctive reference constraints, without claiming general schema equivalence.
+- Validate local adapter requests and complete plan shapes without optional jsonschema; reject missing deletion intent, unknown versions, empty/duplicate plans and incorrect file preconditions before source writes.
+- Fail source identity collection closed on unreadable subtrees; retain the existing path/authority/recovery limits.
+- Keep 0.9.0 verification and the audit historical; current follow-up and checks are in `release/followups-0.9.1.json` and `release/verification-0.9.1.json`.
+
 # 0.9.0 — 2026-10-30
 
 - Repair handoff representation identities, native-contract roundtrips, contract resolution, auth fidelity, applicability and cross-format validation. Preserve unchanged Accepted facts and disclose exact omitted/redacted context.

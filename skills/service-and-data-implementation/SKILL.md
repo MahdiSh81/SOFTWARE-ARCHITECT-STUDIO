@@ -1,13 +1,13 @@
 ---
 name: service-and-data-implementation
 description: Implement service business rules and data transitions with executable correctness, tenant authorization, transactional integrity and migration evidence.
-version: 0.9.0
+version: 0.9.1
 ---
 # Service And Data Implementation
 
 ## 1. Name/identifier
 
-`service-and-data-implementation`, packaged skill version 0.9.0.
+`service-and-data-implementation`, packaged skill version 0.9.1.
 
 ## 2. Purpose
 

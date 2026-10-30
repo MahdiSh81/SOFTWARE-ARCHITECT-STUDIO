@@ -12,18 +12,33 @@ METHODS={'get','put','post','delete','options','head','patch','trace'}
 PATH_FIELDS={'$ref','summary','description','servers','parameters'}
 MERMAID_TYPES=('flowchart','graph','sequenceDiagram','erDiagram','stateDiagram-v2','classDiagram','gantt','mindmap','journey','timeline','pie','gitGraph','quadrantChart','C4Context','C4Container')
 
-def _iter_refs(value, location="$"):
-    """Yield every JSON $ref with a stable location for diagnostics."""
+def _iter_refs(value, location="$", *, context='object', version=None, depth=0):
+    """Yield normative offline-reference positions, never instance data or map names."""
+    from contract_resolution import child_context
+    if depth > 80:
+        raise ValueError('reference traversal nesting budget exceeded')
+    if context == 'literal':
+        return
+    if version is None:
+        version = value.get('openapi', '') if isinstance(value, dict) else ''
     if isinstance(value, dict):
+        reference = '$ref' in value and not context.startswith('map:')
+        if reference:
+            yield location + '/$ref', value['$ref']
+            # Other siblings of a Reference Object are not contract references.
+            # Schema Objects in OAS3.1 retain applicable adjacent keywords.
+            if not (context == 'schema' and isinstance(version, str) and version.startswith('3.1.')):
+                return
         for key, child in value.items():
+            if reference and key == '$ref':
+                continue
             child_location = f"{location}/{str(key).replace('~', '~0').replace('/', '~1')}"
-            if key == "$ref":
-                yield child_location, child
-            else:
-                yield from _iter_refs(child, child_location)
+            yield from _iter_refs(child, child_location, context=child_context(context, key),
+                                  version=version, depth=depth+1)
     elif isinstance(value, list):
         for index, child in enumerate(value):
-            yield from _iter_refs(child, f"{location}/{index}")
+            yield from _iter_refs(child, f"{location}/{index}", context=context,
+                                  version=version, depth=depth+1)
 
 
 def _resolve_local_ref(document, ref):
@@ -277,25 +292,10 @@ def _worker_summary(result):
     except (ValueError,TypeError):return 'validator '+str(result.get('status','unknown'))+'; diagnostics omitted'
 
 
-def _contract_value(value, document, seen=(), depth=0):
-    """Normalize offline references for scoped contract comparisons, with a cycle bound."""
-    if depth > 40:
-        raise ValueError('contract comparison nesting budget exceeded')
-    if isinstance(value, dict):
-        if '$ref' in value:
-            ref=value['$ref']
-            if not isinstance(ref,str):raise ValueError('invalid contract reference')
-            if ref in seen:return {'$recursive_ref':ref}
-            target,error=_resolve_local_ref(document,ref)
-            if error:raise ValueError('unresolved contract reference')
-            expanded=_contract_value(target,document,seen+(ref,),depth+1)
-            siblings={k:v for k,v in value.items() if k!='$ref'}
-            if not siblings:return expanded
-            if isinstance(expanded,dict):return {**expanded,**_contract_value(siblings,document,seen,depth+1)}
-        return {k:_contract_value(v,document,seen,depth+1) for k,v in value.items()
-                if k not in {'summary','description','example','examples','externalDocs'} and not k.startswith('x-')}
-    if isinstance(value,list):return [_contract_value(v,document,seen,depth+1) for v in value]
-    return value
+def _contract_value(value, document, seen=(), depth=0, *, context='object'):
+    # One semantic policy for source intent and emitted artifact comparison.
+    from contract_resolution import normalized
+    return normalized(value, document, seen, depth, context=context)
 
 
 def _effective_parameters(document,path,operation):
@@ -334,8 +334,9 @@ def contract_correspondence(project,api):
                     left=_effective_parameters(expected,path,wanted)
                     right=_effective_parameters(api,path,actual)
                 else:
-                    left=_contract_value(left,expected)
-                    right=_contract_value(right,api)
+                    from contract_resolution import child_context
+                    left=_contract_value(left,expected,context=child_context('object',key))
+                    right=_contract_value(right,api,context=child_context('object',key))
                 if left!=right:issues.append(interface['id']+': '+key+' differs')
             except (ValueError,TypeError,AttributeError,RecursionError):
                 issues.append(interface['id']+': '+key+' comparison incomplete')

@@ -7,23 +7,54 @@ from codec import digest
 METHODS = {'get', 'put', 'post', 'delete', 'options', 'head', 'patch', 'trace'}
 
 
-def semantic(value):
-    """Compare supported authored semantics without documentation-only differences."""
-    if isinstance(value, dict):
-        return {k: semantic(v) for k, v in value.items()
-                if k not in {'summary', 'description', 'example', 'examples', 'externalDocs'}
-                and not k.startswith('x-')}
-    if isinstance(value, list):
-        return [semantic(v) for v in value]
-    return value
+DOCUMENTATION = {'summary', 'description', 'example', 'examples', 'externalDocs'}
+SCHEMA_MAPS = {'properties', 'patternProperties', '$defs', 'definitions', 'dependentSchemas', 'dependencies'}
+OBJECT_MAPS = {'responses', 'content', 'headers', 'links', 'callbacks', 'securitySchemes',
+               'paths', 'requestBodies', 'parameters', 'schemas', 'encoding'}
+SCHEMA_CHILDREN = {'items', 'prefixItems', 'additionalItems', 'additionalProperties',
+                   'unevaluatedProperties', 'unevaluatedItems', 'contains', 'not', 'if',
+                   'then', 'else', 'propertyNames', 'contentSchema', 'allOf', 'anyOf', 'oneOf'}
 
 
-def normalized(value, document, seen=(), depth=0):
-    """Resolve local references for comparison only; retain bounded recursive refs."""
+def child_context(context, key):
+    if context.startswith('map:'):
+        return context[4:]
+    if key == 'components':
+        return 'components'
+    if key == 'example' or key == 'value':
+        return 'literal'
+    if key == 'examples':
+        return 'literal' if context == 'schema' else 'map:object'
+    if key in {'enum', 'const', 'default', 'security'}:
+        return 'literal'
+    if key == 'schema' or context == 'schema' and key in SCHEMA_CHILDREN:
+        return 'schema'
+    if context == 'schema' and key in SCHEMA_MAPS:
+        return 'map:schema'
+    if key == 'schemas':
+        return 'map:schema'
+    if key in OBJECT_MAPS and key != 'parameters':
+        return 'map:object'
+    # Unknown schema vocabularies and instance-valued keywords are opaque data.
+    # Never discard their keys by assuming they are OpenAPI documentation.
+    if context == 'schema':
+        return 'literal'
+    return 'object'
+
+
+def normalized(value, document, seen=(), depth=0, *, context='object'):
+    """Bounded structural comparison, preserving data names and schema constraints.
+
+    OAS3.0 Reference Object siblings are ignored. OAS3.1 Schema Object
+    $ref siblings are conjunctive, represented with allOf rather than overwritten.
+    This does not solve arbitrary JSON Schema logical equivalence.
+    """
     if depth > 40:
         raise ValueError('contract reference nesting budget exceeded')
+    if context == 'literal':
+        return copy.deepcopy(value)
     if isinstance(value, dict):
-        if '$ref' in value:
+        if '$ref' in value and not context.startswith('map:'):
             ref = value['$ref']
             if not isinstance(ref, str) or not ref.startswith('#'):
                 raise ValueError('only offline local references supported for correspondence')
@@ -49,12 +80,22 @@ def normalized(value, document, seen=(), depth=0):
                         raise ValueError('pointer crosses scalar')
                 except (KeyError, IndexError, ValueError, TypeError):
                     raise ValueError('unresolved local contract reference') from None
-            expanded = normalized(target, document, seen + (ref,), depth + 1)
-            siblings = normalized({k:v for k,v in value.items() if k != '$ref'}, document, seen, depth + 1)
-            return {**expanded, **siblings} if isinstance(expanded, dict) else expanded
-        return {k:normalized(v,document,seen,depth+1) for k,v in semantic(value).items()}
-    if isinstance(value,list):
-        return [normalized(v,document,seen,depth+1) for v in value]
+            expanded = normalized(target, document, seen + (ref,), depth + 1, context=context)
+            if context == 'schema' and str(document.get('openapi', '')).startswith('3.1.'):
+                siblings = normalized({k:v for k,v in value.items() if k != '$ref'},
+                                      document, seen, depth + 1, context='schema')
+                if siblings:
+                    return {'allOf': [expanded, siblings]}
+            return expanded
+        out = {}
+        for key, item in value.items():
+            if not context.startswith('map:') and (key in DOCUMENTATION or context != 'schema' and key.startswith('x-')):
+                continue
+            out[key] = normalized(item, document, seen, depth + 1,
+                                  context=child_context(context, key))
+        return out
+    if isinstance(value, list):
+        return [normalized(v, document, seen, depth + 1, context=context) for v in value]
     return value
 
 
@@ -99,7 +140,7 @@ def resolve_contracts(project):
             actual.setdefault('security', api.get('security', None))
             # Compare authored fields; native may add documentation and optional details.
             for field in expected:
-                if normalized(expected[field], api) != normalized(actual.get(field), api):
+                if normalized(expected[field], api, context=child_context('object',field)) != normalized(actual.get(field), api, context=child_context('object',field)):
                     conflict(rid, 'operation/' + field, 'native and interface contract disagree')
         security = operation.get('security', api.get('security'))
         intent = item.get('authentication')

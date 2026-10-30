@@ -1,7 +1,7 @@
 ---
 name: implementation-planning-and-change
 description: Convert an approved requirement or defect into a minimal reviewable code-change plan using authorized tools when available.
-version: 0.9.0
+version: 0.9.1
 ---
 # Implementation Planning and Change
 Establish repository/ref, source identity, dirty state, accepted requirements/ADRs, available tool capabilities, and permissions. If an actual editor or runner is unavailable, provide a plan or patch proposal and mark execution blocked.

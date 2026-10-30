@@ -30,11 +30,27 @@ _OPERATION_SCHEMA = {'type': 'string', 'pattern': '^[A-Za-z0-9_-]{2,100}$'}
 _CHANGE_SCHEMA = {'type': 'object', 'required': ['path', 'content'], 'additionalProperties': False,
                   'properties': {'path': {'type': 'string', 'minLength': 1},
                                  'content': {'type': ['string', 'null'], 'maxLength': 1000000}}}
+_PLAN_CHANGE_SCHEMA = {
+    'type': 'object', 'additionalProperties': False,
+    'required': ['path', 'content', 'before_hash', 'after_hash'],
+    'properties': {**_CHANGE_SCHEMA['properties'],
+                   'before_hash': {'type': ['string', 'null'], 'pattern': '^[a-f0-9]{64}$'},
+                   'after_hash': {'type': ['string', 'null'], 'pattern': '^[a-f0-9]{64}$'}},
+}
+_PLAN_SCHEMA = {
+    'type': 'object', 'additionalProperties': False,
+    'required': ['schema_version', 'root', 'input_source_hash', 'changes', 'plan_hash'],
+    'properties': {'schema_version': {'type': 'integer', 'const': 1},
+                   'root': {'type': 'string', 'minLength': 1},
+                   'input_source_hash': _HASH_SCHEMA, 'plan_hash': _HASH_SCHEMA,
+                   'changes': {'type': 'array', 'minItems': 1, 'maxItems': 100, 'items': _PLAN_CHANGE_SCHEMA},
+                   'status': {'const': 'proposed; no files changed'}},
+}
 _REQUEST_FIELDS = {
     'capabilities': ({}, []), 'inspect': ({}, []),
     'propose_change': ({'changes': {'type': 'array', 'minItems': 1, 'maxItems': 100, 'items': _CHANGE_SCHEMA},
                         'expected_source_hash': _HASH_SCHEMA}, ['changes']),
-    'apply_change': ({'plan': {'type': 'object', 'required': ['schema_version', 'root', 'input_source_hash', 'changes', 'plan_hash']},
+    'apply_change': ({'plan': _PLAN_SCHEMA,
                       'operation_id': _OPERATION_SCHEMA}, ['plan']),
     'run_checks': ({'names': {'type': 'array', 'minItems': 1, 'maxItems': 100, 'uniqueItems': True, 'items': {'type': 'string', 'minLength': 1}},
                     'expected_source_hash': _HASH_SCHEMA, 'operation_id': _OPERATION_SCHEMA}, ['names', 'expected_source_hash']),
@@ -51,19 +67,60 @@ def request_schema(operation):
     return {'type': 'object', 'additionalProperties': False, 'properties': properties, 'required': required}
 
 
+def _check_shape(schema, value, path='request', depth=0):
+    """Check our fixed request-schema subset without optional dependencies.
+
+    This is deliberately not a general JSON Schema engine. The optional engine
+    below independently checks the same emitted schemas when installed.
+    """
+    if depth > 64:
+        raise ValueError('adapter request nesting limit exceeded')
+    types = schema.get('type')
+    if isinstance(types, str):
+        types = [types]
+    predicates = {'object': lambda x: isinstance(x, dict), 'array': lambda x: isinstance(x, list),
+                  'string': lambda x: isinstance(x, str), 'null': lambda x: x is None,
+                  'integer': lambda x: type(x) is int}
+    if types and not any(predicates[t](value) for t in types):
+        raise ValueError(path + ': invalid value type')
+    if 'const' in schema and (value != schema['const'] or type(value) is not type(schema['const'])):
+        raise ValueError(path + ': unsupported value/version')
+    if isinstance(value, dict):
+        if any(not isinstance(k, str) for k in value):
+            raise ValueError(path + ': string field names required')
+        properties = schema.get('properties', {})
+        if set(schema.get('required', [])) - set(value):
+            raise ValueError(path + ': required fields missing')
+        if schema.get('additionalProperties') is False and set(value) - set(properties):
+            raise ValueError(path + ': unknown fields')
+        for key, child in value.items():
+            if key in properties:
+                _check_shape(properties[key], child, path + '/' + key, depth + 1)
+    elif isinstance(value, list):
+        if len(value) < schema.get('minItems', 0) or len(value) > schema.get('maxItems', 10000):
+            raise ValueError(path + ': array size outside bounds')
+        if schema.get('uniqueItems') and any(item in value[:i] for i, item in enumerate(value)):
+            raise ValueError(path + ': duplicate array items')
+        for child in value:
+            _check_shape(schema.get('items', {}), child, path + '/item', depth + 1)
+    elif isinstance(value, str):
+        if len(value) < schema.get('minLength', 0) or len(value) > schema.get('maxLength', 1000000):
+            raise ValueError(path + ': string length outside bounds')
+        if schema.get('pattern') and not re.fullmatch(schema['pattern'], value):
+            raise ValueError(path + ': invalid identifier/hash')
+
+
 def validate_request(operation, request):
-    if operation not in OPERATIONS or not isinstance(request, dict):
+    if not isinstance(operation, str) or operation not in OPERATIONS or not isinstance(request, dict):
         raise ValueError('known adapter operation and request object required')
     schema = request_schema(operation)
-    if set(request) - set(schema['properties']) or set(schema['required']) - set(request):
-        raise ValueError('adapter request fields do not match operation schema')
+    _check_shape(schema, request)
     try:
         from jsonschema import Draft202012Validator
-        errors = list(Draft202012Validator(schema).iter_errors(request))
-        if errors:
+        if next(Draft202012Validator(schema).iter_errors(request), None) is not None:
             raise ValueError('adapter request violates operation input schema')
     except ImportError:
-        pass  # Operation-specific core type/bounds checks remain enforced.
+        pass
     return request
 
 
@@ -82,7 +139,9 @@ def inspect(root, *, max_files=2000, max_bytes=20_000_000):
         raise ValueError('selected workspace must be a directory')
     files = {}
     total = 0
-    for base, dirs, names in os.walk(root, followlinks=False):
+    def enumeration_error(error):
+        raise error
+    for base, dirs, names in os.walk(root, followlinks=False, onerror=enumeration_error):
         dirs[:] = sorted(d for d in dirs if d not in EXCLUDE)
         for d in dirs:
             guard(Path(base) / d, root)
@@ -115,7 +174,7 @@ def _path(root, name):
 
 
 def _policy(root, policy, *, effect):
-    if not isinstance(policy, dict) or policy.get('schema_version') != 1:
+    if not isinstance(policy, dict) or type(policy.get('schema_version')) is not int or policy['schema_version'] != 1:
         raise ValueError('explicit host policy version 1 required')
     if policy.get('root') != str(guard(root)):
         raise ValueError('host policy is for a different workspace')
@@ -124,6 +183,8 @@ def _policy(root, policy, *, effect):
         raise ValueError('host authorization reference required for attempted effects')
     if policy.get('expires_at') is not None:
         try:
+            if not isinstance(policy['expires_at'], str):
+                raise ValueError('timestamp string required')
             expiry = datetime.datetime.fromisoformat(policy['expires_at'].replace('Z', '+00:00'))
             if expiry.tzinfo is None or expiry <= datetime.datetime.now(datetime.timezone.utc):
                 raise ValueError('expired authorization')
@@ -135,6 +196,10 @@ def _policy(root, policy, *, effect):
 
 
 def propose_change(root, changes, expected_source_hash=None):
+    request = {'changes': changes}
+    if expected_source_hash is not None:
+        request['expected_source_hash'] = expected_source_hash
+    validate_request('propose_change', request)
     source = inspect(root)
     if expected_source_hash is not None and source['source_hash'] != expected_source_hash:
         raise ValueError('source conflict before proposal')
@@ -159,7 +224,10 @@ def propose_change(root, changes, expected_source_hash=None):
                        'after_hash': digest(content.encode()) if content is not None else None})
     plan = {'schema_version': 1, 'root': str(guard(root)), 'input_source_hash': source['source_hash'],
             'changes': output}
-    return {**plan, 'plan_hash': digest(plan), 'status': 'proposed; no files changed'}
+    result = {**plan, 'plan_hash': digest(plan), 'status': 'proposed; no files changed'}
+    if len(dumps(result).encode()) > 5 * 1024 * 1024:
+        raise ValueError('proposed plan exceeds 5 MiB transport budget')
+    return result
 
 
 def _state_root(root, state_root=None):
@@ -195,6 +263,9 @@ def _receipt(operation_id, capability, start, before, after, status, *, authoriz
 
 
 def apply_change(root, plan, policy, *, operation_id=None, state_root=None):
+    _check_shape(_PLAN_SCHEMA, plan, 'plan')
+    if len(dumps(plan).encode()) > 5 * 1024 * 1024:
+        raise ValueError('plan exceeds 5 MiB transport budget')
     authorization = _policy(root, policy, effect='write')
     if not isinstance(plan, dict) or plan.get('root') != str(guard(root)):
         raise ValueError('plan workspace mismatch')
@@ -206,11 +277,17 @@ def apply_change(root, plan, policy, *, operation_id=None, state_root=None):
     allowed = policy.get('allowed_paths')
     if not isinstance(allowed, list) or not allowed or any(not isinstance(x, str) for x in allowed):
         raise ValueError('explicit allowed_paths required')
+    seen = set()
     for change in plan['changes']:
         _path(root, change['path'])
+        if change['path'] in seen:
+            raise ValueError('duplicate change path')
+        seen.add(change['path'])
         if not any(fnmatch.fnmatchcase(change['path'], pat) for pat in allowed):
             raise ValueError('path outside authorized effects')
         content = change['content']
+        if content is not None and len(content.encode()) > 1_000_000:
+            raise ValueError('UTF-8 content exceeds 1 MB file budget')
         if change['after_hash'] != (digest(content.encode()) if content is not None else None):
             raise ValueError('content identity mismatch')
     state = _state_root(root, state_root)
@@ -227,6 +304,11 @@ def apply_change(root, plan, policy, *, operation_id=None, state_root=None):
         before = inspect(root)
         if before['source_hash'] != plan['input_source_hash']:
             raise ValueError('source conflict; no changes applied')
+        for change in plan['changes']:
+            if before['files'].get(change['path']) != change['before_hash']:
+                raise ValueError('file precondition differs from selected source; no changes applied')
+            if change['content'] is None and change['before_hash'] is None:
+                raise ValueError('cannot delete absent path')
         journal = {'schema_version': 1, 'operation_id': op, 'plan_hash': plan['plan_hash'],
                    'input_source_hash': before['source_hash'], 'root': str(guard(root)),
                    'changes': [{k: c[k] for k in ('path', 'before_hash', 'after_hash')} for c in plan['changes']],

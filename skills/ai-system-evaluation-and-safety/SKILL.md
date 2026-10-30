@@ -1,13 +1,13 @@
 ---
 name: ai-system-evaluation-and-safety
 description: Design and execute evidence-backed evaluation for LLM/RAG/agent applications, including tool boundaries, retrieval access, abstention and quality/cost tradeoffs.
-version: 0.9.0
+version: 0.9.1
 ---
 # Ai System Evaluation And Safety
 
 ## 1. Name/identifier
 
-`ai-system-evaluation-and-safety`, packaged skill version 0.9.0.
+`ai-system-evaluation-and-safety`, packaged skill version 0.9.1.
 
 ## 2. Purpose
 

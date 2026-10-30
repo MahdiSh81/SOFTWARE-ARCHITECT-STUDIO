@@ -1,7 +1,7 @@
 ---
 name: repository-intelligence
 description: Produce bounded, source-attributed repository maps, dependency evidence, and architecture-drift candidates.
-version: 0.9.0
+version: 0.9.1
 ---
 # Repository Intelligence
 Use for a selected repository, unfamiliar codebase, architecture audit, dependency question, or source-backed impact analysis.

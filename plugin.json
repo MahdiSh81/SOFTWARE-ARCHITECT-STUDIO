@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "software-architect-studio",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Software architecture design with portable project context, handoff packages, dependency-based impact analysis, repo audits, validation checks, and behavioral evaluation.",
   "author": {
     "name": "Plugin owner",

@@ -1,13 +1,13 @@
 ---
 name: delivery-and-operations
 description: Prepare, perform when authorized, and verify build/release/operational workflows with explicit recovery and evidence.
-version: 0.9.0
+version: 0.9.1
 ---
 # Delivery And Operations
 
 ## 1. Name/identifier
 
-`delivery-and-operations`, packaged skill version 0.9.0.
+`delivery-and-operations`, packaged skill version 0.9.1.
 
 ## 2. Purpose
 
